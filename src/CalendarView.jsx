@@ -6,8 +6,9 @@ import { useHighScore } from "./hooks/useHighScore";
 import { Cell } from "./Cell";
 import { Calendars } from "./constants";
 
-export default function CalendarView({ date }) {
-    const daysInYear = getDaysInYear(date);
+const date = new Date();
+
+export default function CalendarView() {
     const calendarRef = useRef(null);
     const [calendar, setCalendar] = useState(Calendars[0]);
     const [isCondensed, setIsCondensed] = useState(false);
@@ -16,19 +17,16 @@ export default function CalendarView({ date }) {
     const { streak, calculateStreak } = useStreak(calendar.name);
     const { highScore, calculateHighScore } = useHighScore(calendar.name);
 
-    // Calculate the day of the week for January 1st (0 = Sunday, 1 = Monday, etc.)
     const firstDayOfYear = getDay(startOfYear(date));
 
-    // Create array with empty cells at the beginning + all days of the year
     const calendarCells = useMemo(() => {
+        const daysInYear = getDaysInYear(date);
         const cells = [];
 
-        // Add empty cells for the offset
         for (let i = 0; i < firstDayOfYear; i++) {
             cells.push({ isEmpty: true });
         }
 
-        // Add all days of the year
         for (let i = 0; i < daysInYear; i++) {
             cells.push({
                 isEmpty: false,
@@ -38,7 +36,7 @@ export default function CalendarView({ date }) {
         }
 
         return cells;
-    }, [date, daysInYear, firstDayOfYear]);
+    }, [date, firstDayOfYear, calendar]);
 
     useEffect(() => {
         calculateStreak();
@@ -109,18 +107,24 @@ export default function CalendarView({ date }) {
                     "gap-0.5": isCondensed,
                     "gap-1 w-full": !isCondensed
                 })}>
-                {calendarCells.map((cell, index) => (
-                    <Cell
-                        key={index}
-                        isEmpty={cell.isEmpty}
-                        day={cell.day}
-                        selectedDate={date}
-                        calendarName={calendar.name}
-                        date={cell.date}
-                        colors={calendar.colors}
-                        isCondensed={isCondensed}
-                        onCellMark={calculateStreak} />
-                ))}
+                {calendarCells.map((cell, index) => {
+                    if (cell.isEmpty) {
+                        return <div className={isCondensed ? "size-2" : "size-10"} key={index} />;
+                    }
+
+                    return (
+                        <Cell
+                            key={index}
+                            day={cell.day}
+                            selectedDate={date}
+                            calendarName={calendar.name}
+                            cellDate={cell.date}
+                            colors={calendar.colors}
+                            isCondensed={isCondensed}
+                            onCellMark={calculateStreak} />
+
+                    )
+                })}
             </div>
         </>
     )

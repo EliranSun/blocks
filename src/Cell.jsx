@@ -4,39 +4,36 @@ import { useMemo, useState, useCallback, useEffect } from "react";
 
 
 export const Cell = ({
-    date,
+    cellDate,
     calendarName,
     colors = [],
-    isEmpty = false,
     isCondensed = false,
     onCellMark
 }) => {
-    // If this is an empty cell, just render an empty div
-    if (isEmpty) {
-        return <div className={isCondensed ? "size-2" : "size-10"} />;
-    }
-
-    // Create a unique key for localStorage using calendarName and date
     const storageKey = useMemo(() => {
-        const dateString = format(date, "yyyy-MM-dd"); // YYYY-MM-DD format
+        // const dateString = format(date, "yyyy-MM-dd");
+        const dateString = format(cellDate, "yyyy-MM-dd"); // YYYY-MM-DD format
         return `${calendarName}_${dateString}`;
-    }, [calendarName, date]);
+    }, [calendarName, cellDate]);
 
-    // Load initial state from localStorage
-    // Store color index instead of boolean (-1 means unmarked, 0+ means marked with that color)
     const [colorIndex, setColorIndex] = useState(() => {
         const saved = localStorage.getItem(storageKey);
         return saved ? JSON.parse(saved) : -1;
     });
 
-    const isCellToday = useMemo(() => isToday(date), [date]);
+    useEffect(() => {
+        const saved = localStorage.getItem(storageKey);
+        setColorIndex(saved ? JSON.parse(saved) : -1);
+    }, [storageKey]);
 
-    const dayNumber = useMemo(() => date.toLocaleDateString("en-GB", {
+    const isCellToday = useMemo(() => isToday(cellDate), [cellDate]);
+
+    const dayNumber = useMemo(() => cellDate.toLocaleDateString("en-GB", {
         day: "numeric",
-    }), [date]);
-    const monthName = useMemo(() => date.toLocaleDateString("en-GB", {
+    }), [cellDate]);
+    const monthName = useMemo(() => cellDate.toLocaleDateString("en-GB", {
         month: "short",
-    }), [date]);
+    }), [cellDate]);
 
     const handleMark = useCallback(() => {
         let newColorIndex;
@@ -57,11 +54,15 @@ export const Cell = ({
         onCellMark();
     }, [colorIndex, colors, storageKey, onCellMark]);
 
-    const isMarked = colorIndex >= 0;
+    const isMarked = useMemo(() => colorIndex >= 0, [colorIndex, storageKey]);
+
     const currentColor = useMemo(() => {
-        if (isMarked) return colors[colorIndex]?.className;
+        if (isMarked) {
+            debugger;
+            return colors[colorIndex]?.className;
+        }
         return null;
-        }, [isMarked, colors, colorIndex]);
+    }, [isMarked, colors, colorIndex, storageKey]);
 
     const text = useMemo(() => {
         if (isMarked && colors[colorIndex]?.name) {
