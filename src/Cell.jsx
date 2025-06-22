@@ -55,7 +55,7 @@ export const Cell = ({
         setColorIndex(newColorIndex);
         localStorage.setItem(storageKey, JSON.stringify(newColorIndex));
         onCellMark();
-    }, [colorIndex, colors.length, storageKey, onCellMark]);
+    }, [colorIndex, colors, storageKey, onCellMark]);
 
     const isMarked = colorIndex >= 0;
     const currentColor = useMemo(() => {
