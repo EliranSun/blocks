@@ -58,7 +58,10 @@ export const Cell = ({
     }, [colorIndex, colors.length, storageKey, onCellMark]);
 
     const isMarked = colorIndex >= 0;
-    const currentColor = isMarked ? colors[colorIndex]?.className : null;
+    const currentColor = useMemo(() => {
+        if (isMarked) return colors[colorIndex]?.className;
+        return null;
+        }, [isMarked, colors, colorIndex]);
 
     const text = useMemo(() => {
         if (isMarked && colors[colorIndex]?.name) {
