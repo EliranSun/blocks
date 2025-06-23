@@ -20,7 +20,8 @@ export const useHighScore = (calendarName) => {
         allDays.forEach((date) => {
             const dateString = format(date, "yyyy-MM-dd");
             const storageKey = `${calendarName}_${dateString}`;
-            const isMarked = localStorage.getItem(storageKey) === 'true';
+            const storedValue = localStorage.getItem(storageKey);
+            const isMarked = storedValue !== "-1" && storedValue !== null;
 
             if (isMarked) {
                 currentStreak++;

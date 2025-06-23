@@ -2,6 +2,7 @@
 export const Calendars = [
     {
         name: "mood",
+        icon: "🌈",
         colors: [
             { className: "bg-amber-500", name: "great" },
             { className: "bg-orange-500", name: "good" },
@@ -12,6 +13,7 @@ export const Calendars = [
     },
     {
         name: "REM",
+        icon: "🌙",
         colors: [
             { className: "bg-blue-100", name: "0" },
             { className: "bg-blue-200", name: "30" },
@@ -23,6 +25,7 @@ export const Calendars = [
     },
     {
         name: "Deep",
+        icon: "💤",
         colors: [
             { className: "bg-indigo-100", name: "0" },
             { className: "bg-indigo-200", name: "15" },
@@ -35,15 +38,18 @@ export const Calendars = [
     {
         name: "css",
         isGamified: true,
+        icon: "🎭",
         colors: [{ className: "bg-amber-500" }],
     },
     {
         name: "read",
         isGamified: true,
+        icon: "📚",
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "loneliness",
+        icon: "💔",
         colors: [
             { className: "bg-cyan-100", name: "lonely" },
             { className: "bg-cyan-300", name: "neutral" },
@@ -53,38 +59,47 @@ export const Calendars = [
     },
     {
         name: "write",
+        icon: "📝",
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "draw",
+        icon: "🎨",
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "cinema",
+        icon: "🎥",
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "games",
+        icon: "🎮",
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "date",
+        icon: "💑",
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "sex",
+        icon: "💋",
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "trip",
+        icon: "🌍",
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "gestures",
+        icon: "👋",
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "house",
+        icon: "🏠",
         colors: [
             { className: "bg-red-500", name: "red" },
             { className: "bg-orange-500", name: "orange" },
@@ -96,6 +111,7 @@ export const Calendars = [
     },
     {
         name: "laundry",
+        icon: "🧺",
         colors: [
             { className: "bg-blue-500", name: "blue" },
             { className: "bg-green-500", name: "green" },
@@ -104,18 +120,22 @@ export const Calendars = [
     },
     {
         name: "cooking",
+        icon: "🍳",
         colors: [{ className: "bg-orange-500" }],
     },
     {
         name: "groceries",
+        icon: "🛒",
         colors: [{ className: "bg-emerald-500" }],
     },
     {
         name: "sheets",
+        icon: "🛏️",
         colors: [{ className: "bg-blue-500" }],
     },
     {
         name: "physiotherapy",
+        icon: "🏥",
         colors: [
             { className: "bg-red-200", name: "light" },
             { className: "bg-red-500", name: "medium" },
@@ -123,6 +143,7 @@ export const Calendars = [
     },
     {
         name: "workout",
+        icon: "🏋️",
         colors: [
             { className: "bg-red-500", name: "red" },
             { className: "bg-orange-500", name: "orange" },
@@ -131,6 +152,7 @@ export const Calendars = [
     },
     {
         name: "Friends",
+        icon: "👫",
         colors: [
             { className: "bg-purple-500", name: "maya" },
             { className: "bg-pink-500", name: "rotem" },
@@ -140,6 +162,7 @@ export const Calendars = [
     },
     {
         name: "family",
+        icon: "👪",
         colors: [
             { className: "bg-pink-400", name: "mom" },
             { className: "bg-blue-500", name: "dad" },
@@ -154,10 +177,12 @@ export const Calendars = [
     },
     {
         name: "scroll",
+        icon: "📜",
         colors: [{ className: "bg-yellow-900" }],
     },
     {
         name: "pron/mast",
+        icon: "👀",
         colors: [
             { className: "bg-orange-900", name: "orange" },
             { className: "bg-red-900", name: "red" },
@@ -165,6 +190,7 @@ export const Calendars = [
     },
     {
         name: "lie",
+        icon: "🤥",
         colors: [{ className: "bg-lime-900" }],
     }
 ];

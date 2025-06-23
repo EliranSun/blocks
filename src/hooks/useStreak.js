@@ -11,7 +11,14 @@ export const useStreak = (calendarName) => {
         // First check if today is marked - if not, no active streak
         const todayString = format(today, "yyyy-MM-dd");
         const todayKey = `${calendarName}_${todayString}`;
-        const isTodayMarked = localStorage.getItem(todayKey) === 'true';
+        const storedValue = localStorage.getItem(todayKey);
+        const isTodayMarked = storedValue !== "-1" && storedValue !== null;
+
+        console.debug({
+            isTodayMarked,
+            todayKey,
+            storedValue,
+        });
 
         if (!isTodayMarked) {
             return 0;
@@ -32,7 +39,8 @@ export const useStreak = (calendarName) => {
 
             const dateString = currentDate.toISOString().split('T')[0];
             const storageKey = `${calendarName}_${dateString}`;
-            const isMarked = localStorage.getItem(storageKey) === 'true';
+            const storedValue = localStorage.getItem(storageKey);
+            const isMarked = storedValue !== "-1" && storedValue !== null;
 
             if (!isMarked) {
                 break; // Break on first unmarked day

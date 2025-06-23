@@ -58,7 +58,6 @@ export const Cell = ({
 
     const currentColor = useMemo(() => {
         if (isMarked) {
-            debugger;
             return colors[colorIndex]?.className;
         }
         return null;
