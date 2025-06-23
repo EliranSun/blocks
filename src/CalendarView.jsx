@@ -159,7 +159,7 @@ export default function CalendarView() {
                         "flex fixed gap-2 mx-auto bottom-2 bg-neutral-900 p-4 max-w-96": true,
                         "items-center rounded-full z-10 shadow-xl": true,
                         "w-fit flex-col bottom-0 right-5": isCondensed,
-                        "flex-row w-full inset-x-0": !isCondensed
+                        "flex-row w-full inset-x-0 bottom-5": !isCondensed
                     })}
                 >
                     <div className={classNames({
