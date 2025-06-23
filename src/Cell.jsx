@@ -83,7 +83,7 @@ export const Cell = ({
         <div
             onClick={handleMark}
             className={classNames("rounded-md", currentColor, {
-                "size-12 flex items-center justify-center": !isCondensed,
+                "size-10 flex items-center justify-center": !isCondensed,
                 "size-2": isCondensed,
                 "bg-neutral-700": !isCellToday && !isMarked,
                 "border-3": isCellToday,
