@@ -71,9 +71,9 @@ export default function CalendarView() {
         <>
             <div className={classNames({
                 "flex fixed right-5 bottom-1 bg-neutral-900 p-4": true,
-                "items-center justify-between rounded-full shadow-xl": true,
-                "w-fit flex-col h-60": isCondensed,
-                "w-3/4 flex-row": !isCondensed
+                "items-center rounded-full shadow-xl": true,
+                "w-fit flex-col justify-between h-60": isCondensed,
+                "w-3/4 flex-row gap-1 mx-auto": !isCondensed
             })}>
                 <h1
                     className="text-xl px-2 font-bold cursor-pointer font-mono"
