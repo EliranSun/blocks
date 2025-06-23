@@ -1,14 +1,19 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { eachDayOfInterval, startOfYear, endOfYear, format } from 'date-fns';
 
-export const useHighScore = (calendarName) => {
-    const [highScore, setHighScore] = useState(() => {
-        // Initialize from localStorage if available
-        const saved = localStorage.getItem(`${calendarName}_highscore`);
-        return saved ? parseInt(saved, 10) : 0;
-    });
+export const useHighScore = (calendarName, isActive) => {
+    const [highScore, setHighScore] = useState(0);
+
+    useEffect(() => {
+        setHighScore(0);
+    }, [calendarName]);
 
     const calculateHighScore = useCallback(() => {
+        if (!isActive) {
+            setHighScore(0);
+            return;
+        }
+
         const start = startOfYear(new Date());
         const end = endOfYear(new Date());
         const allDays = eachDayOfInterval({ start, end });
@@ -34,9 +39,8 @@ export const useHighScore = (calendarName) => {
         // Update high score if we found a higher streak
         if (maxStreak > highScore) {
             setHighScore(maxStreak);
-            localStorage.setItem(`${calendarName}_highscore`, maxStreak.toString());
         }
-    }, [highScore, calendarName]);
+    }, [highScore, calendarName, isActive]);
 
     return { highScore, calculateHighScore };
 }; 

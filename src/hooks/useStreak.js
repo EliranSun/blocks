@@ -1,10 +1,15 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { subDays, startOfYear, isBefore, format } from 'date-fns';
 
-export const useStreak = (calendarName) => {
+export const useStreak = (calendarName, isActive) => {
     const [streak, setStreak] = useState(0);
 
     const calculateStreak = useCallback(() => {
+        if (!isActive) {
+            setStreak(0);
+            return;
+        }
+
         let currentStreak = 0;
         const today = new Date();
 
@@ -21,7 +26,8 @@ export const useStreak = (calendarName) => {
         });
 
         if (!isTodayMarked) {
-            return 0;
+            setStreak(0);
+            return;
         }
 
         // If today is marked, count backwards until we find an unmarked day
@@ -49,15 +55,8 @@ export const useStreak = (calendarName) => {
             currentStreak++;
         }
 
-        console.log({
-            currentStreak,
-            currentDate,
-            today,
-            todayString,
-            todayKey,
-        });
         setStreak(currentStreak);
-    }, [calendarName]);
+    }, [calendarName, isActive]);
 
     return { streak, calculateStreak };
 }; 
