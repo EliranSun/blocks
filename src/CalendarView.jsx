@@ -6,6 +6,16 @@ import { useStreak } from "./hooks/useStreak";
 import { useHighScore } from "./hooks/useHighScore";
 import { Cell } from "./Cell";
 import { Calendars } from "./constants";
+import { exportCalendarData, triggerImport } from "./utils/dataManager";
+import {
+    CaretLeftIcon,
+    CaretRightIcon,
+    DownloadSimpleIcon,
+    UploadSimpleIcon,
+    XIcon,
+    GridFourIcon,
+    RowsIcon
+} from "@phosphor-icons/react";
 
 const date = new Date();
 
@@ -88,6 +98,18 @@ export default function CalendarView() {
         }, 150);
     };
 
+    const handleExport = () => {
+        exportCalendarData();
+    };
+
+    const handleImport = () => {
+        triggerImport(false, () => {
+            // Refresh streak and high score after import
+            calculateStreak();
+            calculateHighScore();
+        });
+    };
+
     return (
         <>
             <div
@@ -98,9 +120,10 @@ export default function CalendarView() {
                 })}
             >
                 <button
-                    className="text-black bg-white rounded-full size-15 absolute bottom-5 right-5"
-                    onClick={() => setIsCalendarModalOpen(false)}>
-                    {'X'}
+                    className="text-black bg-white rounded-full size-12 absolute bottom-5 right-5 flex items-center justify-center hover:bg-gray-200 transition-colors"
+                    onClick={() => setIsCalendarModalOpen(false)}
+                    title="Close calendar selection">
+                    <XIcon size={20} weight="bold" />
                 </button>
                 <div className="w-full h-full">
                     {Calendars.map((cal) => (
@@ -121,27 +144,33 @@ export default function CalendarView() {
             <div>
                 <div
                     className={classNames({
-                        "flex fixed right-5 bottom-2 bg-neutral-900 p-4 w-full max-w-96": true,
+                        "flex fixed right-5 bottom-2 bg-neutral-900 p-4  max-w-96": true,
                         "items-center rounded-full z-10 justify-between shadow-xl": true,
-                        "w-fit flex-col h-60": isCondensed,
-                        "w-3/4 flex-row": !isCondensed
+                        "w-fit flex-col": isCondensed,
+                        "flex-row w-full": !isCondensed
                     })}
                 >
-                    <h1 className="text-xl px-2 font-bold cursor-pointer font-mono space-x-2">
+                    <h1 className={classNames("text-xl flex  px-2 font-bold cursor-pointer font-mono", {
+                        "flex-col justify-center": isCondensed,
+                        "flex-row items-center": !isCondensed
+                    })}>
                         <button
-                            className="text-black bg-white rounded-full size-10"
+                            className="text-black bg-white rounded-full size-10 flex items-center justify-center hover:bg-gray-200 transition-colors"
                             onClick={() => switchCalendar(-1)}>
-                            {'<'}
+                            <CaretLeftIcon size={15} weight="bold" />
                         </button>
                         <span
-                            className="text-xl px-2 font-bold cursor-pointer font-mono"
+                            className={classNames("text-xl font-bold  cursor-pointer font-mono hover:text-blue-400 transition-colors", {
+                                "w-10": isCondensed,
+                                "w-20 text-center": !isCondensed
+                            })}
                             onClick={() => setIsCalendarModalOpen(true)}>
                             {calendar.name.toUpperCase().slice(0, 4)}
                         </span>
                         <button
-                            className="text-black bg-white rounded-full size-10"
+                            className="text-black bg-white rounded-full size-10 flex items-center justify-center hover:bg-gray-200 transition-colors"
                             onClick={() => switchCalendar(1)}>
-                            {'>'}
+                            <CaretRightIcon size={15} weight="bold" />
                         </button>
                     </h1>
                     {calendar.isGamified && (
@@ -162,12 +191,32 @@ export default function CalendarView() {
                             </Motion>
                         </>
                     )}
-                    <button
-                        onClick={toggleView}
-                        className="p-4 bg-white text-black size-10 flex items-center justify-center rounded-full hover:bg-blue-600 transition-colors"
-                    >
-                        {isCondensed ? "+" : "-"}
-                    </button>
+                    <div className={classNames("flex gap-2", {
+                        "flex-col": isCondensed,
+                        "flex-row items-center": !isCondensed
+                    })}>
+                        <button
+                            onClick={handleExport}
+                            className="p-2 text-white size-10 flex items-center justify-center rounded-full hover:bg-blue-600 transition-colors"
+                            title="Export calendar data"
+                        >
+                            <UploadSimpleIcon size={18} weight="bold" />
+                        </button>
+                        <button
+                            onClick={handleImport}
+                            className="p-2 text-white size-10 flex items-center justify-center rounded-full hover:bg-blue-600 transition-colors"
+                            title="Import calendar data"
+                        >
+                            <DownloadSimpleIcon size={18} weight="bold" />
+                        </button>
+                        <button
+                            onClick={toggleView}
+                            className="p-2 bg-white text-black size-10 flex items-center justify-center rounded-full hover:bg-gray-200 transition-colors"
+                            title={isCondensed ? "Expand view" : "Condense view"}
+                        >
+                            {isCondensed ? <GridFourIcon size={18} weight="bold" /> : <RowsIcon size={18} weight="bold" />}
+                        </button>
+                    </div>
                 </div>
             </div>
             <div
