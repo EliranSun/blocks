@@ -91,7 +91,7 @@ export const Cell = ({
             {!isCondensed &&
                 <h1 className="flex flex-col items-center justify-center">
                     <span className={text ? "text-[8px]" : ""}>{dayText}</span>
-                    <span className="text-sm font-bold">{text}</span>
+                    {/* span className="text-sm font-bold">{text}</span>*/}
                 </h1>}
         </div>
     );
