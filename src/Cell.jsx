@@ -93,7 +93,7 @@ export const Cell = ({
                     onClick={handleMark}
                     className={classNames("rounded-md cursor-pointer", currentColor, {
                         "size-10 flex items-center justify-center": !isCondensed,
-                        "size-2": isCondensed,
+                        "size-3": isCondensed,
                         "bg-neutral-700": !isCellToday && !isMarked,
                         "border-3": isCellToday,
                     })}
