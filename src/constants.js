@@ -101,21 +101,21 @@ export const Calendars = [
         name: "house",
         icon: "🏠",
         colors: [
-            { className: "bg-red-500", name: "red" },
-            { className: "bg-orange-500", name: "orange" },
-            { className: "bg-yellow-500", name: "yellow" },
-            { className: "bg-green-500", name: "green" },
-            { className: "bg-blue-500", name: "blue" },
-            { className: "bg-purple-500", name: "purple" },
+            { className: "bg-red-500", name: "floor" },
+            { className: "bg-orange-500", name: "clean" },
+            { className: "bg-yellow-500", name: "towels" },
+            { className: "bg-green-500", name: "organize" },
+            { className: "bg-blue-500", name: "dishes" },
         ]
     },
     {
         name: "laundry",
         icon: "🧺",
         colors: [
-            { className: "bg-blue-500", name: "blue" },
-            { className: "bg-green-500", name: "green" },
-            { className: "bg-red-500", name: "red" },
+            { className: "bg-blue-500", name: "wash" },
+            { className: "bg-green-500", name: "dry" },
+            { className: "bg-red-500", name: "fold" },
+            { className: "bg-purple-500", name: "all" },
         ],
     },
     {
@@ -137,17 +137,18 @@ export const Calendars = [
         name: "physiotherapy",
         icon: "🏥",
         colors: [
-            { className: "bg-red-200", name: "light" },
-            { className: "bg-red-500", name: "medium" },
+            { className: "bg-red-200", name: "knee" },
+            { className: "bg-red-500", name: "ankle" },
+            { className: "bg-red-700", name: "all" },
         ],
     },
     {
         name: "workout",
         icon: "🏋️",
         colors: [
-            { className: "bg-red-500", name: "red" },
-            { className: "bg-orange-500", name: "orange" },
-            { className: "bg-yellow-500", name: "yellow" },
+            { className: "bg-red-500", name: "power" },
+            { className: "bg-orange-500", name: "cardio" },
+            { className: "bg-yellow-500", name: "yoga" },
         ],
     },
     {
@@ -184,8 +185,8 @@ export const Calendars = [
         name: "pron/mast",
         icon: "👀",
         colors: [
-            { className: "bg-orange-900", name: "orange" },
-            { className: "bg-red-900", name: "red" },
+            { className: "bg-orange-900", name: "pron" },
+            { className: "bg-red-900", name: "mast" },
         ],
     },
     {
