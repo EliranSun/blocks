@@ -13,7 +13,7 @@ export const Calendars = [
     },
     {
         name: "REM",
-        icon: "🌙",
+        icon: "🧠",
         colors: [
             { className: "bg-blue-100", name: "0" },
             { className: "bg-blue-200", name: "30" },
@@ -25,7 +25,7 @@ export const Calendars = [
     },
     {
         name: "Deep",
-        icon: "💤",
+        icon: "🦵",
         colors: [
             { className: "bg-indigo-100", name: "0" },
             { className: "bg-indigo-200", name: "15" },

@@ -8,7 +8,8 @@ export const Cell = ({
     calendarName,
     colors = [],
     isCondensed = false,
-    onCellMark
+    onCellMark,
+    showInfo = false
 }) => {
     const storageKey = useMemo(() => {
         // const dateString = format(date, "yyyy-MM-dd");
@@ -101,9 +102,9 @@ export const Cell = ({
                         opacity: interpolated.opacity
                     }}>
                     {!isCondensed &&
-                        <h1 className="flex flex-col items-center justify-center">
-                            <span className={text ? "text-[8px]" : ""}>{dayText}</span>
-                            {/* span className="text-sm font-bold">{text}</span>*/}
+                        <h1 className="flex flex-col items-center justify-center text-sm">
+                            <span>{dayText}</span>
+                            {showInfo && <span className="font-bold">{text}</span>}
                         </h1>}
                 </div>
             )}
