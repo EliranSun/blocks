@@ -3,6 +3,31 @@ import { format, isToday } from "date-fns";
 import { useMemo, useState, useCallback, useEffect } from "react";
 import { Motion, spring, presets } from "react-motion";
 
+const DayText = ({ dayText, text, showInfo, isStartOfMonth, isCondensed }) => {
+    if (isCondensed) {
+        return null;
+    }
+
+    if (isStartOfMonth) {
+        return <h1>{dayText}</h1>;
+    }
+
+    if (showInfo) {
+        return (
+            <h1 className="flex flex-col items-center justify-center text-xs">
+                <span>{dayText}</span>
+                <span className="font-bold">{text}</span>
+            </h1>
+        );
+    }
+
+    if (isStartOfMonth) {
+        return <h1>{dayText}</h1>;
+    }
+
+    return null;
+};
+
 export const Cell = ({
     cellDate,
     calendarName,
@@ -74,7 +99,7 @@ export const Cell = ({
         }
 
         return null;
-    }, [isMarked, colorIndex, colors, dayNumber, monthName]);
+    }, [isMarked, colorIndex, colors]);
 
     const dayText = useMemo(() => {
         if (dayNumber === "1") {
@@ -83,30 +108,39 @@ export const Cell = ({
         return dayNumber;
     }, [dayNumber, monthName]);
 
+    const isStartOfMonth = useMemo(() => isNaN(dayText), [dayText]);
+
     return (
         <Motion style={{
             scale: spring(isAnimating ? 1.2 : 1, presets.wobbly),
             opacity: spring(isMarked ? 1 : 0.9)
         }}>
             {interpolated => (
-                <div
-                    onClick={handleMark}
-                    className={classNames("cursor-pointer", currentColor, {
-                        "bg-neutral-700": !isCellToday && !isMarked,
-                        "size-10 flex items-center justify-center rounded-md": !isCondensed,
-                        "size-[9px] rounded-xs": isCondensed,
-                        "border-3": isCellToday && !isCondensed,
-                    })}
-                    style={{
-                        transform: `scale(${interpolated.scale})`,
-                        opacity: interpolated.opacity
-                    }}>
-                    {!isCondensed && showInfo &&
-                        <h1 className="flex flex-col items-center justify-center text-xs">
-                            <span>{dayText}</span>
-                            <span className="font-bold">{text}</span>
-                        </h1>}
-                </div>
+                <>
+                    {!isCondensed && isStartOfMonth && new Array(14).fill(null).map((_, index) => (
+                        <div key={index} className="size-8 bg-transparent rounded-md"></div>
+                    ))}
+                    <div
+                        onClick={handleMark}
+                        className={classNames("cursor-pointer", currentColor, {
+                            "bg-neutral-700": !isCellToday && !isMarked,
+                            "size-12 flex items-center justify-center rounded-md": !isCondensed,
+                            "size-[9px] rounded-xs": isCondensed,
+                            "border-3": isCellToday && !isCondensed,
+                        })}
+                        style={{
+                            transform: `scale(${interpolated.scale})`,
+                            opacity: interpolated.opacity
+                        }}>
+                        <DayText
+                            dayText={dayText}
+                            text={text}
+                            showInfo={showInfo}
+                            isStartOfMonth={isStartOfMonth}
+                            isCondensed={isCondensed}
+                        />
+                    </div>
+                </>
             )}
         </Motion>
     );
