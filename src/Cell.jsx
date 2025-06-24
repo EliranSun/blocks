@@ -91,20 +91,20 @@ export const Cell = ({
             {interpolated => (
                 <div
                     onClick={handleMark}
-                    className={classNames("rounded-md cursor-pointer", currentColor, {
-                        "size-10 flex items-center justify-center": !isCondensed,
-                        "size-3": isCondensed,
+                    className={classNames("cursor-pointer", currentColor, {
                         "bg-neutral-700": !isCellToday && !isMarked,
-                        "border-3": isCellToday,
+                        "size-8 flex items-center justify-center rounded-md": !isCondensed,
+                        "size-[9px] rounded-xs": isCondensed,
+                        "border-3": isCellToday && !isCondensed,
                     })}
                     style={{
                         transform: `scale(${interpolated.scale})`,
                         opacity: interpolated.opacity
                     }}>
-                    {!isCondensed &&
-                        <h1 className="flex flex-col items-center justify-center text-sm">
+                    {!isCondensed && showInfo &&
+                        <h1 className="flex flex-col items-center justify-center text-xs">
                             <span>{dayText}</span>
-                            {showInfo && <span className="font-bold">{text}</span>}
+                            <span className="font-bold">{text}</span>
                         </h1>}
                 </div>
             )}

@@ -19,20 +19,12 @@ export const useStreak = (calendarName, isActive) => {
         const storedValue = localStorage.getItem(todayKey);
         const isTodayMarked = storedValue !== "-1" && storedValue !== null;
 
-        console.debug({
-            isTodayMarked,
-            todayKey,
-            storedValue,
-        });
-
-        if (!isTodayMarked) {
-            setStreak(0);
-            return;
+        if (isTodayMarked) {
+            currentStreak = 1;
         }
 
         // If today is marked, count backwards until we find an unmarked day
         let currentDate = today;
-        currentStreak = 1; // Start at 1 since we know today is marked
 
         while (true) {
             // Get previous day
