@@ -180,7 +180,6 @@ export const Calendars = [
             { className: "bg-green-400", name: "ofek" },
             { className: "bg-blue-600", name: "or" },
             { className: "bg-indigo-500", name: "yahel" },
-            { className: "bg-violet-400", name: "modav" },
         ]
     },
     {
