@@ -47,8 +47,7 @@ export default function CalendarView({
                 setTimeout(() => {
                     todayCell.scrollIntoView({
                         behavior: "smooth",
-                        block: "center",
-                        inline: "center"
+                        block: "start",
                     });
                 }, 1000);
             }
