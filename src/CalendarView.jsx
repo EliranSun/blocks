@@ -57,7 +57,7 @@ export default function CalendarView({
 
     return (
         <div className="shrink-0">
-            {isCondensed && <h1 className="mb-4 text-sm text-center">{calendar.icon} {calendar.name}</h1>}
+            {isCondensed && <h1 className="mb-4 text-sm text-center">{calendar.icon} {calendar.name.slice(0,4)}</h1>}
             <div
                 ref={calendarRef}
                 className={classNames({
