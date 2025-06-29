@@ -29,7 +29,7 @@ const timeSinceLastActivity = (calendarName) => {
     const now = new Date().getTime();
 
     if (lastActivity > now) {
-        return NaN
+        return NaN;
     }
 
     const diffTime = Math.abs(now - lastActivity);
@@ -52,12 +52,12 @@ const Calendar = ({ calendar, setCalendar, setIsCalendarModalOpen }) => {
                     "border-white/30": isNaN(diffDays),
                     // Recent activity: green
                     "border-green-500 text-green-700 hover:text-green-600 active:text-green-600":
-                        diffDays === 0 || diffDays === 1,
+                        diffDays < 15,
                     // Moderate inactivity: amber/yellow
-                    "border-amber-400 text-amber-700 hover:text-amber-600 active:text-amber-600":
-                        diffDays > 1 && diffDays < 30,
+                    "border-amber-400 text-amber-400 hover:text-amber-400 active:text-amber-400":
+                        diffDays >= 15 && diffDays < 30,
                     // Long inactivity: red + grayscale
-                    "border-red-500 text-red-700 grayscale hover:text-red-600 active:text-red-600":
+                    "border-red-500 hover:text-red-500 active:text-red-500":
                         diffDays >= 30,
                 }
             )}
