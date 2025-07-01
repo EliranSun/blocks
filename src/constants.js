@@ -1,8 +1,37 @@
+import {
+    SmileyIcon,
+    BrainIcon,
+    MaskHappyIcon,
+    BookOpenIcon,
+    HeartBreakIcon,
+    PencilLineIcon,
+    PaintBrushIcon,
+    FilmSlateIcon,
+    GameControllerIcon,
+    HeartIcon,
+    GlobeIcon,
+    HandWavingIcon,
+    HouseIcon,
+    TShirtIcon,
+    CookingPotIcon,
+    ShoppingCartIcon,
+    BedIcon,
+    FirstAidKitIcon,
+    BarbellIcon,
+    UsersIcon,
+    UsersThreeIcon,
+    UsersFourIcon,
+    ScrollIcon,
+    EyeIcon,
+    SmileyXEyesIcon,
+    WineIcon,
+    PersonIcon
+} from "@phosphor-icons/react";
 
 export const Calendars = [
     {
         name: "mood",
-        icon: "🌈",
+        icon: SmileyIcon,
         colors: [
             { className: "bg-amber-500", name: "great" },
             { className: "bg-orange-500", name: "good" },
@@ -13,7 +42,7 @@ export const Calendars = [
     },
     {
         name: "REM",
-        icon: "🧠",
+        icon: BrainIcon,
         colors: [
             { className: "bg-blue-100", name: "0" },
             { className: "bg-blue-200", name: "30" },
@@ -25,7 +54,7 @@ export const Calendars = [
     },
     {
         name: "Deep",
-        icon: "🦵",
+        icon: PersonIcon,
         colors: [
             { className: "bg-indigo-100", name: "0" },
             { className: "bg-indigo-200", name: "15" },
@@ -38,18 +67,18 @@ export const Calendars = [
     {
         name: "css",
         isGamified: true,
-        icon: "🎭",
+        icon: MaskHappyIcon,
         colors: [{ className: "bg-amber-500" }],
     },
     {
         name: "read",
         isGamified: true,
-        icon: "📚",
+        icon: BookOpenIcon,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "loneliness",
-        icon: "💔",
+        icon: HeartBreakIcon,
         colors: [
             { className: "bg-cyan-100", name: "lonely" },
             { className: "bg-cyan-300", name: "neutral" },
@@ -59,47 +88,47 @@ export const Calendars = [
     },
     {
         name: "write",
-        icon: "📝",
+        icon: PencilLineIcon,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "draw",
-        icon: "🎨",
+        icon: PaintBrushIcon,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "cinema",
-        icon: "🎥",
+        icon: FilmSlateIcon,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "games",
-        icon: "🎮",
+        icon: GameControllerIcon,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "date",
-        icon: "💑",
+        icon: WineIcon,
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "sex",
-        icon: "💋",
+        icon: HeartIcon,
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "trip",
-        icon: "🌍",
+        icon: GlobeIcon,
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "gestures",
-        icon: "👋",
+        icon: HandWavingIcon,
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "house",
-        icon: "🏠",
+        icon: HouseIcon,
         colors: [
             { className: "bg-red-500", name: "floor" },
             { className: "bg-orange-500", name: "clean" },
@@ -110,7 +139,7 @@ export const Calendars = [
     },
     {
         name: "laundry",
-        icon: "🧺",
+        icon: TShirtIcon,
         colors: [
             { className: "bg-blue-500", name: "wash" },
             { className: "bg-green-500", name: "dry" },
@@ -120,22 +149,22 @@ export const Calendars = [
     },
     {
         name: "cooking",
-        icon: "🍳",
+        icon: CookingPotIcon,
         colors: [{ className: "bg-orange-500" }],
     },
     {
         name: "groceries",
-        icon: "🛒",
+        icon: ShoppingCartIcon,
         colors: [{ className: "bg-emerald-500" }],
     },
     {
         name: "sheets",
-        icon: "🛏️",
+        icon: BedIcon,
         colors: [{ className: "bg-blue-500" }],
     },
     {
         name: "physiotherapy",
-        icon: "🏥",
+        icon: FirstAidKitIcon,
         colors: [
             { className: "bg-red-200", name: "knee" },
             { className: "bg-red-500", name: "ankle" },
@@ -144,7 +173,7 @@ export const Calendars = [
     },
     {
         name: "workout",
-        icon: "🏋️",
+        icon: BarbellIcon,
         colors: [
             { className: "bg-red-500", name: "power" },
             { className: "bg-orange-500", name: "cardio" },
@@ -153,7 +182,7 @@ export const Calendars = [
     },
     {
         name: "Friends",
-        icon: "👫",
+        icon: UsersIcon,
         colors: [
             { className: "bg-purple-500", name: "maya" },
             { className: "bg-pink-500", name: "rotem" },
@@ -163,7 +192,7 @@ export const Calendars = [
     },
     {
         name: "family",
-        icon: "👪",
+        icon: UsersThreeIcon,
         colors: [
             { className: "bg-pink-400", name: "mom" },
             { className: "bg-blue-500", name: "dad" },
@@ -173,7 +202,7 @@ export const Calendars = [
     },
     {
         name: "sibs",
-        icon: "👨‍👩‍👧‍👦",
+        icon: UsersFourIcon,
         colors: [
             { className: "bg-purple-400", name: "sahar" },
             { className: "bg-pink-300", name: "shachar" },
@@ -184,12 +213,12 @@ export const Calendars = [
     },
     {
         name: "scroll",
-        icon: "📜",
+        icon: ScrollIcon,
         colors: [{ className: "bg-yellow-900" }],
     },
     {
         name: "pron/mast",
-        icon: "👀",
+        icon: EyeIcon,
         colors: [
             { className: "bg-orange-900", name: "pron" },
             { className: "bg-red-900", name: "mast" },
@@ -197,7 +226,7 @@ export const Calendars = [
     },
     {
         name: "lie",
-        icon: "🤥",
+        icon: SmileyXEyesIcon,
         colors: [{ className: "bg-lime-900" }],
     }
 ];

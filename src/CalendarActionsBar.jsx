@@ -57,6 +57,8 @@ export const CalendarActionsBar = ({
         triggerImport(false);
     };
 
+    const Icon = calendar.icon;
+
     return (
         <>
 
@@ -105,12 +107,13 @@ export const CalendarActionsBar = ({
                         <CaretLeftIcon size={15} weight="bold" />
                     </Button>
                     <h1
+                        onClick={() => setIsCalendarModalOpen(true)}
                         className={classNames("font-bold text-center cursor-pointer font-mono hover:text-blue-400 transition-colors", {
                             // "w-10": isCondensed,
+                            "flex items-center justify-center": true,
                             "w-15": true
-                        })}
-                        onClick={() => setIsCalendarModalOpen(true)}>
-                        {calendar.icon}
+                        })}>
+                        <Icon size={20} color="black" weight="bold" />
                     </h1>
                     <Button
                         onClick={() => switchCalendar(1)}>

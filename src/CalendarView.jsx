@@ -54,11 +54,15 @@ export default function CalendarView({
         }
     }, [calendarRef, firstDayOfYear, isCondensed]);
 
+    const Icon = calendar.icon;
 
     return (
         <div className="shrink-0">
-            {isCondensed && <h1 className="mb-4 text-sm font-mono text-center">
-                {calendar.icon} {calendar.name.slice(0,4).toUpperCase()}</h1>}
+            {isCondensed &&
+                <h1 className="mb-4 text-sm font-mono text-center flex items-center justify-center gap-2">
+                    <Icon size={16} />
+                    <span className="">{calendar.name.slice(0, 4).toUpperCase()}</span>
+                </h1>}
             <div
                 ref={calendarRef}
                 className={classNames({

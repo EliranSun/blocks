@@ -45,11 +45,17 @@ const Calendar = ({ calendar, setCalendar, setIsCalendarModalOpen }) => {
         return timeSinceLastActivity(calendar.name);
     }, [calendar.name]);
 
+    const Icon = calendar.icon;
+
     return (
         <div
             key={calendar.name}
+            onClick={() => {
+                setCalendar(calendar);
+                setIsCalendarModalOpen(false);
+            }}
             className={classNames(
-                "font-bold h-15 border text-xs flex items-center justify-center rounded-md",
+                "font-bold h-15 border flex flex-col items-center justify-center rounded-md",
                 {
                     "border-white/30": isNaN(diffDays),
                     // Recent activity: green
@@ -62,14 +68,10 @@ const Calendar = ({ calendar, setCalendar, setIsCalendarModalOpen }) => {
                     "border-red-400 hover:text-red-500 text-red-400":
                         diffDays >= 30,
                 }
-            )}
-            onClick={() => {
-                setCalendar(calendar);
-                setIsCalendarModalOpen(false);
-            }}>
-            <span className="text-left">
-                {calendar.name.toUpperCase().slice(0, 4)}
-                {/* {calendar.icon} */}
+            )}>
+            <Icon size={20} />
+            <span className="text-[8px] opacity-50">
+                {calendar.name.toUpperCase().slice(0, 3)}
             </span>
         </div>
     )
