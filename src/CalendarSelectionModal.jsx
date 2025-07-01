@@ -80,7 +80,7 @@ export default function CalendarSelectionModal({
 }) {
     return (
         <div
-            className={classNames("fixed top-0 left-0 w-full h-full backdrop-blur-xl z-50 p-4", {
+            className={classNames("fixed top-0 left-0 w-full h-full backdrop-brightness-50 backdrop-blur-xl z-50 p-4", {
                 "transition-opacity duration-300": true,
                 "opacity-0 pointer-events-none": !isCalendarModalOpen,
                 "opacity-100 pointer-events-auto": isCalendarModalOpen,
