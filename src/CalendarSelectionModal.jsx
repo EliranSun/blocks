@@ -51,7 +51,7 @@ const Calendar = ({ calendar, setCalendar, setIsCalendarModalOpen }) => {
                 {
                     "border-white/30": isNaN(diffDays),
                     // Recent activity: green
-                    "border-green-500 text-green-700 hover:text-green-600 active:text-green-600":
+                    "border-green-500 text-green-500 hover:text-green-600 active:text-green-600":
                         diffDays < 15,
                     // Moderate inactivity: amber/yellow
                     "border-amber-400 text-amber-400 hover:text-amber-400 active:text-amber-400":
