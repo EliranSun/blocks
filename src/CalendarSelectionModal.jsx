@@ -3,6 +3,7 @@ import { Button } from "./Button";
 import { XIcon } from "@phosphor-icons/react";
 import classNames from "classnames";
 import { useMemo } from "react";
+import { isAfter } from "date-fns";
 
 const getStorageByPrefix = (prefix) => {
     return Object
@@ -28,7 +29,7 @@ const timeSinceLastActivity = (calendarName) => {
     const lastActivity = calendarData.at(0).date;
     const now = new Date().getTime();
 
-    if (lastActivity > now) {
+    if (isAfter(lastActivity, now)) {
         return NaN;
     }
 
