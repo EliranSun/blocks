@@ -8,7 +8,7 @@ import classNames from "classnames";
 function App() {
   const [calendar, setCalendar] = useState(Calendars[0]);
   const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(true);
-  const [isCondensed, setIsCondensed] = useState(true);
+  const [isCondensed, setIsCondensed] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [isStreakToggled, setStreakToggled] = useState(false);
