@@ -10,7 +10,6 @@ import {
     GameControllerIcon,
     HeartIcon,
     GlobeIcon,
-    HandWavingIcon,
     HouseIcon,
     TShirtIcon,
     CookingPotIcon,
@@ -25,7 +24,8 @@ import {
     EyeIcon,
     SmileyXEyesIcon,
     WineIcon,
-    PersonIcon
+    PersonIcon,
+    GiftIcon
 } from "@phosphor-icons/react";
 
 export const Calendars = [
@@ -123,7 +123,7 @@ export const Calendars = [
     },
     {
         name: "gestures",
-        icon: HandWavingIcon,
+        icon: GiftIcon,
         colors: [{ className: "bg-purple-500" }],
     },
     {
