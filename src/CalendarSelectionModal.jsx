@@ -26,7 +26,7 @@ const timeSinceLastActivity = (calendarName) => {
         return "Never";
     }
 
-    const lastActivity = calendarData.at(0).date;
+    const lastActivity = calendarData.find(item => item.value !== -1)?.date;
     const now = new Date().getTime();
 
     if (isAfter(lastActivity, now)) {
