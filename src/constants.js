@@ -35,9 +35,9 @@ export const Calendars = [
         colors: [
             { className: "bg-amber-500", name: "great" },
             { className: "bg-orange-600", name: "good" },
-            { className: "bg-red-600", name: "ok" },
-            { className: "bg-blue-600", name: "bad" },
-            { className: "bg-purple-600", name: "awful" },
+            { className: "bg-red-700", name: "ok" },
+            { className: "bg-blue-800", name: "bad" },
+            { className: "bg-purple-900", name: "awful" },
         ]
     },
     {
