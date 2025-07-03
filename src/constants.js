@@ -56,12 +56,12 @@ export const Calendars = [
         name: "Deep",
         icon: PersonIcon,
         colors: [
-            { className: "bg-indigo-100", name: "0" },
-            { className: "bg-indigo-200", name: "15" },
+            { className: "bg-indigo-50", name: "0" },
+            { className: "bg-indigo-100", name: "15" },
             { className: "bg-indigo-300", name: "30" },
-            { className: "bg-indigo-400", name: "45" },
-            { className: "bg-indigo-500", name: "100" },
-            { className: "bg-indigo-600", name: "115" },
+            { className: "bg-indigo-500", name: "45" },
+            { className: "bg-indigo-700", name: "100" },
+            { className: "bg-indigo-950", name: "115" },
         ]
     },
     {
