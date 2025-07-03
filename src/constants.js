@@ -45,11 +45,11 @@ export const Calendars = [
         icon: BrainIcon,
         colors: [
             { className: "bg-blue-100", name: "0" },
-            { className: "bg-blue-200", name: "30" },
-            { className: "bg-blue-300", name: "100" },
-            { className: "bg-blue-400", name: "130" },
-            { className: "bg-blue-500", name: "200" },
-            { className: "bg-blue-600", name: "230" },
+            { className: "bg-blue-300", name: "30" },
+            { className: "bg-blue-500", name: "100" },
+            { className: "bg-blue-700", name: "130" },
+            { className: "bg-blue-800", name: "200" },
+            { className: "bg-blue-950", name: "230" },
         ]
     },
     {
