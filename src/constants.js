@@ -44,11 +44,11 @@ export const Calendars = [
         name: "REM",
         icon: BrainIcon,
         colors: [
-            { className: "bg-blue-100", name: "0" },
-            { className: "bg-blue-300", name: "30" },
-            { className: "bg-blue-500", name: "100" },
-            { className: "bg-blue-700", name: "130" },
-            { className: "bg-blue-800", name: "200" },
+            { className: "bg-blue-50", name: "0" },
+            { className: "bg-blue-100", name: "30" },
+            { className: "bg-blue-300", name: "100" },
+            { className: "bg-blue-500", name: "130" },
+            { className: "bg-blue-700", name: "200" },
             { className: "bg-blue-950", name: "230" },
         ]
     },
