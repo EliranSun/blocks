@@ -30,7 +30,6 @@ const timeSinceLastActivity = (calendarName) => {
     const now = new Date().getTime();
 
     if (isAfter(lastActivity, now)) {
-        alert(JSON.stringify({ calendarName, lastActivity, now }));
         return NaN;
     }
 
