@@ -78,16 +78,16 @@ export const Calendars = [
     {
         name: "Weight",
         icon: ScalesIcon,
-  colors: [
+  "colors": [
     { "className": "bg-green-400", "name": "70" },
-    { "className": "bg-teal-400", "name": "71" },
-    { "className": "bg-cyan-400", "name": "72" },
-    { "className": "bg-sky-400", "name": "73" },
-    { "className": "bg-sky-500", "name": "74" },
-    { "className": "bg-blue-500", "name": "75" },
-    { "className": "bg-blue-600", "name": "76" },
-    { "className": "bg-indigo-500", "name": "77" },
-    { "className": "bg-indigo-600", "name": "78" }
+    { "className": "bg-lime-400", "name": "71" },
+    { "className": "bg-yellow-400", "name": "72" },
+    { "className": "bg-amber-400", "name": "73" },
+    { "className": "bg-orange-400", "name": "74" },
+    { "className": "bg-orange-500", "name": "75" },
+    { "className": "bg-red-400", "name": "76" },
+    { "className": "bg-red-500", "name": "77" },
+    { "className": "bg-red-600", "name": "78" }
   ]
     },
     {
