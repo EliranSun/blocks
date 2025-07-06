@@ -26,7 +26,7 @@ import {
     WineIcon,
     PersonIcon,
     GiftIcon,
-    ScaledIcon,
+    ScalesIcon
 } from "@phosphor-icons/react";
 
 export const Calendars = [
