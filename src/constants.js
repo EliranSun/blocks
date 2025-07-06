@@ -78,8 +78,7 @@ export const Calendars = [
     {
         name: "Weight",
         icon: ScalesIcon,
-        {
-  "colors": [
+  colors: [
     { "className": "bg-green-400", "name": "70" },
     { "className": "bg-teal-400", "name": "71" },
     { "className": "bg-cyan-400", "name": "72" },
@@ -90,7 +89,6 @@ export const Calendars = [
     { "className": "bg-indigo-500", "name": "77" },
     { "className": "bg-indigo-600", "name": "78" }
   ]
-}
     },
     {
         name: "css",
