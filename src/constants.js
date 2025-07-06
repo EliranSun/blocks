@@ -25,7 +25,8 @@ import {
     SmileyXEyesIcon,
     WineIcon,
     PersonIcon,
-    GiftIcon
+    GiftIcon,
+    ScaledIcon,
 } from "@phosphor-icons/react";
 
 export const Calendars = [
@@ -38,6 +39,16 @@ export const Calendars = [
             { className: "bg-red-700", name: "ok" },
             { className: "bg-blue-800", name: "bad" },
             { className: "bg-purple-900", name: "awful" },
+        ]
+    },
+    {
+        name: "loneliness",
+        icon: HeartBreakIcon,
+        colors: [
+            { className: "bg-cyan-100", name: "lonely" },
+            { className: "bg-cyan-300", name: "neutral" },
+            { className: "bg-cyan-500", name: "belong" },
+            { className: "bg-sky-500", name: "giving" },
         ]
     },
     {
@@ -65,6 +76,23 @@ export const Calendars = [
         ]
     },
     {
+        name: "Weight",
+        icon: ScalesIcon,
+        {
+  "colors": [
+    { "className": "bg-green-400", "name": "70" },
+    { "className": "bg-teal-400", "name": "71" },
+    { "className": "bg-cyan-400", "name": "72" },
+    { "className": "bg-sky-400", "name": "73" },
+    { "className": "bg-sky-500", "name": "74" },
+    { "className": "bg-blue-500", "name": "75" },
+    { "className": "bg-blue-600", "name": "76" },
+    { "className": "bg-indigo-500", "name": "77" },
+    { "className": "bg-indigo-600", "name": "78" }
+  ]
+}
+    },
+    {
         name: "css",
         isGamified: true,
         icon: MaskHappyIcon,
@@ -76,16 +104,7 @@ export const Calendars = [
         icon: BookOpenIcon,
         colors: [{ className: "bg-green-500" }],
     },
-    {
-        name: "loneliness",
-        icon: HeartBreakIcon,
-        colors: [
-            { className: "bg-cyan-100", name: "lonely" },
-            { className: "bg-cyan-300", name: "neutral" },
-            { className: "bg-cyan-500", name: "belong" },
-            { className: "bg-sky-500", name: "giving" },
-        ]
-    },
+    
     {
         name: "write",
         icon: PencilLineIcon,
