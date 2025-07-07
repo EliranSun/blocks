@@ -1,13 +1,16 @@
+/* eslint-disable */
+
 import CalendarView from "./CalendarView";
 import { Calendars } from "./constants";
 import { useState } from "react";
 import CalendarSelectionModal from "./CalendarSelectionModal";
 import { CalendarActionsBar } from "./CalendarActionsBar";
 import classNames from "classnames";
+import { HabitView } from "./HabitView";
 
 function App() {
   const [calendar, setCalendar] = useState(Calendars[0]);
-  const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(true);
+  const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
   const [isCondensed, setIsCondensed] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
@@ -22,15 +25,17 @@ function App() {
 
   return (
     <>
-      <section className={classNames("w-full flex items-center overflow-x-auto", {
+      <HabitView calendar={calendar} />
+      {/* <section className={classNames("w-full flex items-center overflow-x-auto", {
         "justify-start gap-4": isCondensed,
         "justify-center": !isCondensed
       })}>
         {isCondensed ?
           Calendars.map((c) => <CalendarView key={c.name} calendar={c} isCondensed {...CalendarProps} />) :
           <CalendarView {...CalendarProps} calendar={calendar} />}
-      </section>
-      <CalendarActionsBar
+      </section> */}
+
+      {/* <CalendarActionsBar
         calendar={calendar}
         setCalendar={setCalendar}
         isCondensed={isCondensed}
@@ -40,7 +45,7 @@ function App() {
         showInfo={showInfo}
         setShowInfo={setShowInfo}
         isStreakToggled={isStreakToggled}
-        setIsCalendarModalOpen={setIsCalendarModalOpen} />
+        setIsCalendarModalOpen={setIsCalendarModalOpen} /> */}
 
       <CalendarSelectionModal
         isCalendarModalOpen={isCalendarModalOpen}

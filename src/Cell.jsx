@@ -15,7 +15,7 @@ const DayText = ({ dayText, text, showInfo, isStartOfMonth, isCondensed }) => {
     if (showInfo) {
         return (
             <h1 className="flex flex-col items-center justify-center text-xs">
-                <span>{dayText}</span>
+                <span className="text-white">{dayText}</span>
                 <span className="font-bold">{text}</span>
             </h1>
         );
@@ -33,8 +33,9 @@ export const Cell = ({
     calendarName,
     colors = [],
     isCondensed = false,
-    onCellMark,
-    showInfo = false
+    onCellMark = () => { },
+    showInfo = false,
+    triggerMark
 }) => {
     const storageKey = useMemo(() => {
         // const dateString = format(date, "yyyy-MM-dd");
@@ -93,6 +94,12 @@ export const Cell = ({
         return null;
     }, [isMarked, colors, colorIndex, storageKey]);
 
+    useEffect(() => {
+        if (triggerMark > 0 && isCellToday) {
+            handleMark(true);
+        }
+    }, [triggerMark, isCellToday]);
+
     const text = useMemo(() => {
         if (isMarked && colors[colorIndex]?.name) {
             return colors[colorIndex]?.name.slice(0, 3);
@@ -121,12 +128,18 @@ export const Cell = ({
                         <div key={index} className="size-8 bg-transparent rounded-md"></div>
                     ))}
                     <div
-                        onClick={handleMark}
+                        onClick={() => {
+                            if (triggerMark > 0) {
+                                return;
+                            }
+
+                            handleMark();
+                        }}
                         className={classNames("cursor-pointer", currentColor, {
                             "bg-neutral-700": !isCellToday && !isMarked,
                             "size-12 flex items-center justify-center rounded-md": !isCondensed,
                             "size-[9px] rounded-xs": isCondensed,
-                            "border-3": isCellToday && !isCondensed,
+                            "border-1 shadow": isCellToday,
                         })}
                         style={{
                             transform: `scale(${interpolated.scale})`,

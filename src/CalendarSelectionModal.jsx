@@ -2,48 +2,10 @@ import { Calendars } from "./constants";
 import { Button } from "./Button";
 import { XIcon } from "@phosphor-icons/react";
 import classNames from "classnames";
-import { useMemo } from "react";
-import { isAfter } from "date-fns";
-
-const getStorageByPrefix = (prefix) => {
-    return Object
-        .keys(localStorage)
-        .filter(key => key.toLowerCase().startsWith(prefix.toLowerCase()))
-        .map(key => {
-            const data = JSON.parse(localStorage.getItem(key));
-            return {
-                date: new Date(key.split("_")[1]).getTime(),
-                value: data
-            }
-        })
-        .sort((a, b) => b.date - a.date);
-}
-
-const timeSinceLastActivity = (calendarName) => {
-    const calendarData = getStorageByPrefix(calendarName + "_");
-
-    if (calendarData.length === 0) {
-        return "Never";
-    }
-
-    const lastActivity = calendarData.find(item => item.value !== -1)?.date;
-    const now = new Date().getTime();
-
-    if (isAfter(lastActivity, now)) {
-        return NaN;
-    }
-
-    const diffTime = Math.abs(now - lastActivity);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-    return diffDays;
-};
+import { useTimeSince } from "./hooks/useTimeSince";
 
 const Calendar = ({ calendar, setCalendar, setIsCalendarModalOpen }) => {
-    const diffDays = useMemo(() => {
-        return timeSinceLastActivity(calendar.name);
-    }, [calendar.name]);
-
+    const diffDays = useTimeSince(calendar.name);
     const Icon = calendar.icon;
 
     return (
