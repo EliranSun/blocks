@@ -6,6 +6,8 @@ import classNames from "classnames";
 import { useTimeSince } from "./hooks/useTimeSince";
 import CalendarView from "./CalendarView";
 import { Motion, spring } from "react-motion";
+import { getStorageKey } from "./utils/strorage";
+import { isSameDay } from "date-fns";
 
 export function HabitTile({ calendar }) {
     const { streak, calculateStreak } = useStreak(calendar.name, true);
@@ -13,6 +15,7 @@ export function HabitTile({ calendar }) {
     const calendarColors = useMemo(() => Calendars.find(c => c.name === calendar.name)?.colors, [calendar.name]);
     const [isPressed, setIsPressed] = useState(false);
     const [triggerMark, setTriggerMark] = useState(0);
+    const [todayValue, setTodayValue] = useState(localStorage.getItem(getStorageKey(calendar.name, new Date())) || "-1");
 
     useEffect(calculateStreak, [calendar.name]);
 
@@ -21,7 +24,11 @@ export function HabitTile({ calendar }) {
     const handleClick = () => {
         setIsPressed(true);
         setTriggerMark(triggerMark + 1);
-        setTimeout(() => setIsPressed(false), 200);
+        setTimeout(() => {
+            setIsPressed(false);
+            const value = localStorage.getItem(getStorageKey(calendar.name, new Date())) || "-1";
+            setTodayValue(value);
+        }, 200);
     };
 
     return (
@@ -54,7 +61,9 @@ export function HabitTile({ calendar }) {
                     </span>
                     <div className="space-y-1">
                         <h1 className="text-base uppercase font-bold">
-                            {calendar.cols ? calendar.name : calendar.name.slice(0, 5)}
+                            {todayValue !== "-1" && calendar.colors[todayValue].name
+                                ? calendar.colors[todayValue].name
+                                : calendar.cols ? calendar.name : calendar.name.slice(0, 6)}
                         </h1>
                         <CalendarView
                             isCondensed

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HabitTile } from "./HabitTile";
-import { isToday } from "date-fns";
+// import { isToday } from "date-fns";
 import { Calendars } from "./constants";
 import { useHabitsByDay } from "./hooks/useHabitsByDay";
 import classNames from "classnames";
@@ -38,28 +38,28 @@ export const HabitView = () => {
 
     return (
         <div className="flex flex-col space-y-8 w-full justify-center items-center">
-            <h1 className="text-base font-bold font-mono text-center">
-                {isToday(date)
-                    ? "Today"
-                    : date.toLocaleDateString("en-US", {
+            <div className="flex flex-col justify-center items-center space-y-4">
+                <h1 className="text-base font-bold font-mono text-center">
+                    {date.toLocaleDateString("en-US", {
                         weekday: "long",
                         month: "long",
                         day: "numeric"
                     })}
-            </h1>
-            <div className="flex flex-row gap-2">
-                {habitsByDay.map(item => {
-                    const Icon = item.calendar.icon;
-                    return (
-                        <Icon
-                            key={item.key}
-                            size={20}
-                            className={classNames({
-                                "text-amber-500": item.calendar.primaryColor === "amber",
-                                "text-green-500": item.calendar.primaryColor === "green",
-                            })} />
-                    );
-                })}
+                </h1>
+                <div className="flex flex-row gap-2">
+                    {habitsByDay.map(item => {
+                        const Icon = item.calendar.icon;
+                        return (
+                            <Icon
+                                key={item.key}
+                                size={20}
+                                className={classNames({
+                                    "text-amber-500": item.calendar.primaryColor === "amber",
+                                    "text-green-500": item.calendar.primaryColor === "green",
+                                })} />
+                        );
+                    })}
+                </div>
             </div>
             {Categories.map(category => (
                 <div className="space-y-4 my-4">

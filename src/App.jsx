@@ -35,7 +35,7 @@ function App() {
           <CalendarView {...CalendarProps} calendar={calendar} />}
       </section> */}
 
-      {/* <CalendarActionsBar
+      <CalendarActionsBar
         calendar={calendar}
         setCalendar={setCalendar}
         isCondensed={isCondensed}
@@ -45,7 +45,7 @@ function App() {
         showInfo={showInfo}
         setShowInfo={setShowInfo}
         isStreakToggled={isStreakToggled}
-        setIsCalendarModalOpen={setIsCalendarModalOpen} /> */}
+        setIsCalendarModalOpen={setIsCalendarModalOpen} />
 
       <CalendarSelectionModal
         isCalendarModalOpen={isCalendarModalOpen}
