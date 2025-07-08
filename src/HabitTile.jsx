@@ -76,11 +76,13 @@ export function HabitTile({ calendar }) {
                         />
                         {calendar.isGamified && streak > 0 &&
                             <span className="text-xs font-mono absolute top-4 right-3">
-                                {streak}🔥
+                                {streak}
+                                <span className="text-red-500">⽕</span>
                             </span>}
                         {calendar.showTimeAgo && diffDays > 0 &&
-                            <span className="text-xs font-mono absolute bottom-4 right-3">
+                            <span className="text-xs font-mono absolute top-4 right-3">
                                 {diffDays}
+                                <span className="text-gray-500">永</span>
                             </span>}
                     </div>
                 </div>
