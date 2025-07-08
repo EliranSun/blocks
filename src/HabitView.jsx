@@ -4,7 +4,7 @@ import { HabitTile } from "./HabitTile";
 import { Calendars } from "./constants";
 import { useHabitsByDay } from "./hooks/useHabitsByDay";
 import classNames from "classnames";
-import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
+import { ArrowLeftIcon, ArrowRightIcon, HandPeaceIcon } from "@phosphor-icons/react";
 import { Quotes } from "./Quotes";
 
 const Categories = [
@@ -98,6 +98,7 @@ export const HabitView = () => {
                         </div>}
                 </>
             ))}
+            <HandPeaceIcon size={100} />
         </div>
     );
 }
