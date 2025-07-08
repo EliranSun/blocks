@@ -1,23 +1,23 @@
-/* eslint-disable */
 import { useStreak } from "./hooks/useStreak";
-import { useEffect, useMemo, useState } from "react";
-import { Calendars } from "./constants";
+import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { useTimeSince } from "./hooks/useTimeSince";
 import CalendarView from "./CalendarView";
 import { Motion, spring } from "react-motion";
 import { getStorageKey } from "./utils/strorage";
-import { isSameDay } from "date-fns";
 
-export function HabitTile({ calendar }) {
+export function HabitTile({ calendar, date = new Date() }) {
     const { streak, calculateStreak } = useStreak(calendar.name, true);
     const diffDays = useTimeSince(calendar.name);
-    const calendarColors = useMemo(() => Calendars.find(c => c.name === calendar.name)?.colors, [calendar.name]);
     const [isPressed, setIsPressed] = useState(false);
     const [triggerMark, setTriggerMark] = useState(0);
-    const [todayValue, setTodayValue] = useState(localStorage.getItem(getStorageKey(calendar.name, new Date())) || "-1");
+    const [todayValue, setTodayValue] = useState("-1");
 
     useEffect(calculateStreak, [calendar.name]);
+
+    useEffect(() => {
+        setTodayValue(localStorage.getItem(getStorageKey(calendar.name, date)) || "-1");
+    }, [date]);
 
     const Icon = calendar.icon;
 
@@ -26,7 +26,7 @@ export function HabitTile({ calendar }) {
         setTriggerMark(triggerMark + 1);
         setTimeout(() => {
             setIsPressed(false);
-            const value = localStorage.getItem(getStorageKey(calendar.name, new Date())) || "-1";
+            const value = localStorage.getItem(getStorageKey(calendar.name, date)) || "-1";
             setTodayValue(value);
         }, 200);
     };
@@ -70,6 +70,7 @@ export function HabitTile({ calendar }) {
                             hideTitle
                             showInfo
                             flex
+                            date={date}
                             triggerMark={triggerMark}
                             limitInDays={calendar.cols ? 17 : 7}
                             calendar={calendar}

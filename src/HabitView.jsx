@@ -4,6 +4,7 @@ import { HabitTile } from "./HabitTile";
 import { Calendars } from "./constants";
 import { useHabitsByDay } from "./hooks/useHabitsByDay";
 import classNames from "classnames";
+import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 
 const Categories = [
     {
@@ -33,20 +34,28 @@ const Categories = [
 ]
 
 export const HabitView = () => {
-    const [date] = useState(new Date());
+    const [date, setDate] = useState(new Date());
     const habitsByDay = useHabitsByDay(date);
 
     return (
         <div className="flex flex-col space-y-8 w-full justify-center items-center">
             <div className="flex flex-col justify-center items-center space-y-4">
-                <h1 className="text-base font-bold font-mono text-center">
-                    {date.toLocaleDateString("en-US", {
-                        weekday: "long",
-                        month: "long",
-                        day: "numeric"
-                    })}
+                <h1 className="text-base font-bold font-mono opacity-80 text-center flex justify-between gap-10">
+                    <button onClick={() => setDate(new Date(date.setDate(date.getDate() - 1)))}>
+                        <ArrowLeftIcon size={20} />
+                    </button>
+                    <span>
+                        {date.toLocaleDateString("en-US", {
+                            weekday: "long",
+                            month: "long",
+                            day: "numeric"
+                        })}
+                    </span>
+                    <button onClick={() => setDate(new Date(date.setDate(date.getDate() + 1)))}>
+                        <ArrowRightIcon size={20} />
+                    </button>
                 </h1>
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-row gap-2 h-9">
                     {habitsByDay.map(item => {
                         const Icon = item.calendar.icon;
                         return (
@@ -75,7 +84,7 @@ export const HabitView = () => {
                                 "col-span-3": calendar.cols === 3,
                                 "col-span-2": calendar.cols === 2,
                             })}>
-                                <HabitTile key={calendar.name} calendar={calendar} />
+                                <HabitTile key={calendar.name} calendar={calendar} date={date} />
                             </div>
                         ))}
                     </div>

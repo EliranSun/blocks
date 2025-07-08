@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { format, isToday } from "date-fns";
+import { format, isSameDay } from "date-fns";
 import { useMemo, useState, useCallback, useEffect } from "react";
 import { Motion, spring, presets } from "react-motion";
 
@@ -35,7 +35,8 @@ export const Cell = ({
     isCondensed = false,
     onCellMark = () => { },
     showInfo = false,
-    triggerMark
+    triggerMark,
+    selectedDate = new Date()
 }) => {
     const storageKey = useMemo(() => {
         // const dateString = format(date, "yyyy-MM-dd");
@@ -55,7 +56,7 @@ export const Cell = ({
         setColorIndex(saved ? JSON.parse(saved) : -1);
     }, [storageKey]);
 
-    const isCellToday = useMemo(() => isToday(cellDate), [cellDate]);
+    const isCellSelected = useMemo(() => isSameDay(cellDate, selectedDate), [cellDate, selectedDate]);
 
     const dayNumber = useMemo(() => cellDate.toLocaleDateString("en-GB", {
         day: "numeric",
@@ -95,10 +96,10 @@ export const Cell = ({
     }, [isMarked, colors, colorIndex, storageKey]);
 
     useEffect(() => {
-        if (triggerMark > 0 && isCellToday) {
+        if (triggerMark > 0 && isCellSelected) {
             handleMark(true);
         }
-    }, [triggerMark, isCellToday]);
+    }, [triggerMark, isCellSelected]);
 
     const text = useMemo(() => {
         if (isMarked && colors[colorIndex]?.name) {
@@ -136,10 +137,10 @@ export const Cell = ({
                             handleMark();
                         }}
                         className={classNames("cursor-pointer", currentColor, {
-                            "bg-neutral-700": !isCellToday && !isMarked,
+                            "bg-neutral-700": !isCellSelected && !isMarked,
                             "size-12 flex items-center justify-center rounded-md": !isCondensed,
                             "size-[9px] rounded-xs": isCondensed,
-                            "border-1 shadow": isCellToday,
+                            "border-1 shadow": isCellSelected,
                         })}
                         style={{
                             transform: `scale(${interpolated.scale})`,

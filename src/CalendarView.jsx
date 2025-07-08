@@ -3,8 +3,6 @@ import { useRef, useEffect, useMemo } from "react";
 import classNames from "classnames";
 import { Cell } from "./Cell";
 
-const date = new Date();
-
 /* eslint-disable */
 export default function CalendarView({
     calendar,
@@ -15,11 +13,12 @@ export default function CalendarView({
     hideTitle,
     limitInDays,
     flex,
-    triggerMark
+    triggerMark,
+    date = new Date()
 }) {
     const calendarRef = useRef(null);
     const firstDayOfYear = getDay(startOfYear(date));
-    const todayIndex = useMemo(() => getDayOfYear(new Date()), []);
+    const todayIndex = useMemo(() => getDayOfYear(date), [date]);
 
     const calendarCells = useMemo(() => {
         const daysInYear = getDaysInYear(date);
@@ -90,11 +89,6 @@ export default function CalendarView({
                     "opacity-0": isTransitioning,
                     "opacity-100": !isTransitioning
                 })}>
-                {/* <p>{JSON.stringify(slicedCells.at(-1).date.toLocaleDateString("en-US", {
-                    weekday: "long",
-                    month: "long",
-                    day: "numeric"
-                }))}</p> */}
                 {slicedCells.map((cell, index) => {
                     if (cell.isEmpty) {
                         return <div className={isCondensed ? "size-2" : "size-8"} key={index} />;
