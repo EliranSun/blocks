@@ -179,6 +179,7 @@ export const Calendars = [
     {
         name: "house",
         icon: HouseIcon,
+        showTimeAgo: true,
         colors: [
             { className: "bg-red-500", name: "floor" },
             { className: "bg-orange-500", name: "clean" },
@@ -190,6 +191,7 @@ export const Calendars = [
     {
         name: "laundry",
         icon: TShirtIcon,
+        showTimeAgo: true,
         colors: [
             { className: "bg-blue-500", name: "wash" },
             { className: "bg-green-500", name: "dry" },
@@ -200,22 +202,26 @@ export const Calendars = [
     {
         name: "groceries",
         icon: ShoppingCartIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-emerald-500" }],
     },
     {
         name: "cooking",
         cols: 2,
         icon: CookingPotIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-orange-500" }],
     },
     {
         name: "sheets",
         icon: BedIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-blue-500" }],
     },
     {
         name: "Friends",
         icon: UsersIcon,
+        showTimeAgo: true,
         colors: [
             { className: "bg-purple-500", name: "maya" },
             { className: "bg-pink-500", name: "rotem" },
@@ -226,6 +232,7 @@ export const Calendars = [
     {
         name: "family",
         icon: UsersThreeIcon,
+        showTimeAgo: true,
         colors: [
             { className: "bg-pink-400", name: "mom" },
             { className: "bg-blue-500", name: "dad" },
@@ -236,6 +243,7 @@ export const Calendars = [
     {
         name: "sibs",
         icon: UsersFourIcon,
+        showTimeAgo: true,
         colors: [
             { className: "bg-purple-400", name: "sahar" },
             { className: "bg-pink-300", name: "shachar" },
@@ -247,11 +255,13 @@ export const Calendars = [
     {
         name: "scroll",
         icon: ScrollIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-yellow-900" }],
     },
     {
         name: "pron/mast",
         icon: EyeIcon,
+        showTimeAgo: true,
         colors: [
             { className: "bg-orange-900", name: "pron" },
             { className: "bg-red-900", name: "mast" },
@@ -260,6 +270,7 @@ export const Calendars = [
     {
         name: "lie",
         icon: SmileyXEyesIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-lime-900" }],
     }
 ];

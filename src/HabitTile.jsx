@@ -78,7 +78,7 @@ export function HabitTile({ calendar }) {
                             <span className="text-xs text-red-500 font-mono absolute top-4 right-3">
                                 {streak}⽕
                             </span>}
-                        {calendar.showTimeAgo && diffDays > 0 &&
+                        {calendar.showTimeAgo && (calendar.cols ? diffDays > 17 : diffDays > 7) &&
                             <span className="text-xs text-gray-500 font-mono absolute top-4 right-3">
                                 {diffDays}永
                             </span>}
