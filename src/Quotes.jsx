@@ -8,11 +8,11 @@ const QuotesArray = [
 
 export const Quotes = () => {
     return (
-        <div className="bg-white opacity-70 rounded-xl playfair-display-500 p-4 w-full">
+        <div className="opacity-80 rounded-xl playfair-display-500 py-4 px-2 w-full">
             <div className="float-left pr-4 pt-4 flex items-center justify-center">
-                <QuotesIcon size={32} />
+                <QuotesIcon size={40} />
             </div>
-            <h1 className="text-2xl font-bold italic tracking-wide leading-tight">
+            <h1 className="text-2xl font-bold italic">
                 {QuotesArray[Math.floor(Math.random() * QuotesArray.length)]}
             </h1>
         </div>
