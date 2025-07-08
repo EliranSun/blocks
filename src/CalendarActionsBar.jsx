@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { Calendars } from "./constants";
 import classNames from "classnames";
 import { Button } from "./Button";
@@ -62,7 +64,7 @@ export const CalendarActionsBar = ({
     return (
         <>
 
-            {calendar.isGamified && (
+            {/* {calendar.isGamified && (
                 <div className="fixed flex flex-col
                 font-bold font-mono
                 items-center justify-between gap-4 bottom-28 right-5">
@@ -87,16 +89,15 @@ export const CalendarActionsBar = ({
                         )}
                     </Motion>
                 </div>
-            )}
+            )} */}
             <div
                 className={classNames({
-                    "flex fixed gap-2 mx-auto bottom-2 bg-neutral-900 p-4 max-w-96": true,
-                    "items-center justify-between rounded-full z-10 shadow-xl": true,
-                    // "w-fit flex-col bottom-0 right-5": isCondensed,
-                    "flex-row w-full inset-x-0 bottom-5": true
+                    "fixed gap-2 p-2 bg-black/10": true,
+                    "flex rounded-full z-10": true,
+                    "w-fit bottom-2 right-2": true
                 })}
             >
-                <div className={classNames({
+                {/* <div className={classNames({
                     "opacity-0": isCondensed,
                     "bg-white rounded-full flex items-center justify-center": true,
                     // "flex-col": isCondensed,
@@ -119,29 +120,29 @@ export const CalendarActionsBar = ({
                         onClick={() => switchCalendar(1)}>
                         <CaretRightIcon size={15} weight="bold" />
                     </Button>
-                </div>
+                </div> */}
                 <div className="flex items-center justify-center gap-2">
-                    <Button onClick={() => setShowInfo(!showInfo)}>
+                    {/* <Button onClick={() => setShowInfo(!showInfo)}>
                         {showInfo ? <EyeIcon size={16} /> : <EyeClosedIcon size={16} />}
-                    </Button>
+                    </Button> */}
                     <Button
                         onClick={handleExport}
                         title="Export calendar data"
                     >
-                        <UploadSimpleIcon size={18} />
+                        <UploadSimpleIcon size={16} />
                     </Button>
                     <Button
                         onClick={handleImport}
                         title="Import calendar data"
                     >
-                        <DownloadSimpleIcon size={18} />
+                        <DownloadSimpleIcon size={16} />
                     </Button>
-                    <Button
+                    {/* <Button
                         onClick={toggleView}
                         title={isCondensed ? "Expand view" : "Condense view"}
                     >
                         {isCondensed ? <GridFourIcon size={18} /> : <RowsIcon size={18} />}
-                    </Button>
+                    </Button> */}
                 </div>
             </div>
         </>

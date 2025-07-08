@@ -1,20 +1,25 @@
-import { getDaysInYear, startOfYear, addDays, getDay } from "date-fns";
+import { getDaysInYear, startOfYear, addDays, getDay, getDayOfYear } from "date-fns";
 import { useRef, useEffect, useMemo } from "react";
 import classNames from "classnames";
 import { Cell } from "./Cell";
 
 const date = new Date();
 
-
+/* eslint-disable */
 export default function CalendarView({
     calendar,
     isCondensed,
     isTransitioning,
     showInfo,
     onCellMark,
+    hideTitle,
+    limitInDays,
+    flex,
+    triggerMark
 }) {
     const calendarRef = useRef(null);
     const firstDayOfYear = getDay(startOfYear(date));
+    const todayIndex = useMemo(() => getDayOfYear(new Date()), []);
 
     const calendarCells = useMemo(() => {
         const daysInYear = getDaysInYear(date);
@@ -56,9 +61,20 @@ export default function CalendarView({
 
     const Icon = calendar.icon;
 
+    const slicedCells = useMemo(() => {
+        if (limitInDays) {
+            return calendarCells.slice(
+                todayIndex - limitInDays + firstDayOfYear,
+                todayIndex + firstDayOfYear
+            );
+        }
+
+        return calendarCells;
+    }, [calendarCells, todayIndex, limitInDays, firstDayOfYear]);
+
     return (
         <div className="shrink-0">
-            {isCondensed &&
+            {!hideTitle && isCondensed &&
                 <h1 className="mb-4 text-sm font-mono text-center flex items-center justify-center gap-2">
                     <Icon size={16} />
                     <span className="">{calendar.name.slice(0, 4).toUpperCase()}</span>
@@ -66,15 +82,20 @@ export default function CalendarView({
             <div
                 ref={calendarRef}
                 className={classNames({
-                    "overflow-y-auto w-fit h-screen gap-1": !isCondensed,
-                    "pb-40 transition-opacity duration-300": true,
-                    "grid grid-cols-7 justify-center ": true,
-                    "gap-[2px]": isCondensed,
-                    "gap-": !isCondensed,
+                    "overflow-y-auto w-fit h-screen gap-1 pb-40": !isCondensed,
+                    "transition-opacity duration-300": true,
+                    "grid grid-cols-7 items-center": !flex,
+                    "flex flex-wrap": flex,
+                    "gap-[2px] w-fit h-fit": isCondensed,
                     "opacity-0": isTransitioning,
                     "opacity-100": !isTransitioning
                 })}>
-                {calendarCells.map((cell, index) => {
+                {/* <p>{JSON.stringify(slicedCells.at(-1).date.toLocaleDateString("en-US", {
+                    weekday: "long",
+                    month: "long",
+                    day: "numeric"
+                }))}</p> */}
+                {slicedCells.map((cell, index) => {
                     if (cell.isEmpty) {
                         return <div className={isCondensed ? "size-2" : "size-8"} key={index} />;
                     }
@@ -90,6 +111,7 @@ export default function CalendarView({
                             colors={calendar.colors}
                             isCondensed={isCondensed}
                             onCellMark={onCellMark}
+                            triggerMark={triggerMark}
                         />
                     )
                 })}

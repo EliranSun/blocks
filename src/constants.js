@@ -33,6 +33,7 @@ export const Calendars = [
     {
         name: "mood",
         icon: SmileyIcon,
+        cols: 2,
         colors: [
             { className: "bg-amber-500", name: "great" },
             { className: "bg-orange-600", name: "good" },
@@ -78,31 +79,52 @@ export const Calendars = [
     {
         name: "Weight",
         icon: ScalesIcon,
-  "colors": [
-    { "className": "bg-green-400", "name": "70" },
-    { "className": "bg-lime-400", "name": "71" },
-    { "className": "bg-yellow-400", "name": "72" },
-    { "className": "bg-amber-400", "name": "73" },
-    { "className": "bg-orange-400", "name": "74" },
-    { "className": "bg-orange-500", "name": "75" },
-    { "className": "bg-red-400", "name": "76" },
-    { "className": "bg-red-500", "name": "77" },
-    { "className": "bg-red-600", "name": "78" }
-  ]
+        colors: [
+            { className: "bg-green-400", name: "70" },
+            { className: "bg-lime-400", name: "71" },
+            { className: "bg-yellow-400", name: "72" },
+            { className: "bg-amber-400", name: "73" },
+            { className: "bg-orange-400", name: "74" },
+            { className: "bg-orange-500", name: "75" },
+            { className: "bg-red-400", name: "76" },
+            { className: "bg-red-500", name: "77" },
+            { className: "bg-red-600", name: "78" }
+        ]
+    },
+    {
+        name: "physiotherapy",
+        icon: FirstAidKitIcon,
+        colors: [
+            { className: "bg-red-200", name: "knee" },
+            { className: "bg-red-500", name: "ankle" },
+            { className: "bg-red-700", name: "all" },
+        ],
+    },
+    {
+        name: "workout",
+        icon: BarbellIcon,
+        colors: [
+            { className: "bg-red-500", name: "power" },
+            { className: "bg-orange-500", name: "cardio" },
+            { className: "bg-yellow-500", name: "yoga" },
+        ],
     },
     {
         name: "css",
+        cols: 2,
         isGamified: true,
+        primaryColor: "amber",
         icon: MaskHappyIcon,
         colors: [{ className: "bg-amber-500" }],
     },
     {
         name: "read",
+        primaryColor: "green",
         isGamified: true,
         icon: BookOpenIcon,
         colors: [{ className: "bg-green-500" }],
     },
-    
+
     {
         name: "write",
         icon: PencilLineIcon,
@@ -140,6 +162,7 @@ export const Calendars = [
     },
     {
         name: "gestures",
+        cols: 3,
         icon: GiftIcon,
         colors: [{ className: "bg-purple-500" }],
     },
@@ -165,37 +188,20 @@ export const Calendars = [
         ],
     },
     {
-        name: "cooking",
-        icon: CookingPotIcon,
-        colors: [{ className: "bg-orange-500" }],
-    },
-    {
         name: "groceries",
         icon: ShoppingCartIcon,
         colors: [{ className: "bg-emerald-500" }],
     },
     {
+        name: "cooking",
+        cols: 2,
+        icon: CookingPotIcon,
+        colors: [{ className: "bg-orange-500" }],
+    },
+    {
         name: "sheets",
         icon: BedIcon,
         colors: [{ className: "bg-blue-500" }],
-    },
-    {
-        name: "physiotherapy",
-        icon: FirstAidKitIcon,
-        colors: [
-            { className: "bg-red-200", name: "knee" },
-            { className: "bg-red-500", name: "ankle" },
-            { className: "bg-red-700", name: "all" },
-        ],
-    },
-    {
-        name: "workout",
-        icon: BarbellIcon,
-        colors: [
-            { className: "bg-red-500", name: "power" },
-            { className: "bg-orange-500", name: "cardio" },
-            { className: "bg-yellow-500", name: "yoga" },
-        ],
     },
     {
         name: "Friends",
