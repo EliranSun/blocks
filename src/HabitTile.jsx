@@ -71,7 +71,7 @@ export function HabitTile({ calendar }) {
                             showInfo
                             flex
                             triggerMark={triggerMark}
-                            limitInDays={calendar.cols ? 30 : 7}
+                            limitInDays={calendar.cols ? 17 : 7}
                             calendar={calendar}
                         />
                         {calendar.isGamified && streak > 0 &&
