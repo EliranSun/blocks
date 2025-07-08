@@ -98,7 +98,7 @@ export const HabitView = () => {
                         </div>}
                 </>
             ))}
-            <HandPeaceIcon size={100} />
+            <HandPeaceIcon size={120} className="my-10" />
         </div>
     );
 }
