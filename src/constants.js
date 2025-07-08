@@ -94,6 +94,7 @@ export const Calendars = [
     {
         name: "physiotherapy",
         icon: FirstAidKitIcon,
+        showTimeAgo: true,
         colors: [
             { className: "bg-red-200", name: "knee" },
             { className: "bg-red-500", name: "ankle" },
@@ -103,6 +104,7 @@ export const Calendars = [
     {
         name: "workout",
         icon: BarbellIcon,
+        showTimeAgo: true,
         colors: [
             { className: "bg-red-500", name: "power" },
             { className: "bg-orange-500", name: "cardio" },
@@ -128,42 +130,50 @@ export const Calendars = [
     {
         name: "write",
         icon: PencilLineIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "draw",
         icon: PaintBrushIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "cinema",
         icon: FilmSlateIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "games",
         icon: GameControllerIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "date",
         icon: WineIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "sex",
         icon: HeartIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "trip",
         icon: GlobeIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "gestures",
         cols: 3,
         icon: GiftIcon,
+        showTimeAgo: true,
         colors: [{ className: "bg-purple-500" }],
     },
     {

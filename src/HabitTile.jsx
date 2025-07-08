@@ -78,6 +78,10 @@ export function HabitTile({ calendar }) {
                             <span className="text-xs font-mono absolute top-4 right-3">
                                 {streak}🔥
                             </span>}
+                        {calendar.showTimeAgo && diffDays > 0 &&
+                            <span className="text-xs font-mono absolute bottom-4 right-3">
+                                {diffDays}
+                            </span>}
                     </div>
                 </div>
             )}
