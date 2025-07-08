@@ -94,7 +94,7 @@ export const CalendarActionsBar = ({
                 className={classNames({
                     "fixed gap-2 p-2 bg-black/10": true,
                     "flex rounded-full z-10": true,
-                    "w-fit bottom-2 right-2": true
+                    "w-fit bottom-3 left-4": true
                 })}
             >
                 {/* <div className={classNames({
