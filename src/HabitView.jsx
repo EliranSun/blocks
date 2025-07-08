@@ -50,13 +50,18 @@ export const HabitView = () => {
                     {habitsByDay.map(item => {
                         const Icon = item.calendar.icon;
                         return (
-                            <Icon
-                                key={item.key}
-                                size={20}
-                                className={classNames({
-                                    "text-amber-500": item.calendar.primaryColor === "amber",
-                                    "text-green-500": item.calendar.primaryColor === "green",
-                                })} />
+                            <div className="flex flex-col items-center justify-center">
+                                <Icon
+                                    key={item.key}
+                                    size={20}
+                                    className={classNames({
+                                        "text-amber-500": item.calendar.primaryColor === "amber",
+                                        "text-green-500": item.calendar.primaryColor === "green",
+                                    })} />
+                                <span className="text-xs font-mono">
+                                    {item.calendar.name.slice(0, 2).toLowerCase()}
+                                </span>
+                            </div>
                         );
                     })}
                 </div>
