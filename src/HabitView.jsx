@@ -5,6 +5,7 @@ import { Calendars } from "./constants";
 import { useHabitsByDay } from "./hooks/useHabitsByDay";
 import classNames from "classnames";
 import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
+import { Quotes } from "./Quotes";
 
 const Categories = [
     {
@@ -75,20 +76,27 @@ export const HabitView = () => {
                     })}
                 </div>
             </div>
-            {Categories.map(category => (
-                <div className="space-y-4 my-4">
-                    <h2 className="text-2xl font-bold font-mono text-center">{category.name}</h2>
-                    <div className="grid grid-cols-3 gap-2">
-                        {category.calendars.map((calendar) => (
-                            <div className={classNames({
-                                "col-span-3": calendar.cols === 3,
-                                "col-span-2": calendar.cols === 2,
-                            })}>
-                                <HabitTile key={calendar.name} calendar={calendar} date={date} />
-                            </div>
-                        ))}
+            {Categories.map((category, index) => (
+                <>
+                    <div className="space-y-4 my-4">
+                        <h2 className="text-2xl font-bold font-mono text-center">{category.name}</h2>
+                        <div className="grid grid-cols-3 gap-2">
+                            {category.calendars.map((calendar) => (
+                                <div className={classNames({
+                                    "col-span-3": calendar.cols === 3,
+                                    "col-span-2": calendar.cols === 2,
+                                })}>
+                                    <HabitTile key={calendar.name} calendar={calendar} date={date} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
+
+                    {index === 1 &&
+                        <div className="my-4">
+                            <Quotes />
+                        </div>}
+                </>
             ))}
         </div>
     );
