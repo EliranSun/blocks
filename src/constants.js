@@ -96,9 +96,12 @@ export const Calendars = [
         icon: FirstAidKitIcon,
         showTimeAgo: true,
         colors: [
-            { className: "bg-red-200", name: "knee" },
-            { className: "bg-red-500", name: "ankle" },
-            { className: "bg-red-700", name: "all" },
+            { className: "bg-pink-400", name: "SS" },
+            { className: "bg-orange-400", name: "WS" },
+            { className: "bg-yellow-400", name: "plank" },
+            { className: "bg-green-400", name: "D&C" },
+            { className: "bg-purple-400", name: "combo" },
+            { className: "bg-purple-600", name: "all" },
         ],
     },
     {

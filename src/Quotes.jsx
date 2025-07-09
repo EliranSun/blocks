@@ -4,7 +4,8 @@ const QuotesArray = [
     "We carry on as if our experience has meaning — as if our activities have transcendent value—but we are unable to justify this belief intellectually",
     "'Men have forgotten this truth,' said the fox. 'But you must not forget it. You become responsible, forever, for what you have tamed. You are responsible for your rose...'",
     "Having a romantic partner who reacts actively and constructively to your good fortune is actually more conducive to a happy marriage than having a partner who can soothe you in the bad times.",
-]
+    "The known is explored territory, a place of stability and familiarity; it is the “city of God,”",
+];
 
 export const Quotes = () => {
     return (
