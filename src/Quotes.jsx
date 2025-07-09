@@ -8,7 +8,7 @@ const QuotesArray = [
 
 export const Quotes = () => {
     return (
-        <div className="opacity-80 rounded-xl playfair-display-500 py-4 px-2 w-full">
+        <div className="opacity-50 rounded-xl playfair-display-500 py-4 px-2 w-full">
             <div className="float-left pr-4 pt-4 flex items-center justify-center">
                 <QuotesIcon size={40} />
             </div>
