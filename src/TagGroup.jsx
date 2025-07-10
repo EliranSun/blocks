@@ -27,7 +27,7 @@ const WifeTags = [
   ];
 
 const Groups = {
-  "health": HealthTags
+  "health": HealthTags,
   "wife": WifeTags,
   };
   
