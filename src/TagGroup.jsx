@@ -12,7 +12,7 @@ const HealthTags = [
   "on schedule", 
   "social",
   "low carbs",
-  "high protein"
+  "high protein",
   "eating early"
 ];
 
