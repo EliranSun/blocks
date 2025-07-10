@@ -50,13 +50,11 @@ function TagGroup({ groupName = "", date }) {
   useEffect(() => {
     const tags = localStorage.getItem(storageKey);
     if (tags) {
-      alert(tags);
       setSelectedTags(JSON.parse(tags));
     }
   }, [storageKey]);
 
   useEffect(() => {
-    alert(JSON.stringify(storageKey, selectedTags));
     localStorage.setItem(storageKey, JSON.stringify(selectedTags));
   }, [storageKey, selectedTags]);
 
