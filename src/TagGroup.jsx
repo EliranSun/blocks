@@ -69,7 +69,7 @@ function TagGroup({ groupName = "" }) {
         {showAll ? "Show less" : "Show more"}
       </button>
     )}
-  </div
+  </div>
     </div>
   );
 }
