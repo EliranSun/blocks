@@ -42,7 +42,7 @@ export const HabitView = () => {
     return (
         <div className="flex flex-col space-y-8 w-full justify-center items-center">
             <div className="flex flex-col justify-center items-center space-y-4">
-                <h1 className="text-base font-bold font-mono opacity-80 text-center flex justify-between gap-10">
+                <h1 className="sticky top-0 text-base font-bold font-mono opacity-80 text-center flex justify-between gap-10">
                     <button onClick={() => setDate(new Date(date.setDate(date.getDate() - 1)))}>
                         <ArrowLeftIcon size={20} />
                     </button>
