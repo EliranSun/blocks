@@ -14,8 +14,21 @@ const HealthTags = [
   "eating early"
 ];
 
+const WifeTags = [
+  "One Piece",
+  "passion",
+  "snake woman",
+  "Nathan for You",
+  "Baldur's Gate III",
+  "Blue Prince",
+  "Kentucky Route Zero",
+  "Neighbor upstairs",
+  "CSS drawing"
+  ];
+
 const Groups = {
   "health": HealthTags
+  "wife": WifeTags,
   };
   
 
