@@ -81,7 +81,7 @@ export const HabitView = () => {
                 <>
                     <div className="space-y-4 my-4">
                         <h2 className="text-2xl font-bold font-mono text-center">{category.name}</h2>
-                        <TagGroup />
+                        <TagGroup groupName={category.name.toLowerCase()} />
                         <div className="grid grid-cols-3 gap-2">
                             {category.calendars.map((calendar) => (
                                 <div className={classNames({
