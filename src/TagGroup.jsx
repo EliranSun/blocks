@@ -16,7 +16,7 @@ const HealthTags = [
   "eating early"
 ];
 
-const WifeTags = [
+const CreativeTags = [
   "One Piece",
   "passion",
   "snake woman",
@@ -28,8 +28,14 @@ const WifeTags = [
   "CSS drawing"
 ];
 
+const WifeTags = [
+  "Hapisga",
+  "Movie",
+];
+
 const Groups = {
   "health": HealthTags,
+  "creative": CreativeTags,
   "wife": WifeTags,
 };
 
