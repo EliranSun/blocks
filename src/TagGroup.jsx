@@ -27,7 +27,8 @@ function TagGroup({ groupName = "" }) {
     );
   };
   
-  if (!groupName) return null;
+  if (!groupName || !Groups[groupName]) 
+    return null;
 
   return (
     <div className="flex flex-wrap gap-2">
