@@ -69,7 +69,7 @@ export const HabitView = () => {
                                         "text-amber-500": item.calendar.primaryColor === "amber",
                                         "text-green-500": item.calendar.primaryColor === "green",
                                     })} />
-                               {/* <span className="text-xs font-mono">
+                                {/* <span className="text-xs font-mono">
                                     {item.calendar.name.slice(0, 2).toLowerCase()}
                                 </span>*/}
                             </div>
@@ -92,7 +92,7 @@ export const HabitView = () => {
                                 </div>
                             ))}
                         </div>
-                                                <TagGroup groupName={category.name.toLowerCase()} />
+                        <TagGroup groupName={category.name.toLowerCase()} date={date} />
                     </div>
 
                     {index === 1 &&

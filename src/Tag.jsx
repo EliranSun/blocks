@@ -1,11 +1,11 @@
 import React from "react";
-import clsx from "classnames"; // Optional, see note below
+import cn from "classnames";
 
 function Tag({ label, selected, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={clsx(
+      className={cn(
         "px-3 py-1 text-sm rounded-full border transition-colors duration-200",
         "hover:shadow-sm",
         selected

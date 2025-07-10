@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Tag from "./Tag";
+import { getStorageKey } from "./utils/strorage";
+
 
 const HealthTags = [
   "family",
   "friends",
-  "Woke up", 
-  "8hrs", 
-  "low hours", 
-  "on schedule", 
+  "Woke up",
+  "8hrs",
+  "low hours",
+  "on schedule",
   "social",
   "low carbs",
   "high protein",
@@ -24,22 +26,18 @@ const WifeTags = [
   "Kentucky Route Zero",
   "Neighbor upstairs",
   "CSS drawing"
-  ];
+];
 
 const Groups = {
   "health": HealthTags,
   "wife": WifeTags,
 };
-  
 
-function TagGroup({ groupName = "" }) {
+
+function TagGroup({ groupName = "", date }) {
   const [selectedTags, setSelectedTags] = useState([]);
   const [showAll, setShowAll] = useState(false);
-
-  if (!groupName || !Groups[groupName]) 
-      return null;
-      
-  const tagsToShow = showAll ? Groups[groupName] : Groups[groupName].slice(0, 8);
+  const storageKey = useMemo(() => getStorageKey(`${groupName}_tags`, date), [groupName, date]);
 
   const toggleTag = (tag) => {
     setSelectedTags((prev) =>
@@ -48,8 +46,24 @@ function TagGroup({ groupName = "" }) {
         : [...prev, tag]
     );
   };
-  
-  
+
+  useEffect(() => {
+    const tags = localStorage.getItem(storageKey);
+    if (tags) {
+      setSelectedTags(JSON.parse(tags));
+    }
+  }, [storageKey]);
+
+  useEffect(() => {
+    localStorage.setItem(storageKey, JSON.stringify(selectedTags));
+  }, [storageKey, selectedTags]);
+
+
+  if (!groupName || !Groups[groupName])
+    return null;
+
+  const tagsToShow = showAll ? Groups[groupName] : Groups[groupName].slice(0, 8);
+
 
   return (
     <div className="flex flex-wrap gap-2">
@@ -62,13 +76,13 @@ function TagGroup({ groupName = "" }) {
         />
       ))}
       {Groups[groupName].length > 8 && (
-      <button
-        onClick={() => setShowAll(!showAll)}
-        className="text-sm text-blue-500 hover:underline self-start"
-      >
-        {showAll ? "Show less" : "Show more"}
-      </button>
-    )}
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="text-sm text-blue-500 hover:underline self-start"
+        >
+          {showAll ? "Show less" : "Show more"}
+        </button>
+      )}
     </div>
   );
 }
