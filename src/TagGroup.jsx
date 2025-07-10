@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Tag from "./Tag";
 
 const HealthTags = [
+  "family",
+  "friends",
   "Woke up", 
   "8hrs", 
   "low hours", 
