@@ -59,6 +59,8 @@ function TagGroup({ groupName = "", date }) {
   }, [storageKey, selectedTags]);
 
 
+  console.log({ storageKey, selectedTags });
+
   if (!groupName || !Groups[groupName])
     return null;
 
@@ -66,7 +68,7 @@ function TagGroup({ groupName = "", date }) {
 
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       {tagsToShow.map((tag) => (
         <Tag
           key={tag}
@@ -78,9 +80,9 @@ function TagGroup({ groupName = "", date }) {
       {Groups[groupName].length > 8 && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className="text-sm text-blue-500 hover:underline self-start"
+          className="text-sm hover:underline"
         >
-          {showAll ? "Show less" : "Show more"}
+          {showAll ? "less" : "more"}
         </button>
       )}
     </div>
