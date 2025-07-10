@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import Tag from "./Tag";
 
-const initialTags = ["Focus", "Energy", "Sleep", "Physio", "Creative"];
+const Groups = {
+  health: HealthTags
+  };
+  
+const HealthTags = [
+  "Woke up", 
+  "8hrs", 
+  "low hours", 
+  "on schedule", 
+  "social",
+  "low carbs",
+  "high protein"
+  "eating early"
+];
 
-function TagGroup() {
+function TagGroup({ groupName = "" }) {
   const [selectedTags, setSelectedTags] = useState([]);
 
   const toggleTag = (tag) => {
@@ -13,10 +26,12 @@ function TagGroup() {
         : [...prev, tag]
     );
   };
+  
+  if (!groupName) return null;
 
   return (
     <div className="flex flex-wrap gap-2">
-      {initialTags.map((tag) => (
+      {HealthTags.map((tag) => (
         <Tag
           key={tag}
           label={tag}
