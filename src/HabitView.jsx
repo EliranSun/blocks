@@ -6,6 +6,7 @@ import { useHabitsByDay } from "./hooks/useHabitsByDay";
 import classNames from "classnames";
 import { ArrowLeftIcon, ArrowRightIcon, HandPeaceIcon } from "@phosphor-icons/react";
 import { Quotes } from "./Quotes";
+import TagGroup from "./TagGroup";
 
 const Categories = [
     {
@@ -80,6 +81,7 @@ export const HabitView = () => {
                 <>
                     <div className="space-y-4 my-4">
                         <h2 className="text-2xl font-bold font-mono text-center">{category.name}</h2>
+                        <TagGroup />
                         <div className="grid grid-cols-3 gap-2">
                             {category.calendars.map((calendar) => (
                                 <div className={classNames({
