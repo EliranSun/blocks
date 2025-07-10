@@ -41,8 +41,8 @@ export const HabitView = () => {
 
     return (
         <div className="flex flex-col space-y-8 w-full justify-center items-center">
-            <div className="flex flex-col justify-center items-center space-y-4">
-                <h1 className="sticky top-0 text-base font-bold font-mono opacity-80 text-center flex justify-between gap-10">
+            <div className="w-full sticky top-0 bg-[#ece1d4] dark:bg-[#242424] z-10 flex flex-col justify-center items-center space-y-2 py-2">
+                <h1 className="text-base font-bold font-mono opacity-80 text-center flex justify-between gap-10">
                     <button onClick={() => setDate(new Date(date.setDate(date.getDate() - 1)))}>
                         <ArrowLeftIcon size={20} />
                     </button>
@@ -80,8 +80,9 @@ export const HabitView = () => {
             {Categories.map((category, index) => (
                 <>
                     <div className="space-y-4 my-4">
-                        <h2 className="text-2xl font-bold font-mono text-center">{category.name}</h2>
-
+                        <h2 className="text-2xl font-bold font-mono text-center">
+                            {category.name}
+                        </h2>
                         <div className="grid grid-cols-3 gap-2">
                             {category.calendars.map((calendar) => (
                                 <div className={classNames({

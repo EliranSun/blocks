@@ -74,7 +74,7 @@ function TagGroup({ groupName = "", date }) {
 
 
   return (
-    <div className="flex flex-wrap items-center gap-2">
+    <div className="flex flex-wrap items-center gap-2 py-4">
       {tagsToShow.map((tag) => (
         <Tag
           key={tag}

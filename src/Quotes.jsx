@@ -1,4 +1,5 @@
 import { QuotesIcon } from "@phosphor-icons/react";
+import { useMemo } from "react";
 
 const QuotesArray = [
     "We carry on as if our experience has meaning — as if our activities have transcendent value—but we are unable to justify this belief intellectually",
@@ -10,13 +11,17 @@ const QuotesArray = [
 ];
 
 export const Quotes = () => {
+    const quote = useMemo(() => {
+        return QuotesArray[Math.floor(Math.random() * QuotesArray.length)];
+    }, []);
+
     return (
-        <div className="opacity-50 rounded-xl playfair-display-500 py-4 px-2 w-full">
+        <div className="opacity-50 rounded-xl merriweather-500 py-4 px-2 w-full">
             <div className="float-left pr-4 pt-4 flex items-center justify-center">
-                <QuotesIcon size={40} />
+                <QuotesIcon size={40} style={{ transform: "scaleX(-1)" }} />
             </div>
             <h1 className="text-2xl font-bold italic">
-                {QuotesArray[Math.floor(Math.random() * QuotesArray.length)]}
+                {quote}
             </h1>
         </div>
     )

@@ -9,8 +9,8 @@ function Tag({ label, selected, onClick }) {
         "px-3 py-1 text-sm rounded-full transition-colors duration-200",
         "hover:shadow-sm",
         selected
-          ? "bg-gray-800 text-white border-gray-500"
-          : "bg-gray-100/50 text-gray-800 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 border-gray-300"
+          ? "bg-stone-800/40 text-white dark:bg-stone-100/90 dark:text-stone-800"
+          : "bg-stone-100/40 text-gray-800 dark:bg-stone-900/40 dark:text-stone-100"
       )}
     >
       {label.toLowerCase()}
