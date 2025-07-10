@@ -16,11 +16,10 @@ export const Quotes = () => {
     }, []);
 
     return (
-        <div className="opacity-50 rounded-xl merriweather-500 py-4 px-2 w-full">
-            <div className="float-left pr-4 pt-4 flex items-center justify-center">
-                <QuotesIcon size={40} style={{ transform: "scaleX(-1)" }} />
-            </div>
-            <h1 className="text-2xl font-bold italic">
+        <div className="opacity-50 rounded-xl merriweather-500 py-4 px-2 space-y-2
+        flex flex-col items-center justify-between">
+            <QuotesIcon size={50} style={{ transform: "scaleX(-1)" }} />
+            <h1 className="text-2xl font-bold italic text-justify">
                 {quote}
             </h1>
         </div>
