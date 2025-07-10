@@ -34,6 +34,13 @@ const Groups = {
 
 function TagGroup({ groupName = "" }) {
   const [selectedTags, setSelectedTags] = useState([]);
+const [showAll, setShowAll] = useState(false);
+
+if (!groupName || !Groups[groupName]) 
+    return null;
+    
+const tagsToShow = showAll ? Groups[groupName] : Groups[groupName].slice(0, 8);
+
 
   const toggleTag = (tag) => {
     setSelectedTags((prev) =>
@@ -43,12 +50,11 @@ function TagGroup({ groupName = "" }) {
     );
   };
   
-  if (!groupName || !Groups[groupName]) 
-    return null;
+  
 
   return (
     <div className="flex flex-wrap gap-2">
-      {Groups[groupName].map((tag) => (
+      {tagsToShow.map((tag) => (
         <Tag
           key={tag}
           label={tag}
@@ -56,6 +62,15 @@ function TagGroup({ groupName = "" }) {
           onClick={() => toggleTag(tag)}
         />
       ))}
+      {Groups[groupName].length > 8 && (
+      <button
+        onClick={() => setShowAll(!showAll)}
+        className="text-sm text-blue-500 hover:underline self-start"
+      >
+        {showAll ? "Show less" : "Show more"}
+      </button>
+    )}
+  </div
     </div>
   );
 }
