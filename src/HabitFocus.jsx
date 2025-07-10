@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react";
-import { getStorageByPrefix } from "./utils/strorage";
+import { getStorageByPrefix, formatDate } from "./utils/strorage";
 import { Calendars } from "./constants";
 import classNames from "classnames";
 
 const Note = ({ habitName, date }) => {
-    const [notes, setNotes] = useState(localStorage.getItem(`${habitName}_notes_${date}`));
+    const [notes, setNotes] = useState(localStorage.getItem(`${habitName}_notes_${formatDate(date)}`));
 
     return (
         <input type="text"
@@ -12,7 +12,7 @@ const Note = ({ habitName, date }) => {
             value={notes}
             onChange={(e) => {
                 setNotes(e.target.value);
-                localStorage.setItem(`${habitName}_notes_${date}`, e.target.value);
+                localStorage.setItem(`${habitName}_notes_${formatDate(date)}`, e.target.value);
             }}
         />
     )

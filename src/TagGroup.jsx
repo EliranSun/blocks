@@ -43,7 +43,7 @@ const Groups = {
 
 
 function TagGroup({ groupName = "", date }) {
-  const [selectedTags, setSelectedTags] = useState([]);
+  const [selectedTags, setSelectedTags] = useState(null);
   const [showAll, setShowAll] = useState(false);
   const storageKey = useMemo(() => getStorageKey(`${groupName}_tags`, date), [groupName, date]);
 
@@ -61,14 +61,18 @@ function TagGroup({ groupName = "", date }) {
   }, [storageKey]);
 
   useEffect(() => {
-    localStorage.setItem(storageKey, JSON.stringify(selectedTags));
+    if (selectedTags !== null) {
+      localStorage.setItem(storageKey, JSON.stringify(selectedTags));
+    }
   }, [storageKey, selectedTags]);
 
 
-  console.log({ storageKey, selectedTags });
-
   if (!groupName || !Groups[groupName])
     return null;
+
+  if (selectedTags === null) {
+    return null;
+  }
 
   const tagsToShow = showAll ? Groups[groupName] : Groups[groupName].slice(0, 8);
 
