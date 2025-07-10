@@ -29,18 +29,17 @@ const WifeTags = [
 const Groups = {
   "health": HealthTags,
   "wife": WifeTags,
-  };
+};
   
 
 function TagGroup({ groupName = "" }) {
   const [selectedTags, setSelectedTags] = useState([]);
-const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(false);
 
-if (!groupName || !Groups[groupName]) 
-    return null;
-    
-const tagsToShow = showAll ? Groups[groupName] : Groups[groupName].slice(0, 8);
-
+  if (!groupName || !Groups[groupName]) 
+      return null;
+      
+  const tagsToShow = showAll ? Groups[groupName] : Groups[groupName].slice(0, 8);
 
   const toggleTag = (tag) => {
     setSelectedTags((prev) =>
