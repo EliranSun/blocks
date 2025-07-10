@@ -47,7 +47,7 @@ function TagGroup({ groupName = "", date }) {
     );
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     const tags = localStorage.getItem(storageKey);
     if (tags) {
       alert(tags);
@@ -58,7 +58,7 @@ function TagGroup({ groupName = "", date }) {
   useEffect(() => {
     alert(JSON.stringify(storageKey, selectedTags));
     localStorage.setItem(storageKey, JSON.stringify(selectedTags));
-  }, [storageKey, selectedTags]);
+  }, [storageKey, selectedTags]); */
 
 
   if (!groupName || !Groups[groupName])
