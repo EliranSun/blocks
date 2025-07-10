@@ -15,10 +15,10 @@ export const getStorageByPrefix = (prefix) => {
         .sort((a, b) => b.date - a.date);
 };
 
-export const getStorageBySuffix = (name, suffix) => {
+export const getStorageBySuffix = (suffix) => {
     return Object
         .keys(localStorage)
-        .filter(key => key.toLowerCase().endsWith(name+suffix.toLowerCase()))
+        .filter(key => key.toLowerCase().endsWith(suffix.toLowerCase()))
         .map(key => {
             const data = JSON.parse(localStorage.getItem(key));
             return {
