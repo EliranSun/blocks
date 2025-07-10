@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import Tag from "./Tag";
 
-const Groups = {
-  "health": HealthTags
-  };
-  
 const HealthTags = [
   "Woke up", 
   "8hrs", 
@@ -15,6 +11,11 @@ const HealthTags = [
   "high protein",
   "eating early"
 ];
+
+const Groups = {
+  "health": HealthTags
+  };
+  
 
 function TagGroup({ groupName = "" }) {
   const [selectedTags, setSelectedTags] = useState([]);
