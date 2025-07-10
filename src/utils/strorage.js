@@ -4,7 +4,11 @@ import { Calendars } from "../constants";
 export const getStorageByPrefix = (prefix) => {
     return Object
         .keys(localStorage)
-        .filter(key => key.toLowerCase().startsWith(prefix.toLowerCase()))
+        .filter(key =>
+            key.toLowerCase().startsWith(prefix.toLowerCase()) &&
+            !key.includes("tags") &&
+            !key.includes("notes")
+        )
         .map(key => {
             const data = JSON.parse(localStorage.getItem(key));
             return {
@@ -18,9 +22,11 @@ export const getStorageByPrefix = (prefix) => {
 export const getStorageBySuffix = (suffix) => {
     return Object
         .keys(localStorage)
-        .filter(key => 
+        .filter(key =>
             key.toLowerCase().endsWith(suffix.toLowerCase()) &&
-            !key.includes("tags"))
+            !key.includes("tags") &&
+            !key.includes("notes")
+        )
         .map(key => {
             const data = JSON.parse(localStorage.getItem(key));
             return {

@@ -8,7 +8,7 @@ export const HabitHeader = ({ date, setDate, habitsByDay, onHabitClick }) => {
                 <button onClick={() => setDate(new Date(date.setDate(date.getDate() - 1)))}>
                     <ArrowLeftIcon size={20} />
                 </button>
-                <span onClick={() => onHabitClick("mood")}>
+                <span>
                     {date.toLocaleDateString("en-US", {
                         weekday: "long",
                         month: "long",
@@ -27,6 +27,7 @@ export const HabitHeader = ({ date, setDate, habitsByDay, onHabitClick }) => {
                             <Icon
                                 key={item.key}
                                 size={20}
+                                onClick={() => onHabitClick(item.calendar.name)}
                                 className={classNames({
                                     "text-amber-500": item.calendar.primaryColor === "amber",
                                     "text-green-500": item.calendar.primaryColor === "green",
