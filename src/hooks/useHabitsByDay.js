@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import { formatDate, getStorageBySuffix } from "../utils/strorage";
 
-export const useHabitsByDay = (name, date) => {
+export const useHabitsByDay = (date) => {
     const habitsByDay = useMemo(() => {
         const formattedDate = formatDate(date);
-        return getStorageBySuffix(name, formattedDate);
+        return getStorageBySuffix(formattedDate);
     }, [date]);
 
     return habitsByDay;
