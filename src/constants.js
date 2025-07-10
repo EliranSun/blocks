@@ -277,3 +277,29 @@ export const Calendars = [
         colors: [{ className: "bg-lime-900" }],
     }
 ];
+export const Categories = [
+    {
+        name: "Health",
+        calendars: Calendars.slice(0, 7),
+    },
+    {
+        name: "Creative",
+        calendars: Calendars.slice(7, 13),
+    },
+    {
+        name: "Wife",
+        calendars: Calendars.slice(13, 17),
+    },
+    {
+        name: "House",
+        calendars: Calendars.slice(17, 22),
+    },
+    {
+        name: "Social",
+        calendars: Calendars.slice(22, 25),
+    },
+    {
+        name: "Avoid",
+        calendars: Calendars.slice(25, 28),
+    }
+];
