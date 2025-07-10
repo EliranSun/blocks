@@ -13,7 +13,9 @@ const HealthTags = [
   "social",
   "low carbs",
   "high protein",
-  "eating early"
+  "eating early",
+  "css",
+  "read",
 ];
 
 const CreativeTags = [
