@@ -10,7 +10,7 @@ function Tag({ label, selected, onClick }) {
         "hover:shadow-sm",
         selected
           ? "bg-gray-800 text-white border-gray-500"
-          : "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 border-gray-300"
+          : "bg-gray-100/50 text-gray-800 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 border-gray-300"
       )}
     >
       {label.toLowerCase()}
