@@ -18,7 +18,9 @@ export const getStorageByPrefix = (prefix) => {
 export const getStorageBySuffix = (suffix) => {
     return Object
         .keys(localStorage)
-        .filter(key => key.toLowerCase().endsWith(suffix.toLowerCase()))
+        .filter(key => 
+            key.toLowerCase().endsWith(suffix.toLowerCase()) &&
+            key.includes("tags"))
         .map(key => {
             const data = JSON.parse(localStorage.getItem(key));
             return {
