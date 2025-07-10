@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Tag from "./Tag";
 
 const Groups = {
-  health: HealthTags
+  "health": HealthTags
   };
   
 const HealthTags = [
@@ -32,7 +32,7 @@ function TagGroup({ groupName = "" }) {
 
   return (
     <div className="flex flex-wrap gap-2">
-      {HealthTags.map((tag) => (
+      {Groups[groupName].map((tag) => (
         <Tag
           key={tag}
           label={tag}
