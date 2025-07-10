@@ -68,9 +68,9 @@ export const HabitView = () => {
                                         "text-amber-500": item.calendar.primaryColor === "amber",
                                         "text-green-500": item.calendar.primaryColor === "green",
                                     })} />
-                                <span className="text-xs font-mono">
+                               {/* <span className="text-xs font-mono">
                                     {item.calendar.name.slice(0, 2).toLowerCase()}
-                                </span>
+                                </span>*/}
                             </div>
                         );
                     })}
