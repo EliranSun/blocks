@@ -20,7 +20,7 @@ export const getStorageBySuffix = (suffix) => {
         .keys(localStorage)
         .filter(key => 
             key.toLowerCase().endsWith(suffix.toLowerCase()) &&
-            key.includes("tags"))
+            !key.includes("tags"))
         .map(key => {
             const data = JSON.parse(localStorage.getItem(key));
             return {
