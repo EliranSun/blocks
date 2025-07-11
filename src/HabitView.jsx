@@ -88,7 +88,7 @@ const Habits = ({ date }) => {
                         </div>}
                 </>
             ))}
-            <HandPeaceIcon size={120} className="my-10" />
+            <HandPeaceIcon size={120} className="my-32 opacity-50" />
         </>
     )
 }
