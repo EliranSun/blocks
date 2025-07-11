@@ -37,7 +37,13 @@ const Thought = ({ category, date }) => {
     return (
         <h3
             onClick={() => setIsThinking(true)}
-            className="text-xl merriweather-500 p-2 opacity-70 w-full">
+            className={classNames(
+                "text-xl merriweather-500 p-2 w-full",
+                {
+                    "opacity-70": thought,
+                    "opacity-40": !thought,
+                }
+            )}>
             {thought || `My thoughts for today on ${category.name}...`}
         </h3>
     )
