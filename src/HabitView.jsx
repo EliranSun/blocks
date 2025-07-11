@@ -1,21 +1,55 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HabitTile } from "./HabitTile";
 import { Categories } from "./constants";
 import { useHabitsByDay } from "./hooks/useHabitsByDay";
 import classNames from "classnames";
 import { HandPeaceIcon } from "@phosphor-icons/react";
 import { Quotes } from "./Quotes";
-import TagGroup from "./TagGroup";
+// import TagGroup from "./TagGroup";
 import { HabitHeader } from "./habit/Header";
 import { HabitFocus } from "./HabitFocus";
+import { formatDate } from "./utils/strorage";
+
+const Thought = ({ category, date }) => {
+    const [isThinking, setIsThinking] = useState(false);
+    const [thought, setThought] = useState("");
+
+    useEffect(() => {
+        const thought = localStorage.getItem(`thought-${category.name}-${formatDate(date)}`);
+        setThought(thought || "");
+    }, [date, category.name]);
+
+    if (isThinking) {
+        return (
+            <textarea
+                value={thought}
+                autoFocus
+                onChange={(e) => setThought(e.target.value)}
+                onBlur={() => {
+                    setIsThinking(false);
+                    localStorage.setItem(`thought-${category.name}-${formatDate(date)}`, thought);
+                }}
+                placeholder={`My thoughts for today on ${category.name}...`}
+                className="w-full border merriweather-500 h-[33vh] text-xl rounded-xl p-4" />
+        )
+    }
+
+    return (
+        <h3
+            onClick={() => setIsThinking(true)}
+            className="text-xl merriweather-500 p-2 opacity-70 w-full">
+            {thought || `My thoughts for today on ${category.name}...`}
+        </h3>
+    )
+};
 
 const Habits = ({ date }) => {
     return (
         <>
             {Categories.map((category, index) => (
                 <>
-                    <div className="space-y-4 my-4">
-                        <h2 className="text-2xl font-bold font-mono text-center">
+                    <div className="space-y-4">
+                        <h2 className="text-2xl font-bold merriweather-500 text-center">
                             {category.name}
                         </h2>
                         <div className="grid grid-cols-3 gap-2">
@@ -28,11 +62,9 @@ const Habits = ({ date }) => {
                                 </div>
                             ))}
                         </div>
-                        <textarea 
-                        placeholder={`My thoughts for today on ${category.name}`}
-                        className="w-full border merriweather-500 h-[33vh] text-xl rounded-xl p-4" />
                         {/* <TagGroup groupName={category.name.toLowerCase()} date={date} /> */}
                     </div>
+                    <Thought category={category} date={date} />
 
                     {index === 1 &&
                         <div className="my-4">
@@ -51,7 +83,7 @@ export const HabitView = () => {
     const habitsByDay = useHabitsByDay(date);
 
     return (
-        <div className="flex flex-col space-y-8 w-full justify-center items-center">
+        <>
             <HabitHeader
                 date={date}
                 setDate={setDate}
@@ -60,9 +92,12 @@ export const HabitView = () => {
                     ? setHabitFocusView("")
                     : setHabitFocusView(habitName)}
             />
-            {habitFocusView
-                ? <HabitFocus habitName={habitFocusView} />
-                : <Habits date={date} />}
-        </div>
+            <div className="flex flex-col space-y-8 w-full justify-center items-center">
+
+                {habitFocusView
+                    ? <HabitFocus habitName={habitFocusView} />
+                    : <Habits date={date} />}
+            </div>
+        </>
     );
 }

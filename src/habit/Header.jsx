@@ -1,44 +1,50 @@
+/* eslint-disable */
 import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 import classNames from "classnames";
+import { Button } from "../Button";
 
 export const HabitHeader = ({ date, setDate, habitsByDay, onHabitClick }) => {
     return (
-        <div className="w-full sticky top-0 bg-[#ece1d4] dark:bg-[#242424] z-10 flex flex-col justify-center items-center space-y-2 py-2">
-            <h1 className="text-base font-bold font-mono opacity-80 text-center flex justify-between gap-10">
-                <button onClick={() => setDate(new Date(date.setDate(date.getDate() - 1)))}>
-                    <ArrowLeftIcon size={20} />
-                </button>
-                <span>
+        <>
+            <div className="flex flex-col mt-20 mb-28">
+                <h1 className="text-3xl font-bold font-mono opacity-80 text-center merriweather-500">
                     {date.toLocaleDateString("en-US", {
                         weekday: "long",
                         month: "long",
                         day: "numeric"
                     })}
-                </span>
-                <button onClick={() => setDate(new Date(date.setDate(date.getDate() + 1)))}>
-                    <ArrowRightIcon size={20} />
-                </button>
-            </h1>
-            <div className="flex flex-row gap-2 h-9">
-                {habitsByDay.map(item => {
-                    const Icon = item.calendar.icon;
-                    return (
-                        <div className="flex flex-col items-center justify-center">
+                </h1>
+                <div className="flex items-center justify-center my-4 gap-2 rounded-full px-4 flex-wrap">
+                    {habitsByDay.map(item => {
+                        const Icon = item.calendar.icon;
+                        return (
+
                             <Icon
                                 key={item.key}
-                                size={20}
+                                size={42}
                                 onClick={() => onHabitClick(item.calendar.name)}
                                 className={classNames({
                                     "text-amber-500": item.calendar.primaryColor === "amber",
                                     "text-green-500": item.calendar.primaryColor === "green",
                                 })} />
-                            {/* <span className="text-xs font-mono">
-                                    {item.calendar.name.slice(0, 2).toLowerCase()}
-                                </span>*/}
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                </div>
             </div>
-        </div>
+            <div className={classNames(
+                "fixed bottom-3 right-4 bg-black/20 rounded-full w-fit",
+                "px-4 z-10 flex flex-col justify-center items-center py-2",
+                "flex-row gap-4"
+            )}>
+
+                <Button onClick={() => setDate(new Date(date.setDate(date.getDate() - 1)))}>
+                    <ArrowLeftIcon size={20} />
+                </Button>
+                <Button onClick={() => setDate(new Date(date.setDate(date.getDate() + 1)))}>
+                    <ArrowRightIcon size={20} />
+                </Button>
+
+            </div>
+        </>
     );
 };

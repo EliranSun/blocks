@@ -3,7 +3,7 @@
 import { Calendars } from "./constants";
 import classNames from "classnames";
 import { Button } from "./Button";
-import { CaretLeftIcon, CaretRightIcon, EyeIcon, EyeClosedIcon, UploadSimpleIcon, DownloadSimpleIcon, GridFourIcon, RowsIcon } from "@phosphor-icons/react";
+import { UploadSimpleIcon, DownloadSimpleIcon, ArrowClockwiseIcon } from "@phosphor-icons/react";
 import { Motion, spring, presets } from "react-motion";
 import { exportCalendarData, triggerImport } from "./utils/dataManager";
 import { useStreak } from "./hooks/useStreak";
@@ -92,7 +92,7 @@ export const CalendarActionsBar = ({
             )} */}
             <div
                 className={classNames({
-                    "fixed gap-2 p-2 bg-black/10": true,
+                    "fixed gap-2 p-2 bg-black/20": true,
                     "flex rounded-full z-10": true,
                     "w-fit bottom-3 left-4": true
                 })}
@@ -136,6 +136,12 @@ export const CalendarActionsBar = ({
                         title="Import calendar data"
                     >
                         <DownloadSimpleIcon size={16} />
+                    </Button>
+                    <Button
+                        onClick={() => window.location.reload()}
+                        title="Reload calendar data"
+                    >
+                        <ArrowClockwiseIcon size={16} />
                     </Button>
                     {/* <Button
                         onClick={toggleView}

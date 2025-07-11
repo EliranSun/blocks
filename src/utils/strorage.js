@@ -7,7 +7,8 @@ export const getStorageByPrefix = (prefix) => {
         .filter(key =>
             key.toLowerCase().startsWith(prefix.toLowerCase()) &&
             !key.includes("tags") &&
-            !key.includes("notes")
+            !key.includes("notes") &&
+            !key.includes("thought")
         )
         .map(key => {
             const data = JSON.parse(localStorage.getItem(key));
@@ -25,7 +26,8 @@ export const getStorageBySuffix = (suffix) => {
         .filter(key =>
             key.toLowerCase().endsWith(suffix.toLowerCase()) &&
             !key.includes("tags") &&
-            !key.includes("notes")
+            !key.includes("notes") &&
+            !key.includes("thought")
         )
         .map(key => {
             const data = JSON.parse(localStorage.getItem(key));
