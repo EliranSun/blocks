@@ -15,7 +15,7 @@ const Thought = ({ category, date }) => {
     const [thought, setThought] = useState("");
 
     useEffect(() => {
-        const thought = localStorage.getItem(`thought-${category.name}-${formatDate(date)}`);
+        const thought = localStorage.getItem(`thought_${category.name}_${formatDate(date)}`);
         setThought(thought || "");
     }, [date, category.name]);
 
@@ -27,7 +27,7 @@ const Thought = ({ category, date }) => {
                 onChange={(e) => setThought(e.target.value)}
                 onBlur={() => {
                     setIsThinking(false);
-                    localStorage.setItem(`thought-${category.name}-${formatDate(date)}`, thought);
+                    localStorage.setItem(`thought_${category.name}_${formatDate(date)}`, thought);
                 }}
                 placeholder={`My thoughts for today on ${category.name}...`}
                 className="w-full border merriweather-500 h-[33vh] text-xl rounded-xl p-4" />
