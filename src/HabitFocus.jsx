@@ -24,7 +24,7 @@ export const HabitFocus = ({ habitName }) => {
 
     return (
         <div className="bg-white/50 dark:bg-black/50 rounded-lg p-4 w-full">
-            <h1>{habitName}</h1>
+            <h1 className="w-full text-4xl text-center">{habitName}</h1>
             <div className="flex flex-col">
                 {storageData.map((item) => {
                     const color = Calendars.find(calendar => calendar.name === habitName)?.colors[item.value];
