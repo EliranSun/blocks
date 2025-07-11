@@ -29,7 +29,7 @@ const Habits = ({ date }) => {
                             ))}
                         </div>
                         <textarea 
-                        placeholder={`My thoughts for today on {category.name}`}
+                        placeholder={`My thoughts for today on ${category.name}`}
                         className="w-full border merriweather-500 h-40 text-xl rounded-xl p-4" />
                         <TagGroup groupName={category.name.toLowerCase()} date={date} />
                     </div>
