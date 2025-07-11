@@ -28,6 +28,7 @@ const Habits = ({ date }) => {
                                 </div>
                             ))}
                         </div>
+                        <textarea className="w-full h-40 text-xl rounded-xl p-4" />
                         <TagGroup groupName={category.name.toLowerCase()} date={date} />
                     </div>
 
