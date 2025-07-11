@@ -6,7 +6,7 @@ import { Button } from "../Button";
 export const HabitHeader = ({ date, setDate, habitsByDay, onHabitClick }) => {
     return (
         <>
-            <div className="flex flex-col mt-20 mb-28">
+            <div className="flex flex-col mt-20 mb-28 justify-center items-center">
                 <h1 className="text-3xl font-bold font-mono opacity-80 text-center merriweather-500">
                     {date.toLocaleDateString("en-US", {
                         weekday: "long",
@@ -14,11 +14,10 @@ export const HabitHeader = ({ date, setDate, habitsByDay, onHabitClick }) => {
                         day: "numeric"
                     })}
                 </h1>
-                <div className="flex items-center justify-center my-4 gap-2 rounded-full px-4 flex-wrap">
+                <div className="grid grid-cols-4 w-fit my-4 gap-2 rounded-full px-4">
                     {habitsByDay.map(item => {
                         const Icon = item.calendar.icon;
                         return (
-
                             <Icon
                                 key={item.key}
                                 size={42}
@@ -32,7 +31,7 @@ export const HabitHeader = ({ date, setDate, habitsByDay, onHabitClick }) => {
                 </div>
             </div>
             <div className={classNames(
-                "fixed bottom-3 right-4 bg-black/20 rounded-full w-fit",
+                "fixed bottom-4 right-4 bg-black/20 rounded-full w-fit",
                 "px-4 z-10 flex flex-col justify-center items-center py-2",
                 "flex-row gap-4"
             )}>
