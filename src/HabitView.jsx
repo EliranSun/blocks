@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { HabitTile } from "./HabitTile";
 import { Categories } from "./constants";
 import { useHabitsByDay } from "./hooks/useHabitsByDay";
@@ -13,24 +13,34 @@ import { formatDate } from "./utils/strorage";
 const Thought = ({ category, date }) => {
     const [isThinking, setIsThinking] = useState(false);
     const [thought, setThought] = useState("");
+    const textareaRef = useRef(null);
 
     useEffect(() => {
         const thought = localStorage.getItem(`thought_${category.name}_${formatDate(date)}`);
         setThought(thought || "");
     }, [date, category.name]);
 
+    useEffect(() => {
+        if (isThinking && textareaRef.current) {
+            const length = textareaRef.current.value.length;
+            textareaRef.current.setSelectionRange(length, length);
+        }
+    }, [isThinking]);
+
     if (isThinking) {
         return (
             <textarea
+                ref={textareaRef}
                 value={thought}
                 autoFocus
                 onChange={(e) => setThought(e.target.value)}
+                placeholder={`My thoughts for today on ${category.name}...`}
+                className="w-full border merriweather-500 h-[33vh] text-xl rounded-xl p-4"
                 onBlur={() => {
                     setIsThinking(false);
                     localStorage.setItem(`thought_${category.name}_${formatDate(date)}`, thought);
                 }}
-                placeholder={`My thoughts for today on ${category.name}...`}
-                className="w-full border merriweather-500 h-[33vh] text-xl rounded-xl p-4" />
+            />
         )
     }
 
