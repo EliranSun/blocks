@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { formatDate } from "./utils/strorage";
 
 
-export const Thought = ({ category, date }) => {
+export const Thought = ({ category, date, showCategoryName = false, hideIfEmpty = false }) => {
     const [isThinking, setIsThinking] = useState(false);
     const [thought, setThought] = useState("");
     const textareaRef = useRef(null);
@@ -36,17 +36,25 @@ export const Thought = ({ category, date }) => {
         );
     }
 
+    if (hideIfEmpty && !thought) {
+        return null;
+    }
+
     return (
         <h3
             onClick={() => setIsThinking(true)}
             className={classNames(
-                "text-xl merriweather-500 p-2 w-full",
-                {
-                    "opacity-70": thought,
-                    "opacity-40": !thought,
-                }
+                "text-xl merriweather-500 py-2 w-full",
+
             )}>
-            {thought || `My thoughts for today on ${category.name}...`}
+            {showCategoryName && <span className="merriweather-500 opacity-100 ">
+                {category.name}: </span>}
+            <span className={classNames({
+                "opacity-70": thought,
+                "opacity-40": !thought,
+            })}>
+                {thought || `My thoughts for today on ${category.name}...`}
+            </span>
         </h3>
     );
 };

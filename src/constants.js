@@ -37,11 +37,11 @@ export const Calendars = [
         icon: SmileyIcon,
         cols: 2,
         colors: [
-            { className: "bg-amber-500", name: "great" },
-            { className: "bg-orange-600", name: "good" },
-            { className: "bg-red-700", name: "ok" },
-            { className: "bg-blue-800", name: "bad" },
-            { className: "bg-purple-900", name: "awful" },
+            { colorClassName: "text-amber-500", className: "bg-amber-500", name: "great" },
+            { colorClassName: "text-orange-600", className: "bg-orange-600", name: "good" },
+            { colorClassName: "text-red-700", className: "bg-red-700", name: "ok" },
+            { colorClassName: "text-blue-800", className: "bg-blue-800", name: "bad" },
+            { colorClassName: "text-purple-900", className: "bg-purple-900", name: "awful" },
         ]
     },
     {

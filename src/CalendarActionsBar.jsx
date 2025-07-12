@@ -6,6 +6,7 @@ export const CalendarActionsBar = ({
     onHomeClick,
     onHabitsClick,
     onSettingsClick,
+    onNotesClick
 }) => {
     return (
         <div
@@ -28,7 +29,7 @@ export const CalendarActionsBar = ({
                 <GridFourIcon size={16} />
             </Button>
             <Button
-                // onClick={onHabitsClick}
+                onClick={onNotesClick}
                 title="Notes"
             >
                 <NoteIcon size={16} />
