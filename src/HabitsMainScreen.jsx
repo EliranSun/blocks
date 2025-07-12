@@ -1,28 +1,12 @@
 import classNames from "classnames";
 import { useHabitsByDay } from "./hooks/useHabitsByDay";
 import { Calendars } from "./constants";
-import { useSwipeable } from "react-swipeable";
 import React from "react";
+import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
 
 export const HabitsMainScreen = ({ date, onDateChange }) => {
     const habitsByDay = useHabitsByDay(date);
-
-    const handlers = useSwipeable({
-        onSwipedLeft: () => {
-            // Go to next day
-            const nextDate = new Date(date);
-            nextDate.setDate(date.getDate() + 1);
-            onDateChange(nextDate);
-        },
-        onSwipedRight: () => {
-            // Go to previous day
-            const prevDate = new Date(date);
-            prevDate.setDate(date.getDate() - 1);
-            onDateChange(prevDate);
-        },
-        preventDefaultTouchmoveEvent: true,
-        trackMouse: true
-    });
+    const handlers = useDateSwipeNavigation(date, onDateChange);
 
     return (
         <div {...handlers} className="flex h-[calc(100dvh-5.5rem)] justify-center items-center w-full">

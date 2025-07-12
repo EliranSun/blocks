@@ -4,10 +4,13 @@ import { Thought } from "./Thought";
 import { HandPeaceIcon } from "@phosphor-icons/react";
 import { Quotes } from "./Quotes";
 import classNames from "classnames";
+import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
 
-export const Habits = ({ date }) => {
+export const Habits = ({ date, onDateChange }) => {
+    const handlers = useDateSwipeNavigation(date, onDateChange);
+
     return (
-        <div className="flex flex-col space-y-8 w-full justify-center items-center">
+        <div {...handlers} className="flex flex-col space-y-8 w-full justify-center items-center">
             <h1 className="text-lg font-bold merriweather-500 text-center py-4">
                 {date.toLocaleDateString("en-US", {
                     weekday: "long",
