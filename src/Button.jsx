@@ -5,7 +5,7 @@ export const Button = ({ children, className, ...rest }) => {
         <button
             {...rest}
             className={classNames(
-                "bg-white/80 rounded-full",
+                "bg-white/80 dark:bg-black/90 rounded-full",
                 "size-12 flex items-center justify-center",
                 "hover:bg-gray-200 transition-colors",
                 className)}>
