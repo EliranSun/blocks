@@ -7,8 +7,6 @@ import classNames from "classnames";
 
 export const NotesView = () => {
     const days = useMemo(() => {
-        ;
-
         const dayOfYear = getDayOfYear(new Date());
         return new Array(dayOfYear).fill(0).map((_, index) => {
             const date = new Date(2025, 0, index + 1);
