@@ -1,0 +1,52 @@
+import classNames from "classnames";
+import { useState, useRef, useEffect } from "react";
+import { formatDate } from "./utils/strorage";
+
+
+export const Thought = ({ category, date }) => {
+    const [isThinking, setIsThinking] = useState(false);
+    const [thought, setThought] = useState("");
+    const textareaRef = useRef(null);
+
+    useEffect(() => {
+        const thought = localStorage.getItem(`thought_${category.name}_${formatDate(date)}`);
+        setThought(thought || "");
+    }, [date, category.name]);
+
+    useEffect(() => {
+        if (isThinking && textareaRef.current) {
+            const length = textareaRef.current.value.length;
+            textareaRef.current.setSelectionRange(length, length);
+        }
+    }, [isThinking]);
+
+    if (isThinking) {
+        return (
+            <textarea
+                ref={textareaRef}
+                value={thought}
+                autoFocus
+                onChange={(e) => setThought(e.target.value)}
+                placeholder={`My thoughts for today on ${category.name}...`}
+                className="w-full border merriweather-500 h-[33vh] text-xl rounded-xl p-4"
+                onBlur={() => {
+                    setIsThinking(false);
+                    localStorage.setItem(`thought_${category.name}_${formatDate(date)}`, thought);
+                }} />
+        );
+    }
+
+    return (
+        <h3
+            onClick={() => setIsThinking(true)}
+            className={classNames(
+                "text-xl merriweather-500 p-2 w-full",
+                {
+                    "opacity-70": thought,
+                    "opacity-40": !thought,
+                }
+            )}>
+            {thought || `My thoughts for today on ${category.name}...`}
+        </h3>
+    );
+};

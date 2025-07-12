@@ -1,56 +1,21 @@
-/* eslint-disable */
-
-import CalendarView from "./CalendarView";
-import { Calendars } from "./constants";
 import { useState } from "react";
-import CalendarSelectionModal from "./CalendarSelectionModal";
 import { CalendarActionsBar } from "./CalendarActionsBar";
-import classNames from "classnames";
-import { HabitView } from "./HabitView";
+import { Habits } from "./Habits";
+import { HabitsMainScreen } from "./HabitsMainScreen";
 
 function App() {
-  const [calendar, setCalendar] = useState(Calendars[0]);
-  const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
-  const [isCondensed, setIsCondensed] = useState(false);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const [showInfo, setShowInfo] = useState(false);
-  const [isStreakToggled, setStreakToggled] = useState(false);
-
-  const CalendarProps = {
-    isCondensed,
-    isTransitioning,
-    showInfo,
-    onCellMark: () => setStreakToggled(!isStreakToggled)
-  }
+  const [date, setDate] = useState(new Date());
+  const [view, setView] = useState("home");
 
   return (
     <>
-      <HabitView calendar={calendar} />
-      {/* <section className={classNames("w-full flex items-center overflow-x-auto", {
-        "justify-start gap-4": isCondensed,
-        "justify-center": !isCondensed
-      })}>
-        {isCondensed ?
-          Calendars.map((c) => <CalendarView key={c.name} calendar={c} isCondensed {...CalendarProps} />) :
-          <CalendarView {...CalendarProps} calendar={calendar} />}
-      </section> */}
-
+      {view === "home"
+        ? <HabitsMainScreen date={date} onDateChange={setDate} />
+        : <Habits date={date} onDateChange={setDate} />}
       <CalendarActionsBar
-        calendar={calendar}
-        setCalendar={setCalendar}
-        isCondensed={isCondensed}
-        setIsCondensed={setIsCondensed}
-        isTransitioning={isTransitioning}
-        setIsTransitioning={setIsTransitioning}
-        showInfo={showInfo}
-        setShowInfo={setShowInfo}
-        isStreakToggled={isStreakToggled}
-        setIsCalendarModalOpen={setIsCalendarModalOpen} />
-
-      <CalendarSelectionModal
-        isCalendarModalOpen={isCalendarModalOpen}
-        setIsCalendarModalOpen={setIsCalendarModalOpen}
-        setCalendar={setCalendar} />
+        onHomeClick={() => setView("home")}
+        onHabitsClick={() => setView("habits")}
+        onSettingsClick={() => setView("settings")} />
     </>
   )
 }
