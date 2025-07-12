@@ -17,8 +17,8 @@ export const NotesView = () => {
 
             return {
                 date,
-                backgroundColor: color.className,
-                colorClassName: color.colorClassName,
+                backgroundColor: color?.className,
+                colorClassName: color?.colorClassName,
                 habitsByDay
             }
         }).reverse();
