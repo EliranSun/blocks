@@ -17,7 +17,6 @@ import {
     BedIcon,
     FirstAidKitIcon,
     BarbellIcon,
-    UsersIcon,
     UsersThreeIcon,
     UsersFourIcon,
     ScrollIcon,
@@ -26,7 +25,10 @@ import {
     WineIcon,
     PersonIcon,
     GiftIcon,
-    ScalesIcon
+    ScalesIcon,
+    BeerSteinIcon,
+    TreeIcon,
+    SunIcon
 } from "@phosphor-icons/react";
 
 export const Calendars = [
@@ -223,7 +225,7 @@ export const Calendars = [
     },
     {
         name: "Friends",
-        icon: UsersIcon,
+        icon: BeerSteinIcon,
         showTimeAgo: true,
         colors: [
             { className: "bg-purple-500", name: "maya" },
@@ -234,7 +236,7 @@ export const Calendars = [
     },
     {
         name: "family",
-        icon: UsersThreeIcon,
+        icon: TreeIcon,
         showTimeAgo: true,
         colors: [
             { className: "bg-pink-400", name: "mom" },
@@ -245,7 +247,7 @@ export const Calendars = [
     },
     {
         name: "sibs",
-        icon: UsersFourIcon,
+        icon: SunIcon,
         showTimeAgo: true,
         colors: [
             { className: "bg-purple-400", name: "sahar" },
