@@ -6,6 +6,7 @@ html,
 body {
   overscroll-behavior-x: none;
   overscroll-behavior: contain;
+  touch-action: none;
 }
 
 @keyframes partial-fade-in {
