@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { CalendarActionsBar } from "./CalendarActionsBar";
 import { Habits } from "./Habits";
 import { HabitsMainScreen } from "./HabitsMainScreen";
@@ -14,6 +14,14 @@ function App() {
 
   const isToday = date.toDateString() === new Date().toDateString();
   const isNight = date.getHours() < 6 || date.getHours() > 18;
+  const title = useMemo(() => {
+    if (isToday) return "Today";
+    return date.toLocaleDateString("en-US", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+    });
+  }, [date, isToday]);
 
   return (
     <>
@@ -24,23 +32,21 @@ function App() {
           "opacity-0": view !== "habits",
         })}>
           {isNight ? <MoonIcon size={40} /> : <SunIcon size={40} />}
-          {isToday ? "Today" : date.toLocaleDateString("en-US", {
-            weekday: "long",
-            month: "long",
-            day: "numeric",
-          })}
+          {title}
         </h1>
-        <CalendarActionsBar onSettingsClick={() => view === "settings"
-          ? setView("home")
-          : setView("settings")} />
+        <CalendarActionsBar
+          onSettingsClick={() => view === "settings"
+            ? setView("home")
+            : setView("settings")} />
       </div>
       {view === "home" && <HabitsMainScreen date={date} onDateChange={setDate} />}
       {view === "habits" && <Habits date={date} onDateChange={setDate} />}
-      {view === "settings" && <Settings
-        onHomeClick={() => setView("home")}
-        onHabitsClick={() => setView("habits")}
-        onNotesClick={() => setView("notes")} />}
       {view === "notes" && <NotesView />}
+      {view === "settings" &&
+        <Settings
+          onHomeClick={() => setView("home")}
+          onHabitsClick={() => setView("habits")}
+          onNotesClick={() => setView("notes")} />}
 
 
     </>

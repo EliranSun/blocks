@@ -12,7 +12,7 @@ const Title = ({ children, onClick }) => {
 export const Settings = ({ onHomeClick, onHabitsClick, onNotesClick }) => {
     return (
         <div className={classNames(
-            "fixed inset-0 m-auto flex flex-col w-full h-screen",
+            "fixed z-20 inset-0 m-auto flex flex-col w-full h-screen",
             "justify-evenly items-center text-6xl",
             "merriweather-500 text-center"
         )}>
