@@ -281,8 +281,12 @@ export const Calendars = [
 ];
 export const Categories = [
     {
+        name: "Mood",
+        calendars: Calendars.slice(0, 2),
+    },
+    {
         name: "Health",
-        calendars: Calendars.slice(0, 7),
+        calendars: Calendars.slice(2, 7),
     },
     {
         name: "Creative",
