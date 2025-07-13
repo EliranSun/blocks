@@ -2,6 +2,16 @@ import classNames from "classnames";
 import { useState, useRef, useEffect } from "react";
 import { formatDate } from "./utils/strorage";
 
+const parseHashtags = (text) => {
+    if (!text) return text;
+    // Split text into segments, preserving newlines and spaces
+    return text.split(/(\s+|\n+|(?=#))/).map((segment, index) => {
+        if (segment.startsWith('#')) {
+            return <span key={index} className="bg-yellow-200 rounded px-1">{segment}</span>;
+        }
+        return segment;
+    });
+};
 
 export const Thought = ({ category, date, showCategoryName = false, hideIfEmpty = false }) => {
     const [isThinking, setIsThinking] = useState(false);
@@ -45,16 +55,20 @@ export const Thought = ({ category, date, showCategoryName = false, hideIfEmpty 
             onClick={() => setIsThinking(true)}
             className={classNames(
                 "text-xl merriweather-500 py-2 w-full",
-
             )}>
-            {showCategoryName && <span className="merriweather-500 opacity-100 ">
-                {category.name}: </span>}
-            <span className={classNames({
-                "opacity-70": thought,
-                "opacity-40": !thought,
-            })}>
-                {thought || `My thoughts for today on ${category.name}...`}
-            </span>
+            {showCategoryName &&
+                <span className="merriweather-500 opacity-100 ">
+                    {category.name}:{' '}
+                </span>}
+            <div className={classNames(
+                "whitespace-pre-wrap",
+                {
+                    "opacity-70": thought,
+                    "opacity-40": !thought,
+                }
+            )}>
+                {parseHashtags(thought || `My thoughts for today on ${category.name}...`)}
+            </div>
         </h3>
     );
 };
