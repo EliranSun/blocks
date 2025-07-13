@@ -12,7 +12,7 @@ export const CalendarActionsBar = ({
         <div
             className={classNames({
                 "gap-1": true,
-                "flex rounded-full z-10": true,
+                "flex rounded-full z-20": true,
                 // "w-fit bottom-4 right-4": true
             })}
         >
