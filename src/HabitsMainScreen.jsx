@@ -9,8 +9,8 @@ export const HabitsMainScreen = ({ date, onDateChange }) => {
     const handlers = useDateSwipeNavigation(date, onDateChange);
 
     return (
-        <div {...handlers} className="flex h-[calc(100dvh-5.5rem)] justify-center items-center w-full">
-            <div className="grid grid-cols-4 w-fit items-center gap-5">
+        <div {...handlers} className="flex py-8 justify-center items-center w-full">
+            <div className="grid grid-cols-4 w-fit h-full items-center gap-5">
                 {Calendars.map((item, index) => {
                     const Icon = item.icon;
                     const isSelected = habitsByDay.some(habit => habit.calendar.name === item.name);

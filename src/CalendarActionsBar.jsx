@@ -1,44 +1,48 @@
 import classNames from "classnames";
 import { Button } from "./Button";
-import { HouseSimpleIcon, GridFourIcon, GearIcon, NoteIcon } from "@phosphor-icons/react";
+import { HouseSimpleIcon, GridFourIcon, GearIcon, NoteIcon, ListIcon } from "@phosphor-icons/react";
 
 export const CalendarActionsBar = ({
-    onHomeClick,
-    onHabitsClick,
     onSettingsClick,
-    onNotesClick
+    // onHomeClick,
+    // onHabitsClick,
+    // onNotesClick
 }) => {
     return (
         <div
             className={classNames({
-                "fixed gap-2 p-2 bg-white/40 dark:bg-black/40": true,
+                "gap-1": true,
                 "flex rounded-full z-10": true,
-                "w-fit bottom-4 right-4": true
+                // "w-fit bottom-4 right-4": true
             })}
         >
-            <Button
+            {/* <Button
+                isTransparent={true}
                 onClick={onHomeClick}
                 title="Home"
             >
-                <HouseSimpleIcon size={16} />
+                <HouseSimpleIcon size={24} weight="bold" />
             </Button>
             <Button
+                isTransparent={true}
                 onClick={onHabitsClick}
                 title="Habits"
             >
-                <GridFourIcon size={16} />
+                <GridFourIcon size={24} weight="bold" />
             </Button>
             <Button
+                isTransparent={true}
                 onClick={onNotesClick}
                 title="Notes"
             >
-                <NoteIcon size={16} />
-            </Button>
+                <NoteIcon size={24} weight="bold" />
+            </Button> */}
             <Button
+                isTransparent={true}
                 onClick={onSettingsClick}
                 title="Settings"
             >
-                <GearIcon size={16} />
+                <ListIcon size={24} weight="bold" />
             </Button>
         </div>
     )
