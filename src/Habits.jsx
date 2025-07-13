@@ -11,8 +11,8 @@ export const Habits = ({ date, onDateChange }) => {
     const isToday = date.toDateString() === new Date().toDateString();
 
     return (
-        <div {...handlers} className="flex flex-col space-y-8 w-full justify-center items-center">
-            <h1 className="text-lg font-bold merriweather-500 text-center py-4">
+        <div {...handlers} className="flex flex-col space-y-8 w-full">
+            <h1 className="text-4xl font-bold merriweather-500 pt-4 opacity-70">
                 {isToday ? "Today" : date.toLocaleDateString("en-US", {
                     weekday: "long",
                     month: "long",
@@ -23,7 +23,7 @@ export const Habits = ({ date, onDateChange }) => {
             {Categories.map((category) => (
                 <>
                     <div className="space-y-4">
-                        <h2 className="text-2xl font-bold merriweather-500 text-center">
+                        <h2 className="text-2xl font-bold merriweather-500">
                             {category.name}
                         </h2>
                         <div className="grid grid-cols-3 gap-2">
