@@ -8,17 +8,19 @@ import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
 
 export const Habits = ({ date, onDateChange }) => {
     const handlers = useDateSwipeNavigation(date, onDateChange);
+    const isToday = date.toDateString() === new Date().toDateString();
 
     return (
         <div {...handlers} className="flex flex-col space-y-8 w-full justify-center items-center">
             <h1 className="text-lg font-bold merriweather-500 text-center py-4">
-                {date.toLocaleDateString("en-US", {
+                {isToday ? "Today" : date.toLocaleDateString("en-US", {
                     weekday: "long",
                     month: "long",
                     day: "numeric",
                 })}
             </h1>
-            {Categories.map((category, index) => (
+            <Quotes />
+            {Categories.map((category) => (
                 <>
                     <div className="space-y-4">
                         <h2 className="text-2xl font-bold merriweather-500 text-center">
@@ -34,14 +36,8 @@ export const Habits = ({ date, onDateChange }) => {
                                 </div>
                             ))}
                         </div>
-                        {/* <TagGroup groupName={category.name.toLowerCase()} date={date} /> */}
                     </div>
                     <Thought category={category} date={date} />
-
-                    {index === 1 &&
-                        <div className="my-4">
-                            <Quotes />
-                        </div>}
                 </>
             ))}
             <HandPeaceIcon size={120} className="my-32 opacity-50" />
