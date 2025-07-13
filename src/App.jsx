@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full flex items-center justify-between py-4">
+      <div className="w-full flex items-center justify-between py-4 sticky top-0 bg-[#ece1d4] dark:bg-[#242424] z-10">
         <h1 className={classNames({
           "text-4xl font-bold merriweather-500 flex items-center gap-4": true,
           "opacity-70": view === "habits",

@@ -1,13 +1,20 @@
 import { Categories } from "./constants";
 import { HabitTile } from "./HabitTile";
 import { Thought } from "./Thought";
-import { HandPeaceIcon } from "@phosphor-icons/react";
+import { HandPeaceIcon, MeteorIcon, SparkleIcon, YinYangIcon } from "@phosphor-icons/react";
 import { Quotes } from "./Quotes";
 import classNames from "classnames";
 import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
 
+const Icons = [
+    HandPeaceIcon,
+    MeteorIcon,
+    SparkleIcon,
+    YinYangIcon,
+]
 export const Habits = ({ date, onDateChange }) => {
     const handlers = useDateSwipeNavigation(date, onDateChange);
+    const RandomIcon = Icons[Math.floor(Math.random() * Icons.length)];
     return (
         <div {...handlers} className="flex flex-col space-y-8 w-full pt-4">
             <Quotes />
@@ -32,7 +39,7 @@ export const Habits = ({ date, onDateChange }) => {
                 </>
             ))}
             <div className="flex justify-center items-center mt-10 mb-32">
-                <HandPeaceIcon size={120} className="opacity-50" />
+                <RandomIcon size={120} className="opacity-50" />
             </div>
         </div>
     )
