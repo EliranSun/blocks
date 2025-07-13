@@ -1,7 +1,7 @@
 import { Categories } from "./constants";
 import { HabitTile } from "./HabitTile";
 import { Thought } from "./Thought";
-import { HandPeaceIcon } from "@phosphor-icons/react";
+import { HandPeaceIcon, SunIcon, MoonIcon } from "@phosphor-icons/react";
 import { Quotes } from "./Quotes";
 import classNames from "classnames";
 import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
@@ -9,10 +9,11 @@ import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
 export const Habits = ({ date, onDateChange }) => {
     const handlers = useDateSwipeNavigation(date, onDateChange);
     const isToday = date.toDateString() === new Date().toDateString();
-
+    const isNight = date.getHours() < 6 || date.getHours() > 18;
     return (
         <div {...handlers} className="flex flex-col space-y-8 w-full">
-            <h1 className="text-4xl font-bold merriweather-500 pt-4 opacity-70">
+            <h1 className="text-4xl font-bold merriweather-500 pt-4 opacity-70 flex items-center gap-4">
+                {isNight ? <MoonIcon size={40} /> : <SunIcon size={40} />}
                 {isToday ? "Today" : date.toLocaleDateString("en-US", {
                     weekday: "long",
                     month: "long",
