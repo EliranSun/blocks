@@ -41,7 +41,9 @@ export const Habits = ({ date, onDateChange }) => {
                     <Thought category={category} date={date} />
                 </>
             ))}
-            <HandPeaceIcon size={120} className="my-32 opacity-50" />
+            <div className="flex justify-center items-center mt-10 mb-32">
+                <HandPeaceIcon size={120} className="opacity-50" />
+            </div>
         </div>
     )
 }

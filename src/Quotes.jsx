@@ -18,11 +18,10 @@ export const Quotes = () => {
     }, []);
 
     return (
-        <p className="opacity-40 merriweather-500 px-2 space-y-2
-        flex flex-col items-center justify-between text-2xl font-bold italic relative">
+        <div className="opacity-40 merriweather-500 px-2 space-y-2 text-2xl font-bold italic">
             <span className="text-3xl pr-2">❝</span>
             {quote}
             <span className="text-3xl pl-2">❞</span>
-        </p>
+        </div>
     )
 }
