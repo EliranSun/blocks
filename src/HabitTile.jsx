@@ -72,7 +72,11 @@ export function HabitTile({ calendar, date = new Date() }) {
                             flex
                             date={date}
                             triggerMark={triggerMark}
-                            limitInDays={calendar.cols === 3 ? 30 : calendar.cols === 2 ? 17 : 7}
+                            limitInDays={
+                                calendar.cols === 3 
+                                ? 58 
+                                : calendar.cols === 2 
+                                    ? 18 : 7}
                             calendar={calendar}
                         />
                         {calendar.isGamified && streak > 0 &&
