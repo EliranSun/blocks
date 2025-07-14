@@ -14,7 +14,7 @@ export const Settings = ({ onHomeClick, onHabitsClick, onNotesClick }) => {
         <div className={classNames(
             "fixed z-20 inset-0 m-auto flex flex-col w-full h-screen",
             "justify-evenly items-start text-6xl",
-            "merriweather-500 text-start"
+            "merriweather-500 text-start px-8"
         )}>
             <Title onClick={onHomeClick}>Home</Title>
             <Title onClick={onHabitsClick}>Habits</Title>
