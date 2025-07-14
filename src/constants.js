@@ -35,7 +35,7 @@ export const Calendars = [
     {
         name: "mood",
         icon: SmileyIcon,
-        cols: 2,
+        cols: 3,
         colors: [
             { colorClassName: "text-amber-500", className: "bg-amber-500", name: "great" },
             { colorClassName: "text-orange-600", className: "bg-orange-600", name: "good" },
@@ -267,6 +267,7 @@ export const Calendars = [
         name: "pron/mast",
         icon: EyeIcon,
         showTimeAgo: true,
+        cols: 2,
         colors: [
             { className: "bg-orange-900", name: "pron" },
             { className: "bg-red-900", name: "mast" },
