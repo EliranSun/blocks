@@ -14,14 +14,19 @@ function App() {
 
   const isToday = date.toDateString() === new Date().toDateString();
   const isNight = date.getHours() < 6 || date.getHours() > 18;
+  
   const title = useMemo(() => {
-    if (isToday) return "Today";
+    if (isToday) {
+      if (isNight) return "Tonight"
+      return "Today";
+      }
+      
     return date.toLocaleDateString("en-US", {
       weekday: "short",
       month: "long",
       day: "numeric",
     });
-  }, [date, isToday]);
+  }, [date, isToday, isNight]);
 
   return (
     <>
