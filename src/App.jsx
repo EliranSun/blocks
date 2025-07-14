@@ -17,7 +17,7 @@ function App() {
   const title = useMemo(() => {
     if (isToday) return "Today";
     return date.toLocaleDateString("en-US", {
-      weekday: "long",
+      weekday: "short",
       month: "long",
       day: "numeric",
     });
