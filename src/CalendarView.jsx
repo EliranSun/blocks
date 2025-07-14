@@ -1,9 +1,9 @@
+/* eslint-disable */
 import { getDaysInYear, startOfYear, addDays, getDay, getDayOfYear } from "date-fns";
 import { useRef, useEffect, useMemo } from "react";
 import classNames from "classnames";
 import { Cell } from "./Cell";
 
-/* eslint-disable */
 export default function CalendarView({
     calendar,
     isCondensed,
@@ -14,7 +14,10 @@ export default function CalendarView({
     limitInDays,
     flex,
     triggerMark,
-    date = new Date()
+    date = new Date(),
+    showFullYear = true,
+    horizontal = false,
+    isOpaque = false,
 }) {
     const calendarRef = useRef(null);
     const firstDayOfYear = getDay(startOfYear(date));
@@ -29,6 +32,12 @@ export default function CalendarView({
         }
 
         for (let i = 0; i < daysInYear; i++) {
+            if (!showFullYear) {
+                if (i >= todayIndex) {
+                    continue;
+                }
+            }
+
             cells.push({
                 isEmpty: false,
                 day: i + 1,
@@ -37,7 +46,7 @@ export default function CalendarView({
         }
 
         return cells;
-    }, [firstDayOfYear]);
+    }, [firstDayOfYear, date, showFullYear, todayIndex]);
 
     useEffect(() => {
         if (calendarRef.current && !isCondensed) {
@@ -51,12 +60,13 @@ export default function CalendarView({
                 setTimeout(() => {
                     todayCell.scrollIntoView({
                         behavior: "smooth",
-                        block: "start",
+                        block: horizontal ? "nearest" : "start",
+                        inline: horizontal ? "start" : "nearest",
                     });
                 }, 1000);
             }
         }
-    }, [calendarRef, firstDayOfYear, isCondensed]);
+    }, [calendarRef, firstDayOfYear, isCondensed, horizontal]);
 
     const Icon = calendar.icon;
 
@@ -72,18 +82,20 @@ export default function CalendarView({
     }, [calendarCells, todayIndex, limitInDays, firstDayOfYear]);
 
     return (
-        <div className="shrink-0">
+        <div className="flex flex-col items-center justify-center h-fit">
             {!hideTitle && isCondensed &&
-                <h1 className="mb-4 text-sm font-mono text-center flex items-center justify-center gap-2">
+                <h1 className="text-sm font-mono text-center flex items-center justify-center gap-2">
                     <Icon size={16} />
                     <span className="">{calendar.name.slice(0, 4).toUpperCase()}</span>
                 </h1>}
             <div
                 ref={calendarRef}
                 className={classNames({
-                    "overflow-y-auto w-fit h-screen gap-1 pb-40": !isCondensed,
+                    "overflow-y-auto w-fit h-screen gap-1 pb-40": !isCondensed && !horizontal,
+                    "overflow-x-auto h-fit w-screen gap-1 pr-40": !isCondensed && horizontal,
                     "transition-opacity duration-300": true,
-                    "grid grid-cols-7 items-center": !flex,
+                    "grid grid-cols-7 items-center": !flex && !horizontal,
+                    "grid grid-rows-7 grid-flow-col items-center": !flex && horizontal,
                     "flex flex-wrap": flex,
                     "gap-[2px] w-fit h-fit": isCondensed,
                     "opacity-0": isTransitioning,
@@ -102,6 +114,7 @@ export default function CalendarView({
                             calendarName={calendar.name}
                             cellDate={cell.date}
                             showInfo={showInfo}
+                            isOpaque={isOpaque}
                             colors={calendar.colors}
                             isCondensed={isCondensed}
                             onCellMark={onCellMark}

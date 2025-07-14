@@ -36,7 +36,8 @@ export const Cell = ({
     onCellMark = () => { },
     showInfo = false,
     triggerMark,
-    selectedDate = new Date()
+    selectedDate = new Date(),
+    isOpaque = false,
 }) => {
     const storageKey = useMemo(() => {
         // const dateString = format(date, "yyyy-MM-dd");
@@ -121,7 +122,7 @@ export const Cell = ({
     return (
         <Motion style={{
             scale: spring(isAnimating ? 1.2 : 1, presets.wobbly),
-            opacity: spring(isMarked ? 1 : 0.9)
+            opacity: spring(isMarked ? 1 : isOpaque ? 0.3 : 0.9)
         }}>
             {interpolated => (
                 <>

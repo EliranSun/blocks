@@ -5,55 +5,76 @@ import { HabitsMainScreen } from "./HabitsMainScreen";
 import { Settings } from "./Settings";
 import { NotesView } from "./NotesView";
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
+import CalendarView from "./CalendarView";
 import classNames from "classnames";
+import { Calendars } from "./constants";
+
+const Views = {
+  HOME: "home",
+  HABITS: "habits",
+  NOTES: "notes",
+  CALENDAR: "calendar",
+  SETTINGS: "settings",
+}
 
 function App() {
   const [date, setDate] = useState(new Date());
-  const [view, setView] = useState("home");
+  const [view, setView] = useState(Views.HOME);
 
-
-  const isToday = date.toDateString() === new Date().toDateString();
   const isNight = date.getHours() < 6 || date.getHours() > 18;
-  
+
   const title = useMemo(() => {
+    const isToday = date.toDateString() === new Date().toDateString();
     if (isToday) {
       if (isNight) return "Tonight"
       return "Today";
-      }
-      
+    }
+
     return date.toLocaleDateString("en-US", {
       weekday: "short",
       month: "long",
       day: "numeric",
     });
-  }, [date, isToday, isNight]);
+  }, [date, isNight]);
 
   return (
     <>
       <div className="w-full flex items-center justify-between py-4 sticky top-0 bg-[#ece1d4] dark:bg-[#242424] z-10">
         <h1 className={classNames({
           "text-4xl font-bold merriweather-500 flex items-center gap-4": true,
-          "opacity-70": view === "habits",
-          "opacity-0": view !== "habits",
+          "opacity-70": view === Views.HABITS,
+          "opacity-0": view !== Views.HABITS,
         })}>
           {isNight ? <MoonIcon size={40} /> : <SunIcon size={40} />}
           {title}
         </h1>
         <CalendarActionsBar
-          onSettingsClick={() => view === "settings"
-            ? setView("home")
-            : setView("settings")} />
+          onSettingsClick={() => view === Views.SETTINGS
+            ? setView(Views.HOME)
+            : setView(Views.SETTINGS)} />
       </div>
-      {view === "home" && <HabitsMainScreen date={date} onDateChange={setDate} />}
-      {view === "habits" && <Habits date={date} onDateChange={setDate} />}
-      {view === "notes" && <NotesView />}
-      {view === "settings" &&
+      {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />}
+      {view === Views.HABITS && <Habits date={date} onDateChange={setDate} />}
+      {view === Views.NOTES && <NotesView />}
+      {view === Views.CALENDAR &&
+        <div>
+          {Calendars.map((calendar, index) => (
+            <CalendarView
+              date={date}
+              isCondensed
+              horizontal
+              isOpaque
+              showFullYear={false}
+              calendar={calendar}
+              onDateChange={setDate}
+              key={index} />
+          ))}</div>}
+      {view === Views.SETTINGS &&
         <Settings
-          onHomeClick={() => setView("home")}
-          onHabitsClick={() => setView("habits")}
-          onNotesClick={() => setView("notes")} />}
-
-
+          onHomeClick={() => setView(Views.HOME)}
+          onHabitsClick={() => setView(Views.HABITS)}
+          onNotesClick={() => setView(Views.NOTES)}
+          onCalendarClick={() => setView(Views.CALENDAR)} />}
     </>
   )
 }
