@@ -122,7 +122,7 @@ export const Cell = ({
     return (
         <Motion style={{
             scale: spring(isAnimating ? 1.2 : 1, presets.wobbly),
-            opacity: spring(isMarked ? 1 : isOpaque ? 0.3 : 0.9)
+            opacity: spring(isMarked ? 1 : isOpaque ? 0 : 0.9)
         }}>
             {interpolated => (
                 <>
