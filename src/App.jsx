@@ -57,7 +57,7 @@ function App() {
       {view === Views.HABITS && <Habits date={date} onDateChange={setDate} />}
       {view === Views.NOTES && <NotesView />}
       {view === Views.CALENDAR &&
-        <div>
+        <div className="flex flex-col gap-4">
           {Calendars.map((calendar, index) => (
             <CalendarView
               date={date}
