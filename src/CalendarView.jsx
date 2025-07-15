@@ -86,7 +86,7 @@ export default function CalendarView({
             {!hideTitle && isCondensed &&
                 <h1 className="text-xl merriweather-500 py-4 font-mono text-center flex items-center justify-center gap-2">
                     <Icon size={16} />
-                    <span className="">{calendar.name.slice(0, 4).toUpperCase()}</span>
+                    <span className="">{calendar.name.toUpperCase()}</span>
                 </h1>}
             <div
                 ref={calendarRef}
