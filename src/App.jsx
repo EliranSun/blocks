@@ -4,6 +4,7 @@ import { Habits } from "./Habits";
 import { HabitsMainScreen } from "./HabitsMainScreen";
 import { Settings } from "./Settings";
 import { NotesView } from "./NotesView";
+import { WordCloud } from "./WordCloud";
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
 import CalendarView from "./CalendarView";
 import classNames from "classnames";
@@ -16,6 +17,7 @@ const Views = {
   HABITS: "habits",
   NOTES: "notes",
   CALENDAR: "calendar",
+  WORDCLOUD: "wordcloud",
   SETTINGS: "settings",
 }
 
@@ -66,6 +68,7 @@ function App() {
       {view === Views.HABITS && <Habits date={date} onDateChange={setDate} />}
       {view === Views.NOTES && <NotesView />}
       {view === Views.SEARCH && <SearchView />}
+      {view === Views.WORDCLOUD && <WordCloud />}
       {view === Views.CALENDAR &&
         <div className="flex flex-col gap-4">
           {Calendars.map((calendar, index) => (
@@ -85,7 +88,8 @@ function App() {
           onHabitsClick={() => setView(Views.HABITS)}
           onNotesClick={() => setView(Views.NOTES)}
           onCalendarClick={() => setView(Views.CALENDAR)}
-          onSearchClick={() => setView(Views.SEARCH)} />}
+          onSearchClick={() => setView(Views.SEARCH)}
+          onWordCloudClick={() => setView(Views.WORDCLOUD)} />}
     </>
   )
 }

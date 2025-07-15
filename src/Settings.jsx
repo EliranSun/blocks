@@ -14,7 +14,8 @@ export const Settings = ({
     onHabitsClick,
     onNotesClick,
     onCalendarClick,
-    onSearchClick
+    onSearchClick,
+    onWordCloudClick
 }) => {
     return (
         <div className={classNames(
@@ -27,6 +28,7 @@ export const Settings = ({
             <Title onClick={onCalendarClick}>Calendar</Title>
             <Title onClick={onNotesClick}>Notes</Title>
             <Title onClick={onSearchClick}>Search</Title>
+            <Title onClick={onWordCloudClick}>Word Cloud</Title>
             <Title onClick={triggerImport}>Import</Title>
             <Title onClick={exportCalendarData}>Export</Title>
             <Title onClick={() => window.location.reload()}>Refresh</Title>
