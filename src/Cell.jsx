@@ -122,7 +122,7 @@ export const Cell = ({
     return (
         <Motion style={{
             scale: spring(isAnimating ? 1.2 : 1, presets.wobbly),
-            opacity: spring(isMarked ? 1 : isOpaque ? 0 : 0.9)
+            opacity: spring(isMarked ? 1 : 0.9)
         }}>
             {interpolated => (
                 <>
@@ -138,10 +138,11 @@ export const Cell = ({
                             handleMark();
                         }}
                         className={classNames("cursor-pointer", currentColor, {
-                            "bg-neutral-700": !isCellSelected && !isMarked,
+                            "bg-neutral-700": !isCellSelected && !isMarked && !isOpaque,
                             "size-12 flex items-center justify-center rounded-md": !isCondensed,
                             "size-[9px] rounded-xs": isCondensed,
                             "border-1 shadow": isCellSelected,
+                            "border": isOpaque,
                         })}
                         style={{
                             transform: `scale(${interpolated.scale})`,
