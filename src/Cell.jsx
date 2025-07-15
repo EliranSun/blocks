@@ -142,7 +142,7 @@ export const Cell = ({
                             "size-12 flex items-center justify-center rounded-md": !isCondensed,
                             "size-[9px] rounded-xs": isCondensed,
                             "border-1 shadow": isCellSelected,
-                            "border": isOpaque,
+                            "border border-black/80": isOpaque,
                         })}
                         style={{
                             transform: `scale(${interpolated.scale})`,
