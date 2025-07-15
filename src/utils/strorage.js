@@ -24,9 +24,14 @@ export const searchThoughts = (search) => {
     return Object.keys(localStorage)
         .filter(key => key.includes("thought_"))
         .map(key => {
-            return localStorage.getItem(key);
+            return {
+                value: localStorage.getItem(key),
+                category: new Date(key.split("_")[1]),
+                date: new Date(key.split("_")[2]).getTime(),
+            };
         })
-        .filter(item => item.toLowerCase().includes(search.toLowerCase()));
+        .filter(({ value }) => value.toLowerCase().includes(search.toLowerCase()))
+        .sort((a, b) => b.date - a.date);
 };
 
 export const getStorageBySuffix = (suffix) => {

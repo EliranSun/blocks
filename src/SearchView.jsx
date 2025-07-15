@@ -1,5 +1,6 @@
 import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 import { useState } from "react";
+import { format } from "date-fns";
 import { searchThoughts } from "./utils/strorage";
 
 const highlightSearchTerm = (text, search) => {
@@ -36,7 +37,8 @@ export const SearchView = () => {
                     <div
                         key={index}
                         className="bg-white/50 rounded-xl p-4 w-full overflow-hidden whitespace-wrap">
-                        {highlightSearchTerm(thought, search)}
+                        <b>{format(thought.date, "MMM d, yyyy")}: </b>
+                        {highlightSearchTerm(thought.value, search)}
                     </div>
                 ))}
             </div>
