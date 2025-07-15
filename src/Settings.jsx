@@ -20,6 +20,7 @@ export const Settings = ({ onHomeClick, onHabitsClick, onNotesClick, onCalendarC
             <Title onClick={onHabitsClick}>Habits</Title>
             <Title onClick={onCalendarClick}>Calendar</Title>
             <Title onClick={onNotesClick}>Notes</Title>
+                        <Title onClick={() => alert("todo")}>Search</Title>
             <Title onClick={triggerImport}>Import</Title>
             <Title onClick={exportCalendarData}>Export</Title>
             <Title onClick={() => window.location.reload()}>Refresh</Title>
