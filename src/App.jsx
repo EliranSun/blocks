@@ -9,6 +9,7 @@ import CalendarView from "./CalendarView";
 import classNames from "classnames";
 import { Calendars } from "./constants";
 import { SearchView } from "./SearchView";
+import { DateSelection } from "./DateSelection";
 
 const Views = {
   HOME: "home",
@@ -21,6 +22,7 @@ const Views = {
 function App() {
   const [date, setDate] = useState(new Date());
   const [view, setView] = useState(Views.HOME);
+  const [isDateSelectionOpen, setIsDateSelectionOpen] = useState(false);
 
   const isNight = date.getHours() < 6 || date.getHours() > 18;
 
@@ -33,19 +35,25 @@ function App() {
 
     return date.toLocaleDateString("en-US", {
       weekday: "short",
-      month: "long",
+      month: "short",
       day: "numeric",
     });
   }, [date, isNight]);
 
   return (
     <>
+      {isDateSelectionOpen && <DateSelection onDateChange={date => {
+        setDate(date);
+        setIsDateSelectionOpen(false);
+      }} />}
       <div className="w-full flex items-center justify-between py-4 sticky top-0 bg-[#ece1d4] dark:bg-[#242424] z-10">
-        <h1 className={classNames({
-          "text-4xl font-bold merriweather-500 flex items-center gap-4": true,
-          "opacity-70": view === Views.HABITS,
-          "opacity-0": view !== Views.HABITS,
-        })}>
+        <h1
+          onClick={() => setIsDateSelectionOpen(true)}
+          className={classNames({
+            "text-4xl font-bold merriweather-500 flex items-center gap-4": true,
+            "opacity-70": view === Views.HABITS,
+            "opacity-0": view !== Views.HABITS,
+          })}>
           {isNight ? <MoonIcon size={40} /> : <SunIcon size={40} />}
           {title}
         </h1>

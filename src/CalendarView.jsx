@@ -72,9 +72,11 @@ export default function CalendarView({
 
     const slicedCells = useMemo(() => {
         if (limitInDays) {
+            const start = todayIndex - limitInDays + firstDayOfYear;
+            const end = todayIndex + firstDayOfYear;
             return calendarCells.slice(
-                todayIndex - limitInDays + firstDayOfYear,
-                todayIndex + firstDayOfYear
+                start < 0 ? 0 : start,
+                end > calendarCells.length ? calendarCells.length : end
             );
         }
 
@@ -82,7 +84,7 @@ export default function CalendarView({
     }, [calendarCells, todayIndex, limitInDays, firstDayOfYear]);
 
     return (
-        <div className="flex flex-col items-center justify-center h-fit">
+        <div className="flex flex-col items-start justify-center h-fit">
             {!hideTitle && isCondensed &&
                 <h1 className="text-xl merriweather-500 py-4 font-mono text-center flex items-center justify-center gap-2">
                     <Icon size={16} />

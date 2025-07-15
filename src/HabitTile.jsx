@@ -13,7 +13,7 @@ export function HabitTile({ calendar, date = new Date() }) {
     const [triggerMark, setTriggerMark] = useState(0);
     const [todayValue, setTodayValue] = useState("-1");
 
-    useEffect(calculateStreak, [calendar.name]);
+    useEffect(calculateStreak, [calendar.name, calculateStreak]);
 
     useEffect(() => {
         setTodayValue(localStorage.getItem(getStorageKey(calendar.name, date)) || "-1");
@@ -71,13 +71,13 @@ export function HabitTile({ calendar, date = new Date() }) {
                             showInfo
                             flex
                             date={date}
+                            calendar={calendar}
                             triggerMark={triggerMark}
                             limitInDays={
-                                calendar.cols === 3 
-                                ? 58 
-                                : calendar.cols === 2 
-                                    ? 18 : 7}
-                            calendar={calendar}
+                                calendar.cols === 3
+                                    ? 58
+                                    : calendar.cols === 2
+                                        ? 18 : 7}
                         />
                         {calendar.isGamified && streak > 0 &&
                             <span className="text-xs text-red-500 font-mono absolute top-4 right-3">

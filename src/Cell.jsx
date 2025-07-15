@@ -14,7 +14,7 @@ const DayText = ({ dayText, text, showInfo, isStartOfMonth, isCondensed }) => {
 
     if (showInfo) {
         return (
-            <h1 className="flex flex-col items-center justify-center text-xs">
+            <h1 className="flex flex-col items-center justify-center text-[6px]">
                 <span className="text-white">{dayText}</span>
                 <span className="font-bold">{text}</span>
             </h1>
