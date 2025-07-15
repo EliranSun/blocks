@@ -39,9 +39,9 @@ export const Calendars = [
         colors: [
             { colorClassName: "text-amber-500", className: "bg-amber-500", name: "great" },
             { colorClassName: "text-orange-600", className: "bg-orange-600", name: "good" },
-            { colorClassName: "text-red-700", className: "bg-red-700", name: "ok" },
-            { colorClassName: "text-blue-800", className: "bg-blue-800", name: "bad" },
-            { colorClassName: "text-purple-900", className: "bg-purple-900", name: "awful" },
+            { isDark: true, colorClassName: "text-red-700", className: "bg-red-700", name: "ok" },
+            { isDark: true, colorClassName: "text-blue-800", className: "bg-blue-800", name: "bad" },
+            { isDark: true, colorClassName: "text-purple-900", className: "bg-purple-900", name: "awful" },
         ]
     },
     {
@@ -62,8 +62,8 @@ export const Calendars = [
             { className: "bg-blue-100", name: "30" },
             { className: "bg-blue-300", name: "100" },
             { className: "bg-blue-500", name: "130" },
-            { className: "bg-blue-700", name: "200" },
-            { className: "bg-blue-950", name: "230" },
+            { isDark: true, className: "bg-blue-700", name: "200" },
+            { isDark: true, className: "bg-blue-950", name: "230" },
         ]
     },
     {
@@ -74,8 +74,8 @@ export const Calendars = [
             { className: "bg-indigo-100", name: "15" },
             { className: "bg-indigo-300", name: "30" },
             { className: "bg-indigo-500", name: "45" },
-            { className: "bg-indigo-700", name: "100" },
-            { className: "bg-indigo-950", name: "115" },
+            { isDark: true, className: "bg-indigo-700", name: "100" },
+            { isDark: true, className: "bg-indigo-950", name: "115" },
         ]
     },
     {

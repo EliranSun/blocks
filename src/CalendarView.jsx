@@ -1,8 +1,8 @@
-/* eslint-disable */
 import { getDaysInYear, startOfYear, addDays, getDay, getDayOfYear } from "date-fns";
 import { useRef, useEffect, useMemo } from "react";
 import classNames from "classnames";
 import { Cell } from "./Cell";
+import { Calendars } from "./constants";
 
 export default function CalendarView({
     calendar,
@@ -18,6 +18,7 @@ export default function CalendarView({
     showFullYear = true,
     horizontal = false,
     isOpaque = false,
+    showLegend = false,
 }) {
     const calendarRef = useRef(null);
     const firstDayOfYear = getDay(startOfYear(date));
@@ -125,6 +126,18 @@ export default function CalendarView({
                     )
                 })}
             </div>
+            {showLegend &&
+                <legend className="flex items-center justify-center gap-2 pt-2">
+                    {Calendars.find(c => c.name === calendar.name).colors.map((color, index) => (
+                        <span key={index} className={classNames(
+                            "rounded text-[8px] w-fit h-fit p-1",
+                            color.isDark ? "text-white" : "text-black",
+                            color.className
+                        )}>
+                            {color.name}
+                        </span>
+                    ))}
+                </legend>}
         </div>
     )
 }

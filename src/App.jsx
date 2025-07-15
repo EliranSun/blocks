@@ -77,6 +77,7 @@ function App() {
               isCondensed
               horizontal
               isOpaque
+              showLegend
               showFullYear={false}
               calendar={calendar}
               onDateChange={setDate}
