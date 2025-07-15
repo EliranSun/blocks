@@ -26,9 +26,9 @@ export const Settings = ({
             <Title onClick={onHomeClick}>Home</Title>
             <Title onClick={onHabitsClick}>Habits</Title>
             <Title onClick={onCalendarClick}>Calendar</Title>
-            <Title onClick={onNotesClick}>Notes</Title>
+            <Title onClick={onNotesClick}>Thoughts</Title>
+            <Title onClick={onWordCloudClick}>Cloud</Title>
             <Title onClick={onSearchClick}>Search</Title>
-            <Title onClick={onWordCloudClick}>Word Cloud</Title>
             <Title onClick={triggerImport}>Import</Title>
             <Title onClick={exportCalendarData}>Export</Title>
             <Title onClick={() => window.location.reload()}>Refresh</Title>
