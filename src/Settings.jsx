@@ -9,7 +9,13 @@ const Title = ({ children, onClick }) => {
         )}>{children}</h2>
     )
 }
-export const Settings = ({ onHomeClick, onHabitsClick, onNotesClick, onCalendarClick }) => {
+export const Settings = ({
+    onHomeClick,
+    onHabitsClick,
+    onNotesClick,
+    onCalendarClick,
+    onSearchClick
+}) => {
     return (
         <div className={classNames(
             "fixed z-20 inset-0 m-auto flex flex-col w-full h-screen",
@@ -20,7 +26,7 @@ export const Settings = ({ onHomeClick, onHabitsClick, onNotesClick, onCalendarC
             <Title onClick={onHabitsClick}>Habits</Title>
             <Title onClick={onCalendarClick}>Calendar</Title>
             <Title onClick={onNotesClick}>Notes</Title>
-                        <Title onClick={() => alert("todo")}>Search</Title>
+            <Title onClick={onSearchClick}>Search</Title>
             <Title onClick={triggerImport}>Import</Title>
             <Title onClick={exportCalendarData}>Export</Title>
             <Title onClick={() => window.location.reload()}>Refresh</Title>

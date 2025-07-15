@@ -20,6 +20,15 @@ export const getStorageByPrefix = (prefix) => {
         .sort((a, b) => b.date - a.date);
 };
 
+export const searchThoughts = (search) => {
+    return Object.keys(localStorage)
+        .filter(key => key.includes("thought_"))
+        .map(key => {
+            return localStorage.getItem(key);
+        })
+        .filter(item => item.toLowerCase().includes(search.toLowerCase()));
+};
+
 export const getStorageBySuffix = (suffix) => {
     return Object
         .keys(localStorage)

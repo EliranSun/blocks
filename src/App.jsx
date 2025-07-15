@@ -8,6 +8,7 @@ import { MoonIcon, SunIcon } from "@phosphor-icons/react";
 import CalendarView from "./CalendarView";
 import classNames from "classnames";
 import { Calendars } from "./constants";
+import { SearchView } from "./SearchView";
 
 const Views = {
   HOME: "home",
@@ -56,6 +57,7 @@ function App() {
       {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />}
       {view === Views.HABITS && <Habits date={date} onDateChange={setDate} />}
       {view === Views.NOTES && <NotesView />}
+      {view === Views.SEARCH && <SearchView />}
       {view === Views.CALENDAR &&
         <div className="flex flex-col gap-4">
           {Calendars.map((calendar, index) => (
@@ -74,7 +76,8 @@ function App() {
           onHomeClick={() => setView(Views.HOME)}
           onHabitsClick={() => setView(Views.HABITS)}
           onNotesClick={() => setView(Views.NOTES)}
-          onCalendarClick={() => setView(Views.CALENDAR)} />}
+          onCalendarClick={() => setView(Views.CALENDAR)}
+          onSearchClick={() => setView(Views.SEARCH)} />}
     </>
   )
 }
