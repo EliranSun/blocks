@@ -1,5 +1,5 @@
 import { getDaysInYear, startOfYear, addDays, getDay, getDayOfYear } from "date-fns";
-import { useRef, useEffect, useMemo } from "react";
+import { useRef, useState, useEffect, useMemo } from "react";
 import classNames from "classnames";
 import { Cell } from "./Cell";
 import { Calendars } from "./constants";
@@ -23,7 +23,8 @@ export default function CalendarView({
     const calendarRef = useRef(null);
     const firstDayOfYear = getDay(startOfYear(date));
     const todayIndex = useMemo(() => getDayOfYear(date), [date]);
-
+    const [selectedColorIndex, setSelectedColorIndex] = useState(null);
+    
     const calendarCells = useMemo(() => {
         const daysInYear = getDaysInYear(date);
         const cells = [];
@@ -117,6 +118,7 @@ export default function CalendarView({
                             calendarName={calendar.name}
                             cellDate={cell.date}
                             showInfo={showInfo}
+                            selectedColorIndex={selectedColorIndex}
                             isOpaque={isOpaque}
                             colors={calendar.colors}
                             isCondensed={isCondensed}
@@ -129,8 +131,10 @@ export default function CalendarView({
             {showLegend &&
                 <legend className="flex items-center justify-center gap-2 pt-2">
                     {Calendars.find(c => c.name === calendar.name).colors.map((color, index) => (
-                        <span key={index} className={classNames(
-                            "rounded text-[8px] w-fit h-fit p-1",
+                        <span key={index} 
+                            onClick={() => setSelectedColorIndex(index)}
+                            className={classNames(
+                            "rounded text-[8px] w-fit h-fit p-2",
                             color.isDark ? "text-white" : "text-black",
                             color.className
                         )}>
