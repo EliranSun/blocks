@@ -38,6 +38,7 @@ export const Cell = ({
     triggerMark,
     selectedDate = new Date(),
     isOpaque = false,
+    selectedColorIndex = null
 }) => {
     const storageKey = useMemo(() => {
         // const dateString = format(date, "yyyy-MM-dd");
@@ -118,11 +119,16 @@ export const Cell = ({
     }, [dayNumber, monthName]);
 
     const isStartOfMonth = useMemo(() => isNaN(dayText), [dayText]);
-
+    const isColorSelected = (selectedColorIndex !== null && selectedColorIndex === colorIndex);
+    
     return (
         <Motion style={{
             scale: spring(isAnimating ? 1.2 : 1, presets.wobbly),
-            opacity: spring(isMarked ? 1 : 0.9)
+            opacity: spring(
+                 isColorSelected
+                    ? 0
+                    : isMarked ? 1 : 0.9
+            )
         }}>
             {interpolated => (
                 <>
