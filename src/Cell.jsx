@@ -119,14 +119,14 @@ export const Cell = ({
     }, [dayNumber, monthName]);
 
     const isStartOfMonth = useMemo(() => isNaN(dayText), [dayText]);
-    const isColorSelected = (selectedColorIndex !== null && selectedColorIndex === colorIndex);
+    const isColorSelected = (selectedColorIndex === colorIndex);
     
     return (
         <Motion style={{
             scale: spring(isAnimating ? 1.2 : 1, presets.wobbly),
             opacity: spring(
-                 isColorSelected
-                    ? 0
+                 selectedColorIndex !== null
+                    ? isColorSelected ? 1 : 0
                     : isMarked ? 1 : 0.9
             )
         }}>
