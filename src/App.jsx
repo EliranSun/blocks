@@ -1,16 +1,14 @@
-import { useMemo, useState } from "react";
-import { CalendarActionsBar } from "./CalendarActionsBar";
+import { useState } from "react";
 import { Habits } from "./Habits";
 import { HabitsMainScreen } from "./HabitsMainScreen";
 import { Settings } from "./Settings";
 import { NotesView } from "./NotesView";
 import { WordCloud } from "./WordCloud";
-import { MoonIcon, SunIcon } from "@phosphor-icons/react";
 import CalendarView from "./CalendarView";
-import classNames from "classnames";
 import { Calendars } from "./constants";
 import { SearchView } from "./SearchView";
 import { DateSelection } from "./DateSelection";
+import { Header } from "./Header";
 
 const Views = {
   HOME: "home",
@@ -26,44 +24,13 @@ function App() {
   const [view, setView] = useState(Views.HOME);
   const [isDateSelectionOpen, setIsDateSelectionOpen] = useState(false);
 
-  const isNight = date.getHours() < 6 || date.getHours() > 18;
-
-  const title = useMemo(() => {
-    const isToday = date.toDateString() === new Date().toDateString();
-    if (isToday) {
-      if (isNight) return "Tonight"
-      return "Today";
-    }
-
-    return date.toLocaleDateString("en-US", {
-      weekday: "short",
-      month: "short",
-      day: "numeric",
-    });
-  }, [date, isNight]);
-
   return (
     <>
-      {isDateSelectionOpen && <DateSelection onDateChange={date => {
-        setDate(date);
-        setIsDateSelectionOpen(false);
-      }} />}
-      <div className="w-full flex items-center justify-between py-4 sticky top-0 bg-[#ece1d4] dark:bg-[#242424] z-10">
-        <h1
-          onClick={() => setIsDateSelectionOpen(true)}
-          className={classNames({
-            "text-4xl font-bold merriweather-500 flex items-center gap-4": true,
-            "opacity-70": view === Views.HABITS,
-            "opacity-0": view !== Views.HABITS,
-          })}>
-          {isNight ? <MoonIcon size={40} /> : <SunIcon size={40} />}
-          {title}
-        </h1>
-        <CalendarActionsBar
-          onSettingsClick={() => view === Views.SETTINGS
-            ? setView(Views.HOME)
-            : setView(Views.SETTINGS)} />
-      </div>
+      <Header
+        view={view}
+        setView={setView}
+        setIsDateSelectionOpen={setIsDateSelectionOpen}
+      />
       {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />}
       {view === Views.HABITS && <Habits date={date} onDateChange={setDate} />}
       {view === Views.NOTES && <NotesView />}
@@ -73,6 +40,7 @@ function App() {
         <div className="flex flex-col gap-4">
           {Calendars.map((calendar, index) => (
             <CalendarView
+              key={index}
               date={date}
               isCondensed
               horizontal
@@ -80,9 +48,9 @@ function App() {
               showLegend
               showFullYear={false}
               calendar={calendar}
-              onDateChange={setDate}
-              key={index} />
+              onDateChange={setDate} />
           ))}</div>}
+
       {view === Views.SETTINGS &&
         <Settings
           onHomeClick={() => setView(Views.HOME)}
@@ -91,6 +59,14 @@ function App() {
           onCalendarClick={() => setView(Views.CALENDAR)}
           onSearchClick={() => setView(Views.SEARCH)}
           onWordCloudClick={() => setView(Views.WORDCLOUD)} />}
+
+      {isDateSelectionOpen &&
+        <DateSelection
+          onDateChange={date => {
+            setDate(date);
+            setIsDateSelectionOpen(false);
+          }} />}
+
     </>
   )
 }
