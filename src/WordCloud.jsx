@@ -123,8 +123,8 @@ export const WordCloud = () => {
 
     const getWordSize = (count, maxCount) => {
         const ratio = count / maxCount;
-        if (ratio > 0.8) return "text-4xl";
-        if (ratio > 0.6) return "text-3xl";
+        if (ratio > 0.8) return "text-6xl";
+        if (ratio > 0.6) return "text-4xl";
         if (ratio > 0.4) return "text-2xl";
         if (ratio > 0.2) return "text-xl";
         return "text-lg";
