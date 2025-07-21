@@ -18,6 +18,7 @@ function App() {
   return (
     <>
       <Header
+        date={date}
         view={view}
         setView={setView}
         setIsDateSelectionOpen={setIsDateSelectionOpen}
