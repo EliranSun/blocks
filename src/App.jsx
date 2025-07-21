@@ -5,19 +5,10 @@ import { Settings } from "./Settings";
 import { NotesView } from "./NotesView";
 import { WordCloud } from "./WordCloud";
 import CalendarView from "./CalendarView";
-import { Calendars } from "./constants";
+import { Calendars, Views } from "./constants";
 import { SearchView } from "./SearchView";
 import { DateSelection } from "./DateSelection";
 import { Header } from "./Header";
-
-const Views = {
-  HOME: "home",
-  HABITS: "habits",
-  NOTES: "notes",
-  CALENDAR: "calendar",
-  WORDCLOUD: "wordcloud",
-  SETTINGS: "settings",
-}
 
 function App() {
   const [date, setDate] = useState(new Date());

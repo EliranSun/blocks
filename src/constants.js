@@ -310,3 +310,11 @@ export const Categories = [
         calendars: Calendars.slice(25, 28),
     }
 ];
+export const Views = {
+    HOME: "home",
+    HABITS: "habits",
+    NOTES: "notes",
+    CALENDAR: "calendar",
+    WORDCLOUD: "wordcloud",
+    SETTINGS: "settings",
+};
