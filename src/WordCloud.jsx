@@ -17,14 +17,65 @@ const analyzeWords = (thoughts) => {
         .split(/\s+/)
         .filter(word => word.length > 2) // Filter out very short words
         .filter(word => ![
-            "the", "and", "for", "are", "but", "because", "because of",
-            "not", "you", "all", "can", "had", "her", "was", "one", "our",
-            "out", "day", "get", "has", "him", "his", "how", "its", "may",
-            "new", "now", "old", "see", "two", "who", "boy", "did", "what",
-            "with", "have", "this", "will", "your", "from", "they", "know",
-            "want", "been", "good", "much", "some", "time", "very", "when",
-            "come", "here", "just", "like", "long", "make", "many", "over",
-            "such", "take", "than", "them", "well", "were"].includes(word)); // Filter out common stop words
+            // Articles & Determiners
+            "a", "an", "the", "this", "that", "these", "those", "each", "every", "any", "some", "all",
+
+            // Pronouns
+            "i", "me", "my", "mine", "we", "us", "our", "ours", "you", "your", "yours",
+            "he", "him", "his", "she", "her", "hers", "it", "its", "they", "them", "their", "theirs",
+
+            // Common Verbs (to be, to have, modals, etc.)
+            "am", "is", "are", "was", "were", "be", "being", "been",
+            "have", "has", "had", "having", "do", "does", "did", "doing", "done",
+            "can", "could", "may", "might", "will", "would", "shall", "should", "must",
+
+            // Prepositions
+            "about", "above", "across", "after", "against", "along", "among", "around", "as", "at",
+            "before", "behind", "below", "beneath", "beside", "between", "by", "down", "during",
+            "for", "from", "in", "into", "near", "of", "off", "on", "onto", "out", "over",
+            "through", "to", "under", "up", "upon", "with", "within", "without",
+
+            // Conjunctions & Connectors
+            "and", "but", "or", "nor", "so", "yet", "because", "since", "although", "though",
+            "while", "whereas", "if", "unless", "until", "when", "whenever", "where", "wherever",
+            "however", "therefore", "thus", "hence", "moreover", "furthermore", "nevertheless",
+
+            // Question Words
+            "what", "when", "where", "why", "how", "who", "whom", "whose", "which",
+
+            // Common Adverbs
+            "very", "really", "quite", "pretty", "fairly", "rather", "somewhat", "mostly",
+            "nearly", "almost", "hardly", "barely", "only", "also", "too", "even", "still",
+            "yet", "already", "again", "back", "away", "here", "there", "now", "then",
+            "just", "more", "most", "less", "least", "much", "many", "few", "little",
+
+            // Common Verbs (action/movement/perception)
+            "go", "goes", "going", "went", "gone", "come", "comes", "coming", "came",
+            "get", "gets", "getting", "got", "gotten", "take", "takes", "taking", "took", "taken",
+            "make", "makes", "making", "made", "see", "sees", "seeing", "saw", "seen",
+            "look", "looks", "looking", "looked", "say", "says", "saying", "said",
+            "tell", "tells", "telling", "told", "think", "thinks", "thinking", "thought",
+            "know", "knows", "knowing", "knew", "known", "want", "wants", "wanting", "wanted",
+            "feel", "feels", "feeling", "felt", "seem", "seems", "seeming", "seemed",
+            "become", "becomes", "becoming", "became", "try", "tries", "trying", "tried",
+
+            // Numbers & Quantity
+            "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+            "first", "second", "third", "last", "next", "another", "other", "others",
+
+            // Time-related (generic)
+            "day", "time", "year", "today", "tomorrow", "yesterday", "morning", "afternoon", "evening",
+
+            // Common Adjectives (vague/filler)
+            "good", "bad", "great", "big", "small", "large", "little", "old", "new", "young",
+            "long", "short", "high", "low", "right", "wrong", "same", "different", "easy", "hard",
+
+            // Other Common Words
+            "well", "sure", "okay", "yes", "no", "maybe", "perhaps", "probably", "definitely",
+            "actually", "basically", "literally", "totally", "completely", "absolutely",
+            "thing", "things", "stuff", "way", "ways", "part", "parts", "place", "places",
+            "people", "person", "man", "woman", "boy", "girl", "kind", "type", "sort"
+        ].includes(word)); // Filter out common stop words
 
     const wordCount = {};
     words.forEach(word => {
