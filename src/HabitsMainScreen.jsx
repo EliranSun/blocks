@@ -10,17 +10,8 @@ export const HabitsMainScreen = ({ date, onDateChange }) => {
     const handlers = useDateSwipeNavigation(date, onDateChange);
 
     return (
-        <div className="flex flex-col justify-between h-full gap-8">
-            {/* <h1 className="text-3xl font-bold col-span-2
-        font-mono opacity-80 text-center merriweather-500">
-                {date.toLocaleDateString("en-US", {
-                    weekday: "long",
-                    month: "long",
-                    day: "numeric",
-                })}
-            </h1> */}
-            <Quotes />
-            <div {...handlers} className="grid grid-cols-5 w-fit h-full m-auto gap-5">
+        <div className="flex flex-col justify-between h-[calc(100vh-80px-32px)] gap-8">
+            <div {...handlers} className="grid grid-cols-5 w-fit h-fit m-auto gap-5">
                 {Calendars.map((item, index) => {
                     const Icon = item.icon;
                     const isSelected = habitsByDay.some(habit => habit.calendar.name === item.name);
@@ -47,6 +38,7 @@ export const HabitsMainScreen = ({ date, onDateChange }) => {
                     );
                 })}
             </div>
+            <Quotes />
         </div>
     )
 }

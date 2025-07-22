@@ -2,7 +2,7 @@ import { Views } from "./constants";
 import classNames from "classnames";
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
 import { CalendarActionsBar } from "./CalendarActionsBar";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 
 export const Header = ({
     view,
@@ -11,7 +11,7 @@ export const Header = ({
     setIsDateSelectionOpen,
 }) => {
     const isNight = date.getHours() < 6 || date.getHours() > 18;
-
+    const headerRef = useRef(null);
     const title = useMemo(() => {
         const isToday = date.toDateString() === new Date().toDateString();
         if (isToday) {
@@ -28,11 +28,19 @@ export const Header = ({
 
     const isVisible = view === Views.HABITS || view === Views.HOME;
 
+    useEffect(() => {
+        if (headerRef.current) {
+            alert(headerRef.current.getBoundingClientRect().height);
+        }
+    }, [view]);
+
     return (
-        <div className={classNames(
-            "w-full flex items-center justify-between pb-8 sticky",
-            "top-0 bg-[#ece1d4] dark:bg-[#242424] z-10"
-        )}>
+        <div
+            ref={headerRef}
+            className={classNames(
+                "w-full flex items-center justify-between pb-8 sticky",
+                "top-0 bg-[#ece1d4] dark:bg-[#242424] z-10"
+            )}>
             <h1
                 onClick={() => setIsDateSelectionOpen(true)}
                 className={classNames({
