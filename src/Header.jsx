@@ -2,7 +2,7 @@ import { Views } from "./constants";
 import classNames from "classnames";
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
 import { CalendarActionsBar } from "./CalendarActionsBar";
-import { useEffect, useMemo, useRef } from "react";
+import { useMemo, useRef } from "react";
 
 export const Header = ({
     view,
@@ -27,12 +27,6 @@ export const Header = ({
     }, [date, isNight]);
 
     const isVisible = view === Views.HABITS || view === Views.HOME;
-
-    useEffect(() => {
-        if (headerRef.current) {
-            alert(headerRef.current.getBoundingClientRect().height);
-        }
-    }, [view]);
 
     return (
         <div
