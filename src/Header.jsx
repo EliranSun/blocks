@@ -26,17 +26,19 @@ export const Header = ({
         });
     }, [date, isNight]);
 
+    const isVisible = view === Views.HABITS || view === Views.HOME;
+
     return (
         <div className={classNames(
-            "w-full flex items-center justify-between py-4 sticky",
+            "w-full flex items-center justify-between py-3 sticky",
             "top-0 bg-[#ece1d4] dark:bg-[#242424] z-10"
         )}>
             <h1
                 onClick={() => setIsDateSelectionOpen(true)}
                 className={classNames({
                     "text-4xl font-bold merriweather-500 flex items-center gap-4": true,
-                    "opacity-70": view === Views.HABITS,
-                    "opacity-0": view !== Views.HABITS,
+                    "opacity-70": isVisible,
+                    "opacity-0": !isVisible,
                 })}>
                 {isNight ? <MoonIcon size={40} /> : <SunIcon size={40} />}
                 {title}

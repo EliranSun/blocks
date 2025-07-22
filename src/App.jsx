@@ -9,6 +9,7 @@ import { Calendars, Views } from "./constants";
 import { SearchView } from "./SearchView";
 import { DateSelection } from "./DateSelection";
 import { Header } from "./Header";
+import { Quotes } from "./Quotes";
 
 function App() {
   const [date, setDate] = useState(new Date());
@@ -24,6 +25,7 @@ function App() {
         setIsDateSelectionOpen={setIsDateSelectionOpen}
       />
       {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />}
+      {/* {view === Views.HOME && <Quotes date={date} onDateChange={setDate} />} */}
       {view === Views.HABITS && <Habits date={date} onDateChange={setDate} />}
       {view === Views.NOTES && <NotesView />}
       {view === Views.SEARCH && <SearchView />}

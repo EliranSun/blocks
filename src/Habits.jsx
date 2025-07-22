@@ -2,7 +2,7 @@ import { Categories } from "./constants";
 import { HabitTile } from "./HabitTile";
 import { Thought } from "./Thought";
 import { HandPeaceIcon, MeteorIcon, SparkleIcon, YinYangIcon } from "@phosphor-icons/react";
-import { Quotes } from "./Quotes";
+// import { Quotes } from "./Quotes";
 import classNames from "classnames";
 import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
 
@@ -18,7 +18,7 @@ export const Habits = ({ date, onDateChange }) => {
 
     return (
         <div {...handlers} className="flex flex-col space-y-8 w-full pt-4">
-            <Quotes />
+            {/* <Quotes /> */}
             {Categories.map((category) => (
                 <>
                     <div className="space-y-4" key={category.name}>
