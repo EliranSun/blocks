@@ -30,7 +30,7 @@ export const Header = ({
 
     return (
         <div className={classNames(
-            "w-full flex items-center justify-between py-3 sticky",
+            "w-full flex items-center justify-between pb-8 sticky",
             "top-0 bg-[#ece1d4] dark:bg-[#242424] z-10"
         )}>
             <h1
