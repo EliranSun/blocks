@@ -9,7 +9,7 @@ import { Calendars, Views } from "./constants";
 import { SearchView } from "./SearchView";
 import { DateSelection } from "./DateSelection";
 import { Header } from "./Header";
-import { Quotes } from "./Quotes";
+import { AtlyFive } from "./AtlyFive";
 
 function App() {
   const [date, setDate] = useState(new Date());
@@ -24,7 +24,8 @@ function App() {
         setView={setView}
         setIsDateSelectionOpen={setIsDateSelectionOpen}
       />
-      {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />}
+      {/* {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />} */}
+      {view === Views.HOME && <AtlyFive />}
       {/* {view === Views.HOME && <Quotes date={date} onDateChange={setDate} />} */}
       {view === Views.HABITS && <Habits date={date} onDateChange={setDate} />}
       {view === Views.NOTES && <NotesView />}
