@@ -24,8 +24,8 @@ function App() {
         setView={setView}
         setIsDateSelectionOpen={setIsDateSelectionOpen}
       />
-      {/* {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />} */}
-      {view === Views.HOME && <AtlyFive />}
+      {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />}
+      {view === Views.ATLY && <AtlyFive />}
       {/* {view === Views.HOME && <Quotes date={date} onDateChange={setDate} />} */}
       {view === Views.HABITS && <Habits date={date} onDateChange={setDate} />}
       {view === Views.NOTES && <NotesView />}
@@ -53,6 +53,7 @@ function App() {
           onNotesClick={() => setView(Views.NOTES)}
           onCalendarClick={() => setView(Views.CALENDAR)}
           onSearchClick={() => setView(Views.SEARCH)}
+          onAtlyClick={() => setView(Views.ATLY)}
           onWordCloudClick={() => setView(Views.WORDCLOUD)} />}
 
       {isDateSelectionOpen &&

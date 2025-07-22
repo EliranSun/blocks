@@ -317,4 +317,5 @@ export const Views = {
     CALENDAR: "calendar",
     WORDCLOUD: "wordcloud",
     SETTINGS: "settings",
+    ATLY: "atly",
 };

@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react"
-
-
+import React, { useState, useEffect } from "react";
 
 /* eslint-disable */
 export const AtlyFive = () => {
@@ -59,14 +57,14 @@ export const AtlyFive = () => {
         <div className="flex flex-col gap-4 merriweather-500">
             <h1 className="text-2xl font-bold">Atly Five</h1>
             {error && <div className="text-red-500">{error}</div>}
-            <div className="flex flex-col gap-2">
+            <p className="gap-2 text-3xl">
                 {data.sort((a, b) => a.distance_meters - b.distance_meters).map((item) => (
-                    <div key={item.place_id}>
-                        <div>{item.title}</div>
-                        <div>{item.distance_meters}m away</div>
-                    </div>
+                    <span key={item.place_id} className="pr-4">
+                        <span className="pr-2">{item.title}</span>
+                        <span className="text-gray-500">{item.distance_meters}m away</span>
+                    </span>
                 ))}
-            </div>
+            </p>
         </div>
     )
 }
