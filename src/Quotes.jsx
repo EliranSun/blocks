@@ -10,7 +10,7 @@ const QuotesArray = [
     "Idealization of the partner not only helps sustain love, it also lessens the likelihood of divorce. [...] It may mean focusing on the still beautiful smile instead of the cellulite or the thinning hair, or recognizing the way he shows his love by scraping the ice off your car, even if he could be better at using words to express his feelings.",
     "She thought that being entirely on her own would be just what she needed. In fact, what she needed was not less social connection, but connection that felt more meaningful—a level of connection that matched her genetically biased predisposition.",
     "...It's touching to know that there's no sin in them, for all, all except man, is sinless, and Christ has been with them before us. [...] It cannot but be so, since the Word is for all. All creation and all creatures, every leaf is striving to the Word, singing glory to God, weeping to Christ, unconsciously accomplishing this by the mystery of their sinless life.”",
-    "God is the voice that tells Abraham: If you follow the call of adventure it will be a blessing to yourself. And that is the meaning of life. It's a reason to get up in the morning, even if you're in pain.",
+    "God is the voice that tells Abraham: The call of adventure will be a blessing to yourself. That is the meaning of life. It's a reason to get up in the morning, even if you're in pain.",
 ];
 
 export const Quotes = () => {
