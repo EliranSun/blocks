@@ -60,6 +60,7 @@ export const Calendars = [
     {
         name: "loneliness",
         icon: HeartBreakIcon,
+        cols: 3,
         category: CategoryNames.MOOD,
         colors: [
             { className: "bg-cyan-100", name: "lonely" },
