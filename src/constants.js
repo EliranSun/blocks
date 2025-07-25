@@ -329,7 +329,7 @@ export const Calendars = [
         icon: EyeIcon,
         showTimeAgo: true,
         category: CategoryNames.AVOID,
-        cols: 2,
+        cols: 3,
         colors: [
             { className: "bg-orange-900", name: "pron" },
             { className: "bg-red-900", name: "mast" },
@@ -338,7 +338,7 @@ export const Calendars = [
     {
         name: "lie",
         icon: SmileyXEyesIcon,
-        cols: 3,
+        cols: 2,
         showTimeAgo: true,
         category: CategoryNames.AVOID,
         colors: [{ className: "bg-lime-900" }],
