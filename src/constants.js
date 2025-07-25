@@ -319,13 +319,6 @@ export const Calendars = [
         ]
     },
     {
-        name: "scroll",
-        icon: ScrollIcon,
-        showTimeAgo: true,
-        category: CategoryNames.AVOID,
-        colors: [{ className: "bg-yellow-900" }],
-    },
-    {
         name: "pron/mast",
         icon: EyeIcon,
         showTimeAgo: true,
@@ -343,7 +336,14 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.AVOID,
         colors: [{ className: "bg-lime-900" }],
-    }
+    },
+    {
+        name: "scroll",
+        icon: ScrollIcon,
+        showTimeAgo: true,
+        category: CategoryNames.AVOID,
+        colors: [{ className: "bg-yellow-900" }],
+    },
 ];
 
 export const Categories = [
