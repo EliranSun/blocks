@@ -159,7 +159,7 @@ export const Calendars = [
     },
     {
         name: "css",
-        cols: 2,
+        cols: 3,
         isGamified: true,
         primaryColor: "amber",
         icon: MaskHappyIcon,
@@ -169,6 +169,7 @@ export const Calendars = [
     {
         name: "read",
         primaryColor: "green",
+        cols: 2,
         isGamified: true,
         category: CategoryNames.CREATIVE,
         icon: BookOpenIcon,
@@ -337,6 +338,7 @@ export const Calendars = [
     {
         name: "lie",
         icon: SmileyXEyesIcon,
+        cols: 3,
         showTimeAgo: true,
         category: CategoryNames.AVOID,
         colors: [{ className: "bg-lime-900" }],
