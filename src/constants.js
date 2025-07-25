@@ -28,7 +28,9 @@ import {
     ScalesIcon,
     BeerSteinIcon,
     TreeIcon,
-    SunIcon
+    SunIcon,
+    FishSimpleIcon,
+    SpeakerSlashIcon,
 } from "@phosphor-icons/react";
 
 export const Calendars = [
@@ -92,6 +94,26 @@ export const Calendars = [
             { className: "bg-red-500", name: "77" },
             { className: "bg-red-600", name: "78" }
         ]
+    },
+    {
+        name: "keto",
+        icon: FishSimpleIcon,
+        showTimeAgo: true,
+        isGamified: true,
+        primaryColor: "red",
+        colors: [
+            { className: "bg-red-500" }
+        ],
+    },
+    {
+        name: "no snore",
+        icon: SpeakerSlashIcon,
+        showTimeAgo: true,
+        isGamified: true,
+        primaryColor: "red",
+        colors: [
+            { className: "bg-red-500" }
+        ],
     },
     {
         name: "physiotherapy",
