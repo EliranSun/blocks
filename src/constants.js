@@ -33,7 +33,7 @@ import {
     SpeakerSlashIcon,
 } from "@phosphor-icons/react";
 
-export const Categories = {
+export const CategoryNames = {
     MOOD: "mood",
     HEALTH: "health",
     CREATIVE: "creative",
@@ -48,7 +48,7 @@ export const Calendars = [
         name: "mood",
         icon: SmileyIcon,
         cols: 3,
-        category: Categories.MOOD,
+        category: CategoryNames.MOOD,
         colors: [
             { colorClassName: "text-amber-500", className: "bg-amber-500", name: "great" },
             { colorClassName: "text-orange-600", className: "bg-orange-600", name: "good" },
@@ -60,7 +60,7 @@ export const Calendars = [
     {
         name: "loneliness",
         icon: HeartBreakIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.MOOD,
         colors: [
             { className: "bg-cyan-100", name: "lonely" },
             { className: "bg-cyan-300", name: "neutral" },
@@ -71,7 +71,7 @@ export const Calendars = [
     {
         name: "REM",
         icon: BrainIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-blue-50", name: "0" },
             { className: "bg-blue-100", name: "30" },
@@ -84,7 +84,7 @@ export const Calendars = [
     {
         name: "Deep",
         icon: PersonIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-indigo-50", name: "0" },
             { className: "bg-indigo-100", name: "15" },
@@ -97,7 +97,7 @@ export const Calendars = [
     {
         name: "Weight",
         icon: ScalesIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-green-400", name: "70" },
             { className: "bg-lime-400", name: "71" },
@@ -116,7 +116,7 @@ export const Calendars = [
         showTimeAgo: true,
         isGamified: true,
         primaryColor: "red",
-        category: Categories.MOOD,
+        category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-red-500" }
         ],
@@ -126,7 +126,7 @@ export const Calendars = [
         icon: SpeakerSlashIcon,
         showTimeAgo: true,
         isGamified: true,
-        category: Categories.MOOD,
+        category: CategoryNames.HEALTH,
         primaryColor: "red",
         colors: [
             { className: "bg-red-500" }
@@ -136,7 +136,7 @@ export const Calendars = [
         name: "physiotherapy",
         icon: FirstAidKitIcon,
         showTimeAgo: true,
-        category: Categories.MOOD,
+        category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-pink-400", name: "SS" },
             { className: "bg-orange-400", name: "WS" },
@@ -150,7 +150,7 @@ export const Calendars = [
         name: "workout",
         icon: BarbellIcon,
         showTimeAgo: true,
-        category: Categories.MOOD,
+        category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-red-500", name: "power" },
             { className: "bg-orange-500", name: "cardio" },
@@ -163,14 +163,14 @@ export const Calendars = [
         isGamified: true,
         primaryColor: "amber",
         icon: MaskHappyIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.CREATIVE,
         colors: [{ className: "bg-amber-500" }],
     },
     {
         name: "read",
         primaryColor: "green",
         isGamified: true,
-        category: Categories.MOOD,
+        category: CategoryNames.CREATIVE,
         icon: BookOpenIcon,
         colors: [{ className: "bg-green-500" }],
     },
@@ -178,48 +178,48 @@ export const Calendars = [
     {
         name: "write",
         icon: PencilLineIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.CREATIVE,
         showTimeAgo: true,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "draw",
         icon: PaintBrushIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.CREATIVE,
         showTimeAgo: true,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "cinema",
         icon: FilmSlateIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.CREATIVE,
         showTimeAgo: true,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "games",
         icon: GameControllerIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.CREATIVE,
         showTimeAgo: true,
         colors: [{ className: "bg-green-500" }],
     },
     {
         name: "date",
         icon: WineIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.WIFE,
         showTimeAgo: true,
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "sex",
         icon: HeartIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.WIFE,
         showTimeAgo: true,
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "trip",
-        category: Categories.MOOD,
+        category: CategoryNames.WIFE,
         icon: GlobeIcon,
         showTimeAgo: true,
         colors: [{ className: "bg-purple-500" }],
@@ -228,14 +228,14 @@ export const Calendars = [
         name: "gestures",
         cols: 3,
         icon: GiftIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.WIFE,
         showTimeAgo: true,
         colors: [{ className: "bg-purple-500" }],
     },
     {
         name: "house",
         icon: HouseIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.HOUSE,
         showTimeAgo: true,
         colors: [
             { className: "bg-red-500", name: "floor" },
@@ -248,7 +248,7 @@ export const Calendars = [
     {
         name: "laundry",
         icon: TShirtIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.HOUSE,
         showTimeAgo: true,
         colors: [
             { className: "bg-blue-500", name: "wash" },
@@ -261,21 +261,21 @@ export const Calendars = [
         name: "groceries",
         icon: ShoppingCartIcon,
         showTimeAgo: true,
-        category: Categories.MOOD,
+        category: CategoryNames.HOUSE,
         colors: [{ className: "bg-emerald-500" }],
     },
     {
         name: "cooking",
         cols: 2,
         icon: CookingPotIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.HOUSE,
         showTimeAgo: true,
         colors: [{ className: "bg-orange-500" }],
     },
     {
         name: "sheets",
         icon: BedIcon,
-        category: Categories.MOOD,
+        category: CategoryNames.HOUSE,
         showTimeAgo: true,
         colors: [{ className: "bg-blue-500" }],
     },
@@ -283,7 +283,7 @@ export const Calendars = [
         name: "Friends",
         icon: BeerSteinIcon,
         showTimeAgo: true,
-        category: Categories.MOOD,
+        category: CategoryNames.SOCIAL,
         colors: [
             { className: "bg-purple-500", name: "maya" },
             { className: "bg-pink-500", name: "rotem" },
@@ -295,7 +295,7 @@ export const Calendars = [
         name: "family",
         icon: TreeIcon,
         showTimeAgo: true,
-        category: Categories.MOOD,
+        category: CategoryNames.SOCIAL,
         colors: [
             { className: "bg-pink-400", name: "mom" },
             { className: "bg-blue-500", name: "dad" },
@@ -307,7 +307,7 @@ export const Calendars = [
         name: "sibs",
         icon: SunIcon,
         showTimeAgo: true,
-        category: Categories.MOOD,
+        category: CategoryNames.SOCIAL,
         colors: [
             { className: "bg-purple-400", name: "sahar" },
             { className: "bg-pink-300", name: "shachar" },
@@ -320,14 +320,14 @@ export const Calendars = [
         name: "scroll",
         icon: ScrollIcon,
         showTimeAgo: true,
-        category: Categories.MOOD,
+        category: CategoryNames.AVOID,
         colors: [{ className: "bg-yellow-900" }],
     },
     {
         name: "pron/mast",
         icon: EyeIcon,
         showTimeAgo: true,
-        category: Categories.MOOD,
+        category: CategoryNames.AVOID,
         cols: 2,
         colors: [
             { className: "bg-orange-900", name: "pron" },
@@ -338,38 +338,39 @@ export const Calendars = [
         name: "lie",
         icon: SmileyXEyesIcon,
         showTimeAgo: true,
-        category: Categories.MOOD,
+        category: CategoryNames.AVOID,
         colors: [{ className: "bg-lime-900" }],
     }
 ];
+
 export const Categories = [
     {
         name: "Mood",
-        calendars: Calendars.slice(0, 2),
+        calendars: Calendars.filter(item => item.category === CategoryNames.MOOD)
     },
     {
         name: "Health",
-        calendars: Calendars.slice(2, 7),
+        calendars: Calendars.filter(item => item.category === CategoryNames.HEALTH)
     },
     {
         name: "Creative",
-        calendars: Calendars.slice(7, 13),
+        calendars: Calendars.filter(item => item.category === CategoryNames.CREATIVE)
     },
     {
         name: "Wife",
-        calendars: Calendars.slice(13, 17),
+        calendars: Calendars.filter(item => item.category === CategoryNames.WIFE)
     },
     {
         name: "House",
-        calendars: Calendars.slice(17, 22),
+        calendars: Calendars.filter(item => item.category === CategoryNames.HOUSE)
     },
     {
         name: "Social",
-        calendars: Calendars.slice(22, 25),
+        calendars: Calendars.filter(item => item.category === CategoryNames.SOCIAL)
     },
     {
         name: "Avoid",
-        calendars: Calendars.slice(25, 28),
+        calendars: Calendars.filter(item => item.category === CategoryNames.AVOID)
     }
 ];
 export const Views = {
