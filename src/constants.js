@@ -291,6 +291,7 @@ export const Calendars = [
             { className: "bg-pink-500", name: "rotem" },
             { className: "bg-red-500", name: "nimrod" },
             { className: "bg-orange-500", name: "ofir" },
+            { className: "bg-cyan-500", name: "david" },
         ]
     },
     {
