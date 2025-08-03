@@ -139,6 +139,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.HEALTH,
         colors: [
+            { className: "bg-red-500", name: "Pita" },
             { className: "bg-pink-400", name: "SS" },
             { className: "bg-orange-400", name: "WS" },
             { className: "bg-yellow-400", name: "plank" },
