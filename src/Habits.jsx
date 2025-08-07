@@ -20,7 +20,6 @@ export const Habits = ({ date, onDateChange }) => {
     return (
         <div {...handlers} className="flex flex-col space-y-8 w-full pt-4">
             <div className="flex gap-2">
-            
             {Categories.map(category => 
                 <button onClick={() => setSelectedCategory(category)}>
                     {category.name}
@@ -43,6 +42,7 @@ export const Habits = ({ date, onDateChange }) => {
                             ))}
                         </div>
                     <Thought category={selectedCategory} date={date} />
+                    </div>
             <div className="flex justify-center items-center mt-10 mb-32">
                 <RandomIcon size={120} className="opacity-50" />
             </div>
