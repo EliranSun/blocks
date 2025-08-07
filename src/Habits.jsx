@@ -43,7 +43,6 @@ export const Habits = ({ date, onDateChange }) => {
                             ))}
                         </div>
                     <Thought category={selectedCategory} date={date} />
-                </>
             <div className="flex justify-center items-center mt-10 mb-32">
                 <RandomIcon size={120} className="opacity-50" />
             </div>
