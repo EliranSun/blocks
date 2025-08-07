@@ -22,7 +22,7 @@ export const Habits = ({ date, onDateChange }) => {
             <div className="w-full flex-wrap flex gap-2">
             {Categories.map(category => 
                 <button 
-                    className="rounded-full bg-black/70 text-white p-1"
+                    className="rounded-full bg-black/70 text-white px-2 py-1"
                     onClick={() => setSelectedCategory(category)}>
                     {category.name}
                 </button>)}
