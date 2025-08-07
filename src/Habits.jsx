@@ -2,9 +2,10 @@ import { Categories } from "./constants";
 import { HabitTile } from "./HabitTile";
 import { Thought } from "./Thought";
 import { HandPeaceIcon, MeteorIcon, SparkleIcon, YinYangIcon } from "@phosphor-icons/react";
-// import { Quotes } from "./Quotes";
+
 import classNames from "classnames";
 import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
+import { useState } from "react";
 
 const Icons = [
     HandPeaceIcon,
@@ -15,18 +16,22 @@ const Icons = [
 export const Habits = ({ date, onDateChange }) => {
     const handlers = useDateSwipeNavigation(date, onDateChange);
     const RandomIcon = Icons[Math.floor(Math.random() * Icons.length)];
-
+    const [selectedCategory, setSelectedCategory] = useState(Categories[0]);
     return (
         <div {...handlers} className="flex flex-col space-y-8 w-full pt-4">
-            {/* <Quotes /> */}
-            {Categories.map((category) => (
-                <>
-                    <div className="space-y-4" key={category.name}>
+            <div className="flex gap-2">
+            
+            {Categories.map(category => 
+                <button onClick={() => setSelectedCategory(category)}>
+                    {category.name}
+                </button>)}
+            </div>
+                    <div className="space-y-4">
                         <h2 className="text-2xl font-bold merriweather-500">
-                            {category.name}
+                            {selectedCategory.name}
                         </h2>
                         <div className="grid grid-cols-3 gap-2">
-                            {category.calendars.map((calendar, index) => (
+                            {selectedCategory.calendars.map((calendar, index) => (
                                 <div
                                     key={calendar.name + index}
                                     className={classNames({
@@ -37,10 +42,8 @@ export const Habits = ({ date, onDateChange }) => {
                                 </div>
                             ))}
                         </div>
-                    </div>
-                    <Thought category={category} date={date} />
+                    <Thought category={selectedCategory} date={date} />
                 </>
-            ))}
             <div className="flex justify-center items-center mt-10 mb-32">
                 <RandomIcon size={120} className="opacity-50" />
             </div>
