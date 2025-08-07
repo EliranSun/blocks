@@ -19,9 +19,11 @@ export const Habits = ({ date, onDateChange }) => {
     const [selectedCategory, setSelectedCategory] = useState(Categories[0]);
     return (
         <div {...handlers} className="flex flex-col space-y-8 w-full pt-4">
-            <div className="flex gap-2">
+            <div className="w-full flex-wrap flex gap-2">
             {Categories.map(category => 
-                <button onClick={() => setSelectedCategory(category)}>
+                <button 
+                    className="bg-black/70 text-white p-1"
+                    onClick={() => setSelectedCategory(category)}>
                     {category.name}
                 </button>)}
             </div>
