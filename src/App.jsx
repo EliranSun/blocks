@@ -13,7 +13,7 @@ import { AtlyFive } from "./AtlyFive";
 
 function App() {
   const [date, setDate] = useState(new Date());
-  const [view, setView] = useState(Views.HOME);
+  const [view, setView] = useState(Views.HABITS);
   const [isDateSelectionOpen, setIsDateSelectionOpen] = useState(false);
 
   return (
