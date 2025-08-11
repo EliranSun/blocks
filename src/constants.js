@@ -123,7 +123,7 @@ export const Calendars = [
         ],
     },
     {
-        name: "snore",
+        name: "no snore",
         icon: SpeakerSlashIcon,
         showTimeAgo: true,
         isGamified: true,
