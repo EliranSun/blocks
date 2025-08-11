@@ -123,14 +123,16 @@ export const Calendars = [
         ],
     },
     {
-        name: "no snore",
+        name: "snore",
         icon: SpeakerSlashIcon,
         showTimeAgo: true,
         isGamified: true,
         category: CategoryNames.HEALTH,
         primaryColor: "red",
         colors: [
-            { className: "bg-red-500" }
+            { className: "bg-green-500", name: "no snore" },
+            { className: "bg-yellow-500", name: "a little snore" },
+            { className: "bg-red-500", name: "a lot snore" }
         ],
     },
     {
