@@ -332,6 +332,16 @@ export const Calendars = [
         ]
     },
     {
+        name: "abstain",
+        icon: EyeIcon,
+        showTimeAgo: true,
+        category: CategoryNames.AVOID,
+        cols: 3,
+        colors: [
+            { className: "bg-green-400", name: "mast" },
+        ],
+    },
+    {
         name: "pron/mast",
         icon: EyeIcon,
         showTimeAgo: true,
