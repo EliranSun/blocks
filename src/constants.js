@@ -338,7 +338,7 @@ export const Calendars = [
         category: CategoryNames.AVOID,
         cols: 3,
         colors: [
-            { className: "bg-green-400", name: "mast" },
+            { className: "bg-green-400" },
         ],
     },
     {
