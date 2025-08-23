@@ -319,6 +319,15 @@ export const Calendars = [
         ]
     },
     {
+        name: "grandpa",
+        icon: TreeIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-red-400" }
+        ]
+    },
+    {
         name: "sibs",
         icon: SunIcon,
         showTimeAgo: true,
