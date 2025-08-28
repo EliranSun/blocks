@@ -31,6 +31,7 @@ function App() {
       {view === Views.NOTES && <NotesView />}
       {view === Views.SEARCH && <SearchView />}
       {view === Views.WORDCLOUD && <WordCloud />}
+
       {view === Views.CALENDAR &&
         <div className="flex flex-col gap-4">
           {Calendars.map((calendar, index) => (
