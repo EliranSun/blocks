@@ -17,8 +17,7 @@ import {
     BedIcon,
     FirstAidKitIcon,
     BarbellIcon,
-    UsersThreeIcon,
-    UsersFourIcon,
+    HeartHalfIcon,
     ScrollIcon,
     EyeIcon,
     SmileyXEyesIcon,
@@ -58,9 +57,19 @@ export const Calendars = [
         ]
     },
     {
+        name: "giving",
+        icon: HeartHalfIcon,
+        cols: 1,
+        category: CategoryNames.MOOD,
+        colors: [
+            { className: "bg-cyan-500" },
+        ]
+    },
+    {
         name: "loneliness",
         icon: HeartBreakIcon,
-        cols: 2,
+        cols: 1,
+        isHidden: true,
         category: CategoryNames.MOOD,
         colors: [
             { className: "bg-cyan-100", name: "lonely" },
@@ -72,6 +81,7 @@ export const Calendars = [
     {
         name: "REM",
         icon: BrainIcon,
+        isHidden: true,
         category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-blue-50", name: "0" },
@@ -85,6 +95,7 @@ export const Calendars = [
     {
         name: "Deep",
         icon: PersonIcon,
+        isHidden: true,
         category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-indigo-50", name: "0" },
@@ -98,6 +109,7 @@ export const Calendars = [
     {
         name: "Weight",
         icon: ScalesIcon,
+        isHidden: true,
         category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-pink-400", name: "70" },
@@ -116,6 +128,7 @@ export const Calendars = [
         icon: FishSimpleIcon,
         showTimeAgo: true,
         isGamified: true,
+        isHidden: true,
         primaryColor: "red",
         category: CategoryNames.HEALTH,
         colors: [
@@ -127,6 +140,7 @@ export const Calendars = [
         icon: SpeakerSlashIcon,
         showTimeAgo: true,
         isGamified: true,
+        isHidden: true,
         category: CategoryNames.HEALTH,
         primaryColor: "red",
         colors: [

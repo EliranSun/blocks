@@ -35,8 +35,8 @@ export const Habits = ({ date, onDateChange }) => {
                 {/* <h2 className="text-2xl font-bold merriweather-500">
                     {selectedCategory.name}
                 </h2> */}
-                <div className="grid grid-cols-3 gap-2">
-                    {flatCategories.map((calendar, index) => (
+                <div className="flex flex-wrap gap-2">
+                    {flatCategories.filter(calendar => !calendar.isHidden).map((calendar, index) => (
                         <div
                             key={calendar.name + index}
                             className={classNames({
