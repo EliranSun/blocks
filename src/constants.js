@@ -333,6 +333,33 @@ export const Calendars = [
         ]
     },
     {
+        name: "Mom",
+        icon: TreeIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-red-400" }
+        ]
+    },
+    {
+        name: "Dad",
+        icon: TreeIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-red-400" }
+        ]
+    },
+    {
+        name: "Grandma",
+        icon: TreeIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-red-400" }
+        ]
+    },
+    {
         name: "grandpa",
         icon: TreeIcon,
         showTimeAgo: true,
@@ -354,6 +381,7 @@ export const Calendars = [
             { className: "bg-indigo-500", name: "yahel" },
         ]
     },
+    
     {
         name: "Or",
         icon: SunIcon,
