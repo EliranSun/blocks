@@ -355,6 +355,55 @@ export const Calendars = [
         ]
     },
     {
+        name: "Or",
+        icon: SunIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-amber-400" }
+        ]
+    },
+    {
+        name: "Sahar",
+        icon: SunIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-amber-400" }
+        ]
+    },
+    {
+        name: "Shachar",
+        icon: SunIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-purple-400", name: "sahar" },
+            { className: "bg-pink-300", name: "shachar" },
+            { className: "bg-green-400", name: "ofek" },
+            { className: "bg-blue-600", name: "or" },
+            { className: "bg-indigo-500", name: "yahel" },
+        ]
+    },
+    {
+        name: "Ofek",
+        icon: SunIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-amber-400" }
+        ]
+    },
+    {
+        name: "Yahel",
+        icon: SunIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-amber-400" }
+        ]
+    },
+    {
         name: "abstain",
         icon: EyeIcon,
         showTimeAgo: true,
