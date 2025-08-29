@@ -406,11 +406,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-purple-400", name: "sahar" },
-            { className: "bg-pink-300", name: "shachar" },
-            { className: "bg-green-400", name: "ofek" },
-            { className: "bg-blue-600", name: "or" },
-            { className: "bg-indigo-500", name: "yahel" },
+            { className: "bg-amber-400" }
         ]
     },
     {
