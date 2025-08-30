@@ -400,7 +400,7 @@ export const Calendars = [
             { className: "bg-indigo-500", name: "yahel" },
         ]
     },
-    
+
     {
         name: "Or",
         icon: SunIcon,
@@ -446,16 +446,16 @@ export const Calendars = [
             { className: "bg-amber-400" }
         ]
     },
-    {
-        name: "abstain",
-        icon: EyeIcon,
-        showTimeAgo: true,
-        category: CategoryNames.AVOID,
-        cols: 3,
-        colors: [
-            { className: "bg-green-400" },
-        ],
-    },
+    // {
+    //     name: "abstain",
+    //     icon: EyeIcon,
+    //     showTimeAgo: true,
+    //     category: CategoryNames.AVOID,
+    //     cols: 3,
+    //     colors: [
+    //         { className: "bg-green-400" },
+    //     ],
+    // },
     {
         name: "pron/mast",
         icon: EyeIcon,
@@ -463,6 +463,7 @@ export const Calendars = [
         category: CategoryNames.AVOID,
         cols: 3,
         colors: [
+            { className: "bg-green-600", name: "abstain" },
             { className: "bg-orange-600", name: "pron" },
             { className: "bg-red-600", name: "mast" },
         ],
@@ -470,7 +471,7 @@ export const Calendars = [
     {
         name: "lie",
         icon: SmileyXEyesIcon,
-        cols: 2,
+        cols: 1,
         showTimeAgo: true,
         category: CategoryNames.AVOID,
         colors: [{ className: "bg-lime-600" }],
