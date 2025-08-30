@@ -109,7 +109,8 @@ export const Calendars = [
     {
         name: "Weight",
         icon: ScalesIcon,
-        isHidden: true,
+        cols: 2,
+        isHidden: false,
         category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-pink-400", name: "70" },
