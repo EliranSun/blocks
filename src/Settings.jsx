@@ -10,10 +10,7 @@ const Title = ({ children, onClick }) => {
     )
 }
 export const Settings = ({
-    onHomeClick,
     onHabitsClick,
-    onNotesClick,
-    onCalendarClick,
     onSearchClick,
     onWordCloudClick,
     // onAtlyClick,
@@ -25,10 +22,7 @@ export const Settings = ({
             "merriweather-500 text-start px-8"
         )}>
             <Title onClick={() => window.location.reload()}>Refresh</Title>
-            <Title onClick={onHomeClick}>Home</Title>
             <Title onClick={onHabitsClick}>Habits</Title>
-            <Title onClick={onCalendarClick}>Calendar</Title>
-            <Title onClick={onNotesClick}>Thoughts</Title>
             <Title onClick={onWordCloudClick}>Cloud</Title>
             <Title onClick={onSearchClick}>Search</Title>
             <Title onClick={triggerImport}>Import</Title>
