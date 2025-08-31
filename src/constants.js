@@ -340,6 +340,15 @@ export const Calendars = [
         ]
     },
     {
+        name: "Rotem",
+        icon: BeerSteinIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-cyan-500" },
+        ]
+    },
+    {
         name: "family",
         icon: TreeIcon,
         showTimeAgo: true,
