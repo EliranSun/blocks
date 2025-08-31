@@ -47,7 +47,7 @@ export const Habits = ({ date, onDateChange, onHabitClick }) => {
                                 key={calendar.name}
                                 calendar={calendar}
                                 date={date}
-                                onHabitClick={() => onHabitClick(calendar.name)} />
+                                onHabitClick={() => onHabitClick(calendar)} />
                         </div>
                     ))}
                 </div>

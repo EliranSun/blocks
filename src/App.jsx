@@ -32,11 +32,25 @@ function App() {
         <Habits
           date={date}
           onDateChange={setDate}
-          onHabitClick={habit => {
-            setHabit(habit);
+          onHabitClick={calendar => {
+            setHabit(calendar);
             setView(Views.HABIT);
           }} />}
-      {view === Views.HABIT && habit !== null && <div>{habit}</div>}
+      {view === Views.HABIT && habit !== null &&
+        <div>
+          <CalendarView
+            date={date}
+            onTitleClick={() => setView(Views.HABITS)}
+            isCondensed
+            horizontal
+            flex
+            isOpaque
+            showLegend
+            showInfo
+            showFullYear={true}
+            calendar={habit}
+            onDateChange={setDate} />
+        </div>}
       {view === Views.NOTES && <NotesView />}
       {view === Views.SEARCH && <SearchView />}
       {view === Views.WORDCLOUD && <WordCloud />}

@@ -1,5 +1,5 @@
 import { getDaysInYear, startOfYear, addDays, getDay, getDayOfYear } from "date-fns";
-import { useRef, useState, useEffect, useMemo } from "react";
+import { useRef, useState, useMemo } from "react";
 import classNames from "classnames";
 import { Cell } from "./Cell";
 import { Calendars } from "./constants";
@@ -20,6 +20,7 @@ export default function CalendarView({
     isOpaque = false,
     showLegend = false,
     onCellsClick,
+    onTitleClick,
 }) {
     const calendarRef = useRef(null);
     const firstDayOfYear = getDay(startOfYear(date));
@@ -51,25 +52,25 @@ export default function CalendarView({
         return cells;
     }, [firstDayOfYear, date, showFullYear, todayIndex]);
 
-    useEffect(() => {
-        if (calendarRef.current && !isCondensed) {
-            // jump to today
-            const today = new Date();
-            const startOfCurrentYear = startOfYear(today);
-            const daysSinceStartOfYear = Math.floor((today - startOfCurrentYear) / (1000 * 60 * 60 * 24));
-            // Add the offset to account for empty cells at the beginning
-            const todayCell = calendarRef.current.children[firstDayOfYear + daysSinceStartOfYear];
-            if (todayCell) {
-                setTimeout(() => {
-                    todayCell.scrollIntoView({
-                        behavior: "smooth",
-                        block: horizontal ? "nearest" : "start",
-                        inline: horizontal ? "start" : "nearest",
-                    });
-                }, 1000);
-            }
-        }
-    }, [calendarRef, firstDayOfYear, isCondensed, horizontal]);
+    // useEffect(() => {
+    //     if (calendarRef.current && !isCondensed) {
+    //         // jump to today
+    //         const today = new Date();
+    //         const startOfCurrentYear = startOfYear(today);
+    //         const daysSinceStartOfYear = Math.floor((today - startOfCurrentYear) / (1000 * 60 * 60 * 24));
+    //         // Add the offset to account for empty cells at the beginning
+    //         const todayCell = calendarRef.current.children[firstDayOfYear + daysSinceStartOfYear];
+    //         if (todayCell) {
+    //             setTimeout(() => {
+    //                 todayCell.scrollIntoView({
+    //                     behavior: "smooth",
+    //                     block: horizontal ? "nearest" : "start",
+    //                     inline: horizontal ? "start" : "nearest",
+    //                 });
+    //             }, 1000);
+    //         }
+    //     }
+    // }, [calendarRef, firstDayOfYear, isCondensed, horizontal]);
 
     const Icon = calendar.icon;
 
@@ -89,7 +90,9 @@ export default function CalendarView({
     return (
         <div className="flex flex-col items-start justify-center h-fit">
             {!hideTitle && isCondensed &&
-                <h1 className="text-xl merriweather-500 py-4 font-mono text-center flex items-center justify-center gap-2">
+                <h1
+                    onClick={onTitleClick}
+                    className="text-xl merriweather-500 py-4 font-mono text-center flex items-center justify-center gap-2">
                     <Icon size={16} />
                     <span className="">{calendar.name.toUpperCase()}</span>
                 </h1>}

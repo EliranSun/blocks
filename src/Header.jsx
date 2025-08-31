@@ -26,7 +26,7 @@ export const Header = ({
         });
     }, [date, isNight]);
 
-    const isVisible = view === Views.HABITS || view === Views.HOME;
+    const isVisible = view === Views.HABITS || view === Views.HOME || view === Views.HABIT;
 
     return (
         <div
