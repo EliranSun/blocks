@@ -32,7 +32,7 @@ export const Settings = ({
             <Title onClick={onWordCloudClick}>Cloud</Title>
             <Title onClick={onSearchClick}>Search</Title>
             <Title onClick={triggerImport}>Import</Title>
-            <Title onClick={exportCalendarData}>Export</Title>
+            <Title onClick={() => exportCalendarData(`calendar-data-${new Date().toISOString().split('T')[0]}.json`)}>Export</Title>
             {/* <Title onClick={onAtlyClick}>Atly</Title> */}
         </div>
     )
