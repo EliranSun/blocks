@@ -21,6 +21,7 @@ export default function CalendarView({
     showLegend = false,
     onCellsClick,
     onTitleClick,
+    selectedMonth,
 }) {
     const calendarRef = useRef(null);
     const firstDayOfYear = getDay(startOfYear(date));
@@ -88,7 +89,7 @@ export default function CalendarView({
     }, [calendarCells, todayIndex, limitInDays, firstDayOfYear]);
 
     return (
-        <div className="flex flex-col items-start justify-center h-fit">
+        <div className="flex items-end h-fit">
             {!hideTitle && isCondensed &&
                 <h1
                     onClick={onTitleClick}
@@ -124,6 +125,7 @@ export default function CalendarView({
                             calendarName={calendar.name}
                             cellDate={cell.date}
                             showInfo={showInfo}
+                            selectedMonth={selectedMonth}
                             selectedColorIndex={selectedColorIndex}
                             isOpaque={isOpaque}
                             colors={calendar.colors}
@@ -135,14 +137,21 @@ export default function CalendarView({
                 })}
             </div>
             {showLegend &&
-                <legend className="flex items-center justify-center gap-2 pt-2">
+                <legend className="flex flex-col gap-2">
                     {Calendars.find(c => c.name === calendar.name).colors.map((color, index) => (
                         <span key={index}
-                            onClick={() => setSelectedColorIndex(index)}
+                            onClick={() => {
+                                if (index === selectedColorIndex) {
+                                    setSelectedColorIndex(null);
+                                } else {
+                                    setSelectedColorIndex(index);
+                                }
+                            }}
                             className={classNames(
-                                "rounded text-[8px] w-fit h-fit p-2",
+                                "p-2 text-xs text-center ml-2 rounded uppercase",
                                 color.isDark ? "text-white" : "text-black",
-                                color.className
+                                color.className,
+                                // color.textClassName
                             )}>
                             {color.name}
                         </span>

@@ -1,5 +1,6 @@
+/* eslint-disable */
 import classNames from "classnames";
-import { format, isSameDay } from "date-fns";
+import { format, isSameDay, isSameMonth } from "date-fns";
 import { useMemo, useState, useCallback, useEffect } from "react";
 import { Motion, spring, presets } from "react-motion";
 
@@ -38,7 +39,8 @@ export const Cell = ({
     triggerMark,
     selectedDate = new Date(),
     isOpaque = false,
-    selectedColorIndex = null
+    selectedColorIndex = null,
+    selectedMonth = null
 }) => {
     const storageKey = useMemo(() => {
         // const dateString = format(date, "yyyy-MM-dd");
@@ -120,14 +122,24 @@ export const Cell = ({
 
     const isStartOfMonth = useMemo(() => isNaN(dayText), [dayText]);
     const isColorSelected = (selectedColorIndex === colorIndex);
+    const isMonthSelected = isSameMonth(cellDate, selectedMonth);
+
+    const opacity = useMemo(() => {
+        if (selectedMonth !== null) {
+            return isMonthSelected ? 1 : 0;
+        }
+        if (selectedColorIndex !== null) {
+            return isColorSelected ? 1 : 0;
+        }
+
+        return isMarked ? 1 : 0.9;
+    }, [selectedColorIndex, isColorSelected, isMarked, selectedMonth, isMonthSelected]);
 
     return (
         <Motion style={{
             scale: spring(isAnimating ? 1.2 : 1, presets.wobbly),
             opacity: spring(
-                selectedColorIndex !== null
-                    ? isColorSelected ? 1 : 0
-                    : isMarked ? 1 : 0.9
+                opacity
             )
         }}>
             {interpolated => (

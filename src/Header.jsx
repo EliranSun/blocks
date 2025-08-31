@@ -8,11 +8,18 @@ export const Header = ({
     view,
     setView,
     date,
+    habitName,
+    habitIcon: HabitIcon,
+    onTitleClick,
     setIsDateSelectionOpen,
 }) => {
     const isNight = date.getHours() < 6 || date.getHours() > 18;
     const headerRef = useRef(null);
     const title = useMemo(() => {
+        if (habitName) {
+            return habitName.toUpperCase();
+        }
+
         const isToday = date.toDateString() === new Date().toDateString();
         if (isToday) {
             if (isNight) return "Tonight"
@@ -24,7 +31,7 @@ export const Header = ({
             month: "short",
             day: "numeric",
         });
-    }, [date, isNight]);
+    }, [date, isNight, habitName]);
 
     const isVisible = view === Views.HABITS || view === Views.HOME || view === Views.HABIT;
 
@@ -32,17 +39,24 @@ export const Header = ({
         <div
             ref={headerRef}
             className={classNames(
-                "w-full flex items-center justify-between pb-8 sticky",
+                "w-full flex items-center justify-between pb-4 sticky",
                 "top-0 bg-[#ece1d4] dark:bg-[#242424] z-10"
             )}>
             <h1
-                onClick={() => setIsDateSelectionOpen(true)}
+                onClick={() => {
+                    if (onTitleClick && habitName) {
+                        onTitleClick();
+                    } else {
+                        setIsDateSelectionOpen(true);
+                    }
+                }}
                 className={classNames({
                     "text-4xl font-bold merriweather-500 flex items-center gap-4": true,
                     "opacity-70": isVisible,
                     "opacity-0": !isVisible,
                 })}>
-                {isNight ? <MoonIcon size={40} /> : <SunIcon size={40} />}
+                {HabitIcon ? <HabitIcon size={40} />
+                    : isNight ? <MoonIcon size={40} /> : <SunIcon size={40} />}
                 {title}
             </h1>
             <CalendarActionsBar

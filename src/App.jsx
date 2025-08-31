@@ -10,6 +10,7 @@ import { SearchView } from "./SearchView";
 import { DateSelection } from "./DateSelection";
 import { Header } from "./Header";
 import { AtlyFive } from "./AtlyFive";
+import { HabitView } from "./HabitView";
 
 function App() {
   const [date, setDate] = useState(new Date());
@@ -23,7 +24,13 @@ function App() {
         date={date}
         view={view}
         setView={setView}
+        habitName={habit?.name}
+        habitIcon={habit?.icon}
         setIsDateSelectionOpen={setIsDateSelectionOpen}
+        onTitleClick={() => {
+          setView(Views.HABITS);
+          setHabit(null);
+        }}
       />
       {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />}
       {view === Views.ATLY && <AtlyFive />}
@@ -37,20 +44,7 @@ function App() {
             setView(Views.HABIT);
           }} />}
       {view === Views.HABIT && habit !== null &&
-        <div>
-          <CalendarView
-            date={date}
-            onTitleClick={() => setView(Views.HABITS)}
-            isCondensed
-            horizontal={false}
-            flex={false}
-            isOpaque
-            showLegend
-            showInfo
-            showFullYear={true}
-            calendar={habit}
-            onDateChange={setDate} />
-        </div>}
+        <HabitView date={date} setView={setView} habit={habit} setDate={setDate} />}
       {view === Views.NOTES && <NotesView />}
       {view === Views.SEARCH && <SearchView />}
       {view === Views.WORDCLOUD && <WordCloud />}
