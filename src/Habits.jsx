@@ -16,7 +16,7 @@ const Icons = [
 
 const flatCategories = Categories.flatMap(category => category.calendars);
 
-export const Habits = ({ date, onDateChange }) => {
+export const Habits = ({ date, onDateChange, onHabitClick }) => {
     const handlers = useDateSwipeNavigation(date, onDateChange);
     const RandomIcon = Icons[Math.floor(Math.random() * Icons.length)];
     // const [selectedCategory, setSelectedCategory] = useState(Categories[0]);
@@ -35,7 +35,7 @@ export const Habits = ({ date, onDateChange }) => {
                 {/* <h2 className="text-2xl font-bold merriweather-500">
                     {selectedCategory.name}
                 </h2> */}
-                <div className="grid grid-cols-3 gap-2">
+                <div className="md:grid-cols-6 max-w-screen-md mx-auto flex-wrap grid grid-cols-3 gap-2">
                     {flatCategories.filter(calendar => !calendar.isHidden).map((calendar, index) => (
                         <div
                             key={calendar.name + index}
@@ -43,7 +43,11 @@ export const Habits = ({ date, onDateChange }) => {
                                 "col-span-3": calendar.cols === 3,
                                 "col-span-2": calendar.cols === 2,
                             })}>
-                            <HabitTile key={calendar.name} calendar={calendar} date={date} />
+                            <HabitTile
+                                key={calendar.name}
+                                calendar={calendar}
+                                date={date}
+                                onHabitClick={() => onHabitClick(calendar.name)} />
                         </div>
                     ))}
                 </div>

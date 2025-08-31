@@ -14,6 +14,7 @@ import { AtlyFive } from "./AtlyFive";
 function App() {
   const [date, setDate] = useState(new Date());
   const [view, setView] = useState(Views.HABITS);
+  const [habit, setHabit] = useState(null);
   const [isDateSelectionOpen, setIsDateSelectionOpen] = useState(false);
 
   return (
@@ -27,7 +28,15 @@ function App() {
       {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />}
       {view === Views.ATLY && <AtlyFive />}
       {/* {view === Views.HOME && <Quotes date={date} onDateChange={setDate} />} */}
-      {view === Views.HABITS && <Habits date={date} onDateChange={setDate} />}
+      {view === Views.HABITS &&
+        <Habits
+          date={date}
+          onDateChange={setDate}
+          onHabitClick={habit => {
+            setHabit(habit);
+            setView(Views.HABIT);
+          }} />}
+      {view === Views.HABIT && habit !== null && <div>{habit}</div>}
       {view === Views.NOTES && <NotesView />}
       {view === Views.SEARCH && <SearchView />}
       {view === Views.WORDCLOUD && <WordCloud />}

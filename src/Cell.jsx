@@ -120,12 +120,12 @@ export const Cell = ({
 
     const isStartOfMonth = useMemo(() => isNaN(dayText), [dayText]);
     const isColorSelected = (selectedColorIndex === colorIndex);
-    
+
     return (
         <Motion style={{
             scale: spring(isAnimating ? 1.2 : 1, presets.wobbly),
             opacity: spring(
-                 selectedColorIndex !== null
+                selectedColorIndex !== null
                     ? isColorSelected ? 1 : 0
                     : isMarked ? 1 : 0.9
             )
@@ -136,13 +136,13 @@ export const Cell = ({
                         <div key={index} className="size-8 bg-transparent rounded-md"></div>
                     ))}
                     <div
-                        onClick={() => {
-                            if (triggerMark > 0) {
-                                return;
-                            }
+                        // onClick={() => {
+                        //     if (triggerMark > 0) {
+                        //         return;
+                        //     }
 
-                            handleMark();
-                        }}
+                        //     handleMark();
+                        // }}
                         className={classNames("cursor-pointer", currentColor, {
                             "bg-neutral-700": !isCellSelected && !isMarked && !isOpaque,
                             "size-12 flex items-center justify-center rounded-md": !isCondensed,

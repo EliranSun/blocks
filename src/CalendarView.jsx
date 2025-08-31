@@ -19,12 +19,13 @@ export default function CalendarView({
     horizontal = false,
     isOpaque = false,
     showLegend = false,
+    onCellsClick,
 }) {
     const calendarRef = useRef(null);
     const firstDayOfYear = getDay(startOfYear(date));
     const todayIndex = useMemo(() => getDayOfYear(date), [date]);
     const [selectedColorIndex, setSelectedColorIndex] = useState(null);
-    
+
     const calendarCells = useMemo(() => {
         const daysInYear = getDaysInYear(date);
         const cells = [];
@@ -94,6 +95,8 @@ export default function CalendarView({
                 </h1>}
             <div
                 ref={calendarRef}
+                onClick={onCellsClick}
+                style={{ cursor: "pointer" }}
                 className={classNames({
                     "overflow-y-auto w-fit h-screen gap-1 pb-40": !isCondensed && !horizontal,
                     "overflow-x-auto h-fit w-screen gap-1 pr-40": !isCondensed && horizontal,
@@ -131,13 +134,13 @@ export default function CalendarView({
             {showLegend &&
                 <legend className="flex items-center justify-center gap-2 pt-2">
                     {Calendars.find(c => c.name === calendar.name).colors.map((color, index) => (
-                        <span key={index} 
+                        <span key={index}
                             onClick={() => setSelectedColorIndex(index)}
                             className={classNames(
-                            "rounded text-[8px] w-fit h-fit p-2",
-                            color.isDark ? "text-white" : "text-black",
-                            color.className
-                        )}>
+                                "rounded text-[8px] w-fit h-fit p-2",
+                                color.isDark ? "text-white" : "text-black",
+                                color.className
+                            )}>
                             {color.name}
                         </span>
                     ))}

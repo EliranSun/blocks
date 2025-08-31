@@ -6,7 +6,18 @@ import CalendarView from "./CalendarView";
 import { Motion, spring } from "react-motion";
 import { getStorageKey } from "./utils/strorage";
 
-export function HabitTile({ calendar, date = new Date() }) {
+/* eslint-disable */
+
+const HabitName = ({ calendar, todayValue }) => {
+    return (
+        <h1 className="text-base uppercase font-bold">
+            {todayValue !== "-1" && calendar.colors[todayValue].name
+                ? calendar.colors[todayValue].name
+                : calendar.cols ? calendar.name : calendar.name.slice(0, 6)}
+        </h1>
+    )
+}
+export function HabitTile({ calendar, date = new Date(), onHabitClick }) {
     const { streak, calculateStreak } = useStreak(calendar.name, true);
     const diffDays = useTimeSince(calendar.name);
     const [isPressed, setIsPressed] = useState(false);
@@ -41,35 +52,33 @@ export function HabitTile({ calendar, date = new Date() }) {
             }}>
             {({ scale }) => (
                 <div
-                    onClick={handleClick}
                     style={{
                         transform: `scale(${scale})`,
                         cursor: 'pointer'
                     }}
                     className={classNames("bg-white/50 dark:bg-black/50 rounded-2xl p-4", {
                         // "border-2 border-amber-500": diffDays === 1,
-                        "flex flex-col justify-between": true,
-                        "size-28": !calendar.cols,
-                        "h-28": calendar.cols > 0,
+                        "flex flex-col justify-between h-full": true,
+                        // "size-28": !calendar.cols,
+                        // "h-28": calendar.cols > 0,
                     })}
                 >
-                    <span>
+                    <div
+                        onClick={onHabitClick}
+                        className="space-y-1">
                         <Icon size={24} className={classNames({
                             "text-amber-500": calendar.primaryColor === "amber",
                             "text-green-500": calendar.primaryColor === "green",
                         })} />
-                    </span>
-                    <div className="space-y-1">
-                        <h1 className="text-base uppercase font-bold">
-                            {todayValue !== "-1" && calendar.colors[todayValue].name
-                                ? calendar.colors[todayValue].name
-                                : calendar.cols ? calendar.name : calendar.name.slice(0, 6)}
-                        </h1>
+                        <HabitName calendar={calendar} todayValue={todayValue} />
+                    </div>
+                    <div className="">
                         <CalendarView
                             isCondensed
                             hideTitle
                             showInfo
                             flex
+                            onCellsClick={handleClick}
                             date={date}
                             calendar={calendar}
                             triggerMark={triggerMark}

@@ -536,6 +536,7 @@ export const Categories = [
 export const Views = {
     HOME: "home",
     HABITS: "habits",
+    HABIT: "habit",
     NOTES: "notes",
     CALENDAR: "calendar",
     WORDCLOUD: "wordcloud",

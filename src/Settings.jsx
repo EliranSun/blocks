@@ -16,7 +16,7 @@ export const Settings = ({
     onCalendarClick,
     onSearchClick,
     onWordCloudClick,
-    onAtlyClick,
+    // onAtlyClick,
 }) => {
     return (
         <div className={classNames(
@@ -24,6 +24,7 @@ export const Settings = ({
             "justify-evenly items-start",
             "merriweather-500 text-start px-8"
         )}>
+            <Title onClick={() => window.location.reload()}>Refresh</Title>
             <Title onClick={onHomeClick}>Home</Title>
             <Title onClick={onHabitsClick}>Habits</Title>
             <Title onClick={onCalendarClick}>Calendar</Title>
@@ -32,8 +33,7 @@ export const Settings = ({
             <Title onClick={onSearchClick}>Search</Title>
             <Title onClick={triggerImport}>Import</Title>
             <Title onClick={exportCalendarData}>Export</Title>
-            <Title onClick={() => window.location.reload()}>Refresh</Title>
-            <Title onClick={onAtlyClick}>Atly</Title>
+            {/* <Title onClick={onAtlyClick}>Atly</Title> */}
         </div>
     )
 }
