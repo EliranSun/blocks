@@ -51,7 +51,7 @@ export const HabitView = ({ date, setView, habit, setDate }) => {
                     onDateChange={setDate} />
             </div>
 
-            <div className="bg-white/30 p-4 rounded-lg text-lg font-mono">
+            <div className="bg-white/30 p-4 rounded-lg text-lg font-mono w-16 text-center">
                 {data.length}
             </div>
         </div>
