@@ -42,8 +42,8 @@ function App() {
             date={date}
             onTitleClick={() => setView(Views.HABITS)}
             isCondensed
-            horizontal
-            flex
+            horizontal={false}
+            flex={false}
             isOpaque
             showLegend
             showInfo
