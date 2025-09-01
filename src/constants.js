@@ -156,16 +156,7 @@ export const Calendars = [
         icon: FirstAidKitIcon,
         showTimeAgo: true,
         category: CategoryNames.HEALTH,
-        description: `
-                30s deadhang
-                3 cats
-                3 dogs
-                30s plank
-                30s sit squat
-                30s pita
-                30s wall squat
-                30s hero pose (sit)
-            `,
+        description: "30s deadhang \n\r 3 cats \n\r 3 dogs \n\r 30s plank \n\r 30s sit squat \n\r 30s pita \n\r 30s wall squat \n\r  30s hero pose (sit)",
         colors: [
             { className: "bg-red-500", name: "Pita" },
             { className: "bg-pink-400", name: "SS" },

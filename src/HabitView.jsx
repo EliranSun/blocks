@@ -50,13 +50,13 @@ export const HabitView = ({ date, setView, habit, setDate }) => {
                         onDateChange={setDate} />
                 </div>
 
-                <div className="bg-white/30 p-4 rounded-lg text-lg font-mono w-16 text-center">
-                    {data.length} <br />
+                <div className="bg-white/30 p-4 h-fit rounded-lg text-lg font-mono w-16 text-center">
+                    {data.length}
                 </div>
 
             </div>
 
-            <p>
+            <p className="text-sm my-4 opacity-70">
                 {habit.description}
             </p>
         </>
