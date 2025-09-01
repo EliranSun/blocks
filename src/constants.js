@@ -158,9 +158,6 @@ export const Calendars = [
         category: CategoryNames.HEALTH,
         description: (
             <pre>
-                စွာ မရှိဘူး လို့ မေးလို့လို့ စွာ လွတ်မြောက်အတွေ့အကြုံး ရှိနေကြသူတွေအတွက်
-                အမြန်ဆုံး ပြုလုပ်လို့ရသည့် လုပ်ဆောင်ချက်များ
-
                 30s deadhang
                 3 cats
                 3 dogs
