@@ -130,7 +130,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick }) {
                         <div className="absolute top-4 right-3 flex items-center gap-1 font-mono text-xs">
                             <span
                                 onClick={onHabitClick}
-                                className="text-xs bg-blue-500 px-1 rounded">
+                                className="text-xs text-blue-500 px-1 rounded">
                                 年
                             </span>
                             <Streak calendar={calendar} streak={streak} />
