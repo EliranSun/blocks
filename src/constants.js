@@ -60,6 +60,7 @@ export const Calendars = [
         name: "giving",
         icon: HeartHalfIcon,
         cols: 1,
+        showTimeAgo: true,
         category: CategoryNames.MOOD,
         colors: [
             { className: "bg-cyan-500" },
@@ -129,7 +130,7 @@ export const Calendars = [
         icon: FishSimpleIcon,
         showTimeAgo: true,
         isGamified: true,
-        isHidden: true,
+        isHidden: false,
         primaryColor: "red",
         category: CategoryNames.HEALTH,
         colors: [
