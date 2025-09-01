@@ -17,7 +17,7 @@ export const Header = ({
     const headerRef = useRef(null);
     const title = useMemo(() => {
         if (habitName) {
-            return habitName.toUpperCase();
+            return habitName.toUpperCase().slice(0, 6);
         }
 
         const isToday = date.toDateString() === new Date().toDateString();
