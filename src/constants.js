@@ -163,6 +163,7 @@ export const Calendars = [
             { className: "bg-green-400", name: "D&C" },
             { className: "bg-purple-400", name: "combo" },
             { className: "bg-purple-600", name: "all" },
+                        { className: "bg-cyab-500", name: "Hand" },
         ],
     },
     {
