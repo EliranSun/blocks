@@ -56,9 +56,9 @@ export const HabitView = ({ date, setView, habit, setDate }) => {
 
             </div>
 
-            <pre>
+            <p>
                 {habit.description}
-            </pre>
+            </p>
         </>
     )
 }
