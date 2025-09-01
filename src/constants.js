@@ -156,11 +156,7 @@ export const Calendars = [
         icon: FirstAidKitIcon,
         showTimeAgo: true,
         category: CategoryNames.HEALTH,
-        description: (
-            <pre>
-                စွာ မရှိဘူး လို့ မေးလို့လို့ စွာ လွတ်မြောက်အတွေ့အကြုံး ရှိနေကြသူတွေအတွက်
-                အမြန်ဆုံး ပြုလုပ်လို့ရသည့် လုပ်ဆောင်ချက်များ
-
+        description: `
                 30s deadhang
                 3 cats
                 3 dogs
@@ -169,8 +165,7 @@ export const Calendars = [
                 30s pita
                 30s wall squat
                 30s hero pose (sit)
-            </pre>
-        ),
+            `,
         colors: [
             { className: "bg-red-500", name: "Pita" },
             { className: "bg-pink-400", name: "SS" },
