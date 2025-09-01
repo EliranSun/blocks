@@ -25,6 +25,10 @@ const TimeAgo = ({ calendar, diffDays }) => {
         return null;
     }
 
+    if (diffDays === "Never") {
+        return "無"; // mo - none
+    }
+
     if (calendar.cols > 0 && diffDays > 17) {
         return (
             <span className="text-gray-500">
@@ -41,7 +45,7 @@ const TimeAgo = ({ calendar, diffDays }) => {
         )
     }
 
-    return "Never";
+    return null;
 }
 
 const Streak = ({ calendar, streak }) => {
