@@ -21,7 +21,7 @@ const HabitName = ({ calendar, todayValue }) => {
 
 
 const TimeAgo = ({ calendar, diffDays }) => {
-    if (!calendar.showTimeAgo || diffDays === "Never") {
+    if (!calendar.showTimeAgo) {
         return null;
     }
 
@@ -33,7 +33,7 @@ const TimeAgo = ({ calendar, diffDays }) => {
         )
     }
 
-    if (calendar.cols === 0 && diffDays > 7) {
+    if (diffDays > 7) {
         return (
             <span className="text-gray-500">
                 {diffDays}永
@@ -41,7 +41,7 @@ const TimeAgo = ({ calendar, diffDays }) => {
         )
     }
 
-    return null;
+    return "Never";
 }
 
 const Streak = ({ calendar, streak }) => {
@@ -128,11 +128,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick }) {
                                         ? 18 : 7}
                         />
                         <div className="absolute top-4 right-3 flex items-center gap-1 font-mono text-xs">
-                            <span
-                                onClick={onHabitClick}
-                                className="text-xs text-blue-500 px-1 rounded">
-                                年
-                            </span>
+                            <span onClick={onHabitClick}>年</span>
                             <Streak calendar={calendar} streak={streak} />
                             <TimeAgo calendar={calendar} diffDays={diffDays} />
                         </div>
