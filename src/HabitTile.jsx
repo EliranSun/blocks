@@ -64,7 +64,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick }) {
                     })}
                 >
                     <div
-                        onClick={onHabitClick}
+                        onClick={handleClick}
                         className="space-y-1">
                         <Icon size={24} className={classNames({
                             "text-amber-500": calendar.primaryColor === "amber",
@@ -88,6 +88,11 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick }) {
                                     : calendar.cols === 2
                                         ? 18 : 7}
                         />
+                        <span
+                            onClick={onHabitClick}
+                            className="text-xs text-blue-500 font-mono absolute top-4 right-8">
+                            年
+                        </span>
                         {calendar.isGamified && streak > 0 &&
                             <span className="text-xs text-red-500 font-mono absolute top-4 right-3">
                                 {streak}⽕

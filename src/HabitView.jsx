@@ -17,8 +17,6 @@ export const HabitView = ({ date, setView, habit, setDate }) => {
             })
             .filter((item) => item.value > -1), [habit.name, selectedMonth]);
 
-    console.log(data);
-
     return (
         <div className="flex gap-4 w-full justify-center">
             <div className="flex flex-col justify-evenly font-mono text-sm bg-white/30 p-4 rounded-lg">
