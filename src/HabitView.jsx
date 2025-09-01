@@ -55,10 +55,9 @@ export const HabitView = ({ date, setView, habit, setDate }) => {
                 </div>
 
             </div>
-
-            <p className="text-sm my-4 opacity-70">
+            <pre className="text-sm my-2 opacity-70 w-full p-4">
                 {habit.description}
-            </p>
+            </pre>
         </>
     )
 }
