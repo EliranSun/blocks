@@ -156,6 +156,21 @@ export const Calendars = [
         icon: FirstAidKitIcon,
         showTimeAgo: true,
         category: CategoryNames.HEALTH,
+        description: (
+            <pre>
+                စွာ မရှိဘူး လို့ မေးလို့လို့ စွာ လွတ်မြောက်အတွေ့အကြုံး ရှိနေကြသူတွေအတွက်
+                အမြန်ဆုံး ပြုလုပ်လို့ရသည့် လုပ်ဆောင်ချက်များ
+
+                30s deadhang
+                3 cats
+                3 dogs
+                30s plank
+                30s sit squat
+                30s pita
+                30s wall squat
+                30s hero pose (sit)
+            </pre>
+        ),
         colors: [
             { className: "bg-red-500", name: "Pita" },
             { className: "bg-pink-400", name: "SS" },
@@ -164,7 +179,7 @@ export const Calendars = [
             { className: "bg-green-400", name: "D&C" },
             { className: "bg-purple-400", name: "combo" },
             { className: "bg-purple-600", name: "all" },
-                        { className: "bg-cyan-500", name: "Hand" },
+            { className: "bg-cyan-500", name: "Hand" },
         ],
     },
     {
