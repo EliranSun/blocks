@@ -2,7 +2,7 @@ import { Views } from "./constants";
 import CalendarView from "./CalendarView";
 import { useState, useMemo, useEffect } from "react";
 import { getStorageByPrefix } from "./utils/strorage";
-import { isSameMonth } from "date-fns";
+import { isSameMonth, getDaysInYear } from "date-fns";
 import { useStreak } from "./hooks/useStreak";
 import { useTimeSince } from "./hooks/useTimeSince";
 const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -60,6 +60,9 @@ export const HabitView = ({ date, setView, habit, setDate }) => {
                 <div className="flex flex-col gap-2">
                     <div className="bg-white/30 p-4 h-fit rounded-lg text-lg font-mono w-16 text-center">
                         {data.length}
+                    </div>
+                    <div className="bg-white/30 p-4 h-fit rounded-lg text-lg font-mono w-16 text-center">
+                        {Math.round(data.length / getDaysInYear(date) * 100)}%
                     </div>
                     <div className="bg-white/30 p-4 h-fit rounded-lg text-lg font-mono w-16 text-center">
                         {streak > 0 ? streak + "⽕" : streak}
