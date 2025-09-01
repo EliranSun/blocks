@@ -16,7 +16,46 @@ const HabitName = ({ calendar, todayValue }) => {
                 : calendar.cols ? calendar.name : calendar.name.slice(0, 6)}
         </h1>
     )
+};
+
+
+
+const TimeAgo = ({ calendar, diffDays }) => {
+    if (!calendar.showTimeAgo || diffDays === "Never") {
+        return null;
+    }
+
+    if (calendar.cols > 0 && diffDays > 17) {
+        return (
+            <span className="text-gray-500">
+                {diffDays}永
+            </span>
+        )
+    }
+
+    if (calendar.cols === 0 && diffDays > 7) {
+        return (
+            <span className="text-gray-500">
+                {diffDays}永
+            </span>
+        )
+    }
+
+    return null;
 }
+
+const Streak = ({ calendar, streak }) => {
+    if (!calendar.isGamified || streak === 0) {
+        return null;
+    }
+
+    return (
+        <span className="text-red-500">
+            {streak}⽕
+        </span>
+    );
+}
+
 export function HabitTile({ calendar, date = new Date(), onHabitClick }) {
     const { streak, calculateStreak } = useStreak(calendar.name, true);
     const diffDays = useTimeSince(calendar.name);
@@ -88,19 +127,15 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick }) {
                                     : calendar.cols === 2
                                         ? 18 : 7}
                         />
-                        <span
-                            onClick={onHabitClick}
-                            className="text-xs text-blue-500 font-mono absolute top-4 right-8">
-                            年
-                        </span>
-                        {calendar.isGamified && streak > 0 &&
-                            <span className="text-xs text-red-500 font-mono absolute top-4 right-3">
-                                {streak}⽕
-                            </span>}
-                        {calendar.showTimeAgo && (diffDays === "Never" || (calendar.cols ? diffDays > 17 : diffDays > 7)) &&
-                            <span className="text-xs text-gray-500 font-mono absolute top-4 right-3">
-                                {diffDays}永
-                            </span>}
+                        <div className="absolute top-4 right-3 flex items-center gap-1 font-mono text-xs">
+                            <span
+                                onClick={onHabitClick}
+                                className="text-xs bg-blue-500 px-1 rounded">
+                                年
+                            </span>
+                            <Streak calendar={calendar} streak={streak} />
+                            <TimeAgo calendar={calendar} diffDays={diffDays} />
+                        </div>
                     </div>
                 </div>
             )}
