@@ -300,7 +300,10 @@ export const Calendars = [
         icon: BedIcon,
         category: CategoryNames.HOUSE,
         showTimeAgo: true,
-        colors: [{ className: "bg-blue-500" }],
+        colors: [
+            { className: "bg-blue-500", name: "sheets"  },
+            { className: "bg-orange-500", name: "pillows" }
+        ],
     },
     {
         name: "Friends",
