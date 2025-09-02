@@ -217,7 +217,10 @@ export const Calendars = [
         icon: FilmSlateIcon,
         category: CategoryNames.CREATIVE,
         showTimeAgo: true,
-        colors: [{ className: "bg-green-500" }],
+        colors: [
+            { className: "bg-green-500", name: "TV" },
+                        { className: "bg-purple-500", name: "Movie" },
+        ],
     },
     {
         name: "games",
