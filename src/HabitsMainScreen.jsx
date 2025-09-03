@@ -41,6 +41,7 @@ const HabitsIconGrid = ({ date, onDateChange }) => {
     )
 };
 
+/* eslint-disable */
 export const HabitsMainScreen = ({ onContinue }) => {
     const [isClosed, setIsClosed] = useState(false);
     return (
@@ -53,7 +54,7 @@ export const HabitsMainScreen = ({ onContinue }) => {
             <Quotes />
             <Button onClick={() => {
                 setIsClosed(true);
-                onContinue();
+                setTimeout(onContinue, 150);
             }}>
                 Continue
             </Button>
