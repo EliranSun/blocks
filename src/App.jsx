@@ -14,7 +14,7 @@ import { HabitView } from "./HabitView";
 
 function App() {
   const [date, setDate] = useState(new Date());
-  const [view, setView] = useState(Views.HABITS);
+  const [view, setView] = useState(Views.HOME);
   const [habit, setHabit] = useState(null);
   const [isDateSelectionOpen, setIsDateSelectionOpen] = useState(false);
 
@@ -32,47 +32,82 @@ function App() {
           setHabit(null);
         }}
       />
-      {view === Views.HOME && <HabitsMainScreen date={date} onDateChange={setDate} />}
-      {view === Views.ATLY && <AtlyFive />}
-      {/* {view === Views.HOME && <Quotes date={date} onDateChange={setDate} />} */}
-      {view === Views.HABITS &&
-        <Habits
-          date={date}
-          onDateChange={setDate}
-          onHabitClick={calendar => {
-            setHabit(calendar);
-            setView(Views.HABIT);
-          }} />}
-      {view === Views.HABIT && habit !== null &&
-        <HabitView date={date} setView={setView} habit={habit} setDate={setDate} />}
-      {view === Views.NOTES && <NotesView />}
-      {view === Views.SEARCH && <SearchView />}
-      {view === Views.WORDCLOUD && <WordCloud />}
+      {(() => {
+        switch (view) {
+          case Views.HOME: {
+            return (
+              <HabitsMainScreen
+                date={date}
+                onDateChange={setDate}
+                onContinue={() => setView(Views.HABITS)} />
+            );
+          }
 
-      {view === Views.CALENDAR &&
-        <div className="flex flex-col gap-4">
-          {Calendars.map((calendar, index) => (
-            <CalendarView
-              key={index}
-              date={date}
-              isCondensed
-              horizontal
-              isOpaque
-              showLegend
-              showFullYear={false}
-              calendar={calendar}
-              onDateChange={setDate} />
-          ))}</div>}
+          case Views.ATLY:
+            return <AtlyFive />;
 
-      {view === Views.SETTINGS &&
-        <Settings
-          onHomeClick={() => setView(Views.HOME)}
-          onHabitsClick={() => setView(Views.HABITS)}
-          onNotesClick={() => setView(Views.NOTES)}
-          onCalendarClick={() => setView(Views.CALENDAR)}
-          onSearchClick={() => setView(Views.SEARCH)}
-          onAtlyClick={() => setView(Views.ATLY)}
-          onWordCloudClick={() => setView(Views.WORDCLOUD)} />}
+          case Views.HABITS:
+            return (
+              <Habits
+                date={date}
+                onDateChange={setDate}
+                onHabitClick={calendar => {
+                  setHabit(calendar);
+                  setView(Views.HABIT);
+                }}
+              />
+            );
+
+          case Views.HABIT:
+            return habit !== null ? (
+              <HabitView date={date} setView={setView} habit={habit} setDate={setDate} />
+            ) : null;
+
+          case Views.NOTES:
+            return <NotesView />;
+
+          case Views.SEARCH:
+            return <SearchView />;
+
+          case Views.WORDCLOUD:
+            return <WordCloud />;
+
+          case Views.CALENDAR:
+            return (
+              <div className="flex flex-col gap-4">
+                {Calendars.map((calendar, index) => (
+                  <CalendarView
+                    key={index}
+                    date={date}
+                    isCondensed
+                    horizontal
+                    isOpaque
+                    showLegend
+                    showFullYear={false}
+                    calendar={calendar}
+                    onDateChange={setDate}
+                  />
+                ))}
+              </div>
+            );
+
+          case Views.SETTINGS:
+            return (
+              <Settings
+                onHomeClick={() => setView(Views.HOME)}
+                onHabitsClick={() => setView(Views.HABITS)}
+                onNotesClick={() => setView(Views.NOTES)}
+                onCalendarClick={() => setView(Views.CALENDAR)}
+                onSearchClick={() => setView(Views.SEARCH)}
+                onAtlyClick={() => setView(Views.ATLY)}
+                onWordCloudClick={() => setView(Views.WORDCLOUD)}
+              />
+            );
+
+          default:
+            return null;
+        }
+      })()}
 
       {isDateSelectionOpen &&
         <DateSelection

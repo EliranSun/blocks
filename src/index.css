@@ -82,13 +82,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  height: 100vh;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   padding: 20px;
-  /* overflow: hidden; */
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {

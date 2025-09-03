@@ -12,11 +12,16 @@ const QuotesArray = [
     "...It's touching to know that there's no sin in them, for all, all except man, is sinless, and Christ has been with them before us. [...] It cannot but be so, since the Word is for all. All creation and all creatures, every leaf is striving to the Word, singing glory to God, weeping to Christ, unconsciously accomplishing this by the mystery of their sinless life.”",
     "God is the voice that tells Abraham: The call of adventure will be a blessing to yourself. That is the meaning of life. It's a reason to get up in the morning, even if you're in pain.",
     "At some point you got to decide if you are serious about things. If you are doing something of sufficiant worth - you let go of the things that interfere with it.",
+    "In his fervent prayer he did not beseech God to lighten his darkness but only thirsted for the joyous emotion, which always visited his sould after the praise aboration, of which his evening prayer usually consisted. That joy always brough him light untroubled sleep."
 ];
 
 export const Quotes = () => {
     const quote = useMemo(() => {
-        return QuotesArray[Math.floor(Math.random() * QuotesArray.length)];
+        // Use the current day of the month to select a quote deterministically
+        const today = new Date();
+        // Day of month is 1-31, so subtract 1 for 0-based index
+        const index = today.getDate() % QuotesArray.length;
+        return QuotesArray[index];
     }, []);
 
     return (
