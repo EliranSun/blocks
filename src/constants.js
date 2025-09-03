@@ -156,7 +156,15 @@ export const Calendars = [
         icon: FirstAidKitIcon,
         showTimeAgo: true,
         category: CategoryNames.HEALTH,
-        description: "30s deadhang \n3 cats \n3 dogs \n30s plank \n30s sit squat \n90s pita \n30s wall squat \n30s hero pose (sit)",
+        description:
+            "3min pita" +
+            "\n3 cats " +
+            "\n3 dogs " +
+            "\n30s sit squat " +
+            "\n30s hero pose (sit)" +
+            "\n30s plank " +
+            "\n30s wall squat " +
+            "\n30s deadhang ",
         colors: [
             { className: "bg-red-500", name: "Pita" },
             { className: "bg-pink-400", name: "SS" },
@@ -219,7 +227,7 @@ export const Calendars = [
         showTimeAgo: true,
         colors: [
             { className: "bg-green-500", name: "TV" },
-                        { className: "bg-purple-500", name: "Movie" },
+            { className: "bg-purple-500", name: "Movie" },
         ],
     },
     {
@@ -304,7 +312,7 @@ export const Calendars = [
         category: CategoryNames.HOUSE,
         showTimeAgo: true,
         colors: [
-            { className: "bg-blue-500", name: "sheets"  },
+            { className: "bg-blue-500", name: "sheets" },
             { className: "bg-orange-500", name: "pillows" }
         ],
     },
