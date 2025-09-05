@@ -21,6 +21,7 @@ const QuotesArray = [
     "For our children—not your children, but ours—the children of the poor gentlemen looked down upon by every one—know what justice means, sir, even at nine years old. How should the rich know? They don't explore such depths once in their lives. But at that moment in the square when he kissed his hand, at that moment my Ilusha had grasped all that justice means",
     "After this cruel analysis the learned of this world have nothing left of all that was sacred of old. But they have only analyzed the parts and overlooked the whole, and indeed their blindness is marvelous. Yet the whole still stands steadfast before their eyes, and the gates of hell shall not prevail against it. Has it not lasted nineteen centuries, is it not still a living, a moving power in the individual soul and in the masses of people?",
     "Addiction, so they say, lies at the sharp edge of procrastination.",
+    "Put simply, we engage in self-defeating behaviors because, on some level, we believe they help us. My OCD is a kind of coping mechanism. Lounging in front of the screen and drinking wine on a dry day is a pause from productivity laced with self-reproach. Snow days, train strikes, and pandemic lockdowns give us permission to let ourselves off the hook without punishment—even when we still feel resistance.",
 ];
 
 export const Quotes = () => {
