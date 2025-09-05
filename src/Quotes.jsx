@@ -20,7 +20,7 @@ const QuotesArray = [
     "When he realizes that he is not only worse than others, but that he is responsible to all men for all and everything, for all human sins, national and individual, only then the aim of our seclusion is attained. For know, dear ones, that every one of us is undoubtedly responsible for all men and everything on earth, not merely through the general sinfulness of creation, but each one personally for all mankind and every individual man. This knowledge is the crown of life for the monk and for every man.",
     "For our children—not your children, but ours—the children of the poor gentlemen looked down upon by every one—know what justice means, sir, even at nine years old. How should the rich know? They don't explore such depths once in their lives. But at that moment in the square when he kissed his hand, at that moment my Ilusha had grasped all that justice means",
     "After this cruel analysis the learned of this world have nothing left of all that was sacred of old. But they have only analyzed the parts and overlooked the whole, and indeed their blindness is marvelous. Yet the whole still stands steadfast before their eyes, and the gates of hell shall not prevail against it. Has it not lasted nineteen centuries, is it not still a living, a moving power in the individual soul and in the masses of people?",
-    
+    "Addiction, so they say, lies at the sharp edge of procrastination.",
 ];
 
 export const Quotes = () => {
