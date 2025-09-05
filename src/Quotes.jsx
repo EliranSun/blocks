@@ -16,6 +16,11 @@ const QuotesArray = [
     "When Mrs. Lincoln and others spoke harshly of the southern people, Lincoln replied: “Don’t criticize them; they are just what we would be under similar circumstances.",
     "There you are; human nature in action, wrongdoers, blaming everybody but themselves. We are all like that.",
     "Criticism is futile because it puts a person on the defensive and usually makes him strive to justify himself.",
+    "If that laudable soldier's exploit was so very great there would have been no sin in it if he had on such an emergency renounced, so to speak, the name of Christ and his own christening, to save by that same his life, for good deeds, by which, in the course of years to expiate his cowardice.",
+    "When he realizes that he is not only worse than others, but that he is responsible to all men for all and everything, for all human sins, national and individual, only then the aim of our seclusion is attained. For know, dear ones, that every one of us is undoubtedly responsible for all men and everything on earth, not merely through the general sinfulness of creation, but each one personally for all mankind and every individual man. This knowledge is the crown of life for the monk and for every man.",
+    "For our children—not your children, but ours—the children of the poor gentlemen looked down upon by every one—know what justice means, sir, even at nine years old. How should the rich know? They don't explore such depths once in their lives. But at that moment in the square when he kissed his hand, at that moment my Ilusha had grasped all that justice means",
+    "After this cruel analysis the learned of this world have nothing left of all that was sacred of old. But they have only analyzed the parts and overlooked the whole, and indeed their blindness is marvelous. Yet the whole still stands steadfast before their eyes, and the gates of hell shall not prevail against it. Has it not lasted nineteen centuries, is it not still a living, a moving power in the individual soul and in the masses of people?",
+    
 ];
 
 export const Quotes = () => {
