@@ -35,7 +35,7 @@ export const Habits = ({ date, onDateChange, onHabitClick }) => {
             <div className="w-full flex-wrap flex gap-2">
             {["sun", "mon", "tue", "wed", "thu", "fri", "sat"].map((dayOfWeek, index) => 
                 <button 
-                    className={classNames("font-mono px-2 py-1", {
+                    className={classNames("font-mono text-sm px-2 py-1", {
                         "font-bold": dayOfWeek === format(date, "EEE").toLowerCase()
                       })}
                     onClick={() => onDateChange(getDateForIndex(date, index))}>
