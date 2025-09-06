@@ -2,7 +2,7 @@ import { Categories } from "./constants";
 import { HabitTile } from "./HabitTile";
 import { Thought } from "./Thought";
 import { HandPeaceIcon, MeteorIcon, SparkleIcon, YinYangIcon } from "@phosphor-icons/react";
-import { addDays, format, startOfWeek } from "date-fns";
+import { addDays, startOfWeek } from "date-fns";
 import classNames from "classnames";
 import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
 // import { useState } from "react";
