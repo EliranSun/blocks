@@ -2,7 +2,7 @@ import { Categories } from "./constants";
 import { HabitTile } from "./HabitTile";
 import { Thought } from "./Thought";
 import { HandPeaceIcon, MeteorIcon, SparkleIcon, YinYangIcon } from "@phosphor-icons/react";
-import { addDays, startOfWeek } from "date-fns";
+import { addDays, format, startOfWeek } from "date-fns";
 import classNames from "classnames";
 import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
 // import { useState } from "react";
@@ -35,7 +35,9 @@ export const Habits = ({ date, onDateChange, onHabitClick }) => {
             <div className="w-full flex-wrap flex gap-2">
             {["sun", "mon", "tue", "wed", "thu", "fri", "sat"].map((dayOfWeek, index) => 
                 <button 
-                    className="font-mono px-2 py-1"
+                    className={classNames("font-mono px-2 py-1", {
+                        "font-bold": dayOfWeek === format(date, "EEE").toLowerCase()
+                      })}
                     onClick={() => onDateChange(getDateForIndex(date, index))}>
                     {dayOfWeek}
                 </button>)}
