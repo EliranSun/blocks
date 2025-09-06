@@ -2,7 +2,7 @@ import { Categories } from "./constants";
 import { HabitTile } from "./HabitTile";
 import { Thought } from "./Thought";
 import { HandPeaceIcon, MeteorIcon, SparkleIcon, YinYangIcon } from "@phosphor-icons/react";
-
+import { addDays, format, startOfWeek } from "date-fns";
 import classNames from "classnames";
 import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
 // import { useState } from "react";
@@ -14,6 +14,15 @@ const Icons = [
     YinYangIcon,
 ];
 
+function getDateForIndex(baseDate, index) {
+  // Get the Sunday of that week (index 0 = Sunday)
+  const start = startOfWeek(baseDate, { weekStartsOn: 0 });
+  // Add the index to reach the right day
+  return addDays(start, index);
+}
+
+
+
 const flatCategories = Categories.flatMap(category => category.calendars);
 
 export const Habits = ({ date, onDateChange, onHabitClick }) => {
@@ -23,14 +32,14 @@ export const Habits = ({ date, onDateChange, onHabitClick }) => {
 
     return (
         <div {...handlers} className="flex flex-col space-y-8 w-full pt-4">
-            {/* <div className="w-full flex-wrap flex gap-2">
-            {Categories.map(category => 
+            <div className="w-full flex-wrap flex gap-2">
+            {["sun", "mon", "tue", "wed", "thu", "fri", "sat"].map((dayOfWeek, index) => 
                 <button 
-                    className="rounded-full bg-black/70 text-white px-2 py-1"
-                    onClick={() => setSelectedCategory(category)}>
-                    {category.name}
+                    className="font-mono px-2 py-1"
+                    onClick={() => onDateChange(getDateForIndex(date, index))}>
+                    {dayOfWeek}
                 </button>)}
-            </div> */}
+            </div>
             <div className="space-y-4">
                 {/* <h2 className="text-2xl font-bold merriweather-500">
                     {selectedCategory.name}
