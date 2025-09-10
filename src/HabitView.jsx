@@ -5,6 +5,7 @@ import { getStorageByPrefix } from "./utils/strorage";
 import { isSameMonth, getDaysInYear } from "date-fns";
 import { useStreak } from "./hooks/useStreak";
 import { useTimeSince } from "./hooks/useTimeSince";
+
 const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 export const HabitView = ({ date, setView, habit, setDate }) => {
@@ -28,7 +29,7 @@ export const HabitView = ({ date, setView, habit, setDate }) => {
         <>
             <div className="flex gap-4 w-full justify-center">
                 <div className="flex gap-0 rounded-lg bg-white/40 p-4 font-mono text-sm">
-                    <div className="flex flex-col justify-evenly pr-4 opacity-70">
+                    <div className="flex flex-col justify-evenly pr-2 opacity-70">
                         {Months.map((month, index) => (
                             <h2 key={index} onClick={() => {
                                 if (selectedMonth?.getMonth() === index) {
@@ -39,6 +40,11 @@ export const HabitView = ({ date, setView, habit, setDate }) => {
                             }}>
                                 {month.slice(0, 3)}
                             </h2>
+                        ))}
+                    </div>
+                    <div className="text-[7px] space-y-[1.22px] pr-1">
+                        {new Array(52).fill(0).map((_, index) => (
+                            <h2 key={index}>{index + 1}</h2>
                         ))}
                     </div>
                     <CalendarView
