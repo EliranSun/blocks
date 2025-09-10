@@ -5,13 +5,9 @@ import { useMemo, useState, useCallback, useEffect } from "react";
 import { Motion, spring, presets } from "react-motion";
 
 const DayText = ({ dayText, text, showInfo, isStartOfMonth, isCondensed }) => {
-    if (isCondensed) {
-        return null;
-    }
-
-    if (isStartOfMonth) {
-        return <h1>{dayText}</h1>;
-    }
+    // if (isCondensed) {
+    //     return null;
+    // }
 
     if (showInfo) {
         return (
