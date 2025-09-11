@@ -13,7 +13,7 @@ const DayText = ({ dayText, text, showInfo, isStartOfMonth, isCondensed }) => {
         return (
             <h1 className="flex flex-col items-center justify-center text-[6px]">
                 <span className="text-white">{dayText}</span>
-                <span className="font-bold">{text}</span>
+                <span className={`font-bold ${isCondensed ? "hidden" : ""}`}>{text}</span>
             </h1>
         );
     }
