@@ -101,6 +101,10 @@ function App() {
                 onSearchClick={() => setView(Views.SEARCH)}
                 onAtlyClick={() => setView(Views.ATLY)}
                 onWordCloudClick={() => setView(Views.WORDCLOUD)}
+                onHabitClick={calendar => {
+                  setHabit(calendar);
+                  setView(Views.HABIT);
+                }}
               />
             );
 
