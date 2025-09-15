@@ -96,7 +96,7 @@ function App() {
               <Settings
                 onHomeClick={() => setView(Views.HOME)}
                 onHabitsClick={() => setView(Views.HABITS)}
-                onNotesClick={() => setView(Views.NOTES)}
+                onThoughtsClick={() => setView(Views.NOTES)}
                 onCalendarClick={() => setView(Views.CALENDAR)}
                 onSearchClick={() => setView(Views.SEARCH)}
                 onAtlyClick={() => setView(Views.ATLY)}

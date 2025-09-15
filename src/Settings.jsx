@@ -14,6 +14,7 @@ export const Settings = ({
     onSearchClick,
     onWordCloudClick,
     // onAtlyClick,
+    onThoughtsClick,
 }) => {
     return (
         <div className={classNames(
@@ -23,6 +24,7 @@ export const Settings = ({
         )}>
             <Title onClick={() => window.location.reload()}>Refresh</Title>
             <Title onClick={onHabitsClick}>Habits</Title>
+            <Title onClick={onThoughtsClick}>Thoughts</Title>
             <Title onClick={onWordCloudClick}>Cloud</Title>
             <Title onClick={onSearchClick}>Search</Title>
             <Title onClick={triggerImport}>Import</Title>
