@@ -13,7 +13,7 @@ const HabitName = ({ calendar, todayValue }) => {
         <h1 className="text-base uppercase font-bold">
             {todayValue !== "-1" && calendar.colors[todayValue].name
                 ? calendar.colors[todayValue].name
-                : calendar.cols ? calendar.name : calendar.name.slice(0, 6)}
+                : calendar.name.slice(0, 3)}
         </h1>
     )
 };
@@ -60,7 +60,7 @@ const Streak = ({ calendar, streak }) => {
     );
 }
 
-export function HabitTile({ calendar, date = new Date(), onHabitClick }) {
+export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly, showInfo = true }) {
     const { streak, calculateStreak } = useStreak(calendar.name, true);
     const diffDays = useTimeSince(calendar.name);
     const [isPressed, setIsPressed] = useState(false);
@@ -100,26 +100,28 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick }) {
                         cursor: 'pointer'
                     }}
                     className={classNames("bg-white/50 dark:bg-black/50 rounded-2xl p-4", {
-                        // "border-2 border-amber-500": diffDays === 1,
-                        "flex flex-col justify-between h-full": true,
-                        // "size-28": !calendar.cols,
-                        // "h-28": calendar.cols > 0,
+                        "flex flex-col justify-between": true,
+                        "h-24": titleOnly,
+                        "h-full": !titleOnly,
                     })}
                 >
                     <div
                         onClick={handleClick}
-                        className="space-y-1">
-                        <Icon size={24} className={classNames({
+                        className="flex gap-1 items-center my-1">
+                        <Icon size={23} className={classNames({
+                            "hidden": titleOnly,
                             "text-amber-500": calendar.primaryColor === "amber",
                             "text-green-500": calendar.primaryColor === "green",
                         })} />
                         <HabitName calendar={calendar} todayValue={todayValue} />
                     </div>
-                    <div className="">
+                    <div className={classNames({
+                        "hidden": titleOnly,
+                    })}>
                         <CalendarView
                             isCondensed
                             hideTitle
-                            showInfo
+                            showInfo={showInfo}
                             flex
                             onCellsClick={handleClick}
                             date={date}
@@ -131,12 +133,13 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick }) {
                                     : calendar.cols === 2
                                         ? 18 : 7}
                         />
-                        <div className="absolute top-4 right-3 flex items-center gap-1 font-mono text-xs">
-                            <span onClick={onHabitClick}>年</span>
-                            <Streak calendar={calendar} streak={streak} />
-                            <TimeAgo calendar={calendar} diffDays={diffDays} />
-                        </div>
                     </div>
+                    {/* absolute top-4 right-3  */}
+                    {/* <div onClick={onHabitClick} className="mt-4 flex items-center gap-1 font-mono text-xs">
+                        <span >年</span>
+                        <Streak calendar={calendar} streak={streak} />
+                        <TimeAgo calendar={calendar} diffDays={diffDays} />
+                    </div> */}
                 </div>
             )}
         </Motion>

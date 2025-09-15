@@ -18,10 +18,6 @@ const DayText = ({ dayText, text, showInfo, isStartOfMonth, isCondensed }) => {
         );
     }
 
-    if (isStartOfMonth) {
-        return <h1>{dayText}</h1>;
-    }
-
     return null;
 };
 
