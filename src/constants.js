@@ -320,6 +320,7 @@ export const Calendars = [
         name: "Friends",
         icon: BeerSteinIcon,
         showTimeAgo: true,
+        isHidden: true,
         category: CategoryNames.SOCIAL,
         colors: [
             { className: "bg-purple-500", name: "maya" },
@@ -348,6 +349,16 @@ export const Calendars = [
         ]
     },
     {
+        name: "David",
+        icon: BeerSteinIcon,
+        showTimeAgo: true,
+        cols: 2,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-cyan-500" },
+        ]
+    },
+    {
         name: "Shirly",
         icon: BeerSteinIcon,
         showTimeAgo: true,
@@ -369,6 +380,7 @@ export const Calendars = [
         name: "family",
         icon: TreeIcon,
         showTimeAgo: true,
+        isHidden: true,
         category: CategoryNames.SOCIAL,
         colors: [
             { className: "bg-pink-400", name: "mom" },
@@ -426,6 +438,7 @@ export const Calendars = [
         name: "sibs",
         icon: SunIcon,
         showTimeAgo: true,
+        isHidden: true,
         category: CategoryNames.SOCIAL,
         colors: [
             { className: "bg-purple-400", name: "sahar" },
@@ -458,6 +471,7 @@ export const Calendars = [
         name: "Shachar",
         icon: SunIcon,
         showTimeAgo: true,
+        cols: 2,
         category: CategoryNames.SOCIAL,
         colors: [
             { className: "bg-amber-400" }
