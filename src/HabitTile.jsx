@@ -134,12 +134,11 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                                         ? 18 : 7}
                         />
                     </div>
-                    {/* absolute top-4 right-3  */}
-                    {/* <div onClick={onHabitClick} className="mt-4 flex items-center gap-1 font-mono text-xs">
-                        <span >年</span>
+                    {/*   */}
+                    <div onClick={onHabitClick} className="absolute top-4 right-3 flex items-center gap-1 font-mono text-xs">
                         <Streak calendar={calendar} streak={streak} />
                         <TimeAgo calendar={calendar} diffDays={diffDays} />
-                    </div> */}
+                    </div>
                 </div>
             )}
         </Motion>
