@@ -340,15 +340,6 @@ export const Calendars = [
         ]
     },
     {
-        name: "Maya",
-        icon: BeerSteinIcon,
-        showTimeAgo: true,
-        category: CategoryNames.SOCIAL,
-        colors: [
-            { className: "bg-cyan-500" },
-        ]
-    },
-    {
         name: "David",
         icon: BeerSteinIcon,
         showTimeAgo: true,
@@ -358,6 +349,16 @@ export const Calendars = [
             { className: "bg-cyan-500" },
         ]
     },
+    {
+        name: "Maya",
+        icon: BeerSteinIcon,
+        showTimeAgo: true,
+        category: CategoryNames.SOCIAL,
+        colors: [
+            { className: "bg-cyan-500" },
+        ]
+    },
+    
     {
         name: "Shirly",
         icon: BeerSteinIcon,
