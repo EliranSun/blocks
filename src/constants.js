@@ -262,7 +262,7 @@ export const Calendars = [
     },
     {
         name: "gestures",
-        cols: 3,
+        cols: 2,
         icon: GiftIcon,
         category: CategoryNames.WIFE,
         showTimeAgo: true,
@@ -355,6 +355,7 @@ export const Calendars = [
         name: "Maya",
         icon: BeerSteinIcon,
         showTimeAgo: true,
+        cols: 1,
         category: CategoryNames.SOCIAL,
         colors: [
             { className: "bg-cyan-500" },
@@ -474,7 +475,7 @@ export const Calendars = [
         name: "Shachar",
         icon: SunIcon,
         showTimeAgo: true,
-        cols: 2,
+        cols: 1,
         category: CategoryNames.SOCIAL,
         colors: [
             { className: "bg-amber-400" }
@@ -509,18 +510,6 @@ export const Calendars = [
     //     ],
     // },
     {
-        name: "pron/mast",
-        icon: EyeIcon,
-        showTimeAgo: true,
-        category: CategoryNames.AVOID,
-        cols: 2,
-        colors: [
-            { className: "bg-red-600", name: "pron" },
-            { className: "bg-yellow-600", name: "mast" },
-            { className: "bg-green-600", name: "abstain" },
-        ],
-    },
-    {
         name: "lie",
         icon: SmileyXEyesIcon,
         cols: 1,
@@ -534,6 +523,18 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.AVOID,
         colors: [{ className: "bg-yellow-600" }],
+    },
+    {
+        name: "pron/mast",
+        icon: EyeIcon,
+        showTimeAgo: true,
+        category: CategoryNames.AVOID,
+        cols: 2,
+        colors: [
+            { className: "bg-red-600", name: "pron" },
+            { className: "bg-yellow-600", name: "mast" },
+            { className: "bg-green-600", name: "abstain" },
+        ],
     },
 ];
 

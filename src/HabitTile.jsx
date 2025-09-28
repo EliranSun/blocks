@@ -54,7 +54,7 @@ const Streak = ({ calendar, streak, alwaysShow }) => {
     }
 
     return (
-        <span className="text-red-500">
+        <span className="">
             {streak}⽕
         </span>
     );
@@ -113,14 +113,14 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                         "rounded-2xl p-4": true,
                         "text-white": currentColor,
                         "bg-white/50 dark:bg-black/50": !currentColor,
-                        "flex flex-col gap-4": true,
+                        "flex flex-col gap-1": true,
                         "h-24": titleOnly,
                         "h-full min-h-24": !titleOnly,
                     })}
                 >
                     <div
                         onClick={handleClick}
-                        className="flex gap-1 items-center my-1">
+                        className="flex flex-col gap-1 items-start justify-start">
                         <Icon size={23} className={classNames({
                             "hidden": titleOnly,
                             // "text-amber-500": calendar.primaryColor === "amber",
@@ -129,7 +129,9 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                         <HabitName
                             calendar={calendar}
                             todayValue={todayValue}
-                            sliceTitle={!calendar.cols || calendar.cols < 2} />
+                            // sliceTitle={!calendar.cols || calendar.cols < 2} 
+                            sliceTitle={false}
+                        />
                     </div>
                     <div className={classNames({
                         // "hidden": titleOnly,
