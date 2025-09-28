@@ -116,7 +116,8 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                         <HabitName calendar={calendar} todayValue={todayValue} />
                     </div>
                     <div className={classNames({
-                        "hidden": titleOnly,
+                        // "hidden": titleOnly,
+                                                    "hidden": true,
                     })}>
                         <CalendarView
                             isCondensed
