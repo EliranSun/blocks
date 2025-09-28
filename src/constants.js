@@ -181,6 +181,7 @@ export const Calendars = [
         name: "workout",
         icon: BarbellIcon,
         showTimeAgo: true,
+        isGamified: false,
         category: CategoryNames.HEALTH,
         colors: [
             { className: "bg-red-500", name: "power" },

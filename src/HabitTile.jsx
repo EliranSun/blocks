@@ -37,7 +37,7 @@ const TimeAgo = ({ calendar, diffDays, alwaysShow }) => {
         )
     }
 
-    if (diffDays > 7) {
+    if (diffDays > 1) {
         return (
             <span className="text-gray-500">
                 {diffDays}永
