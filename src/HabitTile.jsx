@@ -1,5 +1,5 @@
 import { useStreak } from "./hooks/useStreak";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import classNames from "classnames";
 import { useTimeSince } from "./hooks/useTimeSince";
 import CalendarView from "./CalendarView";
@@ -8,24 +8,24 @@ import { getStorageKey } from "./utils/strorage";
 
 /* eslint-disable */
 
-const HabitName = ({ calendar, todayValue }) => {
+const HabitName = ({ calendar, todayValue, sliceTitle }) => {
     return (
         <h1 className="text-base uppercase font-bold">
             {todayValue !== "-1" && calendar.colors[todayValue].name
                 ? calendar.colors[todayValue].name
-                : calendar.name.slice(0, 3)}
+                : sliceTitle ? calendar.name.slice(0, 3) : calendar.name}
         </h1>
     )
 };
 
 
 
-const TimeAgo = ({ calendar, diffDays }) => {
-    if (!calendar.showTimeAgo) {
+const TimeAgo = ({ calendar, diffDays, alwaysShow }) => {
+    if (!calendar.showTimeAgo && !alwaysShow) {
         return null;
     }
 
-    if (diffDays === "Never") {
+    if (diffDays === "Never" && !alwaysShow) {
         return "無"; // mo - none
     }
 
@@ -48,8 +48,8 @@ const TimeAgo = ({ calendar, diffDays }) => {
     return null;
 }
 
-const Streak = ({ calendar, streak }) => {
-    if (!calendar.isGamified || streak === 0) {
+const Streak = ({ calendar, streak, alwaysShow }) => {
+    if (!calendar.isGamified || (streak === 0 && !alwaysShow)) {
         return null;
     }
 
@@ -85,6 +85,16 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
         }, 200);
     };
 
+    const currentColor = useMemo(() => {
+        if (todayValue === "-1") {
+            return null;
+        }
+
+        return calendar.colors[Number(todayValue)]?.className;
+    }, [calendar.colors, todayValue]);
+
+    console.log({ currentColor, triggerMark, todayValue });
+
     return (
         <Motion
             style={{
@@ -99,10 +109,13 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                         transform: `scale(${scale})`,
                         cursor: 'pointer'
                     }}
-                    className={classNames("bg-white/50 dark:bg-black/50 rounded-2xl p-4", {
-                        "flex flex-col justify-between": true,
+                    className={classNames(currentColor, {
+                        "rounded-2xl p-4": true,
+                        "text-white": currentColor,
+                        "bg-white/50 dark:bg-black/50": !currentColor,
+                        "flex flex-col gap-4": true,
                         "h-24": titleOnly,
-                        "h-full": !titleOnly,
+                        "h-full min-h-24": !titleOnly,
                     })}
                 >
                     <div
@@ -110,14 +123,17 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                         className="flex gap-1 items-center my-1">
                         <Icon size={23} className={classNames({
                             "hidden": titleOnly,
-                            "text-amber-500": calendar.primaryColor === "amber",
-                            "text-green-500": calendar.primaryColor === "green",
+                            // "text-amber-500": calendar.primaryColor === "amber",
+                            // "text-green-500": calendar.primaryColor === "green",
                         })} />
-                        <HabitName calendar={calendar} todayValue={todayValue} />
+                        <HabitName
+                            calendar={calendar}
+                            todayValue={todayValue}
+                            sliceTitle={!calendar.cols || calendar.cols < 2} />
                     </div>
                     <div className={classNames({
                         // "hidden": titleOnly,
-                                                    "hidden": true,
+                        "hidden": true,
                     })}>
                         <CalendarView
                             isCondensed
@@ -135,10 +151,10 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                                         ? 18 : 7}
                         />
                     </div>
-                    {/*   */}
-                    <div onClick={onHabitClick} className="absolute top-4 right-3 flex items-center gap-1 font-mono text-xs">
-                        <Streak calendar={calendar} streak={streak} />
-                        <TimeAgo calendar={calendar} diffDays={diffDays} />
+                    {/* absolute top-4 right-3   */}
+                    <div onClick={handleClick} className="flex items-center gap-1 font-mono text-xs">
+                        <Streak calendar={calendar} streak={streak} alwaysShow={true} />
+                        <TimeAgo calendar={calendar} diffDays={diffDays} alwaysShow={true} />
                     </div>
                 </div>
             )}

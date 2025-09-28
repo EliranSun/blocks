@@ -61,6 +61,7 @@ export const Calendars = [
         icon: HeartHalfIcon,
         cols: 1,
         showTimeAgo: true,
+        isHidden: true,
         category: CategoryNames.MOOD,
         colors: [
             { className: "bg-cyan-500" },
@@ -110,7 +111,7 @@ export const Calendars = [
     {
         name: "Weight",
         icon: ScalesIcon,
-        cols: 2,
+        cols: 1,
         isHidden: false,
         category: CategoryNames.HEALTH,
         colors: [
@@ -130,7 +131,7 @@ export const Calendars = [
         icon: FishSimpleIcon,
         showTimeAgo: true,
         isGamified: true,
-        isHidden: false,
+        isHidden: true,
         primaryColor: "red",
         category: CategoryNames.HEALTH,
         colors: [
@@ -358,7 +359,7 @@ export const Calendars = [
             { className: "bg-cyan-500" },
         ]
     },
-    
+
     {
         name: "Shirly",
         icon: BeerSteinIcon,
