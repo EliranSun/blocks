@@ -93,7 +93,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
         return calendar.colors[Number(todayValue)]?.className;
     }, [calendar.colors, todayValue]);
 
-    console.log({ currentColor, triggerMark, todayValue });
+    console.log(calendar.name, { calendar });
 
     return (
         <Motion
@@ -129,7 +129,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                         <HabitName
                             calendar={calendar}
                             todayValue={todayValue}
-                            sliceTitle={calendar.cols === 1} 
+                            sliceTitle={!calendar.cols || calendar.cols <= 1}
                         />
                     </div>
                     <div className={classNames({
