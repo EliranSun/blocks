@@ -13,7 +13,7 @@ const HabitName = ({ calendar, todayValue, sliceTitle }) => {
         <h1 className="text-base uppercase font-bold">
             {todayValue !== "-1" && calendar.colors[todayValue].name
                 ? calendar.colors[todayValue].name
-                : sliceTitle ? calendar.name.slice(0, 7) : calendar.name}
+                : sliceTitle ? calendar.name.slice(0, 6) : calendar.name}
         </h1>
     )
 };
