@@ -13,7 +13,7 @@ const HabitName = ({ calendar, todayValue, sliceTitle }) => {
         <h1 className="text-base uppercase font-bold">
             {todayValue !== "-1" && calendar.colors[todayValue].name
                 ? calendar.colors[todayValue].name
-                : sliceTitle ? calendar.name.slice(0, 6) : calendar.name}
+                : sliceTitle ? calendar.name.slice(0, 7) : calendar.name}
         </h1>
     )
 };
@@ -31,7 +31,7 @@ const TimeAgo = ({ calendar, diffDays, alwaysShow }) => {
 
     if (calendar.cols > 0 && diffDays > 17) {
         return (
-            <span className="text-gray-500">
+            <span className="">
                 {diffDays}永
             </span>
         )
@@ -39,7 +39,7 @@ const TimeAgo = ({ calendar, diffDays, alwaysShow }) => {
 
     if (diffDays > 1) {
         return (
-            <span className="text-gray-500">
+            <span className="">
                 {diffDays}永
             </span>
         )
@@ -113,7 +113,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                         "rounded-2xl p-4": true,
                         "text-white": currentColor,
                         "bg-white/50 dark:bg-black/50": !currentColor,
-                        "flex flex-col gap-1": true,
+                        "flex flex-col gap-0 border-1 border-black/20": true,
                         "h-24": titleOnly,
                         "h-full min-h-24": !titleOnly,
                     })}
@@ -121,7 +121,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                     <div
                         onClick={handleClick}
                         className="flex flex-col gap-1 items-start justify-start">
-                        <Icon size={23} className={classNames({
+                        <Icon size={30} className={classNames({
                             "hidden": titleOnly,
                             // "text-amber-500": calendar.primaryColor === "amber",
                             // "text-green-500": calendar.primaryColor === "green",
@@ -153,7 +153,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                         />
                     </div>
                     {/* absolute top-4 right-3   */}
-                    <div onClick={handleClick} className="flex items-center gap-1 font-mono text-xs">
+                    <div onClick={handleClick} className="flex items-center gap-1 font-mono text-sm">
                         <Streak calendar={calendar} streak={streak} alwaysShow={true} />
                         <TimeAgo calendar={calendar} diffDays={diffDays} alwaysShow={true} />
                     </div>
