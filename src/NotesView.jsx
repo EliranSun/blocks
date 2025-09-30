@@ -17,8 +17,9 @@ export const NotesView = () => {
 
             return {
                 date,
-                backgroundColor: color?.className,
-                colorClassName: color?.colorClassName,
+                // TODO: Replace with proper color class generation
+                backgroundColor: color?.color ? `bg-${color.color}-500` : null,
+                colorClassName: color?.color ? `text-${color.color}-500 border-${color.color}-500` : null,
                 habitsByDay
             }
         }).reverse();

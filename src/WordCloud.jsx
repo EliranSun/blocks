@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import classNames from "classnames";
+import { Colors } from "./constants";
 
 const getThoughtsFromStorage = () => {
     return Object.keys(localStorage)
@@ -132,11 +133,11 @@ export const WordCloud = () => {
 
     const getWordColor = (count, maxCount) => {
         const ratio = count / maxCount;
-        if (ratio > 0.8) return "text-amber-600 dark:text-amber-400";
-        if (ratio > 0.6) return "text-orange-600 dark:text-orange-400";
-        if (ratio > 0.4) return "text-red-600 dark:text-red-400";
-        if (ratio > 0.2) return "text-purple-600 dark:text-purple-400";
-        return "text-blue-600 dark:text-blue-400";
+        if (ratio > 0.8) return `text-${Colors.AMBER}-600 dark:text-${Colors.AMBER}-400`;
+        if (ratio > 0.6) return `text-${Colors.ORANGE}-600 dark:text-${Colors.ORANGE}-400`;
+        if (ratio > 0.4) return `text-${Colors.RED}-600 dark:text-${Colors.RED}-400`;
+        if (ratio > 0.2) return `text-${Colors.PURPLE}-600 dark:text-${Colors.PURPLE}-400`;
+        return `text-${Colors.BLUE}-600 dark:text-${Colors.BLUE}-400`;
     };
 
     const maxWordCount = words.length > 0 ? words[0][1] : 1;

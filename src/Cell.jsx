@@ -86,7 +86,9 @@ export const Cell = ({
 
     const currentColor = useMemo(() => {
         if (isMarked) {
-            return colors[colorIndex]?.className;
+            const colorConstant = colors[colorIndex]?.color;
+            // TODO: Replace with proper color class generation
+            return colorConstant ? `bg-${colorConstant}-500` : null;
         }
         return null;
     }, [isMarked, colors, colorIndex, storageKey]);

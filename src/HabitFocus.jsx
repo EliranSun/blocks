@@ -23,30 +23,31 @@ export const HabitFocus = ({ habitName }) => {
     console.log(storageData);
 
     return (
-<>
+        <>
             <h1 className="w-full text-4xl my-4 text-center">{habitName}</h1>
-                    <div className="bg-white/50 dark:bg-black/50 rounded-lg p-4 w-full">
-            <div className="flex flex-col">
-                {storageData.map((item) => {
-                    const color = Calendars.find(calendar => calendar.name === habitName)?.colors[item.value];
-                    if (!color) return null;
+            <div className="bg-white/50 dark:bg-black/50 rounded-lg p-4 w-full">
+                <div className="flex flex-col">
+                    {storageData.map((item) => {
+                        const color = Calendars.find(calendar => calendar.name === habitName)?.colors[item.value];
+                        if (!color) return null;
 
-                    return (
-                        <div key={item.date} className={classNames(
-                            "flex items-center justify-center w-full gap-2")}>
-                            <span className={classNames(
-                                "flex items-center justify-center",
-                                "text-white text-xs rounded p-2 size-8 overflow-hidden",
-                                color.className)
-                            }>
-                                {color.name.slice(0, 2).toUpperCase()}
-                            </span>
-                            <Note habitName={habitName} date={item.date} />
-                        </div>
-                    )
-                })}
+                        return (
+                            <div key={item.date} className={classNames(
+                                "flex items-center justify-center w-full gap-2")}>
+                                <span className={classNames(
+                                    "flex items-center justify-center",
+                                    "text-white text-xs rounded p-2 size-8 overflow-hidden",
+                                    // TODO: Replace with proper color class generation
+                                    color.color ? `bg-${color.color}-500` : '')
+                                }>
+                                    {color.name.slice(0, 2).toUpperCase()}
+                                </span>
+                                <Note habitName={habitName} date={item.date} />
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
-        </div>
         </>
     );
 };

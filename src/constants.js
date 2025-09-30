@@ -42,6 +42,27 @@ export const CategoryNames = {
     AVOID: "avoid"
 };
 
+export const Colors = {
+    AMBER: "amber",
+    ORANGE: "orange",
+    RED: "red",
+    BLUE: "blue",
+    PURPLE: "purple",
+    CYAN: "cyan",
+    GREEN: "green",
+    LIME: "lime",
+    TEAL: "teal",
+    INDIGO: "indigo",
+    SKY: "sky",
+    VIOLET: "violet",
+    PINK: "pink",
+    EMERALD: "emerald",
+    YELLOW: "yellow",
+    GRAY: "gray",
+    NEUTRAL: "neutral",
+    STONE: "stone",
+}
+
 export const Calendars = [
     {
         name: "mood",
@@ -49,11 +70,11 @@ export const Calendars = [
         cols: 3,
         category: CategoryNames.MOOD,
         colors: [
-            { colorClassName: "text-amber-500", className: "bg-amber-500", name: "great" },
-            { colorClassName: "text-orange-600", className: "bg-orange-600", name: "good" },
-            { isDark: true, colorClassName: "text-red-700", className: "bg-red-700", name: "ok" },
-            { isDark: true, colorClassName: "text-blue-800", className: "bg-blue-800", name: "bad" },
-            { isDark: true, colorClassName: "text-purple-900", className: "bg-purple-900", name: "awful" },
+            { color: Colors.AMBER, name: "great" },
+            { color: Colors.ORANGE, name: "good" },
+            { isDark: true, color: Colors.RED, name: "ok" },
+            { isDark: true, color: Colors.BLUE, name: "bad" },
+            { isDark: true, color: Colors.PURPLE, name: "awful" },
         ]
     },
     {
@@ -64,7 +85,7 @@ export const Calendars = [
         isHidden: true,
         category: CategoryNames.MOOD,
         colors: [
-            { className: "bg-cyan-500" },
+            { color: Colors.CYAN },
         ]
     },
     {
@@ -74,10 +95,10 @@ export const Calendars = [
         isHidden: true,
         category: CategoryNames.MOOD,
         colors: [
-            { className: "bg-cyan-100", name: "lonely" },
-            { className: "bg-cyan-300", name: "neutral" },
-            { className: "bg-cyan-500", name: "belong" },
-            { className: "bg-sky-500", name: "giving" },
+            { color: Colors.CYAN, name: "lonely" },
+            { color: Colors.CYAN, name: "neutral" },
+            { color: Colors.CYAN, name: "belong" },
+            { color: Colors.SKY, name: "giving" },
         ]
     },
     {
@@ -86,12 +107,12 @@ export const Calendars = [
         isHidden: true,
         category: CategoryNames.HEALTH,
         colors: [
-            { className: "bg-blue-50", name: "0" },
-            { className: "bg-blue-100", name: "30" },
-            { className: "bg-blue-300", name: "100" },
-            { className: "bg-blue-500", name: "130" },
-            { isDark: true, className: "bg-blue-700", name: "200" },
-            { isDark: true, className: "bg-blue-950", name: "230" },
+            { color: Colors.BLUE, name: "0" },
+            { color: Colors.BLUE, name: "30" },
+            { color: Colors.BLUE, name: "100" },
+            { color: Colors.BLUE, name: "130" },
+            { isDark: true, color: Colors.BLUE, name: "200" },
+            { isDark: true, color: Colors.BLUE, name: "230" },
         ]
     },
     {
@@ -100,12 +121,12 @@ export const Calendars = [
         isHidden: true,
         category: CategoryNames.HEALTH,
         colors: [
-            { className: "bg-indigo-50", name: "0" },
-            { className: "bg-indigo-100", name: "15" },
-            { className: "bg-indigo-300", name: "30" },
-            { className: "bg-indigo-500", name: "45" },
-            { isDark: true, className: "bg-indigo-700", name: "100" },
-            { isDark: true, className: "bg-indigo-950", name: "115" },
+            { color: Colors.INDIGO, name: "0" },
+            { color: Colors.INDIGO, name: "15" },
+            { color: Colors.INDIGO, name: "30" },
+            { color: Colors.INDIGO, name: "45" },
+            { isDark: true, color: Colors.INDIGO, name: "100" },
+            { isDark: true, color: Colors.INDIGO, name: "115" },
         ]
     },
     {
@@ -115,15 +136,15 @@ export const Calendars = [
         isHidden: false,
         category: CategoryNames.HEALTH,
         colors: [
-            { className: "bg-pink-400", name: "70" },
-            { className: "bg-purple-400", name: "71" },
-            { className: "bg-indigo-400", name: "72" },
-            { className: "bg-sky-400", name: "73" },
-            { className: "bg-teal-400", name: "74" },
-            { className: "bg-green-400", name: "75" },
-            { className: "bg-lime-400", name: "76" },
-            { className: "bg-amber-400", name: "77" },
-            { className: "bg-red-400", name: "78" }
+            { color: Colors.PINK, name: "70" },
+            { color: Colors.PURPLE, name: "71" },
+            { color: Colors.INDIGO, name: "72" },
+            { color: Colors.SKY, name: "73" },
+            { color: Colors.TEAL, name: "74" },
+            { color: Colors.GREEN, name: "75" },
+            { color: Colors.LIME, name: "76" },
+            { color: Colors.AMBER, name: "77" },
+            { color: Colors.RED, name: "78" }
         ]
     },
     {
@@ -135,7 +156,7 @@ export const Calendars = [
         primaryColor: "red",
         category: CategoryNames.HEALTH,
         colors: [
-            { className: "bg-red-500" }
+            { color: Colors.RED }
         ],
     },
     {
@@ -147,9 +168,9 @@ export const Calendars = [
         category: CategoryNames.HEALTH,
         primaryColor: "red",
         colors: [
-            { className: "bg-green-500", name: "no snore" },
-            { className: "bg-yellow-500", name: "a little snore" },
-            { className: "bg-red-500", name: "a lot snore" }
+            { color: Colors.GREEN, name: "no snore" },
+            { color: Colors.YELLOW, name: "a little snore" },
+            { color: Colors.RED, name: "a lot snore" }
         ],
     },
     {
@@ -167,14 +188,14 @@ export const Calendars = [
             "\n30s wall squat " +
             "\n30s deadhang ",
         colors: [
-            { className: "bg-red-500", name: "Pita" },
-            { className: "bg-pink-400", name: "SS" },
-            { className: "bg-orange-400", name: "WS" },
-            { className: "bg-yellow-400", name: "plank" },
-            { className: "bg-green-400", name: "D&C" },
-            { className: "bg-purple-400", name: "combo" },
-            { className: "bg-purple-600", name: "all" },
-            { className: "bg-cyan-500", name: "Hand" },
+            { color: Colors.RED, name: "Pita" },
+            { color: Colors.PINK, name: "SS" },
+            { color: Colors.ORANGE, name: "WS" },
+            { color: Colors.YELLOW, name: "plank" },
+            { color: Colors.GREEN, name: "D&C" },
+            { color: Colors.PURPLE, name: "combo" },
+            { color: Colors.PURPLE, name: "all" },
+            { color: Colors.CYAN, name: "Hand" },
         ],
     },
     {
@@ -184,9 +205,9 @@ export const Calendars = [
         isGamified: false,
         category: CategoryNames.HEALTH,
         colors: [
-            { className: "bg-red-500", name: "power" },
-            { className: "bg-orange-500", name: "cardio" },
-            { className: "bg-yellow-500", name: "yoga" },
+            { color: Colors.RED, name: "power" },
+            { color: Colors.ORANGE, name: "cardio" },
+            { color: Colors.YELLOW, name: "yoga" },
         ],
     },
     {
@@ -196,7 +217,7 @@ export const Calendars = [
         primaryColor: "amber",
         icon: MaskHappyIcon,
         category: CategoryNames.CREATIVE,
-        colors: [{ className: "bg-amber-500" }],
+        colors: [{ color: Colors.AMBER }],
     },
     {
         name: "read",
@@ -205,7 +226,7 @@ export const Calendars = [
         isGamified: true,
         category: CategoryNames.CREATIVE,
         icon: BookOpenIcon,
-        colors: [{ className: "bg-green-500" }],
+        colors: [{ color: Colors.GREEN }],
     },
 
     {
@@ -213,14 +234,14 @@ export const Calendars = [
         icon: PencilLineIcon,
         category: CategoryNames.CREATIVE,
         showTimeAgo: true,
-        colors: [{ className: "bg-green-500" }],
+        colors: [{ color: Colors.GREEN }],
     },
     {
         name: "draw",
         icon: PaintBrushIcon,
         category: CategoryNames.CREATIVE,
         showTimeAgo: true,
-        colors: [{ className: "bg-green-500" }],
+        colors: [{ color: Colors.GREEN }],
     },
     {
         name: "cinema",
@@ -228,8 +249,8 @@ export const Calendars = [
         category: CategoryNames.CREATIVE,
         showTimeAgo: true,
         colors: [
-            { className: "bg-green-500", name: "TV" },
-            { className: "bg-purple-500", name: "Movie" },
+            { color: Colors.GREEN, name: "TV" },
+            { color: Colors.PURPLE, name: "Movie" },
         ],
     },
     {
@@ -237,28 +258,28 @@ export const Calendars = [
         icon: GameControllerIcon,
         category: CategoryNames.CREATIVE,
         showTimeAgo: true,
-        colors: [{ className: "bg-green-500" }],
+        colors: [{ color: Colors.GREEN }],
     },
     {
         name: "date",
         icon: WineIcon,
         category: CategoryNames.WIFE,
         showTimeAgo: true,
-        colors: [{ className: "bg-purple-500" }],
+        colors: [{ color: Colors.PURPLE }],
     },
     {
         name: "sex",
         icon: HeartIcon,
         category: CategoryNames.WIFE,
         showTimeAgo: true,
-        colors: [{ className: "bg-purple-500" }],
+        colors: [{ color: Colors.PURPLE }],
     },
     {
         name: "trip",
         category: CategoryNames.WIFE,
         icon: GlobeIcon,
         showTimeAgo: true,
-        colors: [{ className: "bg-purple-500" }],
+        colors: [{ color: Colors.PURPLE }],
     },
     {
         name: "gestures",
@@ -266,7 +287,7 @@ export const Calendars = [
         icon: GiftIcon,
         category: CategoryNames.WIFE,
         showTimeAgo: true,
-        colors: [{ className: "bg-purple-500" }],
+        colors: [{ color: Colors.PURPLE }],
     },
     {
         name: "house",
@@ -274,11 +295,11 @@ export const Calendars = [
         category: CategoryNames.HOUSE,
         showTimeAgo: true,
         colors: [
-            { className: "bg-red-500", name: "floor" },
-            { className: "bg-orange-500", name: "clean" },
-            { className: "bg-yellow-500", name: "towels" },
-            { className: "bg-green-500", name: "organize" },
-            { className: "bg-blue-500", name: "dishes" },
+            { color: Colors.RED, name: "floor" },
+            { color: Colors.ORANGE, name: "clean" },
+            { color: Colors.YELLOW, name: "towels" },
+            { color: Colors.GREEN, name: "organize" },
+            { color: Colors.BLUE, name: "dishes" },
         ]
     },
     {
@@ -287,10 +308,10 @@ export const Calendars = [
         category: CategoryNames.HOUSE,
         showTimeAgo: true,
         colors: [
-            { className: "bg-blue-500", name: "wash" },
-            { className: "bg-green-500", name: "dry" },
-            { className: "bg-red-500", name: "fold" },
-            { className: "bg-purple-500", name: "all" },
+            { color: Colors.BLUE, name: "wash" },
+            { color: Colors.GREEN, name: "dry" },
+            { color: Colors.RED, name: "fold" },
+            { color: Colors.PURPLE, name: "all" },
         ],
     },
     {
@@ -298,7 +319,7 @@ export const Calendars = [
         icon: ShoppingCartIcon,
         showTimeAgo: true,
         category: CategoryNames.HOUSE,
-        colors: [{ className: "bg-emerald-500" }],
+        colors: [{ color: Colors.EMERALD }],
     },
     {
         name: "cooking",
@@ -306,7 +327,7 @@ export const Calendars = [
         icon: CookingPotIcon,
         category: CategoryNames.HOUSE,
         showTimeAgo: true,
-        colors: [{ className: "bg-orange-500" }],
+        colors: [{ color: Colors.ORANGE }],
     },
     {
         name: "sheets",
@@ -314,8 +335,8 @@ export const Calendars = [
         category: CategoryNames.HOUSE,
         showTimeAgo: true,
         colors: [
-            { className: "bg-blue-500", name: "sheets" },
-            { className: "bg-orange-500", name: "pillows" }
+            { color: Colors.BLUE, name: "sheets" },
+            { color: Colors.ORANGE, name: "pillows" }
         ],
     },
     {
@@ -325,11 +346,11 @@ export const Calendars = [
         isHidden: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-purple-500", name: "maya" },
-            { className: "bg-pink-500", name: "rotem" },
-            { className: "bg-red-500", name: "nimrod" },
-            { className: "bg-orange-500", name: "ofir" },
-            { className: "bg-cyan-500", name: "david" },
+            { color: Colors.PURPLE, name: "maya" },
+            { color: Colors.PINK, name: "rotem" },
+            { color: Colors.RED, name: "nimrod" },
+            { color: Colors.ORANGE, name: "ofir" },
+            { color: Colors.CYAN, name: "david" },
         ]
     },
     {
@@ -338,7 +359,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-cyan-500" },
+            { color: Colors.CYAN },
         ]
     },
     {
@@ -348,7 +369,7 @@ export const Calendars = [
         cols: 2,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-cyan-500" },
+            { color: Colors.CYAN },
         ]
     },
     {
@@ -358,7 +379,7 @@ export const Calendars = [
         cols: 1,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-cyan-500" },
+            { color: Colors.CYAN },
         ]
     },
 
@@ -368,7 +389,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-cyan-500" },
+            { color: Colors.CYAN },
         ]
     },
     {
@@ -377,7 +398,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-cyan-500" },
+            { color: Colors.CYAN },
         ]
     },
     {
@@ -387,10 +408,10 @@ export const Calendars = [
         isHidden: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-pink-400", name: "mom" },
-            { className: "bg-blue-500", name: "dad" },
-            { className: "bg-red-400", name: "grandma" },
-            { className: "bg-violet-400", name: "modav" },
+            { color: Colors.PINK, name: "mom" },
+            { color: Colors.BLUE, name: "dad" },
+            { color: Colors.RED, name: "grandma" },
+            { color: Colors.VIOLET, name: "modav" },
         ]
     },
     {
@@ -399,7 +420,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-red-400" }
+            { color: Colors.RED }
         ]
     },
     {
@@ -408,7 +429,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-red-400" }
+            { color: Colors.RED }
         ]
     },
     {
@@ -417,7 +438,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-red-400" }
+            { color: Colors.RED }
         ]
     },
     {
@@ -426,7 +447,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-red-400" }
+            { color: Colors.RED }
         ]
     },
     {
@@ -435,7 +456,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-red-400" }
+            { color: Colors.RED }
         ]
     },
     {
@@ -445,11 +466,11 @@ export const Calendars = [
         isHidden: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-purple-400", name: "sahar" },
-            { className: "bg-pink-300", name: "shachar" },
-            { className: "bg-green-400", name: "ofek" },
-            { className: "bg-blue-600", name: "or" },
-            { className: "bg-indigo-500", name: "yahel" },
+            { color: Colors.PURPLE, name: "sahar" },
+            { color: Colors.PINK, name: "shachar" },
+            { color: Colors.GREEN, name: "ofek" },
+            { color: Colors.BLUE, name: "or" },
+            { color: Colors.INDIGO, name: "yahel" },
         ]
     },
 
@@ -459,7 +480,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-amber-400" }
+            { color: Colors.AMBER }
         ]
     },
     {
@@ -468,7 +489,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-amber-400" }
+            { color: Colors.AMBER }
         ]
     },
     {
@@ -478,7 +499,7 @@ export const Calendars = [
         cols: 1,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-amber-400" }
+            { color: Colors.AMBER }
         ]
     },
     {
@@ -487,7 +508,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-amber-400" }
+            { color: Colors.AMBER }
         ]
     },
     {
@@ -496,7 +517,7 @@ export const Calendars = [
         showTimeAgo: true,
         category: CategoryNames.SOCIAL,
         colors: [
-            { className: "bg-amber-400" }
+            { color: Colors.AMBER }
         ]
     },
     // {
@@ -515,14 +536,14 @@ export const Calendars = [
         cols: 1,
         showTimeAgo: true,
         category: CategoryNames.AVOID,
-        colors: [{ className: "bg-lime-600" }],
+        colors: [{ color: Colors.LIME }],
     },
     {
         name: "scroll",
         icon: ScrollIcon,
         showTimeAgo: true,
         category: CategoryNames.AVOID,
-        colors: [{ className: "bg-yellow-600" }],
+        colors: [{ color: Colors.YELLOW }],
     },
     {
         name: "pron/mast",
@@ -531,9 +552,9 @@ export const Calendars = [
         category: CategoryNames.AVOID,
         cols: 2,
         colors: [
-            { className: "bg-red-600", name: "pron" },
-            { className: "bg-yellow-600", name: "mast" },
-            { className: "bg-green-600", name: "abstain" },
+            { color: Colors.RED, name: "pron" },
+            { color: Colors.YELLOW, name: "mast" },
+            { color: Colors.GREEN, name: "abstain" },
         ],
     },
 ];

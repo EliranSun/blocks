@@ -1,4 +1,4 @@
-import { Calendars } from "./constants";
+import { Calendars, Colors } from "./constants";
 import { Button } from "./Button";
 import { XIcon } from "@phosphor-icons/react";
 import classNames from "classnames";
@@ -20,13 +20,13 @@ const Calendar = ({ calendar, setCalendar, setIsCalendarModalOpen }) => {
                 {
                     "border-white/30": isNaN(diffDays),
                     // Recent activity: green
-                    "border-green-400 text-green-400 hover:text-green-600 active:text-green-600":
+                    [`border-${Colors.GREEN}-400 text-${Colors.GREEN}-400 hover:text-${Colors.GREEN}-600 active:text-${Colors.GREEN}-600`]:
                         diffDays < 15,
                     // Moderate inactivity: amber/yellow
-                    "border-amber-400 text-amber-400 hover:text-amber-400 active:text-amber-400":
+                    [`border-${Colors.AMBER}-400 text-${Colors.AMBER}-400 hover:text-${Colors.AMBER}-400 active:text-${Colors.AMBER}-400`]:
                         diffDays >= 15 && diffDays < 30,
                     // Long inactivity: red + grayscale
-                    "border-red-400 hover:text-red-500 text-red-400":
+                    [`border-${Colors.RED}-400 hover:text-${Colors.RED}-500 text-${Colors.RED}-400`]:
                         diffDays >= 30,
                 }
             )}>

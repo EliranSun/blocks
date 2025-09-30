@@ -90,7 +90,10 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
             return null;
         }
 
-        return calendar.colors[Number(todayValue)]?.className;
+        const colorConstant = calendar.colors[Number(todayValue)]?.color;
+        return colorConstant
+            ? `bg-${colorConstant}-500 border-${colorConstant}-500 text-white`
+            : null;
     }, [calendar.colors, todayValue]);
 
     console.log(calendar.name, { calendar });
@@ -109,11 +112,15 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                         transform: `scale(${scale})`,
                         cursor: 'pointer'
                     }}
-                    className={classNames(currentColor, {
-                        "rounded-2xl p-4": true,
-                        "text-white": currentColor,
-                        "bg-white/50 dark:bg-black/50": !currentColor,
-                        "flex flex-col gap-0 border-1 border-black/20": true,
+                    className={classNames(currentColor, "border", {
+                        "p-4": true,
+                        "border-1 border-black/50 dark:border-white/50": !currentColor,
+                        // "rounded-2xl": true,
+                        // "text-white": currentColor,
+                        // "bg-white/50 dark:bg-black/50": !currentColor,
+                        // "border-1 border-black/20": true,
+                        // "bg-white/50 dark:bg-black/50": true,
+                        "flex flex-col gap-0": true,
                         "h-24": titleOnly,
                         "h-full min-h-24": !titleOnly,
                     })}

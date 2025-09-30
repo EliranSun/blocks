@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { useHabitsByDay } from "./hooks/useHabitsByDay";
-import { Calendars } from "./constants";
+import { Calendars, Colors } from "./constants";
 import React, { useState } from "react";
 import { useDateSwipeNavigation } from "./hooks/useDateSwipeNavigation";
 import { Quotes } from "./Quotes";
@@ -25,8 +25,8 @@ const HabitsIconGrid = ({ date, onDateChange }) => {
                                 {
                                     "partial-animate-fade-in": !isSelected,
                                     "full-animate-fade-in": isSelected,
-                                    "text-amber-500": item.primaryColor === "amber",
-                                    "text-green-500": item.primaryColor === "green",
+                                    "text-amber-500": item.primaryColor === Colors.AMBER,
+                                    "text-green-500": item.primaryColor === Colors.GREEN,
                                 }
                             )}
                             style={{

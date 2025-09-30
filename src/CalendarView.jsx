@@ -150,7 +150,8 @@ export default function CalendarView({
                             className={classNames(
                                 "p-2 text-xs text-center ml-2 rounded uppercase",
                                 color.isDark ? "text-white" : "text-black",
-                                color.className,
+                                // TODO: Replace with proper color class generation
+                                color.color ? `bg-${color.color}-500` : '',
                                 // color.textClassName
                             )}>
                             {color.name}
