@@ -92,7 +92,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
 
         const colorConstant = calendar.colors[Number(todayValue)]?.color;
         return colorConstant
-            ? `bg-${colorConstant}-500 border-${colorConstant}-500 text-white`
+            ? `bg-black border-white text-white`
             : null;
     }, [calendar.colors, todayValue]);
 
