@@ -177,6 +177,7 @@ export const Calendars = [
         name: "physiotherapy",
         icon: FirstAidKitIcon,
         showTimeAgo: true,
+        isGamified: true,
         category: CategoryNames.HEALTH,
         description:
             "3min pita" +
