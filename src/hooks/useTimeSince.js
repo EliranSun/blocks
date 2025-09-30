@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { isAfter } from "date-fns";
+import { isAfter, differenceInDays } from "date-fns";
 import { getStorageByPrefix } from "../utils/strorage";
 
 const timeSinceLastActivity = (calendarName) => {
@@ -16,10 +16,7 @@ const timeSinceLastActivity = (calendarName) => {
         return NaN;
     }
 
-    const diffTime = Math.abs(now - lastActivity);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-    return diffDays;
+    return differenceInDays(now, lastActivity);
 };
 
 export const useTimeSince = (calendarName) => {

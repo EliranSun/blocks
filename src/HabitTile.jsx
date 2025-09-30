@@ -21,7 +21,7 @@ const HabitName = ({ calendar, todayValue, sliceTitle }) => {
 
 
 const TimeAgo = ({ calendar, diffDays, alwaysShow }) => {
-    if (!calendar.showTimeAgo && !alwaysShow) {
+    if (!calendar.showTimeAgo && !alwaysShow || diffDays === 0) {
         return null;
     }
 
@@ -29,23 +29,11 @@ const TimeAgo = ({ calendar, diffDays, alwaysShow }) => {
         return "無"; // mo - none
     }
 
-    if (calendar.cols > 0 && diffDays > 17) {
-        return (
-            <span className="">
-                {diffDays}永
-            </span>
-        )
-    }
-
-    if (diffDays > 1) {
-        return (
-            <span className="">
-                {diffDays}永
-            </span>
-        )
-    }
-
-    return null;
+    return (
+        <span className="">
+            {diffDays}永
+        </span>
+    )
 }
 
 const Streak = ({ calendar, streak, alwaysShow }) => {
@@ -54,7 +42,7 @@ const Streak = ({ calendar, streak, alwaysShow }) => {
     }
 
     return (
-        <span className="">
+        <span className="text-red-300 dark:text-red-600">
             {streak}⽕
         </span>
     );
@@ -92,7 +80,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
 
         const colorConstant = calendar.colors[Number(todayValue)]?.color;
         return colorConstant
-            ? `bg-black border-white text-white`
+            ? `bg-black border-black text-white`
             : null;
     }, [calendar.colors, todayValue]);
 
