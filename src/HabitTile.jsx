@@ -351,16 +351,15 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                             sliceTitle={!calendar.cols || calendar.cols <= 1}
                         />
                     </div>
-                    {/* <div className={classNames({
-                        // "hidden": titleOnly,
-                        "hidden": true,
+                    <div className={classNames({
+                        "hidden": titleOnly,
                     })}>
                         <CalendarView
                             isCondensed
                             hideTitle
                             showInfo={showInfo}
                             flex
-                            onCellsClick={handleClick}
+                            // onCellsClick={handleClick}
                             date={date}
                             calendar={calendar}
                             triggerMark={triggerMark}
@@ -370,8 +369,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                                     : calendar.cols === 2
                                         ? 18 : 7}
                         />
-                    </div> */}
-                    {/* absolute top-4 right-3   */}
+                    </div>
                     <div className="flex items-center gap-1 font-mono text-sm relative z-10 pointer-events-none">
                         <Streak calendar={calendar} streak={streak} alwaysShow={true} />
                         <TimeAgo calendar={calendar} diffDays={diffDays} alwaysShow={true} />
