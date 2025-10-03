@@ -129,6 +129,13 @@ export const Cell = ({
         return isMarked ? 1 : 0.9;
     }, [selectedColorIndex, isColorSelected, isMarked, selectedMonth, isMonthSelected]);
 
+useEffect(() => {
+    alert(JSON.stringify({ 
+        currentColor,
+        colorIndex 
+    }));
+    }, []);
+    
     return (
         <Motion style={{
             scale: spring(isAnimating ? 1.2 : 1, presets.wobbly),
