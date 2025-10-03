@@ -360,6 +360,7 @@ export function HabitTile({ calendar, date = new Date(), onHabitClick, titleOnly
                             showInfo={showInfo}
                             flex
                             // onCellsClick={handleClick}
+                            grayscale
                             date={date}
                             calendar={calendar}
                             triggerMark={triggerMark}
