@@ -47,7 +47,7 @@ export const Habits = ({ date, onDateChange, onHabitClick }) => {
 
     return (
         <div className="flex flex-col space-y-8 w-full pt-4">
-            <div className="w-full overflow-x-auto" ref={scrollContainerRef}>
+            <div className="fixed bottom-12 inset-x-0 mx-auto bg-white dark:bg-black p-2 rounded-lg w-full overflow-x-auto" ref={scrollContainerRef}>
                 <div className="flex gap-2">
                     {getDaysFromMonthStart(date).map((day) => {
                         const dayOfWeek = format(day, "EEE").toLowerCase();
