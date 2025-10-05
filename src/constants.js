@@ -558,6 +558,17 @@ export const Calendars = [
             { color: Colors.GREEN, name: "abstain" },
         ],
     },
+    {
+        name: "abstain",
+        icon: EyeIcon,
+        showTimeAgo: true,
+        isGamified: true,
+        category: CategoryNames.AVOID,
+        cols: 2,
+        colors: [
+            { color: Colors.GREEN },
+        ],
+    },
 ];
 
 export const Categories = [
