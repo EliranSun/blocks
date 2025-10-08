@@ -149,7 +149,8 @@ export const Cell = ({
 
                         //     handleMark();
                         // }}
-                        className={classNames("cursor-pointer", currentColor, {
+                        className={classNames("cursor-pointer", {
+                            "bg-white": currentColor,
                             "bg-neutral-700": !isCellSelected && !isMarked && !isOpaque,
                             "size-12 flex items-center justify-center rounded-md": !isCondensed,
                             "size-[9px] rounded-xs": isCondensed,
