@@ -48,7 +48,7 @@ export const Habits = ({ date, onDateChange, onHabitClick }) => {
     return (
         <div className="flex flex-col space-y-8 w-full pt-4">
             <div className="fixed z-50 bottom-12 inset-x-0 mx-auto p-2 rounded-lg w-full overflow-x-auto" ref={scrollContainerRef}>
-                <div className="flex gap-2">
+                <div className="flex px-2 gap-2">
                     {getDaysFromMonthStart(date).map((day) => {
                         const dayOfWeek = format(day, "EEE").toLowerCase();
                         const dayOfMonth = format(day, "d");
@@ -62,9 +62,9 @@ export const Habits = ({ date, onDateChange, onHabitClick }) => {
                                 className={classNames(
                                     "font-mono text-sm px-3 py-2 whitespace-nowrap rounded-2xl transition-colors",
                                     {
-                                        "font-bold bg-black text-white dark:text-white dark:bg-white": isSelected,
+                                        "font-bold bg-black text-white dark:text-black dark:bg-white": isSelected,
                                         "text-amber-700 dark:text-amber-400 underline": isTodayDate && !isSelected,
-                                        "hover:bg-gray-100 dark:hover:bg-gray-800": !isSelected && !isTodayDate
+                                        "bg-white text-black dark:text-white dark:bg-black hover:bg-gray-100 dark:hover:bg-gray-800": !isSelected && !isTodayDate
                                     }
                                 )}>
                                 {dayOfWeek} {dayOfMonth}
