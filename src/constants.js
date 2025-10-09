@@ -284,7 +284,7 @@ export const Calendars = [
     },
     {
         name: "gestures",
-        cols: 2,
+        cols: 3,
         icon: GiftIcon,
         category: CategoryNames.WIFE,
         showTimeAgo: true,
