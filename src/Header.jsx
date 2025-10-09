@@ -2,7 +2,7 @@ import { Views } from "./constants";
 import classNames from "classnames";
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
 import { CalendarActionsBar } from "./CalendarActionsBar";
-import { useMemo, useRef } from "react";
+import { useRef } from "react";
 
 export const Header = ({
     view,
@@ -12,26 +12,27 @@ export const Header = ({
     habitIcon: HabitIcon,
     onTitleClick,
     setIsDateSelectionOpen,
+    title,
 }) => {
     const isNight = date.getHours() < 6 || date.getHours() > 18;
     const headerRef = useRef(null);
-    const title = useMemo(() => {
-        if (habitName) {
-            return habitName.toUpperCase().slice(0, 6);
-        }
+    // const title = useMemo(() => {
+    //     if (habitName) {
+    //         return habitName.toUpperCase().slice(0, 6);
+    //     }
 
-        const isToday = date.toDateString() === new Date().toDateString();
-        if (isToday) {
-            if (isNight) return "Tonight"
-            return "Today";
-        }
+    //     const isToday = date.toDateString() === new Date().toDateString();
+    //     if (isToday) {
+    //         if (isNight) return "Tonight"
+    //         return "Today";
+    //     }
 
-        return date.toLocaleDateString("en-US", {
-            weekday: "short",
-            month: "short",
-            day: "numeric",
-        });
-    }, [date, isNight, habitName]);
+    //     return date.toLocaleDateString("en-US", {
+    //         weekday: "short",
+    //         month: "short",
+    //         day: "numeric",
+    //     });
+    // }, [date, isNight, habitName]);
 
     const isVisible = view === Views.HABITS || view === Views.HOME || view === Views.HABIT;
 
@@ -39,9 +40,10 @@ export const Header = ({
         <div
             ref={headerRef}
             className={classNames(
-                "w-full flex items-center justify-between pb-4 sticky",
-                "top-0 bg-[#ece1d4] dark:bg-[#242424] z-10"
-            )}>
+                "left-0 right-0 flex items-center justify-between py-4 px-5",
+                "fixed top-0 bg-[#ece1d4] dark:bg-[#242424] z-10"
+            )}
+        >
             <h1
                 onClick={() => {
                     if (onTitleClick && habitName) {
@@ -57,7 +59,7 @@ export const Header = ({
                 })}>
                 {HabitIcon ? <HabitIcon size={40} />
                     : isNight ? <MoonIcon size={40} /> : <SunIcon size={40} />}
-                {title}
+                {title.toUpperCase()}
             </h1>
             <CalendarActionsBar
                 onSettingsClick={() => view === Views.SETTINGS

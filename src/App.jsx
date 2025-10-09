@@ -11,18 +11,46 @@ import { DateSelection } from "./DateSelection";
 import { Header } from "./Header";
 import { AtlyFive } from "./AtlyFive";
 import { HabitView } from "./HabitView";
+import { Categories } from "./constants";
+import GlassNavigation from "./components/molecules/GlassNavigation";
+
+const PageCategories = [
+  {
+    name: "self", categories: Categories.filter(category =>
+      category.name === "Mood" ||
+      category.name === "Health" ||
+      category.name === "Creative" ||
+      category.name === "Avoid")
+  },
+
+  {
+    name: "together", categories: Categories.filter(category =>
+      category.name === "Wife" ||
+      category.name === "House")
+  },
+
+  { name: "outside", categories: Categories.filter(category => category.name === "Social") },
+
+];
 
 function App() {
   const [date, setDate] = useState(new Date());
   const [view, setView] = useState(Views.HOME);
   const [habit, setHabit] = useState(null);
   const [isDateSelectionOpen, setIsDateSelectionOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(PageCategories[0].name);
 
   return (
     <>
+      <GlassNavigation
+        categories={PageCategories}
+        selectedCategory={selectedCategory}
+        onCategoryChange={setSelectedCategory}
+      />
       <Header
         date={date}
         view={view}
+        title={selectedCategory}
         setView={setView}
         habitName={habit?.name}
         habitIcon={habit?.icon}
@@ -32,6 +60,7 @@ function App() {
           setHabit(null);
         }}
       />
+      <div className="mt-32" /> {/* This is to offset the header height */}
       {(() => {
         switch (view) {
           case Views.HOME: {
@@ -51,6 +80,9 @@ function App() {
               <Habits
                 date={date}
                 onDateChange={setDate}
+                selectedCategories={PageCategories.find(category => {
+                  return category.name === selectedCategory;
+                }).categories}
                 onHabitClick={calendar => {
                   setHabit(calendar);
                   setView(Views.HABIT);
