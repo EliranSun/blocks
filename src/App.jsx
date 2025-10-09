@@ -16,7 +16,7 @@ import GlassNavigation from "./components/molecules/GlassNavigation";
 
 const PageCategories = [
   {
-    name: "self", categories: Categories.filter(category =>
+    name: "self", label: "I", categories: Categories.filter(category =>
       category.name === "Mood" ||
       category.name === "Health" ||
       category.name === "Creative" ||
@@ -24,12 +24,12 @@ const PageCategories = [
   },
 
   {
-    name: "together", categories: Categories.filter(category =>
+    name: "together", label: "II", categories: Categories.filter(category =>
       category.name === "Wife" ||
       category.name === "House")
   },
 
-  { name: "outside", categories: Categories.filter(category => category.name === "Social") },
+  { name: "outside", label: "III", categories: Categories.filter(category => category.name === "Social") },
 
 ];
 
