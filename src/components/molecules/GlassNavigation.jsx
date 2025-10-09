@@ -27,7 +27,7 @@ const GlassNavigation = ({ categories, selectedCategory, onCategoryChange }) => 
                         }}
                     >
                         <span className="glass-button-content">
-                            {category.name}
+                            {category.label}
                         </span>
                         <div className="glass-button-glow" />
                     </button>
