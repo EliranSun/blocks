@@ -550,6 +550,7 @@ export const Calendars = [
         name: "pron/mast",
         icon: EyeIcon,
         showTimeAgo: true,
+        isHidden: true,
         category: CategoryNames.AVOID,
         cols: 2,
         colors: [
