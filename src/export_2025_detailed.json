@@ -1,0 +1,3201 @@
+[
+  {
+    "start date":"2025-01-28 15:39:16",
+    "end date":"2025-01-28 16:22:35",
+    "duration":43.322,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-02-08 13:50:05",
+    "end date":"2025-02-08 14:35:36",
+    "duration":45.5223,
+    "name":"The beach design",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-08 14:58:16",
+    "end date":"2025-02-08 15:24:50",
+    "duration":26.5509,
+    "name":"The beach design",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-08 16:06:45",
+    "end date":"2025-02-08 17:08:59",
+    "duration":62.2404,
+    "name":"The beach design",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-09 08:27:10",
+    "end date":"2025-02-09 08:28:14",
+    "duration":1.0806,
+    "name":"Beach narrative",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-09 08:45:11",
+    "end date":"2025-02-09 09:56:56",
+    "duration":71.7439,
+    "name":"Beach narration",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-11 09:32:14",
+    "end date":"2025-02-11 10:52:03",
+    "duration":79.829,
+    "name":"Thoughts system",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-11 11:02:32",
+    "end date":"2025-02-11 12:11:56",
+    "duration":69.3905,
+    "name":"Thoughts system",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-11 15:51:08",
+    "end date":"2025-02-11 16:12:07",
+    "duration":20.9733,
+    "name":"Charlotte stay sequence",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-11 16:19:19",
+    "end date":"2025-02-11 16:36:23",
+    "duration":17.0624,
+    "name":"Charlotte stay sequence",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-11 17:02:36",
+    "end date":"2025-02-11 17:26:34",
+    "duration":23.9755,
+    "name":"Charlotte stay sequence",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-12 08:37:19",
+    "end date":"2025-02-12 09:36:03",
+    "duration":58.7308,
+    "name":"Boat",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-13 08:43:12",
+    "end date":"2025-02-13 09:04:40",
+    "duration":21.4727,
+    "name":"Busy",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-13 09:06:48",
+    "end date":"2025-02-13 09:27:53",
+    "duration":21.088,
+    "name":"Busy",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-15 15:00:32",
+    "end date":"2025-02-15 16:59:28",
+    "duration":118.9419,
+    "name":"Boat",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-16 09:04:00",
+    "end date":"2025-02-16 09:55:18",
+    "duration":51.3089,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-02-18 09:56:33",
+    "end date":"2025-02-18 10:43:33",
+    "duration":47.0132,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-02-18 10:47:12",
+    "end date":"2025-02-18 11:32:15",
+    "duration":45.0442,
+    "name":"Beach narration",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-18 12:02:53",
+    "end date":"2025-02-18 12:17:53",
+    "duration":15.0,
+    "name":"Beach narration",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-18 12:53:55",
+    "end date":"2025-02-18 13:47:26",
+    "duration":53.5074,
+    "name":"Boat movement",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-18 14:58:55",
+    "end date":"2025-02-18 15:26:46",
+    "duration":27.8455,
+    "name":"Thoughts",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-18 18:37:45",
+    "end date":"2025-02-18 20:04:04",
+    "duration":86.3116,
+    "name":"Name",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-18 20:16:00",
+    "end date":"2025-02-18 20:44:07",
+    "duration":28.1192,
+    "name":"Name",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-19 08:30:25",
+    "end date":"2025-02-19 09:33:10",
+    "duration":62.7518,
+    "name":"Name",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-20 19:46:39",
+    "end date":"2025-02-20 20:14:23",
+    "duration":27.7304,
+    "name":"Sync level with dialog",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-20 20:16:31",
+    "end date":"2025-02-20 20:26:44",
+    "duration":10.2219,
+    "name":"Player prefs and dialog state bug",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-20 20:36:24",
+    "end date":"2025-02-20 20:43:55",
+    "duration":7.5116,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-02-22 11:15:12",
+    "end date":"2025-02-22 12:26:53",
+    "duration":71.6698,
+    "name":"Level sync with player state",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-23 09:34:33",
+    "end date":"2025-02-23 09:40:08",
+    "duration":5.5841,
+    "name":"Level sync with player state",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-24 10:52:39",
+    "end date":"2025-02-24 12:02:31",
+    "duration":69.8635,
+    "name":"Player movement in boat",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-24 12:07:35",
+    "end date":"2025-02-24 13:02:23",
+    "duration":54.7927,
+    "name":"Boat teleport",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-24 14:49:54",
+    "end date":"2025-02-24 16:16:46",
+    "duration":86.8564,
+    "name":"Zeke office",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-24 16:23:01",
+    "end date":"2025-02-24 17:51:01",
+    "duration":87.9999,
+    "name":"Zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-26 09:16:03",
+    "end date":"2025-02-26 09:56:19",
+    "duration":40.2659,
+    "name":"Zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-26 20:11:28",
+    "end date":"2025-02-26 20:33:41",
+    "duration":22.223,
+    "name":"Zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-26 20:57:14",
+    "end date":"2025-02-26 21:52:24",
+    "duration":55.1788,
+    "name":"Zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-27 08:34:31",
+    "end date":"2025-02-27 08:46:21",
+    "duration":11.8214,
+    "name":"Zeke flirt",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-27 08:56:40",
+    "end date":"2025-02-27 09:52:16",
+    "duration":55.5989,
+    "name":"Zeke flirt",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-28 13:02:22",
+    "end date":"2025-02-28 15:10:03",
+    "duration":127.685,
+    "name":"Zeke flirt",
+    "notes":null
+  },
+  {
+    "start date":"2025-02-28 17:17:30",
+    "end date":"2025-02-28 17:54:05",
+    "duration":36.5933,
+    "name":"Zeke: text wife",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-01 10:26:22",
+    "end date":"2025-03-01 11:37:35",
+    "duration":71.2105,
+    "name":"Zeke: text wife",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-01 15:49:03",
+    "end date":"2025-03-01 17:06:10",
+    "duration":77.1131,
+    "name":"Zeke: text wife",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-02 09:16:18",
+    "end date":"2025-03-02 09:58:05",
+    "duration":41.7821,
+    "name":"Zeke: text wife",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-03 09:26:52",
+    "end date":"2025-03-03 10:02:21",
+    "duration":35.4732,
+    "name":"Zeke: movement",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-03 10:09:09",
+    "end date":"2025-03-03 11:03:34",
+    "duration":54.4134,
+    "name":"Zeke: mini games connection",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-03 11:05:20",
+    "end date":"2025-03-03 11:29:14",
+    "duration":23.903,
+    "name":"Zeke: morgan art",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-03 12:50:26",
+    "end date":"2025-03-03 15:06:30",
+    "duration":136.0615,
+    "name":"Zeke: organize desk art",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-03 15:27:42",
+    "end date":"2025-03-03 15:43:52",
+    "duration":16.1638,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-03 17:11:19",
+    "end date":"2025-03-03 17:45:32",
+    "duration":34.2114,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-04 09:00:47",
+    "end date":"2025-03-04 09:36:52",
+    "duration":36.085,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-05 08:20:07",
+    "end date":"2025-03-05 08:39:03",
+    "duration":18.9412,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-05 09:05:03",
+    "end date":"2025-03-05 10:38:56",
+    "duration":93.8892,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-06 09:27:03",
+    "end date":"2025-03-06 10:14:01",
+    "duration":46.9801,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-07 13:56:58",
+    "end date":"2025-03-07 14:49:53",
+    "duration":52.9215,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-08 10:00:46",
+    "end date":"2025-03-08 10:24:54",
+    "duration":24.1371,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-09 09:12:56",
+    "end date":"2025-03-09 10:02:12",
+    "duration":49.2763,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-10 09:43:04",
+    "end date":"2025-03-10 10:06:27",
+    "duration":23.3776,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-10 10:11:21",
+    "end date":"2025-03-10 10:15:11",
+    "duration":3.8316,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-10 10:15:11",
+    "end date":"2025-03-10 11:17:01",
+    "duration":61.8331,
+    "name":"Zeke: progress bar and mini games",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-10 11:24:26",
+    "end date":"2025-03-10 11:37:05",
+    "duration":12.6481,
+    "name":"Zeke: progress bar and mini games",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-10 11:51:30",
+    "end date":"2025-03-10 13:42:02",
+    "duration":110.5307,
+    "name":"Zeke: progress bar and mini games",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-10 14:08:34",
+    "end date":"2025-03-10 14:57:01",
+    "duration":48.448,
+    "name":"Zeke: progress bar and mini games",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-10 15:55:28",
+    "end date":"2025-03-10 17:33:23",
+    "duration":97.9283,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-11 08:50:51",
+    "end date":"2025-03-11 09:05:22",
+    "duration":14.5074,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-13 15:32:36",
+    "end date":"2025-03-13 16:56:47",
+    "duration":84.1816,
+    "name":"Zeke: organize desk",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-14 09:53:16",
+    "end date":"2025-03-14 09:58:11",
+    "duration":4.9169,
+    "name":"Zeke: connect mini games and narrative",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-14 13:54:42",
+    "end date":"2025-03-14 16:35:14",
+    "duration":160.5251,
+    "name":"Zeke: connect mini games and narrative",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-15 10:25:00",
+    "end date":"2025-03-15 11:08:33",
+    "duration":43.55,
+    "name":"Zeke: connect mini games and narrative",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-15 19:00:00",
+    "end date":"2025-03-15 20:33:44",
+    "duration":93.7362,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-03-16 09:50:44",
+    "end date":"2025-03-16 10:27:13",
+    "duration":36.4869,
+    "name":"Zeke boss lines",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-16 16:41:27",
+    "end date":"2025-03-16 17:18:31",
+    "duration":37.0595,
+    "name":"Zeke boss lines",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-17 09:13:08",
+    "end date":"2025-03-17 10:07:48",
+    "duration":54.671,
+    "name":"Zeke boss lines",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-17 10:23:41",
+    "end date":"2025-03-17 11:18:30",
+    "duration":54.8076,
+    "name":"Zeke boss lines",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-17 11:33:28",
+    "end date":"2025-03-17 11:46:28",
+    "duration":13.0046,
+    "name":"Zeke boss lines",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-17 12:10:22",
+    "end date":"2025-03-17 13:16:35",
+    "duration":66.2132,
+    "name":"Zeke shout",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-17 14:23:13",
+    "end date":"2025-03-17 15:58:16",
+    "duration":95.0484,
+    "name":"Zeke shout",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-17 16:50:52",
+    "end date":"2025-03-17 17:35:10",
+    "duration":44.2905,
+    "name":"Kettle and zeke voice",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-18 18:44:34",
+    "end date":"2025-03-18 19:48:33",
+    "duration":63.9978,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-03-19 15:58:19",
+    "end date":"2025-03-19 17:03:06",
+    "duration":64.776,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-03-21 14:20:00",
+    "end date":"2025-03-21 14:52:11",
+    "duration":32.1877,
+    "name":"Zeke suicide",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-21 15:05:00",
+    "end date":"2025-03-21 16:14:25",
+    "duration":69.4234,
+    "name":"Zeke suicide",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-23 15:06:39",
+    "end date":"2025-03-23 15:17:37",
+    "duration":10.9683,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-03-24 10:00:13",
+    "end date":"2025-03-24 13:34:47",
+    "duration":214.5684,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-03-24 14:35:00",
+    "end date":"2025-03-24 16:00:14",
+    "duration":85.2333,
+    "name":"Stacy art",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-25 19:51:13",
+    "end date":"2025-03-25 20:45:12",
+    "duration":53.983,
+    "name":"Stacy ",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-26 09:59:07",
+    "end date":"2025-03-26 10:42:01",
+    "duration":42.9036,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-03-29 16:12:36",
+    "end date":"2025-03-29 17:22:54",
+    "duration":70.2926,
+    "name":"Stacy ",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-31 09:39:39",
+    "end date":"2025-03-31 12:19:30",
+    "duration":159.8517,
+    "name":"Stacy  flashlight",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-31 12:50:00",
+    "end date":"2025-03-31 13:47:40",
+    "duration":57.6764,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-03-31 14:01:47",
+    "end date":"2025-03-31 15:36:01",
+    "duration":94.2212,
+    "name":"Stacy items",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-31 16:04:09",
+    "end date":"2025-03-31 16:34:07",
+    "duration":29.9536,
+    "name":"Stacy",
+    "notes":null
+  },
+  {
+    "start date":"2025-03-31 16:50:37",
+    "end date":"2025-03-31 17:31:24",
+    "duration":40.7873,
+    "name":"Stacy",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-02 18:05:43",
+    "end date":"2025-04-02 18:35:43",
+    "duration":30.0,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-04-04 12:34:58",
+    "end date":"2025-04-04 14:14:25",
+    "duration":99.4522,
+    "name":"Stacy map",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-04 16:38:09",
+    "end date":"2025-04-04 17:24:25",
+    "duration":46.2597,
+    "name":"Stacy map",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-05 10:23:59",
+    "end date":"2025-04-05 11:41:13",
+    "duration":77.2266,
+    "name":"Stacy map",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-06 08:07:39",
+    "end date":"2025-04-06 08:18:49",
+    "duration":11.1693,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-04-06 09:31:43",
+    "end date":"2025-04-06 09:49:28",
+    "duration":17.7451,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-04-07 10:19:40",
+    "end date":"2025-04-07 11:10:24",
+    "duration":50.7251,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-04-08 09:54:33",
+    "end date":"2025-04-08 10:40:38",
+    "duration":46.0711,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 08:44:41",
+    "end date":"2025-04-09 11:14:57",
+    "duration":150.267,
+    "name":"Stacy map",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 11:21:21",
+    "end date":"2025-04-09 11:26:21",
+    "duration":5.0,
+    "name":"Stacy map",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 11:38:38",
+    "end date":"2025-04-09 12:50:06",
+    "duration":71.4574,
+    "name":"Stacy map",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 12:55:19",
+    "end date":"2025-04-09 13:17:24",
+    "duration":22.0845,
+    "name":"Stacy map",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 13:27:17",
+    "end date":"2025-04-09 13:27:26",
+    "duration":0.1412,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 13:28:28",
+    "end date":"2025-04-09 14:10:15",
+    "duration":41.7713,
+    "name":"Stacy map game design",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 14:17:31",
+    "end date":"2025-04-09 14:49:58",
+    "duration":32.4449,
+    "name":"Stacy map game design",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 15:04:37",
+    "end date":"2025-04-09 15:14:33",
+    "duration":9.924,
+    "name":"Stacy map game design",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 15:23:07",
+    "end date":"2025-04-09 17:04:51",
+    "duration":101.7348,
+    "name":"Stacy map game design",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 17:07:36",
+    "end date":"2025-04-09 17:10:56",
+    "duration":3.3286,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 17:24:35",
+    "end date":"2025-04-09 17:39:40",
+    "duration":15.0816,
+    "name":"Start",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-09 18:13:46",
+    "end date":"2025-04-09 18:49:13",
+    "duration":35.4438,
+    "name":"Stacy Start",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-14 14:07:15",
+    "end date":"2025-04-14 14:44:18",
+    "duration":37.0501,
+    "name":"Stacy Start",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-14 15:51:15",
+    "end date":"2025-04-14 16:01:15",
+    "duration":10.0,
+    "name":"Stacy inventory system",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-15 09:48:07",
+    "end date":"2025-04-15 10:14:07",
+    "duration":25.9971,
+    "name":"Stacy inventory system",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-16 08:38:39",
+    "end date":"2025-04-16 10:15:17",
+    "duration":96.6376,
+    "name":"Stacy inventory system",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-16 10:19:12",
+    "end date":"2025-04-16 10:31:26",
+    "duration":12.2443,
+    "name":"Stacy old man",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-16 11:23:41",
+    "end date":"2025-04-16 12:26:23",
+    "duration":62.7017,
+    "name":"Stacy old man",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-16 12:53:24",
+    "end date":"2025-04-16 14:38:56",
+    "duration":105.5212,
+    "name":"Stacy old man",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-16 14:39:26",
+    "end date":"2025-04-16 16:05:36",
+    "duration":86.1687,
+    "name":"Stacy reactiond",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-16 16:10:21",
+    "end date":"2025-04-16 16:21:20",
+    "duration":10.9781,
+    "name":"Stacy hunger ",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-16 16:52:26",
+    "end date":"2025-04-16 18:29:46",
+    "duration":97.3268,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-04-17 10:10:00",
+    "end date":"2025-04-17 10:59:04",
+    "duration":49.0775,
+    "name":"Stacy & zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-17 11:15:28",
+    "end date":"2025-04-17 12:06:06",
+    "duration":50.6404,
+    "name":"Stacy & zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-17 12:34:35",
+    "end date":"2025-04-17 12:41:38",
+    "duration":7.0408,
+    "name":"Stacy & zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-23 08:30:35",
+    "end date":"2025-04-23 09:05:29",
+    "duration":34.9024,
+    "name":"Stacy & zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-23 09:42:06",
+    "end date":"2025-04-23 11:04:13",
+    "duration":82.124,
+    "name":"Stacy & zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-23 11:25:30",
+    "end date":"2025-04-23 12:49:22",
+    "duration":83.8622,
+    "name":"Stacy & zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-23 13:06:07",
+    "end date":"2025-04-23 13:36:03",
+    "duration":29.9444,
+    "name":"Stacy & zeke",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-23 14:23:55",
+    "end date":"2025-04-23 15:27:03",
+    "duration":63.1283,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-04-23 19:40:51",
+    "end date":"2025-04-23 20:10:51",
+    "duration":30.0,
+    "name":"Stacy rope",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-24 09:10:05",
+    "end date":"2025-04-24 09:49:19",
+    "duration":39.2273,
+    "name":"Stacy rope",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-25 18:30:05",
+    "end date":"2025-04-25 19:03:51",
+    "duration":33.7676,
+    "name":"Stacy bodies",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-26 10:32:16",
+    "end date":"2025-04-26 11:32:37",
+    "duration":60.3447,
+    "name":"Stacy bodies",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-27 08:46:40",
+    "end date":"2025-04-27 09:22:12",
+    "duration":35.5437,
+    "name":"Stacy bodies",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-30 09:09:42",
+    "end date":"2025-04-30 11:29:46",
+    "duration":140.0658,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-04-30 11:36:54",
+    "end date":"2025-04-30 12:55:59",
+    "duration":79.0898,
+    "name":"Stacy treasure",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-30 13:32:11",
+    "end date":"2025-04-30 13:51:38",
+    "duration":19.4529,
+    "name":"Stacy treasure",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-30 14:25:41",
+    "end date":"2025-04-30 16:45:51",
+    "duration":140.1538,
+    "name":"Stacy treasure",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-30 17:11:59",
+    "end date":"2025-04-30 18:01:53",
+    "duration":49.8904,
+    "name":"Stacy treasure",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-30 18:13:32",
+    "end date":"2025-04-30 18:27:50",
+    "duration":14.2962,
+    "name":"Stacy end",
+    "notes":null
+  },
+  {
+    "start date":"2025-04-30 18:42:10",
+    "end date":"2025-04-30 18:47:09",
+    "duration":4.9714,
+    "name":"Stacy end",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-01 10:15:50",
+    "end date":"2025-05-01 10:39:44",
+    "duration":23.8931,
+    "name":"Stacy end",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-02 11:20:00",
+    "end date":"2025-05-02 11:29:16",
+    "duration":9.2759,
+    "name":"Stacy end",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-02 11:31:50",
+    "end date":"2025-05-02 11:56:57",
+    "duration":25.1073,
+    "name":"Stacy end",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-02 12:30:00",
+    "end date":"2025-05-02 13:01:26",
+    "duration":31.4367,
+    "name":"Stacy end",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-02 13:05:29",
+    "end date":"2025-05-02 13:44:52",
+    "duration":39.3945,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-02 17:18:12",
+    "end date":"2025-05-02 17:41:44",
+    "duration":23.5359,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-03 15:18:06",
+    "end date":"2025-05-03 16:11:48",
+    "duration":53.7068,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-03 16:40:00",
+    "end date":"2025-05-03 16:54:03",
+    "duration":14.0536,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-04 09:57:56",
+    "end date":"2025-05-04 10:31:03",
+    "duration":33.1176,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-05 09:30:40",
+    "end date":"2025-05-05 10:30:52",
+    "duration":60.2094,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-06 08:21:05",
+    "end date":"2025-05-06 08:33:14",
+    "duration":12.1478,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-06 08:50:50",
+    "end date":"2025-05-06 09:15:57",
+    "duration":25.1119,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-07 09:27:00",
+    "end date":"2025-05-07 12:36:02",
+    "duration":189.0392,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-07 13:22:53",
+    "end date":"2025-05-07 14:48:39",
+    "duration":85.7587,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-07 18:01:10",
+    "end date":"2025-05-07 20:10:40",
+    "duration":129.4868,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-08 09:45:46",
+    "end date":"2025-05-08 10:24:00",
+    "duration":38.2305,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-09 16:09:35",
+    "end date":"2025-05-09 16:49:35",
+    "duration":40.0,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-10 15:09:27",
+    "end date":"2025-05-10 15:51:04",
+    "duration":41.6099,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-10 16:15:00",
+    "end date":"2025-05-10 16:29:08",
+    "duration":14.1464,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-11 10:23:36",
+    "end date":"2025-05-11 11:00:54",
+    "duration":37.2934,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-11 11:21:02",
+    "end date":"2025-05-11 12:30:58",
+    "duration":69.9344,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-11 13:44:22",
+    "end date":"2025-05-11 15:25:07",
+    "duration":100.7485,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-11 16:27:48",
+    "end date":"2025-05-11 18:09:50",
+    "duration":102.0194,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-11 18:37:04",
+    "end date":"2025-05-11 20:04:55",
+    "duration":87.8531,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-13 09:30:00",
+    "end date":"2025-05-13 10:05:49",
+    "duration":35.8183,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-05-14 09:24:53",
+    "end date":"2025-05-14 09:45:36",
+    "duration":20.7261,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-15 09:20:00",
+    "end date":"2025-05-15 10:08:37",
+    "duration":48.6283,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-16 11:52:40",
+    "end date":"2025-05-16 13:34:33",
+    "duration":101.8896,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-05-17 13:28:43",
+    "end date":"2025-05-17 13:38:28",
+    "duration":9.7536,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-17 13:40:10",
+    "end date":"2025-05-17 14:02:36",
+    "duration":22.4454,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-18 10:09:18",
+    "end date":"2025-05-18 10:33:21",
+    "duration":24.0599,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-18 10:46:26",
+    "end date":"2025-05-18 12:02:04",
+    "duration":75.6386,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-18 14:00:04",
+    "end date":"2025-05-18 14:10:29",
+    "duration":10.4306,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-18 14:10:30",
+    "end date":"2025-05-18 14:50:22",
+    "duration":39.8734,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-18 15:19:43",
+    "end date":"2025-05-18 15:46:30",
+    "duration":26.7958,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-18 17:19:45",
+    "end date":"2025-05-18 17:59:54",
+    "duration":40.1536,
+    "name":"Apartment",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-18 18:06:44",
+    "end date":"2025-05-18 20:00:23",
+    "duration":113.6447,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-05-19 14:24:57",
+    "end date":"2025-05-19 14:58:34",
+    "duration":33.6295,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-21 09:47:30",
+    "end date":"2025-05-21 10:49:34",
+    "duration":62.071,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-23 18:22:15",
+    "end date":"2025-05-23 18:30:17",
+    "duration":8.0413,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-05-23 18:38:50",
+    "end date":"2025-05-23 19:06:01",
+    "duration":27.1866,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-05-25 10:27:26",
+    "end date":"2025-05-25 11:26:35",
+    "duration":59.1443,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-25 11:39:01",
+    "end date":"2025-05-25 12:06:43",
+    "duration":27.7018,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-25 14:13:30",
+    "end date":"2025-05-25 15:46:24",
+    "duration":92.9011,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-25 15:50:00",
+    "end date":"2025-05-25 16:36:48",
+    "duration":46.8036,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-05-25 18:04:59",
+    "end date":"2025-05-25 19:06:34",
+    "duration":61.5876,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-26 09:42:50",
+    "end date":"2025-05-26 10:27:26",
+    "duration":44.5891,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-27 09:30:51",
+    "end date":"2025-05-27 09:38:39",
+    "duration":7.808,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-27 09:50:02",
+    "end date":"2025-05-27 10:19:09",
+    "duration":29.1156,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-27 10:19:14",
+    "end date":"2025-05-27 10:34:17",
+    "duration":15.0379,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-28 09:38:18",
+    "end date":"2025-05-28 10:16:41",
+    "duration":38.3822,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-29 09:31:39",
+    "end date":"2025-05-29 09:32:01",
+    "duration":0.3544,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-29 09:33:38",
+    "end date":"2025-05-29 09:36:14",
+    "duration":2.5906,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-29 09:45:51",
+    "end date":"2025-05-29 09:52:37",
+    "duration":6.76,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-05-29 10:10:08",
+    "end date":"2025-05-29 10:44:16",
+    "duration":34.133,
+    "name":"CSS-98",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-01 18:20:00",
+    "end date":"2025-06-01 18:59:27",
+    "duration":39.4612,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-06-03 12:03:59",
+    "end date":"2025-06-03 12:20:17",
+    "duration":16.3025,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-03 17:21:19",
+    "end date":"2025-06-03 17:37:54",
+    "duration":16.5937,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-03 17:52:21",
+    "end date":"2025-06-03 17:57:21",
+    "duration":5.0089,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-05 09:34:38",
+    "end date":"2025-06-05 09:49:33",
+    "duration":14.9079,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-06 18:03:11",
+    "end date":"2025-06-06 18:36:33",
+    "duration":33.366,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-08 13:38:28",
+    "end date":"2025-06-08 13:38:30",
+    "duration":0.0436,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-06-09 17:37:20",
+    "end date":"2025-06-09 17:58:57",
+    "duration":21.6193,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-09 18:05:38",
+    "end date":"2025-06-09 18:21:26",
+    "duration":15.8013,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-11 10:30:37",
+    "end date":"2025-06-11 11:05:52",
+    "duration":35.249,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-11 21:58:53",
+    "end date":"2025-06-11 22:21:43",
+    "duration":22.8277,
+    "name":"CSS-88",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-13 14:11:36",
+    "end date":"2025-06-13 14:44:30",
+    "duration":32.9003,
+    "name":"CSS-88",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-13 14:49:00",
+    "end date":"2025-06-13 15:38:23",
+    "duration":49.3899,
+    "name":"CSS-88",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-13 15:46:45",
+    "end date":"2025-06-13 15:47:55",
+    "duration":1.1726,
+    "name":"CSS-88",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-13 16:06:40",
+    "end date":"2025-06-13 16:06:44",
+    "duration":0.0697,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-06-14 16:50:17",
+    "end date":"2025-06-14 17:00:14",
+    "duration":9.9489,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-14 20:36:33",
+    "end date":"2025-06-14 20:50:46",
+    "duration":14.2252,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-14 20:50:49",
+    "end date":"2025-06-14 21:00:28",
+    "duration":9.6522,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-15 11:32:17",
+    "end date":"2025-06-15 12:16:24",
+    "duration":44.1191,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-15 13:01:27",
+    "end date":"2025-06-15 13:01:33",
+    "duration":0.1143,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-06-15 13:11:51",
+    "end date":"2025-06-15 13:31:45",
+    "duration":19.8989,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-15 17:09:27",
+    "end date":"2025-06-15 17:26:04",
+    "duration":16.6163,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-15 17:50:40",
+    "end date":"2025-06-15 18:11:06",
+    "duration":20.4343,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-15 18:18:21",
+    "end date":"2025-06-15 18:39:15",
+    "duration":20.9023,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-16 10:44:38",
+    "end date":"2025-06-16 11:23:38",
+    "duration":39.0073,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-16 11:26:27",
+    "end date":"2025-06-16 11:40:50",
+    "duration":14.3705,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-16 18:06:34",
+    "end date":"2025-06-16 19:09:32",
+    "duration":62.9523,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-17 10:43:50",
+    "end date":"2025-06-17 11:32:44",
+    "duration":48.8969,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-18 09:47:30",
+    "end date":"2025-06-18 10:00:31",
+    "duration":13.0148,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-06-18 10:38:31",
+    "end date":"2025-06-18 11:14:54",
+    "duration":36.3817,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-18 11:26:22",
+    "end date":"2025-06-18 12:26:48",
+    "duration":60.4316,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-18 12:33:11",
+    "end date":"2025-06-18 13:06:02",
+    "duration":32.8496,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-18 14:02:22",
+    "end date":"2025-06-18 15:03:14",
+    "duration":60.867,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-18 15:50:35",
+    "end date":"2025-06-18 16:31:11",
+    "duration":40.5896,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-06-19 16:59:45",
+    "end date":"2025-06-19 18:26:43",
+    "duration":86.9565,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-19 19:48:14",
+    "end date":"2025-06-19 20:17:56",
+    "duration":29.6976,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-20 14:51:11",
+    "end date":"2025-06-20 15:37:14",
+    "duration":46.0617,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-21 13:59:14",
+    "end date":"2025-06-21 15:20:22",
+    "duration":81.1293,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-21 15:38:08",
+    "end date":"2025-06-21 15:54:27",
+    "duration":16.3286,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-21 16:09:44",
+    "end date":"2025-06-21 16:32:09",
+    "duration":22.4157,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-21 17:45:00",
+    "end date":"2025-06-21 17:53:26",
+    "duration":8.4314,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-21 22:22:27",
+    "end date":"2025-06-21 22:32:27",
+    "duration":10.0,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-22 11:46:05",
+    "end date":"2025-06-22 12:00:29",
+    "duration":14.3979,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-22 12:31:35",
+    "end date":"2025-06-22 12:42:46",
+    "duration":11.1789,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-22 12:55:49",
+    "end date":"2025-06-22 12:55:52",
+    "duration":0.0637,
+    "name":"CSS-105",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-22 12:55:54",
+    "end date":"2025-06-22 13:10:30",
+    "duration":14.6045,
+    "name":"CSS-99",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-22 17:33:43",
+    "end date":"2025-06-22 17:42:50",
+    "duration":9.1228,
+    "name":"CSS-99",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-22 17:50:22",
+    "end date":"2025-06-22 18:35:25",
+    "duration":45.042,
+    "name":"CSS-99",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-23 16:08:30",
+    "end date":"2025-06-23 17:04:38",
+    "duration":56.1412,
+    "name":"CSS-99",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-24 16:36:56",
+    "end date":"2025-06-24 17:18:55",
+    "duration":41.9798,
+    "name":"CSS-99",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-24 20:25:50",
+    "end date":"2025-06-24 21:02:43",
+    "duration":36.8959,
+    "name":"CSS-99",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-25 08:54:17",
+    "end date":"2025-06-25 10:12:38",
+    "duration":78.3365,
+    "name":"CSS-99",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-25 10:28:44",
+    "end date":"2025-06-25 11:57:04",
+    "duration":88.3256,
+    "name":"CSS-99",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-25 14:32:55",
+    "end date":"2025-06-25 14:57:35",
+    "duration":24.6739,
+    "name":"CSS-99",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-25 15:05:20",
+    "end date":"2025-06-25 16:01:14",
+    "duration":55.8879,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-25 16:58:02",
+    "end date":"2025-06-25 18:02:34",
+    "duration":64.5387,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-25 18:10:24",
+    "end date":"2025-06-25 19:49:41",
+    "duration":99.2864,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-25 21:21:08",
+    "end date":"2025-06-25 22:06:42",
+    "duration":45.5628,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-26 09:14:27",
+    "end date":"2025-06-26 10:22:01",
+    "duration":67.5721,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-27 12:00:52",
+    "end date":"2025-06-27 12:47:24",
+    "duration":46.5237,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-27 14:58:17",
+    "end date":"2025-06-27 15:30:28",
+    "duration":32.1793,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-27 15:50:31",
+    "end date":"2025-06-27 16:15:33",
+    "duration":25.0356,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-28 10:53:35",
+    "end date":"2025-06-28 11:13:00",
+    "duration":19.4071,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-28 17:01:49",
+    "end date":"2025-06-28 17:16:49",
+    "duration":15.0,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-29 09:15:00",
+    "end date":"2025-06-29 10:28:09",
+    "duration":73.1503,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-30 09:31:51",
+    "end date":"2025-06-30 10:19:53",
+    "duration":48.022,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-30 17:15:00",
+    "end date":"2025-06-30 17:33:19",
+    "duration":18.3268,
+    "name":"Css script",
+    "notes":null
+  },
+  {
+    "start date":"2025-06-30 17:40:30",
+    "end date":"2025-06-30 17:41:12",
+    "duration":0.6969,
+    "name":"Css script",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-01 08:32:05",
+    "end date":"2025-07-01 09:06:17",
+    "duration":34.2001,
+    "name":"Css script",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-01 15:04:21",
+    "end date":"2025-07-01 15:37:56",
+    "duration":33.5934,
+    "name":"Css script",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-01 18:48:19",
+    "end date":"2025-07-01 18:48:35",
+    "duration":0.2581,
+    "name":"Css script",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-01 18:51:15",
+    "end date":"2025-07-01 18:52:10",
+    "duration":0.9224,
+    "name":"Css script",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-01 19:03:43",
+    "end date":"2025-07-01 19:10:40",
+    "duration":6.9547,
+    "name":"Css script",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-01 19:16:31",
+    "end date":"2025-07-01 19:19:22",
+    "duration":2.8522,
+    "name":"Css script",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-01 19:20:35",
+    "end date":"2025-07-01 19:22:38",
+    "duration":2.0489,
+    "name":"Css script",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-02 08:47:00",
+    "end date":"2025-07-02 09:04:59",
+    "duration":17.9831,
+    "name":"Css script",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-02 09:04:59",
+    "end date":"2025-07-02 09:05:03",
+    "duration":0.0691,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-07-02 09:08:18",
+    "end date":"2025-07-02 09:12:41",
+    "duration":4.3875,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-02 09:16:02",
+    "end date":"2025-07-02 09:51:14",
+    "duration":35.2096,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-02 09:54:23",
+    "end date":"2025-07-02 11:15:31",
+    "duration":81.122,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-02 11:32:46",
+    "end date":"2025-07-02 13:26:39",
+    "duration":113.867,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-02 13:49:33",
+    "end date":"2025-07-02 14:19:09",
+    "duration":29.6081,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-02 14:25:55",
+    "end date":"2025-07-02 14:26:49",
+    "duration":0.9056,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-02 16:30:30",
+    "end date":"2025-07-02 17:28:12",
+    "duration":57.7017,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-03 09:13:16",
+    "end date":"2025-07-03 09:45:14",
+    "duration":31.9651,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-04 15:02:52",
+    "end date":"2025-07-04 16:03:11",
+    "duration":60.3083,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-06 09:17:40",
+    "end date":"2025-07-06 09:53:04",
+    "duration":35.4001,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-07-07 09:11:45",
+    "end date":"2025-07-07 09:56:55",
+    "duration":45.1594,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-08 09:38:25",
+    "end date":"2025-07-08 10:23:42",
+    "duration":45.276,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-09 08:43:47",
+    "end date":"2025-07-09 09:31:25",
+    "duration":47.6334,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-09 09:43:13",
+    "end date":"2025-07-09 10:53:45",
+    "duration":70.5255,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-09 10:57:48",
+    "end date":"2025-07-09 11:18:51",
+    "duration":21.0637,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-09 11:24:30",
+    "end date":"2025-07-09 12:02:30",
+    "duration":37.9961,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-09 12:44:30",
+    "end date":"2025-07-09 13:03:58",
+    "duration":19.4682,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-09 13:08:58",
+    "end date":"2025-07-09 13:30:19",
+    "duration":21.3534,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-09 13:56:08",
+    "end date":"2025-07-09 14:45:36",
+    "duration":49.4653,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-09 15:08:28",
+    "end date":"2025-07-09 15:57:41",
+    "duration":49.2123,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-09 16:08:18",
+    "end date":"2025-07-09 17:13:24",
+    "duration":65.0959,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-09 17:33:22",
+    "end date":"2025-07-09 19:20:50",
+    "duration":107.4788,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-10 19:54:58",
+    "end date":"2025-07-10 20:25:26",
+    "duration":30.4692,
+    "name":"CSS-44",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-11 15:52:10",
+    "end date":"2025-07-11 16:54:11",
+    "duration":62.022,
+    "name":"CSS-116",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-12 15:12:53",
+    "end date":"2025-07-12 15:59:20",
+    "duration":46.4564,
+    "name":"CSS-116",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-13 09:04:58",
+    "end date":"2025-07-13 09:58:15",
+    "duration":53.2794,
+    "name":"CSS-116",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-14 15:10:30",
+    "end date":"2025-07-14 15:32:19",
+    "duration":21.8026,
+    "name":"CSS-116",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-15 16:07:55",
+    "end date":"2025-07-15 17:12:50",
+    "duration":64.9106,
+    "name":"CSS-116",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 08:52:14",
+    "end date":"2025-07-16 09:33:12",
+    "duration":40.9589,
+    "name":"CSS-88",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 10:11:09",
+    "end date":"2025-07-16 10:40:04",
+    "duration":28.9202,
+    "name":"CSS-88",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 10:43:48",
+    "end date":"2025-07-16 11:14:45",
+    "duration":30.943,
+    "name":"CSS-88",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 11:32:26",
+    "end date":"2025-07-16 12:12:27",
+    "duration":40.0164,
+    "name":"CSS-116",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 12:20:35",
+    "end date":"2025-07-16 12:41:31",
+    "duration":20.9312,
+    "name":"CSS-116",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 12:52:56",
+    "end date":"2025-07-16 13:10:06",
+    "duration":17.1699,
+    "name":"CSS-116",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 13:10:15",
+    "end date":"2025-07-16 14:05:48",
+    "duration":55.5556,
+    "name":"CSS-116",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 14:35:51",
+    "end date":"2025-07-16 16:12:43",
+    "duration":96.8582,
+    "name":"CSS-116",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 16:55:10",
+    "end date":"2025-07-16 16:56:43",
+    "duration":1.5607,
+    "name":"Social",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 17:10:26",
+    "end date":"2025-07-16 17:31:46",
+    "duration":21.3378,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 19:14:18",
+    "end date":"2025-07-16 19:33:09",
+    "duration":18.8519,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 19:35:47",
+    "end date":"2025-07-16 20:15:55",
+    "duration":40.1296,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 20:21:04",
+    "end date":"2025-07-16 20:45:57",
+    "duration":24.8914,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-16 22:02:21",
+    "end date":"2025-07-16 22:50:22",
+    "duration":48.0067,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-17 09:31:24",
+    "end date":"2025-07-17 09:35:07",
+    "duration":3.7238,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-17 10:32:33",
+    "end date":"2025-07-17 11:00:36",
+    "duration":28.0464,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-17 15:07:24",
+    "end date":"2025-07-17 15:28:23",
+    "duration":20.9788,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-17 15:28:46",
+    "end date":"2025-07-17 15:40:40",
+    "duration":11.9093,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-18 13:30:21",
+    "end date":"2025-07-18 14:12:05",
+    "duration":41.7352,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-18 14:24:35",
+    "end date":"2025-07-18 14:27:49",
+    "duration":3.2358,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-18 14:27:52",
+    "end date":"2025-07-18 14:28:52",
+    "duration":0.9847,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-18 15:50:09",
+    "end date":"2025-07-18 16:35:13",
+    "duration":45.0652,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-19 22:11:17",
+    "end date":"2025-07-19 22:56:50",
+    "duration":45.5475,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-20 08:43:52",
+    "end date":"2025-07-20 09:38:53",
+    "duration":55.0079,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-21 09:31:34",
+    "end date":"2025-07-21 09:43:43",
+    "duration":12.1468,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-21 15:17:19",
+    "end date":"2025-07-21 15:57:59",
+    "duration":40.6633,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-22 15:27:50",
+    "end date":"2025-07-22 16:09:43",
+    "duration":41.8798,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 08:14:15",
+    "end date":"2025-07-23 08:27:05",
+    "duration":12.8315,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 09:03:18",
+    "end date":"2025-07-23 09:24:25",
+    "duration":21.125,
+    "name":"Charlotte congratz",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 10:12:04",
+    "end date":"2025-07-23 11:54:19",
+    "duration":102.2541,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 12:15:44",
+    "end date":"2025-07-23 12:59:08",
+    "duration":43.3942,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 13:26:43",
+    "end date":"2025-07-23 13:52:39",
+    "duration":25.9433,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 14:07:10",
+    "end date":"2025-07-23 14:54:18",
+    "duration":47.1346,
+    "name":"CSS-114",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 15:52:20",
+    "end date":"2025-07-23 17:48:46",
+    "duration":116.4311,
+    "name":"CSS-128",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 17:51:45",
+    "end date":"2025-07-23 18:07:08",
+    "duration":15.3837,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 18:46:53",
+    "end date":"2025-07-23 19:09:17",
+    "duration":22.3857,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 19:11:21",
+    "end date":"2025-07-23 19:42:26",
+    "duration":31.0719,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-23 21:00:18",
+    "end date":"2025-07-23 22:09:00",
+    "duration":68.7095,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-24 15:16:18",
+    "end date":"2025-07-24 15:43:44",
+    "duration":27.4218,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-25 16:19:59",
+    "end date":"2025-07-25 16:27:27",
+    "duration":7.4684,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-25 16:46:00",
+    "end date":"2025-07-25 17:03:11",
+    "duration":17.1951,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-25 17:35:25",
+    "end date":"2025-07-25 17:45:42",
+    "duration":10.2735,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-26 16:09:34",
+    "end date":"2025-07-26 16:35:39",
+    "duration":26.0878,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-26 16:52:36",
+    "end date":"2025-07-26 17:03:24",
+    "duration":10.7978,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-27 08:34:11",
+    "end date":"2025-07-27 09:04:57",
+    "duration":30.7604,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-27 15:29:57",
+    "end date":"2025-07-27 16:10:25",
+    "duration":40.4735,
+    "name":"Lone survivor design",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-28 16:31:27",
+    "end date":"2025-07-28 17:31:16",
+    "duration":59.8255,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-29 10:39:16",
+    "end date":"2025-07-29 11:30:27",
+    "duration":51.1868,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-29 21:39:23",
+    "end date":"2025-07-29 21:53:41",
+    "duration":14.2953,
+    "name":"Dev vlog",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-30 09:20:38",
+    "end date":"2025-07-30 10:21:22",
+    "duration":60.7398,
+    "name":"Dev vlog",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-30 10:49:29",
+    "end date":"2025-07-30 11:59:20",
+    "duration":69.8536,
+    "name":"Dev log",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-30 12:02:30",
+    "end date":"2025-07-30 14:06:52",
+    "duration":124.3641,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-30 14:55:29",
+    "end date":"2025-07-30 16:23:14",
+    "duration":87.7413,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-30 19:08:56",
+    "end date":"2025-07-30 20:33:21",
+    "duration":84.4083,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-30 21:02:47",
+    "end date":"2025-07-30 21:35:35",
+    "duration":32.806,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-30 21:48:22",
+    "end date":"2025-07-30 22:55:06",
+    "duration":66.7383,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-30 23:31:34",
+    "end date":"2025-07-31 00:26:55",
+    "duration":55.3551,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-07-31 14:05:58",
+    "end date":"2025-07-31 14:32:01",
+    "duration":26.0502,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-01 12:49:33",
+    "end date":"2025-08-01 13:21:22",
+    "duration":31.8035,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-02 15:42:12",
+    "end date":"2025-08-02 15:52:20",
+    "duration":10.1251,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-08-03 17:52:23",
+    "end date":"2025-08-03 18:22:15",
+    "duration":29.8738,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-03 18:37:56",
+    "end date":"2025-08-03 18:44:11",
+    "duration":6.2353,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-05 16:44:23",
+    "end date":"2025-08-05 17:16:54",
+    "duration":32.5216,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-10 21:11:57",
+    "end date":"2025-08-10 21:11:59",
+    "duration":0.0274,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-08-20 09:26:21",
+    "end date":"2025-08-20 10:04:00",
+    "duration":37.641,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-20 10:40:20",
+    "end date":"2025-08-20 11:29:29",
+    "duration":49.1587,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-20 16:13:53",
+    "end date":"2025-08-20 16:51:52",
+    "duration":37.9855,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-21 13:49:55",
+    "end date":"2025-08-21 14:21:05",
+    "duration":31.1657,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-24 15:20:45",
+    "end date":"2025-08-24 15:41:26",
+    "duration":20.683,
+    "name":"CSS-113",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-26 16:07:27",
+    "end date":"2025-08-26 16:18:51",
+    "duration":11.3952,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-08-27 12:19:24",
+    "end date":"2025-08-27 13:19:25",
+    "duration":60.028,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-08-27 17:28:11",
+    "end date":"2025-08-27 17:48:37",
+    "duration":20.4365,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-08-28 18:46:41",
+    "end date":"2025-08-28 19:31:16",
+    "duration":44.5772,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-08-30 19:21:42",
+    "end date":"2025-08-30 19:42:00",
+    "duration":20.3035,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-08-31 09:45:25",
+    "end date":"2025-08-31 09:45:27",
+    "duration":0.0299,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-08-31 16:19:20",
+    "end date":"2025-08-31 17:04:20",
+    "duration":45.0,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-01 14:34:32",
+    "end date":"2025-09-01 15:11:03",
+    "duration":36.5211,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-01 19:52:06",
+    "end date":"2025-09-01 20:19:53",
+    "duration":27.7978,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-02 15:27:23",
+    "end date":"2025-09-02 16:12:37",
+    "duration":45.2429,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-03 12:00:59",
+    "end date":"2025-09-03 13:10:12",
+    "duration":69.206,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-03 13:53:31",
+    "end date":"2025-09-03 14:54:54",
+    "duration":61.369,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-03 16:13:10",
+    "end date":"2025-09-03 18:34:06",
+    "duration":140.9287,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-03 18:40:26",
+    "end date":"2025-09-03 19:22:09",
+    "duration":41.7207,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-05 15:40:03",
+    "end date":"2025-09-05 16:14:37",
+    "duration":34.5699,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-06 11:12:51",
+    "end date":"2025-09-06 12:40:59",
+    "duration":88.1227,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-07 14:47:15",
+    "end date":"2025-09-07 15:34:12",
+    "duration":46.9399,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-08 18:01:20",
+    "end date":"2025-09-08 18:22:02",
+    "duration":20.7078,
+    "name":"CSS-26",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-09 09:31:31",
+    "end date":"2025-09-09 09:31:35",
+    "duration":0.0611,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-09-09 14:47:00",
+    "end date":"2025-09-09 15:40:11",
+    "duration":53.1878,
+    "name":"CSS-26",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-10 10:09:17",
+    "end date":"2025-09-10 11:10:15",
+    "duration":60.9693,
+    "name":"CSS-26",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-10 11:11:45",
+    "end date":"2025-09-10 12:43:58",
+    "duration":92.2023,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-09-10 12:59:26",
+    "end date":"2025-09-10 13:25:18",
+    "duration":25.8704,
+    "name":"CSS-26",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-10 14:27:34",
+    "end date":"2025-09-10 15:04:38",
+    "duration":37.0638,
+    "name":"CSS-26",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-10 15:12:54",
+    "end date":"2025-09-10 15:37:15",
+    "duration":24.3446,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-10 15:53:16",
+    "end date":"2025-09-10 17:10:52",
+    "duration":77.6022,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-10 18:20:06",
+    "end date":"2025-09-10 18:50:00",
+    "duration":29.8939,
+    "name":"CSS-25",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-11 14:27:06",
+    "end date":"2025-09-11 15:00:51",
+    "duration":33.7428,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-09-12 14:32:54",
+    "end date":"2025-09-12 14:38:22",
+    "duration":5.4788,
+    "name":"CSS-26",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-15 15:23:23",
+    "end date":"2025-09-15 16:07:13",
+    "duration":43.8393,
+    "name":"CSS-35",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-15 18:51:24",
+    "end date":"2025-09-15 19:15:01",
+    "duration":23.624,
+    "name":"CSS-35",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-16 14:12:12",
+    "end date":"2025-09-16 15:13:13",
+    "duration":61.0253,
+    "name":"CSS-35",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-16 15:20:00",
+    "end date":"2025-09-16 15:48:16",
+    "duration":28.281,
+    "name":"CSS-35",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-16 16:35:34",
+    "end date":"2025-09-16 16:40:10",
+    "duration":4.6031,
+    "name":"CSS-35",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-17 11:04:35",
+    "end date":"2025-09-17 12:08:14",
+    "duration":63.651,
+    "name":"CSS-35",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-17 12:38:15",
+    "end date":"2025-09-17 13:26:27",
+    "duration":48.2074,
+    "name":"CSS-38",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-17 15:21:05",
+    "end date":"2025-09-17 16:03:51",
+    "duration":42.7614,
+    "name":"CSS-38",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-17 17:02:28",
+    "end date":"2025-09-17 17:13:37",
+    "duration":11.1549,
+    "name":"CSS-35",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-17 18:04:51",
+    "end date":"2025-09-17 19:26:05",
+    "duration":81.2264,
+    "name":"CSS-35",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-17 19:32:00",
+    "end date":"2025-09-17 19:41:00",
+    "duration":9.0,
+    "name":"Social",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-17 21:12:00",
+    "end date":"2025-09-17 22:05:00",
+    "duration":53.0,
+    "name":"Social",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-17 22:15:00",
+    "end date":"2025-09-17 22:21:00",
+    "duration":6.0,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-09-18 10:00:00",
+    "end date":"2025-09-18 10:40:00",
+    "duration":40.0,
+    "name":"CSS-30",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-18 20:10:00",
+    "end date":"2025-09-18 20:30:00",
+    "duration":20.0,
+    "name":"CSS-30",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-19 16:50:26",
+    "end date":"2025-09-19 17:57:55",
+    "duration":67.4924,
+    "name":"CSS-30",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-20 17:30:26",
+    "end date":"2025-09-20 18:12:46",
+    "duration":42.3406,
+    "name":"CSS-15",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-20 18:19:41",
+    "end date":"2025-09-20 18:20:39",
+    "duration":0.9702,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-09-20 18:21:36",
+    "end date":"2025-09-20 19:21:49",
+    "duration":60.2163,
+    "name":"CSS-30",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-21 15:14:28",
+    "end date":"2025-09-21 16:17:15",
+    "duration":62.7881,
+    "name":"CSS-15",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-22 14:51:50",
+    "end date":"2025-09-22 16:27:51",
+    "duration":96.0103,
+    "name":"CSS-15",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-23 17:39:21",
+    "end date":"2025-09-23 18:03:41",
+    "duration":24.3354,
+    "name":"CSS-15",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-23 19:16:58",
+    "end date":"2025-09-23 20:16:37",
+    "duration":59.6483,
+    "name":"CSS-15",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-24 09:56:30",
+    "end date":"2025-09-24 09:59:17",
+    "duration":2.7732,
+    "name":"CSS-15",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-24 09:59:27",
+    "end date":"2025-09-24 10:00:19",
+    "duration":0.8643,
+    "name":"CSS-15",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-24 10:00:56",
+    "end date":"2025-09-24 10:09:26",
+    "duration":8.4973,
+    "name":"CSS-15",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-24 10:14:54",
+    "end date":"2025-09-24 12:35:26",
+    "duration":140.5345,
+    "name":"CSS-15",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-24 12:47:46",
+    "end date":"2025-09-24 14:01:08",
+    "duration":73.3739,
+    "name":"CSS-30",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-24 14:54:54",
+    "end date":"2025-09-24 16:22:04",
+    "duration":87.1763,
+    "name":"CSS-30",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-24 17:47:48",
+    "end date":"2025-09-24 18:12:56",
+    "duration":25.1266,
+    "name":"CSS-45",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-24 22:55:54",
+    "end date":"2025-09-24 23:38:52",
+    "duration":42.9719,
+    "name":"CSS-45",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-25 15:38:19",
+    "end date":"2025-09-25 16:25:36",
+    "duration":47.2829,
+    "name":"CSS-48",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-26 15:45:08",
+    "end date":"2025-09-26 16:31:02",
+    "duration":45.8999,
+    "name":"CSS-45",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-27 19:14:39",
+    "end date":"2025-09-27 19:45:42",
+    "duration":31.0529,
+    "name":"CSS-55",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-27 23:12:31",
+    "end date":"2025-09-28 00:16:12",
+    "duration":63.6876,
+    "name":"CSS-55",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-28 09:50:48",
+    "end date":"2025-09-28 10:34:57",
+    "duration":44.1504,
+    "name":"CSS-55",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-29 23:11:57",
+    "end date":"2025-09-29 23:25:02",
+    "duration":13.0764,
+    "name":null,
+    "notes":null
+  },
+  {
+    "start date":"2025-09-29 23:25:05",
+    "end date":"2025-09-29 23:51:29",
+    "duration":26.4104,
+    "name":"CSS-54",
+    "notes":null
+  },
+  {
+    "start date":"2025-09-30 17:33:31",
+    "end date":"2025-09-30 18:36:38",
+    "duration":63.1059,
+    "name":"CSS-54",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-01 08:22:38",
+    "end date":"2025-10-01 08:44:51",
+    "duration":22.2189,
+    "name":"CSS-54",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-01 09:04:53",
+    "end date":"2025-10-01 09:37:25",
+    "duration":32.5332,
+    "name":"CSS-54",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-01 10:09:41",
+    "end date":"2025-10-01 11:01:27",
+    "duration":51.7709,
+    "name":"CSS-54",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-01 11:23:43",
+    "end date":"2025-10-01 12:10:55",
+    "duration":47.1967,
+    "name":"CSS-54",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-01 14:52:04",
+    "end date":"2025-10-01 16:12:35",
+    "duration":80.5033,
+    "name":"CSS-54",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-01 16:12:42",
+    "end date":"2025-10-01 16:16:14",
+    "duration":3.5193,
+    "name":"CSS-54",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-01 17:18:59",
+    "end date":"2025-10-01 17:36:49",
+    "duration":17.8455,
+    "name":"CSS-61",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-01 17:37:04",
+    "end date":"2025-10-01 17:52:25",
+    "duration":15.3522,
+    "name":"CSS-54",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-02 11:47:56",
+    "end date":"2025-10-02 13:05:50",
+    "duration":77.8995,
+    "name":"CSS-54",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-03 11:27:51",
+    "end date":"2025-10-03 12:20:34",
+    "duration":52.7094,
+    "name":"CSS-48",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-03 12:27:00",
+    "end date":"2025-10-03 12:31:03",
+    "duration":4.0419,
+    "name":"CSS-48",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-03 13:03:25",
+    "end date":"2025-10-03 13:21:05",
+    "duration":17.6723,
+    "name":"CSS-48",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-03 14:37:59",
+    "end date":"2025-10-03 15:02:01",
+    "duration":24.0217,
+    "name":"CSS-48",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-04 19:31:15",
+    "end date":"2025-10-04 20:12:32",
+    "duration":41.2846,
+    "name":"CSS-48",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-05 16:01:05",
+    "end date":"2025-10-05 16:23:20",
+    "duration":22.2549,
+    "name":"CSS-48",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-05 16:53:42",
+    "end date":"2025-10-05 17:00:19",
+    "duration":6.6131,
+    "name":"CSS-48",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-05 17:50:34",
+    "end date":"2025-10-05 18:05:34",
+    "duration":15.0057,
+    "name":"CSS-48",
+    "notes":null
+  },
+  {
+    "start date":"2025-10-10 10:20:03",
+    "end date":"2025-10-10 10:55:40",
+    "duration":35.6104,
+    "name":null,
+    "notes":null
+  }
+]

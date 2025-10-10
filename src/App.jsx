@@ -13,6 +13,7 @@ import { AtlyFive } from "./AtlyFive";
 import { HabitView } from "./HabitView";
 import { Categories } from "./constants";
 import GlassNavigation from "./components/molecules/GlassNavigation";
+import { CalendarData } from "./components/organism/CalendarData";
 
 const PageCategories = [
   {
@@ -144,6 +145,8 @@ function App() {
             return null;
         }
       })()}
+
+      <CalendarData />
 
       {isDateSelectionOpen &&
         <DateSelection

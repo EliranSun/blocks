@@ -5,8 +5,6 @@ const REVERT_DURATION = 200;
 
 export const useTileProgressAnimation = ({ onAnimationComplete, todayValue }) => {
     const [isPressed, setIsPressed] = useState(false);
-
-    // Hold animation state
     const [isHolding, setIsHolding] = useState(false);
     const [fillProgress, setFillProgress] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
