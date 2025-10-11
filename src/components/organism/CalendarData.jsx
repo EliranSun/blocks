@@ -1,7 +1,7 @@
 import { getDurationsSortedByDate } from "../../utils/duration";
 import { getDaysInYear, format, addDays, getDay, startOfYear } from "date-fns";
 import classNames from "classnames";
-import durationData from "../css-data.json";
+import durationData from "../../css-data.json";
 
 // getTotalDuration
 // const cssDuration = getTotalDuration(durationData);
