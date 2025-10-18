@@ -31,11 +31,11 @@ export const NotesView = () => {
                 <div key={index} className="py-4 space-y-4">
                     <h1 className={classNames("puritan-bold text-3xl uppercase", colorClassName)}>
                         {format(date, "MMMM dd, EEEE")}</h1>
-                    <div className="flex gap-2">
+                    <div className="flex w-full flex-wrap gap-2">
                         {habitsByDay.map((habit) => {
                             const Icon = habit.calendar.icon;
                             return (
-                                <p className="w-full flex-wrap flex gap-1">
+                                <p className="flex gap-1">
                                 <Icon size={18} />
                                 {habit.calendar.name}
                                 </p>
