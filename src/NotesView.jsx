@@ -14,7 +14,7 @@ export const NotesView = () => {
             const color = Calendars.find(c => c.name === "mood")?.colors[colorIndex];
             const formattedDate = formatDate(date);
             const habitsByDay = getStorageBySuffix(formattedDate);
-alert(JSON.stringify(habitsByDay));
+// alert(JSON.stringify(habitsByDay));
 
             return {
                 date,
@@ -39,6 +39,7 @@ alert(JSON.stringify(habitsByDay));
                                 <p className="flex gap-1">
                                 <Icon size={18} />
                                 {habit.calendar.name}
+                                {habit.value}
                                 </p>
                             )
                         })}
