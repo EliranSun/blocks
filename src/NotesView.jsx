@@ -35,7 +35,10 @@ export const NotesView = () => {
                         {habitsByDay.map((habit) => {
                             const Icon = habit.calendar.icon;
                             return (
+                                <p className="flex gap-1">
                                 <Icon size={18} />
+                                {habit.calendar.name}
+                                </p>
                             )
                         })}
                     </div>
