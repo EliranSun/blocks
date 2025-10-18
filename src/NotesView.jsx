@@ -14,6 +14,7 @@ export const NotesView = () => {
             const color = Calendars.find(c => c.name === "mood")?.colors[colorIndex];
             const formattedDate = formatDate(date);
             const habitsByDay = getStorageBySuffix(formattedDate);
+alert(JSON.stringify(habitsByDay));
 
             return {
                 date,
