@@ -76,15 +76,6 @@ export function HabitTile({ calendar, date = new Date(), titleOnly, showInfo = t
             ? fillProgress
             : (isStaticFilled ? 1 : 0);
 
-        console.log('dynamicStyles calc:', {
-            isStaticFilled,
-            isHolding,
-            fillProgress,
-            isTransitioning,
-            effectiveFillProgress,
-            todayValue
-        });
-
         return {
             backgroundImage: effectiveFillProgress > 0
                 ? `linear-gradient(to right, black ${effectiveFillProgress * 100}%, transparent ${effectiveFillProgress * 100}%)`
@@ -138,11 +129,7 @@ export function HabitTile({ calendar, date = new Date(), titleOnly, showInfo = t
                     {...eventHandlers}>
                     <div
                         className="flex flex-col gap-1 items-start justify-start relative z-10 pointer-events-none">
-                        <Icon size={30} className={classNames({
-                            "hidden": titleOnly,
-                            // "text-amber-500": calendar.primaryColor === "amber",
-                            // "text-green-500": calendar.primaryColor === "green",
-                        })} />
+                        <Icon size={30} className={classNames({ "hidden": titleOnly })} />
                         <HabitName
                             calendar={calendar}
                             todayValue={todayValue}
@@ -157,7 +144,6 @@ export function HabitTile({ calendar, date = new Date(), titleOnly, showInfo = t
                             hideTitle
                             showInfo={showInfo}
                             flex
-                            // onCellsClick={handleClick}
                             grayscale
                             date={date}
                             calendar={calendar}

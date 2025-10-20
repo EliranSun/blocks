@@ -14,7 +14,7 @@ export const NotesView = () => {
             const color = Calendars.find(c => c.name === "mood")?.colors[colorIndex];
             const formattedDate = formatDate(date);
             const habitsByDay = getStorageBySuffix(formattedDate);
-// alert(JSON.stringify(habitsByDay));
+            // alert(JSON.stringify(habitsByDay));
 
             return {
                 date,
@@ -25,7 +25,7 @@ export const NotesView = () => {
             }
         }).reverse();
     }, []);
-
+    // ?.colors.find(color => color.name === habit.value)
     return (
         <div>
             {days.map(({ date, colorClassName, habitsByDay }, index) => (
@@ -36,10 +36,12 @@ export const NotesView = () => {
                         {habitsByDay.map((habit) => {
                             const Icon = habit.calendar.icon;
                             return (
-                                <p className="flex gap-1">
-                                <Icon size={18} />
-                                {habit.calendar.name}
-                                {habit.value}
+                                <p className="flex items-center gap-1">
+                                    <Icon size={18} />
+                                    {habit.calendar.name} -
+                                    {Calendars
+                                        .find(calendar => calendar.name === habit.calendar.name)
+                                        ?.colors[Number(habit.value)]?.name}
                                 </p>
                             )
                         })}
